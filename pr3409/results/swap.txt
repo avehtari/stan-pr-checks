@@ -1,0 +1,97 @@
+== STAN_MATH /u/77/ave/unix/proj/stan_math_pr3409, HEAD 2764cf584d, BASE_REF 579253050c 579253050c
+== scratch /tmp/swap_test.jRnDfX
+== g++: g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0
+== stan/ files swapped (M, D): 6
+   stan/math/fwd/fun/inc_beta.hpp
+   stan/math/prim/fun.hpp
+   stan/math/prim/fun/grad_reg_inc_beta.hpp
+   stan/math/prim/fun/inc_beta_dda.hpp
+   stan/math/prim/fun/inc_beta_ddb.hpp
+   stan/math/prim/fun/inc_beta_ddz.hpp
+== stan/ files added by the PR, not swapped: 0
+
+######## stage pr_1 ########
+md5 of the swapped files: a7bf5f6a2e58d737
+  PASS  grad_reg_inc_beta_test  (8 cases)
+  PASS  inc_beta_dda_test  (3 cases)
+  PASS  inc_beta_ddb_test  (3 cases)
+  PASS  inc_beta_ddz_test  (2 cases)
+  PASS  beta_cdf_log_test  (1 cases)
+  PASS  neg_binomial_cdf_log_test  (2 cases)
+  PASS  grad_reg_inc_beta_one_sided_test  (4 cases)
+  PASS  inc_beta_dda_vectorized_test  (1 cases)
+  PASS  inc_beta_ddz_vectorized_test  (1 cases)
+== pr_1: suites not passing: 0
+
+######## stage base ########
+md5 of the swapped files: 73a9bce13d2e7070
+  FAIL  grad_reg_inc_beta_test  (exit 1; cases ok 2, failed 6; failed expectations 13)
+[  FAILED  ] grad_reg_inc_beta.1 (0 ms)
+[  FAILED  ] grad_reg_inc_beta.beta_ab_underflow (0 ms)
+[  FAILED  ] grad_reg_inc_beta.prefactor_underflow (0 ms)
+[  FAILED  ] grad_reg_inc_beta.integer_b (4 ms)
+[  FAILED  ] grad_reg_inc_beta.tails (5 ms)
+[  FAILED  ] grad_reg_inc_beta.upper_tail_no_throw (1 ms)
+  FAIL  inc_beta_dda_test  (exit 1; cases ok 0, failed 3; failed expectations 11)
+[  FAILED  ] MathFunctions.inc_beta_dda (0 ms)
+[  FAILED  ] MathFunctions.inc_beta_dda_regressions (0 ms)
+[  FAILED  ] MathFunctions.inc_beta_dda_upper_tail_no_throw (2 ms)
+  FAIL  inc_beta_ddb_test  (exit 1; cases ok 0, failed 3; failed expectations 12)
+[  FAILED  ] MathFunctions.inc_beta_ddb (0 ms)
+[  FAILED  ] MathFunctions.inc_beta_ddb_regressions (0 ms)
+[  FAILED  ] MathFunctions.inc_beta_ddb_upper_tail_no_throw (1 ms)
+  FAIL  inc_beta_ddz_test  (exit 1; cases ok 1, failed 1; failed expectations 4)
+[  FAILED  ] MathFunctions.inc_beta_ddz_infinite_density (0 ms)
+  FAIL  beta_cdf_log_test  (exit 1; cases ok 0, failed 1; failed expectations 6)
+[  FAILED  ] AgradRev.ProbDistributionsBeta_lcdf_shape_gradients (0 ms)
+  FAIL  neg_binomial_cdf_log_test  (exit 1; cases ok 1, failed 1; failed expectations 1)
+[  FAILED  ] AgradRev.ProbDistributionsNegBinomial_lcdf_alpha_lower_tail (0 ms)
+  BUILD FAILED  grad_reg_inc_beta_one_sided_test
+test/unit/math/prim/fun/grad_reg_inc_beta_one_sided_test.cpp:16:21: error: ‘GRAD_RIB’ has not been declared in ‘stan::math’
+test/unit/math/prim/fun/grad_reg_inc_beta_one_sided_test.cpp:17:56: error: ‘GRAD_RIB’ was not declared in this scope
+test/unit/math/prim/fun/grad_reg_inc_beta_one_sided_test.cpp:17:38: error: parse error in template argument list
+test/unit/math/prim/fun/grad_reg_inc_beta_one_sided_test.cpp:17:69: error: no matching function for call to ‘grad_reg_inc_beta<<expression error> >(double&, double&, double&, double, double, double, double)’
+test/unit/math/prim/fun/grad_reg_inc_beta_one_sided_test.cpp:17:69: error: template argument 1 is invalid
+test/unit/math/prim/fun/grad_reg_inc_beta_one_sided_test.cpp:21:38: error: parse error in template argument list
+test/unit/math/prim/fun/grad_reg_inc_beta_one_sided_test.cpp:21:69: error: no matching function for call to ‘grad_reg_inc_beta<GRAD_RIB>(double&, double&, double&, double, double, double, double)’
+test/unit/math/prim/fun/grad_reg_inc_beta_one_sided_test.cpp:30:33: error: parse error in template argument list
+test/unit/math/prim/fun/grad_reg_inc_beta_one_sided_test.cpp:30:66: error: no matching function for call to ‘grad_reg_inc_beta<GRAD_RIB>(double&, double&, double&, double, double, double, double)’
+  BUILD FAILED  inc_beta_dda_vectorized_test
+test/unit/math/prim/fun/inc_beta_dda_vectorized_test.cpp:30:38: error: no matching function for call to ‘inc_beta_dda(Eigen::VectorXd&, Eigen::VectorXd&, std::vector<double>&, Eigen::VectorXd&, Eigen::VectorXd&)’
+test/unit/math/prim/fun/inc_beta_dda_vectorized_test.cpp:36:39: error: no matching function for call to ‘inc_beta_dda(double, double, Eigen::VectorXd&, double, double)’
+./stan/math/prim/fun/inc_beta_dda.hpp:44:9: error: no match for ‘operator>’ (operand types are ‘Eigen::Matrix<double, -1, 1>’ and ‘Eigen::Matrix<double, -1, 1>’)
+/usr/include/c++/11/type_traits:2579:11: error: no type named ‘type’ in ‘struct std::enable_if<false, void>’
+./stan/math/prim/fun/inc_beta_dda.hpp:45:14: error: no match for ‘operator<’ (operand types are ‘double’ and ‘Eigen::Matrix<double, -1, 1>’)
+./stan/math/prim/fun/inc_beta_dda.hpp:45:23: error: no match for ‘operator<=’ (operand types are ‘Eigen::Matrix<double, -1, 1>’ and ‘double’)
+./stan/math/prim/fun/inc_beta_dda.hpp:45:36: error: no match for ‘operator>’ (operand types are ‘Eigen::Matrix<double, -1, 1>’ and ‘int’)
+./stan/math/prim/fun/inc_beta_dda.hpp:45:52: error: no match for ‘operator<’ (operand types are ‘double’ and ‘Eigen::Matrix<double, -1, 1>’)
+./stan/math/prim/fun/inc_beta_dda.hpp:45:61: error: no match for ‘operator<=’ (operand types are ‘Eigen::Matrix<double, -1, 1>’ and ‘double’)
+./stan/math/prim/fun/inc_beta_dda.hpp:45:73: error: no match for ‘operator>’ (operand types are ‘Eigen::Matrix<double, -1, 1>’ and ‘int’)
+  BUILD FAILED  inc_beta_ddz_vectorized_test
+test/unit/math/prim/fun/inc_beta_ddz_vectorized_test.cpp:30:42: error: no matching function for call to ‘inc_beta_ddz(double, Eigen::VectorXd&, Eigen::VectorXd&)’
+test/unit/math/prim/fun/inc_beta_ddz_vectorized_test.cpp:31:42: error: no matching function for call to ‘inc_beta_ddz(Eigen::VectorXd&, double, Eigen::VectorXd&)’
+test/unit/math/prim/fun/inc_beta_ddz_vectorized_test.cpp:32:42: error: no matching function for call to ‘inc_beta_ddz(Eigen::VectorXd&, Eigen::VectorXd&, double)’
+test/unit/math/prim/fun/inc_beta_ddz_vectorized_test.cpp:33:40: error: no matching function for call to ‘inc_beta_ddz(double, double, Eigen::VectorXd&)’
+./stan/math/prim/fun/inc_beta_ddz.hpp:33:17: error: no match for ‘operator-’ (operand types are ‘Eigen::Matrix<double, -1, 1>’ and ‘int’)
+/usr/include/c++/11/type_traits:2579:11: error: no type named ‘type’ in ‘struct std::enable_if<false, void>’
+./stan/math/prim/fun/inc_beta_ddz.hpp:33:38: error: no match for ‘operator-’ (operand types are ‘Eigen::Matrix<double, -1, 1>’ and ‘int’)
+./stan/math/prim/fun/inc_beta_ddz.hpp:33:48: error: no matching function for call to ‘log(Eigen::Matrix<double, -1, 1>&)’
+/usr/include/c++/11/cmath:350:5: error: no type named ‘__type’ in ‘struct __gnu_cxx::__enable_if<false, double>’
+./stan/math/prim/fun/inc_beta_ddz.hpp:33:17: error: no match for ‘operator-’ (operand types are ‘std::vector<double>’ and ‘int’)
+== base: suites not passing: 9
+
+######## stage pr_2 ########
+md5 of the swapped files: a7bf5f6a2e58d737
+  PASS  grad_reg_inc_beta_test  (8 cases)
+  PASS  inc_beta_dda_test  (3 cases)
+  PASS  inc_beta_ddb_test  (3 cases)
+  PASS  inc_beta_ddz_test  (2 cases)
+  PASS  beta_cdf_log_test  (1 cases)
+  PASS  neg_binomial_cdf_log_test  (2 cases)
+  PASS  grad_reg_inc_beta_one_sided_test  (4 cases)
+  PASS  inc_beta_dda_vectorized_test  (1 cases)
+  PASS  inc_beta_ddz_vectorized_test  (1 cases)
+== pr_2: suites not passing: 0
+
+== restore check: swapped files equal stage pr_1 (a7bf5f6a2e58d737)
+== STAN_MATH unchanged (afe7f79541a1f848)

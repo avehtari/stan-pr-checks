@@ -1,0 +1,123 @@
+4.3101509265126046 300.51389319906849 0.91138154587174658  dda=0 ddb=0 root9=1 beta=0  called from function 'hypergeometric_2F1', hypergeometric fu
+4.0845138072907865 150.97164240761546 0.99160683627388502  dda=0 ddb=0 root9=1 beta=0  called from function 'hypergeometric_2F1', hypergeometric fu
+4.2197529809537233 324.90576407670642 0.89554553027170225  dda=0 ddb=0 root9=1 beta=0  called from function 'hypergeometric_2F1', hypergeometric fu
+2.0090396220143099 1635.3394270324663 0.3568879121620816  dda=0 ddb=0 root9=1 beta=0  Error in function boost::math::hypergeometric_pFq<double>(do
+2.1231489283562524 1618.2262565668407 0.36447714274870879  dda=0 ddb=0 root9=1 beta=0  Error in function boost::math::hypergeometric_pFq<double>(do
+0.90920057676100741 1236.144366216666 0.44146352326217009  dda=0 ddb=0 root9=1 beta=0  Error in function boost::math::hypergeometric_pFq<double>(do
+1.0720210587836032 1713.4859520004079 0.34733693795905157  dda=0 ddb=0 root9=1 beta=0  Error in function boost::math::hypergeometric_pFq<double>(do
+0.72471381955721836 5730.47133463312 0.11815782197937991  dda=0 ddb=0 root9=1 beta=0  Error in function boost::math::hypergeometric_pFq<double>(do
+2.0123354232751991 600.19204279976361 0.70990190149367161  dda=0 ddb=0 root9=1 beta=0  called from function 'hypergeometric_2F1', hypergeometric fu
+12070.186725461303 12114.145277064432 0.17816528267603277  dda=1 ddb=1 root9=0 beta=0  inc_beta_ddb: did not converge within 100000 iterations 
+3277.967522883398 4246.2261478090459 0.23316754816929458  dda=1 ddb=1 root9=0 beta=0  inc_beta_ddb: did not converge within 100000 iterations 
+1500.9113805722516 2661.4859182650025 0.12530474392743624  dda=1 ddb=1 root9=0 beta=0  inc_beta_ddb: did not converge within 100000 iterations 
+2731.5424790358252 6527.4804912922582 0.11638510597468027  dda=1 ddb=1 root9=0 beta=0  inc_beta_ddb: did not converge within 100000 iterations 
+5767.6375423590216 11208.355195007318 0.11281316699041916  dda=1 ddb=1 root9=0 beta=0  inc_beta_ddb: did not converge within 100000 iterations 
+4810.5843033846395 6914.576622583575 0.12643288268184358  dda=1 ddb=1 root9=0 beta=0  inc_beta_ddb: did not converge within 100000 iterations 
+3248.7228960817911 4171.7207777803351 0.23679964550337684  dda=1 ddb=1 root9=0 beta=0  inc_beta_ddb: did not converge within 100000 iterations 
+1893.8614629841995 2046.7936334446479 0.11058589799706187  dda=1 ddb=1 root9=0 beta=0  inc_beta_ddb: did not converge within 100000 iterations 
+5812.0619031604547 6813.4760519294696 0.15887338935747136  dda=1 ddb=1 root9=0 beta=0  inc_beta_ddb: did not converge within 100000 iterations 
+7358.0055050135124 7722.4376191874426 0.12363330593276453  dda=1 ddb=1 root9=0 beta=0  inc_beta_ddb: did not converge within 100000 iterations 
+7526.3136563095823 11168.380939388544 0.12409453756799926  dda=1 ddb=1 root9=0 beta=0  inc_beta_ddb: did not converge within 100000 iterations 
+2139.8885945436245 2912.9590822720884 0.12131472748597094  dda=1 ddb=1 root9=0 beta=0  inc_beta_ddb: did not converge within 100000 iterations 
+3623.2944963972359 4409.8872030872881 0.13484863511082229  dda=1 ddb=1 root9=0 beta=0  inc_beta_ddb: did not converge within 100000 iterations 
+6484.6695412778326 10072.591320851525 0.1518428905107774  dda=1 ddb=1 root9=0 beta=0  inc_beta_ddb: did not converge within 100000 iterations 
+9221.7943256270719 10477.074973800551 0.32113509722369682  dda=1 ddb=1 root9=0 beta=0  inc_beta_ddb: did not converge within 100000 iterations 
+4.3784542968416496 750.09460479053507 0.62302056020644581  dda=0 ddb=0 root9=1 beta=0  called from function 'hypergeometric_2F1', hypergeometric fu
+5645.3808413181741 8087.1396870270337 0.25030139920956224  dda=1 ddb=1 root9=0 beta=0  inc_beta_ddb: did not converge within 100000 iterations 
+2.0288770294320675 1720.5282915475541 0.34787109311631426  dda=0 ddb=0 root9=1 beta=0  Error in function boost::math::hypergeometric_pFq<double>(do
+0.88615878239461421 3621.8621923440096 0.18466931665229119  dda=0 ddb=0 root9=1 beta=0  Error in function boost::math::hypergeometric_pFq<double>(do
+0.75532290822105075 9784.9182380824823 0.072758490343776933  dda=0 ddb=0 root9=1 beta=0  Error in function boost::math::hypergeometric_pFq<double>(do
+2.4304694658646451 9841.0637571369225 0.071748737690885175  dda=0 ddb=0 root9=1 beta=0  Error in function boost::math::hypergeometric_pFq<double>(do
+8326.2326023713194 11470.499120355156 0.24605317257570522  dda=1 ddb=1 root9=0 beta=0  inc_beta_ddb: did not converge within 100000 iterations 
+2078.4875504999577 2947.8694646608315 0.77948299024484125  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+10786.41717664305 10272.854298352791 0.69591129805150831  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+1291.1840723705006 1797.4106097382451 0.76453984199236613  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+618.73558869899921 5798.0898158901364 0.79743296745869818  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+8807.6837632879251 5748.0019822597123 0.76282054560979917  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+510.26709773521759 1176.1276529585189 0.77054621647733623  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+3547.4645609791951 4140.0807753172548 0.78682706149398585  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+10390.29863291993 9195.5513117920582 0.72468251299351105  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+534.41785347689472 1290.8294086366679 0.764312559541658  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+1473.9513937535698 3010.509189698002 0.78073656522994761  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+2622.4991527952693 3714.5009889936168 0.75619575215337775  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+5996.9088886320096 10937.342041155429 0.22618943898876126  dda=1 ddb=1 root9=0 beta=0  inc_beta_ddb: did not converge within 100000 iterations 
+1385.1097362186813 7295.3252455163056 0.7957108583316308  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+8318.6931647996389 7514.6910230394196 0.79509568304486034  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+2489.6832939067249 10923.497300379044 0.78813574462596425  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+8669.085476531809 7374.2976290071292 0.79752156577978317  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+9104.1909955032115 9248.1422446156848 0.23531452976230433  dda=1 ddb=1 root9=0 beta=0  inc_beta_ddb: did not converge within 100000 iterations 
+2042.6535664258147 8595.4748639191657 0.77981529898296764  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+2051.6151679166264 6718.025808615288 0.78139475345169296  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+1273.7409874147738 4615.2662374752399 0.7692622911682343  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+2552.2673379844659 4745.0675700952052 0.75114619851298303  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+3560.5688257882234 5137.3297805634629 0.75912191772831616  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+623.05046820076348 1638.0975108847936 0.7891290738876795  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+3425.0996331307506 4855.8491868438723 0.7930373166696234  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+6727.6030224074957 8105.197127250035 0.30256821225990987  dda=1 ddb=1 root9=0 beta=0  inc_beta_ddb: did not converge within 100000 iterations 
+2786.371314976469 2861.2140690845922 0.76837697974926766  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+744.41096497396745 1304.7152137456731 0.78615195491484324  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+5132.0355797563534 5351.7639388943089 0.30723979416329567  dda=1 ddb=1 root9=0 beta=0  inc_beta_ddb: did not converge within 100000 iterations 
+4442.4616283339119 9218.1469825095555 0.75260937233144243  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+4972.9211638464703 5979.7572237034465 0.22271336983274276  dda=1 ddb=1 root9=0 beta=0  inc_beta_ddb: did not converge within 100000 iterations 
+2856.0066161942327 6928.5859189695211 0.75029024798739141  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+1387.3475728638305 3439.5131956670793 0.78651349302190154  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+549.04579202291461 2676.1179749871553 0.79755542390250578  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+1477.0522140406749 3138.7724311526981 0.76977071392331675  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+2982.3624904823114 4532.3476419104145 0.77364982365816171  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+3786.8848638778122 3291.6942001980333 0.78386858230705547  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+2524.9697887187676 3311.7993100091867 0.77984379167298767  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+10285.475334036939 9740.482707184934 0.73247271859422391  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+1643.0726979145918 10620.563260165109 0.75448716303589136  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+909.07919077989015 2035.7877550591668 0.76272906254136119  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+936.59627457385432 1294.2043377235907 0.78777554429801344  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+4605.7249604693034 4693.0126160078635 0.26975060609121954  dda=1 ddb=1 root9=0 beta=0  inc_beta_ddb: did not converge within 100000 iterations 
+1553.0629989745314 3585.7451824854129 0.76912877675461178  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+1554.7164468353765 5240.6394842127684 0.75567094930963252  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+6015.616818948849 5165.0723594308411 0.75362184630001883  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+1017.6818631960206 5266.133527194881 0.77694736730519298  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+2833.4335882838109 2726.4368460116657 0.77369454014037187  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+535.97639792180519 7674.533569872855 0.75946378478024701  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+796.34629771347795 9437.3021459965294 0.75369960329352503  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+3914.4025746625525 2974.2486853180703 0.79342964838440322  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+685.36655220469129 10447.896923365621 0.78282784763125512  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+2630.5774242495982 3242.4086821571445 0.20820522952436332  dda=1 ddb=1 root9=0 beta=0  inc_beta_ddb: did not converge within 100000 iterations 
+696.86698786564955 3657 0.79555031902238826  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+562.52488305415534 3617 0.87167874682861313  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+640.37451654174765 2501 0.77911411266465591  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+740.54906410285889 1231 0.81876541417500326  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+575.81015323636632 2780 0.8718094049922348  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+0.38635426964266223 3480 0.18766618960847781  dda=0 ddb=0 root9=1 beta=0  Error in function boost::math::hypergeometric_pFq<double>(do
+809.3614903402497 3580 0.75461126339524998  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+749.98216655752663 2221 0.82246588546934052  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+900.863360426746 3806 0.79824147417844993  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+1.0982208890380527 1953 0.30768785154047112  dda=0 ddb=0 root9=1 beta=0  Error in function boost::math::hypergeometric_pFq<double>(do
+1.1721399486401061 1889 0.31604780751627026  dda=0 ddb=0 root9=1 beta=0  Error in function boost::math::hypergeometric_pFq<double>(do
+800.08269418810858 3172 0.76058618235612463  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+766.34857593319191 4298 0.76442561667039732  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+507.44130094567686 4595 0.77500188773595047  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+962.60736275188208 3122 0.89557381758351629  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+581.10285495156415 4147 0.76376459203114966  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+0.40196996909416405 2759 0.2359500621493974  dda=0 ddb=0 root9=1 beta=0  Error in function boost::math::hypergeometric_pFq<double>(do
+722.94435036061748 3801 0.78123581256939556  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+767.036048271043 2649 0.88486060623926621  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+910.10486021933798 2440 0.84735632457806365  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+600.2683952585412 3230 0.81988479466007891  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+617.40134394373752 1721 0.81276224087758298  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+788.43946677613121 2742 0.80917827328909331  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+541.1851089020879 4342 0.88136825892264159  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+1.0574682543050411 1014 0.51917567164341083  dda=0 ddb=0 root9=1 beta=0  hypergeometric function pFq does not meet convergence condit
+673.15249393928627 2548 0.79670987302216811  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+690.85539910678028 2113 0.87003033341582336  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+597.31269745961231 4017 0.8729413339638824  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+0.14990770711972021 3417 0.19016290201569991  dda=0 ddb=0 root9=1 beta=0  Error in function boost::math::hypergeometric_pFq<double>(do
+519.41128062410451 4813 0.7776866218148013  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+0.6839742196383185 4336 0.15323858536452201  dda=0 ddb=0 root9=1 beta=0  Error in function boost::math::hypergeometric_pFq<double>(do
+2.7089235467699311 4189 0.16103804287005402  dda=0 ddb=0 root9=1 beta=0  Error in function boost::math::hypergeometric_pFq<double>(do
+978.66799705761423 2824 0.83681497725353948  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+939.99804199518053 1461 0.84355000833472049  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+806.83460532214508 1361 0.78493109925381288  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+885.48683604445239 1595 0.79222700108438071  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+1.1931076750783958 525 0.74783882124144163  dda=0 ddb=0 root9=1 beta=0  hypergeometric function pFq does not meet convergence condit
+0.46680452393351474 2495 0.24950449942608749  dda=0 ddb=0 root9=1 beta=0  Error in function boost::math::hypergeometric_pFq<double>(do
+754.87283132500727 2403 0.81663550148652964  dda=1 ddb=1 root9=0 beta=0  inc_beta_dda: did not converge within 10000 iterations 
+# points 18000  throws: dda 98  ddb 98  root9 24  beta 0

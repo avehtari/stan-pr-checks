@@ -1,0 +1,2 @@
+points 180360, bit-identical 180360, default threw 3240
+inc_beta_ddz(1.05, 0.35, 1) = inf, (0.5, 2, 0) = inf

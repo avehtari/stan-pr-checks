@@ -1,0 +1,12 @@
+region                         n |  A nf A >1e-2  B nf B >1e-2 | PR nf    worst     rel*  sub
+R1 a,b<1                    2000 |     0       0     0       0 |     0  5.1e-13  1.2e-14    0
+R2 1<=a,b<=20 z<0.75        2000 |     0       0     0       0 |     0  3.4e-14  1.9e-14    0
+R3 seam z>0.75 a<500        2000 |     0      82     3     125 |     0  1.0e-13  4.3e-13    0
+R4 seam b>a b>500 z<=0.75   1985 |     1      87   550     933 |     0  1.0e-12  1.8e-12    1
+R5 b>>a z small             2000 |     0     408     2      12 |     0  1.9e-13  1.7e-12    0
+R6 large a,b z uniform      1523 |    46      36   932     235 |     0  7.2e-13  3.8e-12   11
+R7 large a,b z near mode    2000 |     0       0  1325      10 |     0  1.3e-13  3.3e-12    0
+R8 negbin n<=200            1965 |     0       4     0      26 |     0  5.3e-13  2.4e-13    2
+R9 negbin 200<n<=5000       1999 |    29      22   292    1203 |     0  4.2e-13  6.3e-13    0
+total                            |    76     639  3104    2544 |     0
+columns: nf = non-finite or threw; >1e-2 = finite with err_log > 1e-2; worst = worst err_log; rel* = worst relative error where |r| / I >= 1e-3; sub = points with subnormal I, left out of worst and rel*

@@ -1,0 +1,11 @@
+region              a          b          z wrt   rel err  routes rel err (new ref)
+R6 large a    4313.49    11421.6   0.255773   a  3.78e-12     inf          3.78e-12
+R7 large a    7717.27    11986.2   0.379239   b  3.28e-12     inf          3.28e-12
+R4 seam b>    3367.05    6744.11   0.203109   a  1.84e-12     inf          1.84e-12
+R5 b>>a z     1.92857    797.296 0.00190962   b  1.73e-12     inf          1.73e-12
+R9 negbin     874.617       4612   0.114484   a  6.28e-13     inf          6.28e-13
+R3 seam z>    344.214    1.22716   0.995023   a  4.33e-13     inf          4.33e-13
+R8 negbin     478.255         49   0.176866   b  2.40e-13     inf          2.40e-13
+R2 1<=a,b<    1.09586    11.4727   0.126473   b  1.90e-14     inf          1.90e-14
+R1 a,b<1    0.0117148   0.911604  0.0808433   b  1.20e-14     inf          1.20e-14
+routes: agreeing digits of routes A and B (inf: at least 60)

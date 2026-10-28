@@ -1,0 +1,251 @@
+== host: pht21.int.triton.aalto.fi   date: 2026-10-28T22:42:50+02:00
+== cpu:   Intel(R) Xeon(R) Gold 6230 CPU @ 2.10GHz
+== governor: performance
+== compiler: g++ (conda-forge gcc 14.3.0-18) 14.3.0
+== dev: 579253050c
+== pr:  2764cf584d plus the working tree; changed files: 1
+== md5 dev 99540d4e20cabfd85b9cbe36ea0c104c  pr af077983405f2170abf7a472691c0788  stan/math/prim/fun/grad_reg_inc_beta.hpp
+== md5 dev eab728f91acfeaeb5ab448bdf66d6d16  pr 13738701840b63d5c4cee47f9352d83d  stan/math/prim/fun/inc_beta_dda.hpp
+built probe_speed_dev
+built probe_speed_pr
+
+######## dev, round 1 ########
+# probe_cmp_beta_speed; nominal clock 2.10 GHz; BLOCK=1024
+
+## function level, ns per call
+kernel                                          ns/call     net ns net cycles
+baseline (a + b + z)                                2.4        2.4          5   (acc 7.83e+06)
+3 digamma + beta only                             159.8      157.4        330   (acc 1.79e+06)
+grad_reg_inc_beta double (+3 digamma, beta)     36893.8    36891.4      77472   (acc 120)
+grad_reg_inc_beta var, value+grad              183757.2   183754.8     385885   (acc 24.9)
+grad_reg_inc_beta fvar<double>                 118623.5   118621.1     249104   (acc 48.6)
+grad_reg_inc_beta fvar<fvar<double>>           335246.3   335243.9     704012   (acc 24.9)
+inc_beta_dda double (+2 digamma)                 1396.6     1394.2       2928   (acc -6.17e+03)
+
+## distribution level, N = 1000 observations, shared var shapes, value + reverse sweep
+beta_cdf                   a=5    b=5       1045.2 ns/obs      2195 cycles/obs   (grad 0)
+beta_lcdf                  a=5    b=5      34006.4 ns/obs     71413 cycles/obs   (grad -563.896)
+beta_lccdf                 a=5    b=5      34005.1 ns/obs     71411 cycles/obs   (grad 292.746)
+beta_cdf                   a=50   b=50      3568.8 ns/obs      7495 cycles/obs   (grad 0)
+beta_lcdf                  a=50   b=50     27689.7 ns/obs     58148 cycles/obs   (grad -147.483)
+beta_lccdf                 a=50   b=50     27685.9 ns/obs     58140 cycles/obs   (grad 116.943)
+neg_binomial_cdf           a=5    b=0.3     1993.5 ns/obs      4186 cycles/obs   (grad 0)
+neg_binomial_lcdf          a=5    b=0.3    10251.5 ns/obs     21528 cycles/obs   (grad -248.345)
+student_t_lcdf (nu = a)    a=3    b=1       6215.6 ns/obs     13053 cycles/obs   (grad -165.096)
+
+## Level 1 and 2 spot checks: name a b y value d/da d/db
+SPOT inc_beta     0x1.2cp+9 0x1.2cp+9 0x1p-1 0x1p-1 -nan -nan   # (600, 600, 0.5) val 0.5 da -nan db -nan
+SPOT beta_cdf     0x1.2cp+9 0x1.2cp+9 0x1p-1 0x1p-1 -0x1.7980b8167faep-7 0x1.7980b815831p-7   # (600, 600, 0.5) val 0.5 da -0.0115205 db 0.0115205
+SPOT beta_lcdf    0x1.2cp+9 0x1.2cp+9 0x1p-1 -0x1.62e42fefa39efp-1 -nan -nan   # (600, 600, 0.5) val -0.693147 da -nan db -nan
+SPOT beta_lccdf   0x1.2cp+9 0x1.2cp+9 0x1p-1 -0x1.62e42fefa39efp-1 -nan -nan   # (600, 600, 0.5) val -0.693147 da -nan db -nan
+SPOT inc_beta     0x1.6p+8 0x1.27p+9 0x1.84189374bc6a8p-1 0x1p+0 0x1.6923d66ce4caep-1 -0x1.e6b766f55e425p-1   # (352, 590, 0.758) val 1 da 0.705352 db -0.950618
+SPOT beta_cdf     0x1.6p+8 0x1.27p+9 0x1.84189374bc6a8p-1 0x1p+0 -0x1.41bf229082ac5p-457 0x1.b06dc1340173dp-457   # (352, 590, 0.758) val 1 da -3.37727e-138 db 4.53907e-138
+SPOT beta_lcdf    0x1.6p+8 0x1.27p+9 0x1.84189374bc6a8p-1 0x0p+0 0x1.6923d66ce4caep-1 -0x1.e6b766f55e425p-1   # (352, 590, 0.758) val 0 da 0.705352 db -0.950618
+SPOT beta_lccdf   0x1.6p+8 0x1.27p+9 0x1.84189374bc6a8p-1 -inf -inf inf   # (352, 590, 0.758) val -inf da -inf db inf
+SPOT inc_beta     0x1.251eb851eb852p+0 0x1.a82p+12 0x1.797cc39ffd60fp-13 0x1.4c839342e4182p-1 -0x1.8b7b91d33da2bp-2 0x1.ea39084bca84bp-15   # (1.145, 6786, 0.00018) val 0.649441 da -0.386214 db 5.84391e-05
+SPOT beta_cdf     0x1.251eb851eb852p+0 0x1.a82p+12 0x1.797cc39ffd60fp-13 0x1.4c839342e4182p-1 -0x1.9f261f73931c1p-3 -0x1.ebfac62404a8p-18   # (1.145, 6786, 0.00018) val 0.649441 da -0.202709 db -7.33107e-06
+SPOT beta_lcdf    0x1.251eb851eb852p+0 0x1.a82p+12 0x1.797cc39ffd60fp-13 -0x1.ba008f82dace3p-2 -0x1.307aa99154cedp-1 0x1.796b3889c5e27p-14   # (1.145, 6786, 0.00018) val -0.431643 da -0.594686 db 8.99837e-05
+SPOT beta_lccdf   0x1.251eb851eb852p+0 0x1.a82p+12 0x1.797cc39ffd60fp-13 -0x1.0c589e8d84496p+0 0x1.1a0996d6c4681p+0 -0x1.5d99e2212b03dp-13   # (1.145, 6786, 0.00018) val -1.04823 da 1.10171 db -0.000166703
+SPOT inc_beta     0x1.bep+8 0x1.4p+2 0x1.851eb851eb852p-1 0x1.d49f25379fd25p-155 -0x1.f1d4ac49c8dafp-157 0x1.75109ce35e60ap-153   # (446, 5, 0.76) val 4.00805e-47 da -1.06447e-47 db 1.27631e-46
+SPOT beta_cdf     0x1.bep+8 0x1.4p+2 0x1.851eb851eb852p-1 0x1.d49f25379fd25p-155 -0x1p-49 0x1.4p-50   # (446, 5, 0.76) val 4.00805e-47 da -1.77636e-15 db 1.11022e-15
+SPOT beta_lcdf    0x1.bep+8 0x1.4p+2 0x1.851eb851eb852p-1 -0x1.ab5530fc76bfp+6 -0x1.0ff4d8709dabap-2 0x1.979912d7b5fdep+1   # (446, 5, 0.76) val -106.833 da -0.265582 db 3.18436
+SPOT beta_lccdf   0x1.bep+8 0x1.4p+2 0x1.851eb851eb852p-1 0x0p+0 0x1.f1d4ac49c8dafp-157 -0x1.75109ce35e60ap-153   # (446, 5, 0.76) val 0 da 1.06447e-47 db -1.27631e-46
+SPOT inc_beta     0x1.4p+3 0x1p+0 0x1p-1 0x1p-10 -0x1.62e42fefa39eep-11 0x1.28f9bbd538e38p-9   # (10, 1, 0.5) val 0.000976562 da -0.000676902 db 0.00226574
+SPOT beta_cdf     0x1.4p+3 0x1p+0 0x1p-1 0x1p-10 -0x1.62e42fefa39efp-11 0x1.28f9bbd50cb0cp-9   # (10, 1, 0.5) val 0.000976562 da -0.000676902 db 0.00226574
+SPOT beta_lcdf    0x1.4p+3 0x1p+0 0x1p-1 -0x1.bb9d3beb8c86bp+2 -0x1.62e42fefa39eep-1 0x1.28f9bbd538e38p+1   # (10, 1, 0.5) val -6.93147 da -0.693147 db 2.32012
+SPOT beta_lccdf   0x1.4p+3 0x1p+0 0x1p-1 -0x1.0020055655889p-10 0x1.633cff2f6f7acp-11 -0x1.29440cd86eff4p-9   # (10, 1, 0.5) val -0.00097704 da 0.000677563 db -0.00226796
+SPOT inc_beta     0x1p+1 0x1.8p+1 0x1p-2 0x1.0cp-2 -0x1.d30dc45dbe94fp-3 0x1.b5f359ad01862p-4   # (2, 3, 0.25) val 0.261719 da -0.228054 db 0.106922
+SPOT beta_cdf     0x1p+1 0x1.8p+1 0x1p-2 0x1.0cp-2 -0x1.d30dc45d4133dp-3 0x1.b5f359a9720f2p-4   # (2, 3, 0.25) val 0.261719 da -0.228054 db 0.106922
+SPOT beta_lcdf    0x1p+1 0x1.8p+1 0x1p-2 -0x1.572a03748a307p+0 -0x1.be2413744b103p-1 0x1.a257428e5583fp-2   # (2, 3, 0.25) val -1.34048 da -0.871369 db 0.408536
+SPOT beta_lccdf   0x1p+1 0x1.8p+1 0x1p-2 -0x1.36b6776be1117p-2 0x1.3c4fc1f0ed6e5p-2 -0x1.2899f9020928bp-3   # (2, 3, 0.25) val -0.30343 da 0.308898 db -0.144825
+SPOT inc_beta     0x1.388p+11 0x1p+1 0x1.ff7ced916872bp-1 0x1.25d32b44cbe96p-2 -0x1.ae1ff9789fd54p-13 0x1.fcef3c074008p-3   # (2500, 2, 0.999) val 0.286938 da -0.0002051 db 0.248503
+SPOT beta_cdf     0x1.388p+11 0x1p+1 0x1.ff7ced916872bp-1 0x1.25d32b44cbe96p-2 -0x1.7afab8c762f48p-13 0x1.e51a86781b575p-3   # (2500, 2, 0.999) val 0.286938 da -0.000180711 db 0.236867
+SPOT beta_lcdf    0x1.388p+11 0x1p+1 0x1.ff7ced916872bp-1 -0x1.3f9ce6979e521p+0 -0x1.76c0f59818de3p-11 0x1.bb6b00c6bfc16p-1   # (2500, 2, 0.999) val -1.24849 da -0.000714786 db 0.866051
+SPOT beta_lccdf   0x1.388p+11 0x1p+1 0x1.ff7ced916872bp-1 -0x1.5a4dcccc4439fp-2 0x1.2d9ab2c0d4353p-12 -0x1.64dd9fb525eeep-2   # (2500, 2, 0.999) val -0.338187 da 0.000287632 db -0.348502
+SPOT inc_beta     0x1p+0 0x1.9p+6 0x1.47ae147ae147bp-7 0x1.449768b1e805bp-1 -0x1.b71dac43a83fcp-2 0x1.e22e4c6209fc6p-9   # (1, 100, 0.01) val 0.633968 da -0.428824 db 0.00367875
+SPOT beta_cdf     0x1p+0 0x1.9p+6 0x1.47ae147ae147bp-7 0x1.449768b1e805bp-1 -0x1.b71d0a3828e7p-2 0x1.e22a6e06c8a5dp-9   # (1, 100, 0.01) val 0.633968 da -0.428822 db 0.00367863
+SPOT beta_lcdf    0x1p+0 0x1.9p+6 0x1.47ae147ae147bp-7 -0x1.d2b20d2ac5875p-2 -0x1.5a52d6baffa5cp-1 0x1.7c49c82b3ba45p-8   # (1, 100, 0.01) val -0.455757 da -0.676413 db 0.00580274
+SPOT beta_lccdf   0x1p+0 0x1.9p+6 0x1.47ae147ae147bp-7 -0x1.0149e18c75e2fp+0 0x1.2bea82e04d059p+0 -0x1.495453e6fd6eap-7   # (1, 100, 0.01) val -1.00503 da 1.17155 db -0.0100503
+
+# done
+
+######## pr, round 1 ########
+# probe_cmp_beta_speed; nominal clock 2.10 GHz; BLOCK=1024
+
+## function level, ns per call
+kernel                                          ns/call     net ns net cycles
+baseline (a + b + z)                                4.4        4.4          9   (acc 7.83e+06)
+3 digamma + beta only                             158.8      154.4        324   (acc 1.79e+06)
+grad_reg_inc_beta double (+3 digamma, beta)       686.4      682.0       1432   (acc 120)
+grad_reg_inc_beta var, value+grad                9198.7     9194.2      19308   (acc 24.9)
+grad_reg_inc_beta fvar<double>                   1218.5     1214.0       2549   (acc 48.6)
+grad_reg_inc_beta fvar<fvar<double>>             3038.1     3033.7       6371   (acc 24.9)
+inc_beta_dda double (+2 digamma)                  494.6      490.1       1029   (acc -6.17e+03)
+
+## distribution level, N = 1000 observations, shared var shapes, value + reverse sweep
+beta_cdf                   a=5    b=5        692.6 ns/obs      1454 cycles/obs   (grad 0)
+beta_lcdf                  a=5    b=5        607.6 ns/obs      1276 cycles/obs   (grad -563.896)
+beta_lccdf                 a=5    b=5        608.1 ns/obs      1277 cycles/obs   (grad 292.746)
+beta_cdf                   a=50   b=50      1659.8 ns/obs      3486 cycles/obs   (grad 0)
+beta_lcdf                  a=50   b=50      1280.2 ns/obs      2688 cycles/obs   (grad -147.483)
+beta_lccdf                 a=50   b=50      1281.7 ns/obs      2691 cycles/obs   (grad 116.943)
+neg_binomial_cdf           a=5    b=0.3     1905.7 ns/obs      4002 cycles/obs   (grad 0)
+neg_binomial_lcdf          a=5    b=0.3      933.7 ns/obs      1961 cycles/obs   (grad -248.345)
+student_t_lcdf (nu = a)    a=3    b=1        792.2 ns/obs      1664 cycles/obs   (grad -165.096)
+
+## Level 1 and 2 spot checks: name a b y value d/da d/db
+SPOT inc_beta     0x1.2cp+9 0x1.2cp+9 0x1p-1 0x1p-1 -0x1.7980b81b09df7p-7 0x1.7980b81b09df7p-7   # (600, 600, 0.5) val 0.5 da -0.0115205 db 0.0115205
+SPOT beta_cdf     0x1.2cp+9 0x1.2cp+9 0x1p-1 0x1p-1 -0x1.7980b81b09df7p-7 0x1.7980b81b09df7p-7   # (600, 600, 0.5) val 0.5 da -0.0115205 db 0.0115205
+SPOT beta_lcdf    0x1.2cp+9 0x1.2cp+9 0x1p-1 -0x1.62e42fefa39efp-1 -0x1.7980b81b09df7p-6 0x1.7980b81b09df7p-6   # (600, 600, 0.5) val -0.693147 da -0.0230409 db 0.0230409
+SPOT beta_lccdf   0x1.2cp+9 0x1.2cp+9 0x1p-1 -0x1.62e42fefa39efp-1 0x1.7980b81b09df7p-6 -0x1.7980b81b09df7p-6   # (600, 600, 0.5) val -0.693147 da 0.0230409 db -0.0230409
+SPOT inc_beta     0x1.6p+8 0x1.27p+9 0x1.84189374bc6a8p-1 0x1p+0 -0x1.41bf22908ebb9p-457 0x1.b06dc1340866cp-457   # (352, 590, 0.758) val 1 da -3.37727e-138 db 4.53907e-138
+SPOT beta_cdf     0x1.6p+8 0x1.27p+9 0x1.84189374bc6a8p-1 0x1p+0 -0x1.41bf22908ebb9p-457 0x1.b06dc1340866cp-457   # (352, 590, 0.758) val 1 da -3.37727e-138 db 4.53907e-138
+SPOT beta_lcdf    0x1.6p+8 0x1.27p+9 0x1.84189374bc6a8p-1 0x0p+0 -0x1.41bf22908ebb9p-457 0x1.b06dc1340866cp-457   # (352, 590, 0.758) val 0 da -3.37727e-138 db 4.53907e-138
+SPOT beta_lccdf   0x1.6p+8 0x1.27p+9 0x1.84189374bc6a8p-1 -inf inf -inf   # (352, 590, 0.758) val -inf da inf db -inf
+SPOT inc_beta     0x1.251eb851eb852p+0 0x1.a82p+12 0x1.797cc39ffd60fp-13 0x1.4c839342e4182p-1 -0x1.8b7b91d33ab8ep-2 0x1.ea39084bc2e09p-15   # (1.145, 6786, 0.00018) val 0.649441 da -0.386214 db 5.84391e-05
+SPOT beta_cdf     0x1.251eb851eb852p+0 0x1.a82p+12 0x1.797cc39ffd60fp-13 0x1.4c839342e4182p-1 -0x1.8b7b91d33ab8fp-2 0x1.ea39084bc2e09p-15   # (1.145, 6786, 0.00018) val 0.649441 da -0.386214 db 5.84391e-05
+SPOT beta_lcdf    0x1.251eb851eb852p+0 0x1.a82p+12 0x1.797cc39ffd60fp-13 -0x1.ba008f82dace3p-2 -0x1.307aa9915290ap-1 0x1.796b3889c0007p-14   # (1.145, 6786, 0.00018) val -0.431643 da -0.594686 db 8.99837e-05
+SPOT beta_lccdf   0x1.251eb851eb852p+0 0x1.a82p+12 0x1.797cc39ffd60fp-13 -0x1.0c589e8d84496p+0 0x1.1a0996d6c2543p+0 -0x1.5d99e2212590dp-13   # (1.145, 6786, 0.00018) val -1.04823 da 1.10171 db -0.000166703
+SPOT inc_beta     0x1.bep+8 0x1.4p+2 0x1.851eb851eb852p-1 0x1.d49f25379fd25p-155 -0x1.f1d4ac49c8c8ep-157 0x1.75109ce35e527p-153   # (446, 5, 0.76) val 4.00805e-47 da -1.06447e-47 db 1.27631e-46
+SPOT beta_cdf     0x1.bep+8 0x1.4p+2 0x1.851eb851eb852p-1 0x1.d49f25379fd25p-155 -0x1.f1d4ac49c8c8ep-157 0x1.75109ce35e527p-153   # (446, 5, 0.76) val 4.00805e-47 da -1.06447e-47 db 1.27631e-46
+SPOT beta_lcdf    0x1.bep+8 0x1.4p+2 0x1.851eb851eb852p-1 -0x1.ab5530fc76bfp+6 -0x1.0ff4d8709da1cp-2 0x1.979912d7b5ee6p+1   # (446, 5, 0.76) val -106.833 da -0.265582 db 3.18436
+SPOT beta_lccdf   0x1.bep+8 0x1.4p+2 0x1.851eb851eb852p-1 0x0p+0 0x1.f1d4ac49c8c8ep-157 -0x1.75109ce35e527p-153   # (446, 5, 0.76) val 0 da 1.06447e-47 db -1.27631e-46
+SPOT inc_beta     0x1.4p+3 0x1p+0 0x1p-1 0x1p-10 -0x1.62e42fefa39fp-11 0x1.28f9bbd538e3ep-9   # (10, 1, 0.5) val 0.000976562 da -0.000676902 db 0.00226574
+SPOT beta_cdf     0x1.4p+3 0x1p+0 0x1p-1 0x1p-10 -0x1.62e42fefa39fp-11 0x1.28f9bbd538e3ep-9   # (10, 1, 0.5) val 0.000976562 da -0.000676902 db 0.00226574
+SPOT beta_lcdf    0x1.4p+3 0x1p+0 0x1p-1 -0x1.bb9d3beb8c86bp+2 -0x1.62e42fefa39fp-1 0x1.28f9bbd538e3ep+1   # (10, 1, 0.5) val -6.93147 da -0.693147 db 2.32012
+SPOT beta_lccdf   0x1.4p+3 0x1p+0 0x1p-1 -0x1.0020055655889p-10 0x1.633cff2f6f7aep-11 -0x1.29440cd86effap-9   # (10, 1, 0.5) val -0.00097704 da 0.000677563 db -0.00226796
+SPOT inc_beta     0x1p+1 0x1.8p+1 0x1p-2 0x1.0cp-2 -0x1.d30dc45dbe95p-3 0x1.b5f359ad0186cp-4   # (2, 3, 0.25) val 0.261719 da -0.228054 db 0.106922
+SPOT beta_cdf     0x1p+1 0x1.8p+1 0x1p-2 0x1.0cp-2 -0x1.d30dc45dbe95p-3 0x1.b5f359ad0186bp-4   # (2, 3, 0.25) val 0.261719 da -0.228054 db 0.106922
+SPOT beta_lcdf    0x1p+1 0x1.8p+1 0x1p-2 -0x1.572a03748a307p+0 -0x1.be2413744b104p-1 0x1.a257428e55848p-2   # (2, 3, 0.25) val -1.34048 da -0.871369 db 0.408536
+SPOT beta_lccdf   0x1p+1 0x1.8p+1 0x1p-2 -0x1.36b6776be1117p-2 0x1.3c4fc1f0ed6e6p-2 -0x1.2899f90209292p-3   # (2, 3, 0.25) val -0.30343 da 0.308898 db -0.144825
+SPOT inc_beta     0x1.388p+11 0x1p+1 0x1.ff7ced916872bp-1 0x1.25d32b44cbe96p-2 -0x1.ae1ff9788e6d2p-13 0x1.fcef3c073fadap-3   # (2500, 2, 0.999) val 0.286938 da -0.0002051 db 0.248503
+SPOT beta_cdf     0x1.388p+11 0x1p+1 0x1.ff7ced916872bp-1 0x1.25d32b44cbe96p-2 -0x1.ae1ff9788e6d2p-13 0x1.fcef3c073fadap-3   # (2500, 2, 0.999) val 0.286938 da -0.0002051 db 0.248503
+SPOT beta_lcdf    0x1.388p+11 0x1p+1 0x1.ff7ced916872bp-1 -0x1.3f9ce6979e521p+0 -0x1.76c0f59809b3cp-11 0x1.bb6b00c6bf72ap-1   # (2500, 2, 0.999) val -1.24849 da -0.000714786 db 0.866051
+SPOT beta_lccdf   0x1.388p+11 0x1p+1 0x1.ff7ced916872bp-1 -0x1.5a4dcccc4439fp-2 0x1.2d9ab2c0c8009p-12 -0x1.64dd9fb525af8p-2   # (2500, 2, 0.999) val -0.338187 da 0.000287632 db -0.348502
+SPOT inc_beta     0x1p+0 0x1.9p+6 0x1.47ae147ae147bp-7 0x1.449768b1e805bp-1 -0x1.b71dac43a842dp-2 0x1.e22e4c620a1fdp-9   # (1, 100, 0.01) val 0.633968 da -0.428824 db 0.00367875
+SPOT beta_cdf     0x1p+0 0x1.9p+6 0x1.47ae147ae147bp-7 0x1.449768b1e805bp-1 -0x1.b71dac43a842dp-2 0x1.e22e4c620a1fdp-9   # (1, 100, 0.01) val 0.633968 da -0.428824 db 0.00367875
+SPOT beta_lcdf    0x1p+0 0x1.9p+6 0x1.47ae147ae147bp-7 -0x1.d2b20d2ac5875p-2 -0x1.5a52d6baffa82p-1 0x1.7c49c82b3bc04p-8   # (1, 100, 0.01) val -0.455757 da -0.676413 db 0.00580274
+SPOT beta_lccdf   0x1p+0 0x1.9p+6 0x1.47ae147ae147bp-7 -0x1.0149e18c75e2fp+0 0x1.2bea82e04d07bp+0 -0x1.495453e6fd86ep-7   # (1, 100, 0.01) val -1.00503 da 1.17155 db -0.0100503
+
+# done
+
+######## dev, round 2 ########
+# probe_cmp_beta_speed; nominal clock 2.10 GHz; BLOCK=1024
+
+## function level, ns per call
+kernel                                          ns/call     net ns net cycles
+baseline (a + b + z)                                2.4        2.4          5   (acc 7.83e+06)
+3 digamma + beta only                             159.5      157.1        330   (acc 1.79e+06)
+grad_reg_inc_beta double (+3 digamma, beta)     36836.0    36833.6      77351   (acc 120)
+grad_reg_inc_beta var, value+grad              183957.2   183954.8     386305   (acc 24.9)
+grad_reg_inc_beta fvar<double>                 118702.1   118699.7     249269   (acc 48.6)
+grad_reg_inc_beta fvar<fvar<double>>           335547.9   335545.5     704646   (acc 24.9)
+inc_beta_dda double (+2 digamma)                 1398.4     1396.0       2932   (acc -6.17e+03)
+
+## distribution level, N = 1000 observations, shared var shapes, value + reverse sweep
+beta_cdf                   a=5    b=5       1045.4 ns/obs      2195 cycles/obs   (grad 0)
+beta_lcdf                  a=5    b=5      34092.4 ns/obs     71594 cycles/obs   (grad -563.896)
+beta_lccdf                 a=5    b=5      34084.6 ns/obs     71578 cycles/obs   (grad 292.746)
+beta_cdf                   a=50   b=50      3564.0 ns/obs      7484 cycles/obs   (grad 0)
+beta_lcdf                  a=50   b=50     27750.9 ns/obs     58277 cycles/obs   (grad -147.483)
+beta_lccdf                 a=50   b=50     27760.9 ns/obs     58298 cycles/obs   (grad 116.943)
+neg_binomial_cdf           a=5    b=0.3     1998.4 ns/obs      4197 cycles/obs   (grad 0)
+neg_binomial_lcdf          a=5    b=0.3    10257.0 ns/obs     21540 cycles/obs   (grad -248.345)
+student_t_lcdf (nu = a)    a=3    b=1       6198.2 ns/obs     13016 cycles/obs   (grad -165.096)
+
+## Level 1 and 2 spot checks: name a b y value d/da d/db
+SPOT inc_beta     0x1.2cp+9 0x1.2cp+9 0x1p-1 0x1p-1 -nan -nan   # (600, 600, 0.5) val 0.5 da -nan db -nan
+SPOT beta_cdf     0x1.2cp+9 0x1.2cp+9 0x1p-1 0x1p-1 -0x1.7980b8167faep-7 0x1.7980b815831p-7   # (600, 600, 0.5) val 0.5 da -0.0115205 db 0.0115205
+SPOT beta_lcdf    0x1.2cp+9 0x1.2cp+9 0x1p-1 -0x1.62e42fefa39efp-1 -nan -nan   # (600, 600, 0.5) val -0.693147 da -nan db -nan
+SPOT beta_lccdf   0x1.2cp+9 0x1.2cp+9 0x1p-1 -0x1.62e42fefa39efp-1 -nan -nan   # (600, 600, 0.5) val -0.693147 da -nan db -nan
+SPOT inc_beta     0x1.6p+8 0x1.27p+9 0x1.84189374bc6a8p-1 0x1p+0 0x1.6923d66ce4caep-1 -0x1.e6b766f55e425p-1   # (352, 590, 0.758) val 1 da 0.705352 db -0.950618
+SPOT beta_cdf     0x1.6p+8 0x1.27p+9 0x1.84189374bc6a8p-1 0x1p+0 -0x1.41bf229082ac5p-457 0x1.b06dc1340173dp-457   # (352, 590, 0.758) val 1 da -3.37727e-138 db 4.53907e-138
+SPOT beta_lcdf    0x1.6p+8 0x1.27p+9 0x1.84189374bc6a8p-1 0x0p+0 0x1.6923d66ce4caep-1 -0x1.e6b766f55e425p-1   # (352, 590, 0.758) val 0 da 0.705352 db -0.950618
+SPOT beta_lccdf   0x1.6p+8 0x1.27p+9 0x1.84189374bc6a8p-1 -inf -inf inf   # (352, 590, 0.758) val -inf da -inf db inf
+SPOT inc_beta     0x1.251eb851eb852p+0 0x1.a82p+12 0x1.797cc39ffd60fp-13 0x1.4c839342e4182p-1 -0x1.8b7b91d33da2bp-2 0x1.ea39084bca84bp-15   # (1.145, 6786, 0.00018) val 0.649441 da -0.386214 db 5.84391e-05
+SPOT beta_cdf     0x1.251eb851eb852p+0 0x1.a82p+12 0x1.797cc39ffd60fp-13 0x1.4c839342e4182p-1 -0x1.9f261f73931c1p-3 -0x1.ebfac62404a8p-18   # (1.145, 6786, 0.00018) val 0.649441 da -0.202709 db -7.33107e-06
+SPOT beta_lcdf    0x1.251eb851eb852p+0 0x1.a82p+12 0x1.797cc39ffd60fp-13 -0x1.ba008f82dace3p-2 -0x1.307aa99154cedp-1 0x1.796b3889c5e27p-14   # (1.145, 6786, 0.00018) val -0.431643 da -0.594686 db 8.99837e-05
+SPOT beta_lccdf   0x1.251eb851eb852p+0 0x1.a82p+12 0x1.797cc39ffd60fp-13 -0x1.0c589e8d84496p+0 0x1.1a0996d6c4681p+0 -0x1.5d99e2212b03dp-13   # (1.145, 6786, 0.00018) val -1.04823 da 1.10171 db -0.000166703
+SPOT inc_beta     0x1.bep+8 0x1.4p+2 0x1.851eb851eb852p-1 0x1.d49f25379fd25p-155 -0x1.f1d4ac49c8dafp-157 0x1.75109ce35e60ap-153   # (446, 5, 0.76) val 4.00805e-47 da -1.06447e-47 db 1.27631e-46
+SPOT beta_cdf     0x1.bep+8 0x1.4p+2 0x1.851eb851eb852p-1 0x1.d49f25379fd25p-155 -0x1p-49 0x1.4p-50   # (446, 5, 0.76) val 4.00805e-47 da -1.77636e-15 db 1.11022e-15
+SPOT beta_lcdf    0x1.bep+8 0x1.4p+2 0x1.851eb851eb852p-1 -0x1.ab5530fc76bfp+6 -0x1.0ff4d8709dabap-2 0x1.979912d7b5fdep+1   # (446, 5, 0.76) val -106.833 da -0.265582 db 3.18436
+SPOT beta_lccdf   0x1.bep+8 0x1.4p+2 0x1.851eb851eb852p-1 0x0p+0 0x1.f1d4ac49c8dafp-157 -0x1.75109ce35e60ap-153   # (446, 5, 0.76) val 0 da 1.06447e-47 db -1.27631e-46
+SPOT inc_beta     0x1.4p+3 0x1p+0 0x1p-1 0x1p-10 -0x1.62e42fefa39eep-11 0x1.28f9bbd538e38p-9   # (10, 1, 0.5) val 0.000976562 da -0.000676902 db 0.00226574
+SPOT beta_cdf     0x1.4p+3 0x1p+0 0x1p-1 0x1p-10 -0x1.62e42fefa39efp-11 0x1.28f9bbd50cb0cp-9   # (10, 1, 0.5) val 0.000976562 da -0.000676902 db 0.00226574
+SPOT beta_lcdf    0x1.4p+3 0x1p+0 0x1p-1 -0x1.bb9d3beb8c86bp+2 -0x1.62e42fefa39eep-1 0x1.28f9bbd538e38p+1   # (10, 1, 0.5) val -6.93147 da -0.693147 db 2.32012
+SPOT beta_lccdf   0x1.4p+3 0x1p+0 0x1p-1 -0x1.0020055655889p-10 0x1.633cff2f6f7acp-11 -0x1.29440cd86eff4p-9   # (10, 1, 0.5) val -0.00097704 da 0.000677563 db -0.00226796
+SPOT inc_beta     0x1p+1 0x1.8p+1 0x1p-2 0x1.0cp-2 -0x1.d30dc45dbe94fp-3 0x1.b5f359ad01862p-4   # (2, 3, 0.25) val 0.261719 da -0.228054 db 0.106922
+SPOT beta_cdf     0x1p+1 0x1.8p+1 0x1p-2 0x1.0cp-2 -0x1.d30dc45d4133dp-3 0x1.b5f359a9720f2p-4   # (2, 3, 0.25) val 0.261719 da -0.228054 db 0.106922
+SPOT beta_lcdf    0x1p+1 0x1.8p+1 0x1p-2 -0x1.572a03748a307p+0 -0x1.be2413744b103p-1 0x1.a257428e5583fp-2   # (2, 3, 0.25) val -1.34048 da -0.871369 db 0.408536
+SPOT beta_lccdf   0x1p+1 0x1.8p+1 0x1p-2 -0x1.36b6776be1117p-2 0x1.3c4fc1f0ed6e5p-2 -0x1.2899f9020928bp-3   # (2, 3, 0.25) val -0.30343 da 0.308898 db -0.144825
+SPOT inc_beta     0x1.388p+11 0x1p+1 0x1.ff7ced916872bp-1 0x1.25d32b44cbe96p-2 -0x1.ae1ff9789fd54p-13 0x1.fcef3c074008p-3   # (2500, 2, 0.999) val 0.286938 da -0.0002051 db 0.248503
+SPOT beta_cdf     0x1.388p+11 0x1p+1 0x1.ff7ced916872bp-1 0x1.25d32b44cbe96p-2 -0x1.7afab8c762f48p-13 0x1.e51a86781b575p-3   # (2500, 2, 0.999) val 0.286938 da -0.000180711 db 0.236867
+SPOT beta_lcdf    0x1.388p+11 0x1p+1 0x1.ff7ced916872bp-1 -0x1.3f9ce6979e521p+0 -0x1.76c0f59818de3p-11 0x1.bb6b00c6bfc16p-1   # (2500, 2, 0.999) val -1.24849 da -0.000714786 db 0.866051
+SPOT beta_lccdf   0x1.388p+11 0x1p+1 0x1.ff7ced916872bp-1 -0x1.5a4dcccc4439fp-2 0x1.2d9ab2c0d4353p-12 -0x1.64dd9fb525eeep-2   # (2500, 2, 0.999) val -0.338187 da 0.000287632 db -0.348502
+SPOT inc_beta     0x1p+0 0x1.9p+6 0x1.47ae147ae147bp-7 0x1.449768b1e805bp-1 -0x1.b71dac43a83fcp-2 0x1.e22e4c6209fc6p-9   # (1, 100, 0.01) val 0.633968 da -0.428824 db 0.00367875
+SPOT beta_cdf     0x1p+0 0x1.9p+6 0x1.47ae147ae147bp-7 0x1.449768b1e805bp-1 -0x1.b71d0a3828e7p-2 0x1.e22a6e06c8a5dp-9   # (1, 100, 0.01) val 0.633968 da -0.428822 db 0.00367863
+SPOT beta_lcdf    0x1p+0 0x1.9p+6 0x1.47ae147ae147bp-7 -0x1.d2b20d2ac5875p-2 -0x1.5a52d6baffa5cp-1 0x1.7c49c82b3ba45p-8   # (1, 100, 0.01) val -0.455757 da -0.676413 db 0.00580274
+SPOT beta_lccdf   0x1p+0 0x1.9p+6 0x1.47ae147ae147bp-7 -0x1.0149e18c75e2fp+0 0x1.2bea82e04d059p+0 -0x1.495453e6fd6eap-7   # (1, 100, 0.01) val -1.00503 da 1.17155 db -0.0100503
+
+# done
+
+######## pr, round 2 ########
+# probe_cmp_beta_speed; nominal clock 2.10 GHz; BLOCK=1024
+
+## function level, ns per call
+kernel                                          ns/call     net ns net cycles
+baseline (a + b + z)                                2.4        2.4          5   (acc 7.83e+06)
+3 digamma + beta only                             159.4      157.0        330   (acc 1.79e+06)
+grad_reg_inc_beta double (+3 digamma, beta)       688.0      685.6       1440   (acc 120)
+grad_reg_inc_beta var, value+grad                9244.4     9242.0      19408   (acc 24.9)
+grad_reg_inc_beta fvar<double>                   1218.5     1216.1       2554   (acc 48.6)
+grad_reg_inc_beta fvar<fvar<double>>             3039.2     3036.8       6377   (acc 24.9)
+inc_beta_dda double (+2 digamma)                  497.0      494.6       1039   (acc -6.17e+03)
+
+## distribution level, N = 1000 observations, shared var shapes, value + reverse sweep
+beta_cdf                   a=5    b=5        693.4 ns/obs      1456 cycles/obs   (grad 0)
+beta_lcdf                  a=5    b=5        606.4 ns/obs      1274 cycles/obs   (grad -563.896)
+beta_lccdf                 a=5    b=5        607.0 ns/obs      1275 cycles/obs   (grad 292.746)
+beta_cdf                   a=50   b=50      1658.3 ns/obs      3482 cycles/obs   (grad 0)
+beta_lcdf                  a=50   b=50      1278.6 ns/obs      2685 cycles/obs   (grad -147.483)
+beta_lccdf                 a=50   b=50      1282.2 ns/obs      2693 cycles/obs   (grad 116.943)
+neg_binomial_cdf           a=5    b=0.3     1908.1 ns/obs      4007 cycles/obs   (grad 0)
+neg_binomial_lcdf          a=5    b=0.3      928.0 ns/obs      1949 cycles/obs   (grad -248.345)
+student_t_lcdf (nu = a)    a=3    b=1        790.3 ns/obs      1660 cycles/obs   (grad -165.096)
+
+## Level 1 and 2 spot checks: name a b y value d/da d/db
+SPOT inc_beta     0x1.2cp+9 0x1.2cp+9 0x1p-1 0x1p-1 -0x1.7980b81b09df7p-7 0x1.7980b81b09df7p-7   # (600, 600, 0.5) val 0.5 da -0.0115205 db 0.0115205
+SPOT beta_cdf     0x1.2cp+9 0x1.2cp+9 0x1p-1 0x1p-1 -0x1.7980b81b09df7p-7 0x1.7980b81b09df7p-7   # (600, 600, 0.5) val 0.5 da -0.0115205 db 0.0115205
+SPOT beta_lcdf    0x1.2cp+9 0x1.2cp+9 0x1p-1 -0x1.62e42fefa39efp-1 -0x1.7980b81b09df7p-6 0x1.7980b81b09df7p-6   # (600, 600, 0.5) val -0.693147 da -0.0230409 db 0.0230409
+SPOT beta_lccdf   0x1.2cp+9 0x1.2cp+9 0x1p-1 -0x1.62e42fefa39efp-1 0x1.7980b81b09df7p-6 -0x1.7980b81b09df7p-6   # (600, 600, 0.5) val -0.693147 da 0.0230409 db -0.0230409
+SPOT inc_beta     0x1.6p+8 0x1.27p+9 0x1.84189374bc6a8p-1 0x1p+0 -0x1.41bf22908ebb9p-457 0x1.b06dc1340866cp-457   # (352, 590, 0.758) val 1 da -3.37727e-138 db 4.53907e-138
+SPOT beta_cdf     0x1.6p+8 0x1.27p+9 0x1.84189374bc6a8p-1 0x1p+0 -0x1.41bf22908ebb9p-457 0x1.b06dc1340866cp-457   # (352, 590, 0.758) val 1 da -3.37727e-138 db 4.53907e-138
+SPOT beta_lcdf    0x1.6p+8 0x1.27p+9 0x1.84189374bc6a8p-1 0x0p+0 -0x1.41bf22908ebb9p-457 0x1.b06dc1340866cp-457   # (352, 590, 0.758) val 0 da -3.37727e-138 db 4.53907e-138
+SPOT beta_lccdf   0x1.6p+8 0x1.27p+9 0x1.84189374bc6a8p-1 -inf inf -inf   # (352, 590, 0.758) val -inf da inf db -inf
+SPOT inc_beta     0x1.251eb851eb852p+0 0x1.a82p+12 0x1.797cc39ffd60fp-13 0x1.4c839342e4182p-1 -0x1.8b7b91d33ab8ep-2 0x1.ea39084bc2e09p-15   # (1.145, 6786, 0.00018) val 0.649441 da -0.386214 db 5.84391e-05
+SPOT beta_cdf     0x1.251eb851eb852p+0 0x1.a82p+12 0x1.797cc39ffd60fp-13 0x1.4c839342e4182p-1 -0x1.8b7b91d33ab8fp-2 0x1.ea39084bc2e09p-15   # (1.145, 6786, 0.00018) val 0.649441 da -0.386214 db 5.84391e-05
+SPOT beta_lcdf    0x1.251eb851eb852p+0 0x1.a82p+12 0x1.797cc39ffd60fp-13 -0x1.ba008f82dace3p-2 -0x1.307aa9915290ap-1 0x1.796b3889c0007p-14   # (1.145, 6786, 0.00018) val -0.431643 da -0.594686 db 8.99837e-05
+SPOT beta_lccdf   0x1.251eb851eb852p+0 0x1.a82p+12 0x1.797cc39ffd60fp-13 -0x1.0c589e8d84496p+0 0x1.1a0996d6c2543p+0 -0x1.5d99e2212590dp-13   # (1.145, 6786, 0.00018) val -1.04823 da 1.10171 db -0.000166703
+SPOT inc_beta     0x1.bep+8 0x1.4p+2 0x1.851eb851eb852p-1 0x1.d49f25379fd25p-155 -0x1.f1d4ac49c8c8ep-157 0x1.75109ce35e527p-153   # (446, 5, 0.76) val 4.00805e-47 da -1.06447e-47 db 1.27631e-46
+SPOT beta_cdf     0x1.bep+8 0x1.4p+2 0x1.851eb851eb852p-1 0x1.d49f25379fd25p-155 -0x1.f1d4ac49c8c8ep-157 0x1.75109ce35e527p-153   # (446, 5, 0.76) val 4.00805e-47 da -1.06447e-47 db 1.27631e-46
+SPOT beta_lcdf    0x1.bep+8 0x1.4p+2 0x1.851eb851eb852p-1 -0x1.ab5530fc76bfp+6 -0x1.0ff4d8709da1cp-2 0x1.979912d7b5ee6p+1   # (446, 5, 0.76) val -106.833 da -0.265582 db 3.18436
+SPOT beta_lccdf   0x1.bep+8 0x1.4p+2 0x1.851eb851eb852p-1 0x0p+0 0x1.f1d4ac49c8c8ep-157 -0x1.75109ce35e527p-153   # (446, 5, 0.76) val 0 da 1.06447e-47 db -1.27631e-46
+SPOT inc_beta     0x1.4p+3 0x1p+0 0x1p-1 0x1p-10 -0x1.62e42fefa39fp-11 0x1.28f9bbd538e3ep-9   # (10, 1, 0.5) val 0.000976562 da -0.000676902 db 0.00226574
+SPOT beta_cdf     0x1.4p+3 0x1p+0 0x1p-1 0x1p-10 -0x1.62e42fefa39fp-11 0x1.28f9bbd538e3ep-9   # (10, 1, 0.5) val 0.000976562 da -0.000676902 db 0.00226574
+SPOT beta_lcdf    0x1.4p+3 0x1p+0 0x1p-1 -0x1.bb9d3beb8c86bp+2 -0x1.62e42fefa39fp-1 0x1.28f9bbd538e3ep+1   # (10, 1, 0.5) val -6.93147 da -0.693147 db 2.32012
+SPOT beta_lccdf   0x1.4p+3 0x1p+0 0x1p-1 -0x1.0020055655889p-10 0x1.633cff2f6f7aep-11 -0x1.29440cd86effap-9   # (10, 1, 0.5) val -0.00097704 da 0.000677563 db -0.00226796
+SPOT inc_beta     0x1p+1 0x1.8p+1 0x1p-2 0x1.0cp-2 -0x1.d30dc45dbe95p-3 0x1.b5f359ad0186cp-4   # (2, 3, 0.25) val 0.261719 da -0.228054 db 0.106922
+SPOT beta_cdf     0x1p+1 0x1.8p+1 0x1p-2 0x1.0cp-2 -0x1.d30dc45dbe95p-3 0x1.b5f359ad0186bp-4   # (2, 3, 0.25) val 0.261719 da -0.228054 db 0.106922
+SPOT beta_lcdf    0x1p+1 0x1.8p+1 0x1p-2 -0x1.572a03748a307p+0 -0x1.be2413744b104p-1 0x1.a257428e55848p-2   # (2, 3, 0.25) val -1.34048 da -0.871369 db 0.408536
+SPOT beta_lccdf   0x1p+1 0x1.8p+1 0x1p-2 -0x1.36b6776be1117p-2 0x1.3c4fc1f0ed6e6p-2 -0x1.2899f90209292p-3   # (2, 3, 0.25) val -0.30343 da 0.308898 db -0.144825
+SPOT inc_beta     0x1.388p+11 0x1p+1 0x1.ff7ced916872bp-1 0x1.25d32b44cbe96p-2 -0x1.ae1ff9788e6d2p-13 0x1.fcef3c073fadap-3   # (2500, 2, 0.999) val 0.286938 da -0.0002051 db 0.248503
+SPOT beta_cdf     0x1.388p+11 0x1p+1 0x1.ff7ced916872bp-1 0x1.25d32b44cbe96p-2 -0x1.ae1ff9788e6d2p-13 0x1.fcef3c073fadap-3   # (2500, 2, 0.999) val 0.286938 da -0.0002051 db 0.248503
+SPOT beta_lcdf    0x1.388p+11 0x1p+1 0x1.ff7ced916872bp-1 -0x1.3f9ce6979e521p+0 -0x1.76c0f59809b3cp-11 0x1.bb6b00c6bf72ap-1   # (2500, 2, 0.999) val -1.24849 da -0.000714786 db 0.866051
+SPOT beta_lccdf   0x1.388p+11 0x1p+1 0x1.ff7ced916872bp-1 -0x1.5a4dcccc4439fp-2 0x1.2d9ab2c0c8009p-12 -0x1.64dd9fb525af8p-2   # (2500, 2, 0.999) val -0.338187 da 0.000287632 db -0.348502
+SPOT inc_beta     0x1p+0 0x1.9p+6 0x1.47ae147ae147bp-7 0x1.449768b1e805bp-1 -0x1.b71dac43a842dp-2 0x1.e22e4c620a1fdp-9   # (1, 100, 0.01) val 0.633968 da -0.428824 db 0.00367875
+SPOT beta_cdf     0x1p+0 0x1.9p+6 0x1.47ae147ae147bp-7 0x1.449768b1e805bp-1 -0x1.b71dac43a842dp-2 0x1.e22e4c620a1fdp-9   # (1, 100, 0.01) val 0.633968 da -0.428824 db 0.00367875
+SPOT beta_lcdf    0x1p+0 0x1.9p+6 0x1.47ae147ae147bp-7 -0x1.d2b20d2ac5875p-2 -0x1.5a52d6baffa82p-1 0x1.7c49c82b3bc04p-8   # (1, 100, 0.01) val -0.455757 da -0.676413 db 0.00580274
+SPOT beta_lccdf   0x1p+0 0x1.9p+6 0x1.47ae147ae147bp-7 -0x1.0149e18c75e2fp+0 0x1.2bea82e04d07bp+0 -0x1.495453e6fd86ep-7   # (1, 100, 0.01) val -1.00503 da 1.17155 db -0.0100503
+
+# done
+== done: 2026-10-28T22:44:36+02:00

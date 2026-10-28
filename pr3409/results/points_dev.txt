@@ -1,0 +1,39 @@
+## roots
+root9 (600, 600, 0.5) g1                             -nan
+root9 (352, 590, 0.758) g1                            0.70535154418248225
+root9 (1, 1, 1) g1                                    0
+root9 (600, 600, 0.5) g2                             -nan
+root9 (352, 590, 0.758) g2                           -0.95061799760072019
+root9 (1, 1, 1) g2                                   -inf
+dda (1.145, 6786, 1.8e-4)                            -0.20270943232971031
+ddb (1.145, 6786, 1.8e-4)                            -7.3310671133858816e-06
+dda (446, 5, 0.76)                                   -1.7763568394002505e-15
+ddb (446, 5, 0.76)                                    1.1102230246251565e-15
+dda (1.5, 12500, 0.001)                               1.8226240337764827
+ddb (1.5, 12500, 0.001)                              -0.00088048922293390845
+dda (600, 600, 0.5)                                  -0.01152047146478935
+ddb (600, 600, 0.5)                                   0.011520471462994397
+dda (8326, 11470, 0.246)                             THROW inc_beta_ddb: did not converge within 100000 iterations 
+ddb (8326, 11470, 0.246)                             THROW inc_beta_dda: did not converge within 10000 iterations 
+ddz (1.05, 0.35, 1.0)                                THROW Error in function ibeta_derivative<long double>(long double,long doubl
+ddz (0.5, 2.0, 0.0)                                  THROW Error in function ibeta_derivative<long double>(long double,long doubl
+## distributions, var arguments
+beta_lcdf(0.5 | 600, 600) d/dy                       -nan
+beta_lcdf(0.758 | 352, 590) d/dy                      0
+beta_cdf(1.8e-4 | 1.145, 6786) d/dy                   2203.3762861363084
+beta_cdf(0.76 | 446, 5) d/dy                          2.2859227018828807e-44
+inc_beta(600, 600, 0.5) d/dy                         -nan
+beta_lcdf(0.5 | 600, 600) d/dalpha                   -nan
+beta_lcdf(0.758 | 352, 590) d/dalpha                  0.70535154418248225
+beta_cdf(1.8e-4 | 1.145, 6786) d/dalpha              -0.20270943232971031
+beta_cdf(0.76 | 446, 5) d/dalpha                     -1.7763568394002505e-15
+inc_beta(600, 600, 0.5) d/dalpha                     -nan
+beta_lcdf(0.5 | 600, 600) d/dbeta                    -nan
+beta_lcdf(0.758 | 352, 590) d/dbeta                  -0.95061799760072019
+beta_cdf(1.8e-4 | 1.145, 6786) d/dbeta               -7.3310671133858816e-06
+beta_cdf(0.76 | 446, 5) d/dbeta                       1.1102230246251565e-15
+inc_beta(600, 600, 0.5) d/dbeta                      -nan
+neg_binomial_lcdf(132 | 313, 0.068) d/dalpha          0
+neg_binomial_lcdf(132 | 313, 0.068) d/dbeta          -nan
+beta_cdf(0.76 | 446, 5) value                         4.0080494067773674e-47
+neg_binomial_lcdf(132 | 313, 0.068) value            -603.30155298940531

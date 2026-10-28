@@ -18,6 +18,7 @@ from another one; copy a shared script instead.
 | directory | pull request | topic |
 |---|---|---|
 | `pr3408/` | stan-dev/math#3408 | incomplete gamma gradient roots, 18 cdfs in log space |
+| `pr3409/` | stan-dev/math#3409 | incomplete beta gradient roots (part 1 of 3) |
 
 ## Conventions for a PR directory
 

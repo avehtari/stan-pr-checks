@@ -1,0 +1,1 @@
+# points 18000  throws: dda 0  ddb 0  root9 0  beta 0
