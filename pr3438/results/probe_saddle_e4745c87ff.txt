@@ -1,0 +1,59 @@
+C, start (0.01, 3), solver 3, tolerance 1e-10, 100 steps
+  laplace_marginal_density_est: lmd -nan, solver 3
+    theta (1.80065e-06, 5.92318e-09), |grad log p(theta | y)| 1.78e-07
+    W (-0.43133, 100), eigenvalues of K^-1 + W (-0.0990923, 101.334)
+    det(B) -30.1244, permutation sign +1, LU diagonal (-0.725321, 41.5325)
+  laplace_marginal_tol: -nan
+C, start (0.3, 3), solver 3, tolerance 1e-10, 100 steps
+  laplace_marginal_density_est: lmd -10.30018751, solver 3
+    theta (2.93847, 0.00966601), |grad log p(theta | y)| 5.08e-10
+    W (19.5469, 100), eigenvalues of K^-1 + W (19.8789, 101.335)
+    det(B) 6043.27, permutation sign +1, LU diagonal (79.1877, 76.3157)
+  laplace_marginal_tol: -10.30018751
+D, start (0, 0), solver 3, tolerance 1e-10, 100 steps
+  laplace_marginal_density_est: lmd -4.449184855, solver 3
+    theta (0, 0), |grad log p(theta | y)| 0
+    W (-5.55556, 100), eigenvalues of K^-1 + W (-3.27692, 100.579)
+    det(B) -576.778, permutation sign -1, LU diagonal (8.33333, 69.2133)
+  laplace_marginal_tol: -4.449184855
+D, start (0.01, 0.01), solver 3, tolerance 1e-10, 100 steps
+  laplace_marginal_density_est: lmd -nan, solver 3
+    theta (-0.350384, 0.00298623), |grad log p(theta | y)| 4.29e-12
+    W (6.85933, 100), eigenvalues of K^-1 + W (9.13701, 100.579)
+    det(B) 1608.24, permutation sign -1, LU diagonal (-10.289, 156.307)
+    error vs mpmath: value nan, mean (4.69e-13, 4.25e-15)
+  laplace_marginal_tol: -nan
+D, start (0.05, 1), solver 3, tolerance 1e-10, 100 steps
+  laplace_marginal_density_est: lmd -nan, solver 3
+    theta (-0.350367, 0.00298608), |grad log p(theta | y)| 0.000154
+    W (6.85763, 100), eigenvalues of K^-1 + W (9.13531, 100.579)
+    det(B) 1607.94, permutation sign -1, LU diagonal (-10.2864, 156.317)
+    error vs mpmath: value nan, mean (1.69e-05, 1.44e-07)
+  laplace_marginal_tol: -nan
+D, start (0, 0), solver 3, tolerance 1e-12, 1000 steps
+  laplace_marginal_density_est: lmd -4.449184855, solver 3
+    theta (0, 0), |grad log p(theta | y)| 0
+    W (-5.55556, 100), eigenvalues of K^-1 + W (-3.27692, 100.579)
+    det(B) -576.778, permutation sign -1, LU diagonal (8.33333, 69.2133)
+  laplace_marginal_tol: -4.449184855
+D, start (-0.3, 0), solver 3, tolerance 1e-12, 1000 steps
+  laplace_marginal_density_est: lmd -nan, solver 3
+    theta (-0.350384, 0.00298623), |grad log p(theta | y)| 6.31e-14
+    W (6.85933, 100), eigenvalues of K^-1 + W (9.13701, 100.579)
+    det(B) 1608.24, permutation sign -1, LU diagonal (-10.289, 156.307)
+    error vs mpmath: value nan, mean (3.33e-16, 6.3e-16)
+  laplace_marginal_tol: -nan
+D, start (0.3, 0), solver 3, tolerance 1e-12, 1000 steps
+  laplace_marginal_density_est: lmd -nan, solver 3
+    theta (0.350384, -0.00298623), |grad log p(theta | y)| 6.31e-14
+    W (6.85933, 100), eigenvalues of K^-1 + W (9.13701, 100.579)
+    det(B) 1608.24, permutation sign -1, LU diagonal (-10.289, 156.307)
+    error vs mpmath: value nan, mean (3.33e-16, 6.3e-16)
+  laplace_marginal_tol: -nan
+D, start (0.01, 0.01), solver 3, tolerance 1e-12, 1000 steps
+  laplace_marginal_density_est: lmd -nan, solver 3
+    theta (-0.350384, 0.00298623), |grad log p(theta | y)| 4.29e-12
+    W (6.85933, 100), eigenvalues of K^-1 + W (9.13701, 100.579)
+    det(B) 1608.24, permutation sign -1, LU diagonal (-10.289, 156.307)
+    error vs mpmath: value nan, mean (4.69e-13, 4.25e-15)
+  laplace_marginal_tol: -nan

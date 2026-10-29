@@ -20,6 +20,7 @@ from another one; copy a shared script instead.
 | `pr3408/` | stan-dev/math#3408 | incomplete gamma gradient roots, 18 cdfs in log space |
 | `pr3409/` | stan-dev/math#3409 | incomplete beta gradient roots (part 1 of 3) |
 | `pr3434/` | stan-dev/math#3434 | lgamma, lbeta, digamma differences at large shapes |
+| `pr3438/` | stan-dev/math#3438 | Laplace latent mean, solver-3 log determinant |
 | `pr3442/` | stan-dev/math#3442 | Wiener functions: underflow, gradients, `hcubature` |
 
 ## Conventions for a PR directory
