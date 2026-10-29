@@ -12,7 +12,7 @@ commands that measure it, the expected output, and the measured commits.
 
 Last run: 2026-10-28, on a laptop (12 cores, Ubuntu 22.04, g++ 11.4.0,
 `-O2`, Python 3.10.12, mpmath 1.3.0).  The speed benchmarks ran on CSC
-Roihu (job 2625261, §"Speed").  The swap scripts were not run again
+Roihu (job 2625261, §"Speed"), the swap tests on Triton on 2026-10-29
 (§"Swap tests").
 
 ## Commits
@@ -20,7 +20,8 @@ Roihu (job 2625261, §"Speed").  The swap scripts were not run again
 | name in this file | commit | what |
 |---|---|---|
 | develop | `510d263078` | merge base of the merged head (develop of 2026-10-28) |
-| PR | `64407093ba` | PR head after the merge of develop (2026-10-28) |
+| PR | `64407093ba` | PR head after the merge of develop (2026-10-28); the probes ran on its tree |
+| PR head | `5005dcaa82` | `64407093ba` with unused includes removed and comments changed; the swap tests ran on its tree |
 | old head | `c962588c6d` | PR head that stevieb-bot checked (merge base `d12f488749`) |
 | S6 pair | `0377416157`, `1c8afb741a` | parent and commit of the `log(mu + phi)` change |
 
@@ -40,8 +41,9 @@ Roihu (job 2625261, §"Speed").  The swap scripts were not run again
 | `bnb_grid/` | `beta_neg_binomial_cdf` on a grid of 2 352 points |
 | `lbr_select/` | `log_beta_ratio` without the selection of its form |
 | `speed/` | speed benchmarks and their job scripts |
-| `swap/` | job scripts of the swap tests (not run again) |
-| `results/` | the outputs of the run of 2026-10-28 |
+| `review_rows/` | the probes behind the test rows added after the review |
+| `swap/` | job scripts of the swap tests before the merge of develop |
+| `results/` | the outputs of the runs of 2026-10-28 and 2026-10-29 |
 
 All commands run from this directory (`pr3434/`).  New outputs go to
 `out/`, which git does not track; compare them with `results/`.
@@ -485,14 +487,41 @@ The older runs (develop `d12f488749`):
 
 The job scripts take the tree paths from `TREE`, `SM`, `LIB` and `TBB`.
 
-## Swap tests (not run again)
+## Swap tests
 
-`swap/run_bb_swap.sh` (CPU, the 23 develop headers; Triton jobs 20812673,
-20814979, 20823134), `swap/run_nb_fix.sh` (the negative binomial review
-fixes; jobs 20916196, 20976802), `swap/run_ocl.sh` and
-`swap/run_nb_ocl.sh` (OpenCL on a V100; jobs 20823167, 20916534,
-20976804).  They are the scripts of the runs before the merge of
-`510d263078` and were not adapted to it.
+Run of 2026-10-29 on the tree of `5005dcaa82` against develop
+`510d263078`, Triton, CPU builds with g++ 14.3.0 on batch nodes, OpenCL
+built on a CPU node and run on a V100.  Output (the `RESULT` lines, the
+swapped files and the develop failure lines): `results/swap_20261029.txt`.
+
+Procedure: deploy develop plus the branch diff, run the suites, replace
+the swapped files with their develop versions (all at once), build and
+run the same suites again, restore the branch files, and run them a third
+time.  Files that develop does not have stay in the tree.
+
+- CPU (jobs 21277331, 21277408): the 24 changed non-OpenCL files under
+  `stan/` that exist on develop (listed after `swapped:` in the output).
+  `prim/fun/digamma_diff.hpp` and `prim/fun/log_rising_factorial_ratio.hpp`
+  stay.  Suites: `prim/prob/beta_binomial_test`,
+  `rev/prob/beta_binomial_lpmf_test`, `rev/prob/large_shapes_test`,
+  `mix/prob/neg_binomial_2_log_glm_lpmf_test`,
+  `rev/prob/neg_binomial_2_log_glm_lpmf_test`.  On develop 7 of the 9 new
+  tests fail; `large_shapes_propto_dropped_terms` and
+  `NegBinomial2LogGLM_vector_matches_instances` pass, by design.
+- OpenCL (build job 21277332, GPU job 21277560): the 32 changed files
+  under `stan/` that exist on develop, 24 CPU and 8 OpenCL files.  The 4
+  new files stay.  On develop, every `opencl_large_shapes_reference` test
+  and `opencl_n_outside_support` fail; `lp_propto.val()` is -8.21632 for
+  `n = 6, N = 5`, and the `alpha` adjoints are not 0.
+  `beta_binomial_lpmf_scalar_shapes_test` does not compile on develop
+  (`lbeta(const double&, const double&)`), and the `digamma_diff` tests do
+  not compile because develop has no `digamma_diff`.
+
+The scripts of the runs before the merge of `510d263078` are in `swap/`:
+`run_bb_swap.sh` (CPU, the 23 develop headers of that time; Triton jobs
+20812673, 20814979, 20823134), `run_nb_fix.sh` (the negative binomial
+review fixes; jobs 20916196, 20976802), `run_ocl.sh` and `run_nb_ocl.sh`
+(OpenCL on a V100; jobs 20823167, 20916534, 20976804).
 
 ## Test rows added after the review
 

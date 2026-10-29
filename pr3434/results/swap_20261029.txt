@@ -1,0 +1,279 @@
+######## bb_a3/smtest_21277330.log
+== g++ g++ (conda-forge gcc 14.3.0-18) 14.3.0
+RESULT stage=branch suite=test/unit/math/fwd/prob/lkj_corr_test status=PASS build_s=23 cases=4 failed=0
+RESULT stage=branch suite=test/unit/math/fwd/prob/multi_student_t_test status=PASS build_s=22 cases=2 failed=0
+RESULT stage=branch suite=test/unit/math/laplace/laplace_marginal_neg_binomial_log_lpmf_test status=PASS build_s=91 cases=21 failed=0
+RESULT stage=branch suite=test/unit/math/laplace/laplace_marginal_neg_binomial_log_summary_lpmf_test status=PASS build_s=63 cases=18 failed=0
+RESULT stage=branch suite=test/unit/math/laplace/laplace_neg_binomial_2_log_rng_test status=PASS build_s=45 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/mix/fun/digamma_diff_test status=PASS build_s=26 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/mix/fun/lbeta_test status=PASS build_s=96 cases=2 failed=0
+RESULT stage=branch suite=test/unit/math/mix/prob/dirichlet_multinomial_test status=PASS build_s=28 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/mix/prob/glm_forward_mode_tape_test status=PASS build_s=24 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/mix/prob/lkj_corr_test status=PASS build_s=31 cases=6 failed=0
+RESULT stage=branch suite=test/unit/math/mix/prob/multi_student_t_cholesky_test status=PASS build_s=173 cases=3 failed=0
+RESULT stage=branch suite=test/unit/math/mix/prob/multi_student_t_test status=PASS build_s=68 cases=3 failed=0
+RESULT stage=branch suite=test/unit/math/mix/prob/neg_binomial_2_log_glm_lpmf_test status=PASS build_s=136 cases=3 failed=0
+RESULT stage=branch suite=test/unit/math/mix/prob/neg_binomial_2_log_test status=PASS build_s=24 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/mix/prob/neg_binomial_test status=PASS build_s=28 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/mix/prob/student_t_qf_test status=PASS build_s=51 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/prim/fun/digamma_diff_test status=PASS build_s=12 cases=4 failed=0
+RESULT stage=branch suite=test/unit/math/prim/fun/lbeta_test status=PASS build_s=19 cases=6 failed=0
+RESULT stage=branch suite=test/unit/math/prim/fun/lgamma_stirling_diff_test status=PASS build_s=12 cases=3 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/beta_binomial_ccdf_log_test status=PASS build_s=13 cases=2 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/beta_binomial_cdf_log_test status=PASS build_s=14 cases=3 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/beta_binomial_test status=PASS build_s=45 cases=5 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/beta_neg_binomial_test status=PASS build_s=45 cases=3 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/dirichlet_multinomial_test status=PASS build_s=15 cases=8 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/lkj_corr_test status=PASS build_s=18 cases=7 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/lkj_cov_test status=PASS build_s=16 cases=3 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/multi_student_t_cholesky_test status=PASS build_s=23 cases=14 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/multi_student_t_test status=PASS build_s=22 cases=14 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/neg_binomial_2_ccdf_log_test status=PASS build_s=14 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/neg_binomial_2_cdf_log_test status=PASS build_s=13 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/neg_binomial_2_log_test status=PASS build_s=68 cases=6 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/neg_binomial_2_test status=PASS build_s=82 cases=10 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/neg_binomial_ccdf_log_test status=PASS build_s=13 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/neg_binomial_cdf_log_test status=PASS build_s=13 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/neg_binomial_test status=PASS build_s=75 cases=8 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/student_t_ccdf_log_test status=PASS build_s=14 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/student_t_cdf_log_test status=PASS build_s=13 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/student_t_qf_test status=PASS build_s=16 cases=4 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/student_t_test status=PASS build_s=99 cases=4 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/yule_simon_test status=PASS build_s=68 cases=3 failed=0
+RESULT stage=branch suite=test/unit/math/rev/fun/lbeta_test status=PASS build_s=16 cases=2 failed=0
+RESULT stage=branch suite=test/unit/math/rev/prob/beta_binomial_lpmf_test status=PASS build_s=17 cases=2 failed=0
+RESULT stage=branch suite=test/unit/math/rev/prob/large_shapes_test status=PASS build_s=30 cases=3 failed=0
+RESULT stage=branch suite=test/unit/math/rev/prob/lkj_corr_test status=PASS build_s=22 cases=5 failed=0
+RESULT stage=branch suite=test/unit/math/rev/prob/multi_student_t2_test status=PASS build_s=52 cases=12 failed=0
+RESULT stage=branch suite=test/unit/math/rev/prob/multi_student_t_cholesky_test status=PASS build_s=84 cases=12 failed=0
+RESULT stage=branch suite=test/unit/math/rev/prob/neg_binomial_2_ccdf_log_test status=PASS build_s=18 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/rev/prob/neg_binomial_2_cdf_log_test status=PASS build_s=18 cases=2 failed=0
+RESULT stage=branch suite=test/unit/math/rev/prob/neg_binomial_2_cdf_test status=PASS build_s=17 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/rev/prob/neg_binomial_2_log_glm_lpmf_test status=PASS build_s=34 cases=22 failed=0
+RESULT stage=branch suite=test/unit/math/rev/prob/neg_binomial_2_log_test status=PASS build_s=17 cases=4 failed=0
+RESULT stage=branch suite=test/unit/math/rev/prob/neg_binomial_2_test status=PASS build_s=19 cases=4 failed=0
+RESULT stage=branch suite=test/unit/math/rev/prob/neg_binomial_ccdf_log_test status=PASS build_s=17 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/rev/prob/neg_binomial_cdf_log_test status=PASS build_s=17 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/rev/prob/neg_binomial_cdf_test status=PASS build_s=16 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/rev/prob/neg_binomial_test status=PASS build_s=17 cases=1 failed=0
+######## bb_b3/smtest_21277331.log
+== g++ g++ (conda-forge gcc 14.3.0-18) 14.3.0
+RESULT stage=branch suite=test/unit/math/prim/prob/beta_binomial_test status=PASS build_s=49 cases=5 failed=0
+RESULT stage=branch suite=test/unit/math/rev/prob/beta_binomial_lpmf_test status=PASS build_s=17 cases=2 failed=0
+RESULT stage=branch suite=test/unit/math/rev/prob/large_shapes_test status=PASS build_s=30 cases=3 failed=0
+RESULT stage=branch suite=test/unit/math/mix/prob/neg_binomial_2_log_glm_lpmf_test status=PASS build_s=140 cases=3 failed=0
+######## stage develop (swapped: stan/math/fwd/fun/lbeta.hpp stan/math/prim/fun.hpp stan/math/prim/prob/beta_binomial_cdf.hpp stan/math/prim/prob/beta_binomial_lccdf.hpp stan/math/prim/prob/beta_binomial_lcdf.hpp stan/math/prim/prob/beta_binomial_lpmf.hpp stan/math/prim/prob/beta_neg_binomial_cdf.hpp stan/math/prim/prob/beta_neg_binomial_lccdf.hpp stan/math/prim/prob/beta_neg_binomial_lcdf.hpp stan/math/prim/prob/beta_neg_binomial_lpmf.hpp stan/math/prim/prob/dirichlet_multinomial_lpmf.hpp stan/math/prim/prob/lkj_corr_lpdf.hpp stan/math/prim/prob/multi_student_t_cholesky_lpdf.hpp stan/math/prim/prob/multi_student_t_lpdf.hpp stan/math/prim/prob/neg_binomial_2_log_glm_lpmf.hpp stan/math/prim/prob/neg_binomial_2_log_lpmf.hpp stan/math/prim/prob/neg_binomial_2_lpmf.hpp stan/math/prim/prob/neg_binomial_lpmf.hpp stan/math/prim/prob/student_t_lpdf.hpp stan/math/prim/prob/yule_simon_cdf.hpp stan/math/prim/prob/yule_simon_lccdf.hpp stan/math/prim/prob/yule_simon_lcdf.hpp stan/math/prim/prob/yule_simon_lpmf.hpp stan/math/rev/fun/lbeta.hpp ) ########
+RESULT stage=develop suite=test/unit/math/prim/prob/beta_binomial_test status=FAIL build_s=45 cases=5 failed=2
+FAILED_CASE stage=develop suite=test/unit/math/prim/prob/beta_binomial_test ProbDistributionsBetaBinomial.large_shapes
+FAILED_CASE stage=develop suite=test/unit/math/prim/prob/beta_binomial_test ProbDistributionsBetaBinomial.binomial_limit
+RESULT stage=develop suite=test/unit/math/rev/prob/beta_binomial_lpmf_test status=FAIL build_s=17 cases=2 failed=2
+FAILED_CASE stage=develop suite=test/unit/math/rev/prob/beta_binomial_lpmf_test AgradRev.ProbDistributionsBetaBinomial_log_shape_gradients
+FAILED_CASE stage=develop suite=test/unit/math/rev/prob/beta_binomial_lpmf_test AgradRev.ProbDistributionsBetaBinomial_log_concentration_gradient
+RESULT stage=develop suite=test/unit/math/rev/prob/large_shapes_test status=FAIL build_s=28 cases=3 failed=2
+FAILED_CASE stage=develop suite=test/unit/math/rev/prob/large_shapes_test AgradRev.ProbDistributions_large_shapes_value_and_log_scale_gradients
+FAILED_CASE stage=develop suite=test/unit/math/rev/prob/large_shapes_test AgradRev.ProbDistributions_lkj_corr_eta_gradient_at_one
+RESULT stage=develop suite=test/unit/math/mix/prob/neg_binomial_2_log_glm_lpmf_test status=FAIL build_s=129 cases=3 failed=1
+FAILED_CASE stage=develop suite=test/unit/math/mix/prob/neg_binomial_2_log_glm_lpmf_test AgradRev.mathMixScalFun_neg_binomial_2_log_glm_lpmf_large_theta_hessian
+RESULT check=swap_restore status=PASS secs=0
+RESULT stage=branch_again suite=test/unit/math/prim/prob/beta_binomial_test status=PASS build_s=45 cases=5 failed=0
+RESULT stage=branch_again suite=test/unit/math/rev/prob/beta_binomial_lpmf_test status=PASS build_s=16 cases=2 failed=0
+RESULT stage=branch_again suite=test/unit/math/rev/prob/large_shapes_test status=PASS build_s=30 cases=3 failed=0
+RESULT stage=branch_again suite=test/unit/math/mix/prob/neg_binomial_2_log_glm_lpmf_test status=PASS build_s=142 cases=3 failed=0
+######## bb_b4/smtest_21277408.log
+== g++ g++ (conda-forge gcc 14.3.0-18) 14.3.0
+RESULT stage=branch suite=test/unit/math/rev/prob/neg_binomial_2_log_glm_lpmf_test status=PASS build_s=37 cases=22 failed=0
+######## stage develop (swapped: stan/math/fwd/fun/lbeta.hpp stan/math/prim/fun.hpp stan/math/prim/prob/beta_binomial_cdf.hpp stan/math/prim/prob/beta_binomial_lccdf.hpp stan/math/prim/prob/beta_binomial_lcdf.hpp stan/math/prim/prob/beta_binomial_lpmf.hpp stan/math/prim/prob/beta_neg_binomial_cdf.hpp stan/math/prim/prob/beta_neg_binomial_lccdf.hpp stan/math/prim/prob/beta_neg_binomial_lcdf.hpp stan/math/prim/prob/beta_neg_binomial_lpmf.hpp stan/math/prim/prob/dirichlet_multinomial_lpmf.hpp stan/math/prim/prob/lkj_corr_lpdf.hpp stan/math/prim/prob/multi_student_t_cholesky_lpdf.hpp stan/math/prim/prob/multi_student_t_lpdf.hpp stan/math/prim/prob/neg_binomial_2_log_glm_lpmf.hpp stan/math/prim/prob/neg_binomial_2_log_lpmf.hpp stan/math/prim/prob/neg_binomial_2_lpmf.hpp stan/math/prim/prob/neg_binomial_lpmf.hpp stan/math/prim/prob/student_t_lpdf.hpp stan/math/prim/prob/yule_simon_cdf.hpp stan/math/prim/prob/yule_simon_lccdf.hpp stan/math/prim/prob/yule_simon_lcdf.hpp stan/math/prim/prob/yule_simon_lpmf.hpp stan/math/rev/fun/lbeta.hpp ) ########
+RESULT stage=develop suite=test/unit/math/rev/prob/neg_binomial_2_log_glm_lpmf_test status=PASS build_s=35 cases=22 failed=0
+RESULT check=swap_restore status=PASS secs=0
+RESULT stage=branch_again suite=test/unit/math/rev/prob/neg_binomial_2_log_glm_lpmf_test status=PASS build_s=37 cases=22 failed=0
+######## bb_d3/smtest_21277332.log
+== g++ g++ (conda-forge gcc 14.3.0-18) 14.3.0
+######## OpenCL build, stage develop (swapped: stan/math/fwd/fun/lbeta.hpp stan/math/opencl/kernel_generator/elt_function_cl.hpp stan/math/opencl/kernels/neg_binomial_2_log_glm_lpmf.hpp stan/math/opencl/prim/beta_binomial_lpmf.hpp stan/math/opencl/prim/neg_binomial_2_log_glm_lpmf.hpp stan/math/opencl/prim/neg_binomial_2_log_lpmf.hpp stan/math/opencl/prim/neg_binomial_2_lpmf.hpp stan/math/opencl/prim/neg_binomial_lpmf.hpp stan/math/opencl/prim/student_t_lpdf.hpp stan/math/prim/fun.hpp stan/math/prim/prob/beta_binomial_cdf.hpp stan/math/prim/prob/beta_binomial_lccdf.hpp stan/math/prim/prob/beta_binomial_lcdf.hpp stan/math/prim/prob/beta_binomial_lpmf.hpp stan/math/prim/prob/beta_neg_binomial_cdf.hpp stan/math/prim/prob/beta_neg_binomial_lccdf.hpp stan/math/prim/prob/beta_neg_binomial_lcdf.hpp stan/math/prim/prob/beta_neg_binomial_lpmf.hpp stan/math/prim/prob/dirichlet_multinomial_lpmf.hpp stan/math/prim/prob/lkj_corr_lpdf.hpp stan/math/prim/prob/multi_student_t_cholesky_lpdf.hpp stan/math/prim/prob/multi_student_t_lpdf.hpp stan/math/prim/prob/neg_binomial_2_log_glm_lpmf.hpp stan/math/prim/prob/neg_binomial_2_log_lpmf.hpp stan/math/prim/prob/neg_binomial_2_lpmf.hpp stan/math/prim/prob/neg_binomial_lpmf.hpp stan/math/prim/prob/student_t_lpdf.hpp stan/math/prim/prob/yule_simon_cdf.hpp stan/math/prim/prob/yule_simon_lccdf.hpp stan/math/prim/prob/yule_simon_lcdf.hpp stan/math/prim/prob/yule_simon_lpmf.hpp stan/math/rev/fun/lbeta.hpp ) ########
+RESULT stage=develop suite=test/unit/math/opencl/rev/beta_binomial_lpmf_scalar_shapes_test status=BUILD_FAILED build_s=19 cases=0 failed=0
+RESULT stage=develop suite=test/unit/math/opencl/device_functions/digamma_diff_test status=BUILD_FAILED build_s=18 cases=0 failed=0
+RESULT stage=develop suite=test/unit/math/opencl/kernel_generator/elt_function_cl_test status=BUILD_FAILED build_s=27 cases=0 failed=0
+RESULT check=swap_restore status=PASS secs=0
+GPU_JOB 21277560
+######## bb_d3/smtest_ocl_run_21277560.log
+RESULT stage=branch suite=test/unit/math/opencl/rev/beta_binomial_lpmf_test status=PASS build_s=0 cases=9 failed=0
+RESULT stage=branch suite=test/unit/math/opencl/rev/beta_binomial_lpmf_scalar_shapes_test status=PASS build_s=0 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/opencl/rev/neg_binomial_lpmf_test status=PASS build_s=0 cases=7 failed=0
+RESULT stage=branch suite=test/unit/math/opencl/rev/neg_binomial_2_lpmf_test status=PASS build_s=0 cases=8 failed=0
+RESULT stage=branch suite=test/unit/math/opencl/rev/neg_binomial_2_log_lpmf_test status=PASS build_s=0 cases=8 failed=0
+RESULT stage=branch suite=test/unit/math/opencl/rev/neg_binomial_2_log_glm_lpmf_test status=PASS build_s=0 cases=10 failed=0
+RESULT stage=branch suite=test/unit/math/opencl/rev/student_t_lpdf_test status=PASS build_s=0 cases=5 failed=0
+RESULT stage=branch suite=test/unit/math/opencl/device_functions/digamma_diff_test status=PASS build_s=0 cases=4 failed=0
+RESULT stage=branch suite=test/unit/math/opencl/kernel_generator/elt_function_cl_test status=PASS build_s=0 cases=63 failed=0
+RESULT stage=develop suite=test/unit/math/opencl/rev/beta_binomial_lpmf_test status=FAIL build_s=0 cases=9 failed=2
+FAILED_CASE stage=develop suite=test/unit/math/opencl/rev/beta_binomial_lpmf_test ProbDistributionsBetaBinomial.opencl_n_outside_support
+FAILED_CASE stage=develop suite=test/unit/math/opencl/rev/beta_binomial_lpmf_test ProbDistributionsBetaBinomial.opencl_large_shapes_reference
+RESULT stage=develop suite=test/unit/math/opencl/rev/beta_binomial_lpmf_scalar_shapes_test status=BUILD_FAILED build_s=0 cases=0 failed=0
+RESULT stage=develop suite=test/unit/math/opencl/rev/neg_binomial_lpmf_test status=FAIL build_s=0 cases=7 failed=1
+FAILED_CASE stage=develop suite=test/unit/math/opencl/rev/neg_binomial_lpmf_test muProbDistributionsNegBinomial.opencl_large_shapes_reference
+RESULT stage=develop suite=test/unit/math/opencl/rev/neg_binomial_2_lpmf_test status=FAIL build_s=0 cases=8 failed=1
+FAILED_CASE stage=develop suite=test/unit/math/opencl/rev/neg_binomial_2_lpmf_test muProbDistributionsNegBinomial2.opencl_large_shapes_reference
+RESULT stage=develop suite=test/unit/math/opencl/rev/neg_binomial_2_log_lpmf_test status=FAIL build_s=0 cases=8 failed=1
+FAILED_CASE stage=develop suite=test/unit/math/opencl/rev/neg_binomial_2_log_lpmf_test ProbDistributionsNegBinomial2Log.opencl_large_shapes_reference
+RESULT stage=develop suite=test/unit/math/opencl/rev/neg_binomial_2_log_glm_lpmf_test status=FAIL build_s=0 cases=10 failed=1
+FAILED_CASE stage=develop suite=test/unit/math/opencl/rev/neg_binomial_2_log_glm_lpmf_test ProbDistributionsNegBinomial2LogGLM.opencl_large_shapes_reference
+RESULT stage=develop suite=test/unit/math/opencl/rev/student_t_lpdf_test status=FAIL build_s=0 cases=5 failed=1
+FAILED_CASE stage=develop suite=test/unit/math/opencl/rev/student_t_lpdf_test ProbDistributionsStudentT.opencl_large_shapes_reference
+RESULT stage=develop suite=test/unit/math/opencl/device_functions/digamma_diff_test status=BUILD_FAILED build_s=0 cases=0 failed=0
+RESULT stage=develop suite=test/unit/math/opencl/kernel_generator/elt_function_cl_test status=BUILD_FAILED build_s=0 cases=0 failed=0
+######## bb_b3/smtest_21277331_develop_beta_binomial_lpmf_test.run (develop stage, failure lines)
+test/unit/math/rev/prob/beta_binomial_lpmf_test.cpp:56: Failure
+lp.val() evaluates to -2.6426837097499885,
+t.value evaluates to -2.6471538352642869, and
+1e-13 * std::max(1.0, std::fabs(t.value)) evaluates to 2.6471538352642868e-13.
+test/unit/math/rev/prob/beta_binomial_lpmf_test.cpp:63: Failure
+t.alpha * alpha.adj() evaluates to -1.5429303381777393,
+t.grad_log_alpha evaluates to -1.4999999999974545, and
+scale * std::max(1.0, std::fabs(t.grad_log_alpha)) evaluates to 1.4999999999974545e-12.
+test/unit/math/rev/prob/beta_binomial_lpmf_test.cpp:67: Failure
+t.beta * beta.adj() evaluates to 1.4026639437979449,
+t.grad_log_beta evaluates to 1.4999999999981384, and
+scale * std::max(1.0, std::fabs(t.grad_log_beta)) evaluates to 1.4999999999981383e-12.
+test/unit/math/rev/prob/beta_binomial_lpmf_test.cpp:56: Failure
+lp.val() evaluates to -413.53847987445477,
+t.value evaluates to -413.5407254057975, and
+1e-13 * std::max(1.0, std::fabs(t.value)) evaluates to 4.1354072540579749e-11.
+test/unit/math/rev/prob/beta_binomial_lpmf_test.cpp:63: Failure
+t.alpha * alpha.adj() evaluates to -410.87133695327793,
+t.grad_log_alpha evaluates to -410.81081080252488, and
+scale * std::max(1.0, std::fabs(t.grad_log_alpha)) evaluates to 4.1081081080252488e-10.
+test/unit/math/rev/prob/beta_binomial_lpmf_test.cpp:67: Failure
+t.beta * beta.adj() evaluates to 410.78607182498672,
+t.grad_log_beta evaluates to 410.81081078769341, and
+scale * std::max(1.0, std::fabs(t.grad_log_beta)) evaluates to 4.1081081078769338e-10.
+test/unit/math/rev/prob/beta_binomial_lpmf_test.cpp:56: Failure
+lp.val() evaluates to -64,
+t.value evaluates to -33.658802476858362, and
+1e-13 * std::max(1.0, std::fabs(t.value)) evaluates to 3.3658802476858362e-12.
+test/unit/math/rev/prob/beta_binomial_lpmf_test.cpp:63: Failure
+t.alpha * alpha.adj() evaluates to 0,
+t.grad_log_alpha evaluates to -29.249999999999996, and
+scale * std::max(1.0, std::fabs(t.grad_log_alpha)) evaluates to 2.9249999999999996e-11.
+test/unit/math/rev/prob/beta_binomial_lpmf_test.cpp:67: Failure
+t.beta * beta.adj() evaluates to 0,
+t.grad_log_beta evaluates to 29.249999999999989, and
+scale * std::max(1.0, std::fabs(t.grad_log_beta)) evaluates to 2.9249999999999989e-11.
+test/unit/math/rev/prob/beta_binomial_lpmf_test.cpp:56: Failure
+lp.val() evaluates to -160,
+t.value evaluates to -162.19644025102716, and
+1e-13 * std::max(1.0, std::fabs(t.value)) evaluates to 1.6219644025102716e-11.
+######## bb_b3/smtest_21277331_develop_beta_binomial_test.run (develop stage, failure lines)
+test/unit/math/prim/prob/beta_binomial_test.cpp:114: Failure
+beta_binomial_lpmf(t.n, t.N, t.alpha, t.beta) evaluates to -2.6426837097499885,
+t.value evaluates to -2.6471538352642869, and
+tol evaluates to 2.6471538352642868e-13.
+test/unit/math/prim/prob/beta_binomial_test.cpp:114: Failure
+beta_binomial_lpmf(t.n, t.N, t.alpha, t.beta) evaluates to -2.5489337097499885,
+t.value evaluates to -2.6471538352636159, and
+tol evaluates to 2.6471538352636158e-13.
+test/unit/math/prim/prob/beta_binomial_test.cpp:114: Failure
+beta_binomial_lpmf(t.n, t.N, t.alpha, t.beta) evaluates to 78.451066290250012,
+t.value evaluates to -2.647153835263603, and
+tol evaluates to 2.6471538352636032e-13.
+test/unit/math/prim/prob/beta_binomial_test.cpp:114: Failure
+beta_binomial_lpmf(t.n, t.N, t.alpha, t.beta) evaluates to -3.67991898939988,
+t.value evaluates to -3.6799190420941268, and
+tol evaluates to 3.679919042094127e-13.
+test/unit/math/prim/prob/beta_binomial_test.cpp:114: Failure
+beta_binomial_lpmf(t.n, t.N, t.alpha, t.beta) evaluates to -3.6801993696489035,
+t.value evaluates to -3.6799189921441293, and
+tol evaluates to 3.6799189921441295e-13.
+test/unit/math/prim/prob/beta_binomial_test.cpp:114: Failure
+beta_binomial_lpmf(t.n, t.N, t.alpha, t.beta) evaluates to 689.4672615678511,
+t.value evaluates to -3.6799189920941293, and
+tol evaluates to 3.6799189920941296e-13.
+test/unit/math/prim/prob/beta_binomial_test.cpp:114: Failure
+beta_binomial_lpmf(t.n, t.N, t.alpha, t.beta) evaluates to -413.53847987445477,
+t.value evaluates to -413.5407254057975, and
+tol evaluates to 4.1354072540579749e-11.
+test/unit/math/prim/prob/beta_binomial_test.cpp:114: Failure
+beta_binomial_lpmf(t.n, t.N, t.alpha, t.beta) evaluates to -64,
+t.value evaluates to -33.658802476858362, and
+tol evaluates to 3.3658802476858362e-12.
+test/unit/math/prim/prob/beta_binomial_test.cpp:114: Failure
+beta_binomial_lpmf(t.n, t.N, t.alpha, t.beta) evaluates to -160,
+t.value evaluates to -162.19644025102716, and
+tol evaluates to 1.6219644025102716e-11.
+test/unit/math/prim/prob/beta_binomial_test.cpp:114: Failure
+beta_binomial_lpmf(t.n, t.N, t.alpha, t.beta) evaluates to -43.238292142643509,
+t.value evaluates to -43.238292143128874, and
+tol evaluates to 4.3238292143128876e-12.
+######## bb_b3/smtest_21277331_develop_large_shapes_test.run (develop stage, failure lines)
+test/unit/math/rev/prob/large_shapes_test.cpp:366: Failure
+got evaluates to -2.999999999999996,
+expected evaluates to 1.3124999999999966e-15, and
+bound(tol.second, expected) evaluates to 9.9999999999999994e-12.
+test/unit/math/rev/prob/large_shapes_test.cpp:366: Failure
+got evaluates to -0.039405267666240647,
+expected evaluates to 1.8749999999999945e-16, and
+bound(tol.second, expected) evaluates to 9.9999999999999994e-12.
+test/unit/math/rev/prob/large_shapes_test.cpp:366: Failure
+got evaluates to -2.999999999999996,
+expected evaluates to -1.9999999999999958, and
+bound(tol.second, expected) evaluates to 1.9999999999999957e-11.
+test/unit/math/rev/prob/large_shapes_test.cpp:366: Failure
+got evaluates to 1.9605947323337536,
+expected evaluates to 1.9999999999999942, and
+bound(tol.second, expected) evaluates to 1.9999999999999941e-11.
+test/unit/math/rev/prob/large_shapes_test.cpp:366: Failure
+got evaluates to -0.26200849679173893,
+expected evaluates to 2.4999999999998758e-14, and
+bound(tol.second, expected) evaluates to 9.9999999999999994e-12.
+test/unit/math/rev/prob/large_shapes_test.cpp:366: Failure
+got evaluates to 0.022208597513552194,
+expected evaluates to 0, and
+bound(tol.second, expected) evaluates to 9.9999999999999994e-12.
+test/unit/math/rev/prob/large_shapes_test.cpp:358: Failure
+value evaluates to -25.328436206349394,
+t.value evaluates to -25.328436211374154, and
+bound(tol.first, t.value) evaluates to 2.5328436211374154e-11.
+test/unit/math/rev/prob/large_shapes_test.cpp:358: Failure
+value evaluates to -inf,
+t.value evaluates to -39.143946580898778, and
+bound(tol.first, t.value) evaluates to 3.9143946580898775e-11.
+test/unit/math/rev/prob/large_shapes_test.cpp:366: Failure
+got evaluates to 3.5527136788005009e-05,
+expected evaluates to -1.4294999940378999e-07, and
+bound(tol.second, expected) evaluates to 9.9999999999999994e-12.
+test/unit/math/rev/prob/large_shapes_test.cpp:366: Failure
+got evaluates to 3.5527136788005009e-05,
+expected evaluates to -1.0099999929136667e-07, and
+bound(tol.second, expected) evaluates to 9.9999999999999994e-12.
+######## bb_b3/smtest_21277331_develop_neg_binomial_2_log_glm_lpmf_test.run (develop stage, failure lines)
+test/unit/math/mix/prob/neg_binomial_2_log_glm_lpmf_test.cpp:72: Failure
+alpha.val_.adj() evaluates to 0,
+c.second evaluates to -4.7225324533500949e-17, and
+1e-10 * std::fabs(c.second) evaluates to 4.722532453350095e-27.
+test/unit/math/mix/prob/neg_binomial_2_log_glm_lpmf_test.cpp:72: Failure
+alpha.val_.adj() evaluates to -1.4096952790874231e-13,
+c.second evaluates to -1.4077670835874031e-13, and
+1e-10 * std::fabs(c.second) evaluates to 1.4077670835874032e-23.
+[  FAILED  ] AgradRev.mathMixScalFun_neg_binomial_2_log_glm_lpmf_large_theta_hessian (0 ms)
+[  PASSED  ] 2 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] AgradRev.mathMixScalFun_neg_binomial_2_log_glm_lpmf_large_theta_hessian
+######## bb_b4/smtest_21277408_develop_neg_binomial_2_log_glm_lpmf_test.run (develop stage, failure lines)
+[  PASSED  ] 22 tests.
+######## bb_d3/smtest_ocl_run_21277560.log (develop, beta_binomial_lpmf_test)
+test/unit/math/opencl/rev/beta_binomial_lpmf_test.cpp:109: Failure
+Expected equality of these values:
+  lp_propto.val()
+    Which is: -8.21632
+  stan::math::LOG_ZERO
+--
+test/unit/math/opencl/rev/beta_binomial_lpmf_test.cpp:112: Failure
+Value of: (alpha_adj.array() == 0).all()
+  Actual: false
+Expected: true
+  1.8622259383128954   1.4936552956416869 -0.94874014874014878
+test/unit/math/opencl/rev/beta_binomial_lpmf_test.cpp:109: Failure
+Expected equality of these values:
+  lp_propto.val()
+    Which is: -8.21632
+  stan::math::LOG_ZERO
+RESULT stage=develop suite=test/unit/math/opencl/rev/beta_binomial_lpmf_scalar_shapes_test status=BUILD_FAILED build_s=0 cases=0 failed=0
+RESULT stage=develop suite=test/unit/math/opencl/rev/neg_binomial_lpmf_test status=FAIL build_s=0 cases=7 failed=1
