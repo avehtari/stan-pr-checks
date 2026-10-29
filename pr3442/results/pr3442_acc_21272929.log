@@ -1,0 +1,13 @@
+== host: pht82.int.triton.aalto.fi   date: 2026-10-29T02:05:56+02:00   probe: probe_dacc.cpp   trees: ../base3442.tar.gz ../head3442.tar.gz
+== env: PRECS=unset PTS=unset
+== compiler: g++ (conda-forge gcc 14.3.0-18) 14.3.0
+== flags: -std=c++17 -O2 -DNDEBUG -D_REENTRANT -pthread
+9c8dfa3cb2c58b25e2e8843f6d38b12f  probe_dacc.cpp
+be404bf757c1ebc21f39e4ebb6aeee89  ./swst0_points.hpp
+a3afee38e0a025ab641c754b346921c5  ../base3442.tar.gz
+587e038bdc836a0386a54cdc8196db56  ../head3442.tar.gz
+ran  base3442: exit 0  rows 300  throws 0
+   base3442 wall 5.46 s
+ran  head3442: exit 0  rows 300  throws 0
+   head3442 wall 0.43 s
+== done: 2026-10-29T02:06:35+02:00

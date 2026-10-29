@@ -1,4 +1,7 @@
 out/
+# expected outputs and job logs are data here (the global ignore has *.out, *.log)
+!*.out
+!*.log
 trees.tar.gz
 __pycache__/
 *.pyc

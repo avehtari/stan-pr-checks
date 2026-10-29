@@ -1,0 +1,23 @@
+== host: skl19.int.triton.aalto.fi   date: 2026-10-29T02:15:55+02:00   reps: 3
+== probes: probe_bench.cpp probe_bench4.cpp   trees: ../base3442.tar.gz ../head3442.tar.gz
+== cpu:  Intel(R) Xeon(R) Gold 6148 CPU @ 2.40GHz
+== governor: performance
+== compiler: g++ (conda-forge gcc 14.3.0-18) 14.3.0
+== flags: -std=c++17 -O3 -DNDEBUG -D_REENTRANT -pthread
+adfbdd9333ed3cbfdde5c5f29149451b  probe_bench.cpp
+4dc4b62cf1398d057edd224a35a5efb0  probe_bench4.cpp
+a3afee38e0a025ab641c754b346921c5  ../base3442.tar.gz
+587e038bdc836a0386a54cdc8196db56  ../head3442.tar.gz
+ran  probe_bench.cpp base3442 round 1: exit 0  02:16:33
+ran  probe_bench.cpp head3442 round 1: exit 0  02:16:41
+ran  probe_bench4.cpp base3442 round 1: exit 0  02:17:35
+ran  probe_bench4.cpp head3442 round 1: exit 0  02:17:51
+ran  probe_bench.cpp base3442 round 2: exit 0  02:18:00
+ran  probe_bench.cpp head3442 round 2: exit 0  02:18:08
+ran  probe_bench4.cpp base3442 round 2: exit 0  02:19:02
+ran  probe_bench4.cpp head3442 round 2: exit 0  02:19:17
+ran  probe_bench.cpp base3442 round 3: exit 0  02:19:27
+ran  probe_bench.cpp head3442 round 3: exit 0  02:19:35
+ran  probe_bench4.cpp base3442 round 3: exit 0  02:20:29
+ran  probe_bench4.cpp head3442 round 3: exit 0  02:20:44
+== done: 2026-10-29T02:20:44+02:00

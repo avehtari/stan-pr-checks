@@ -1,0 +1,7 @@
+== host: csl46.int.triton.aalto.fi   date: 2026-10-29T08:55:47+02:00
+3a49585fa671a91174826fdebc15d4bc  probe_oldw4.cpp
+587e038bdc836a0386a54cdc8196db56  head3442.tar.gz
+9a1b902fef8da9cf950b5bc3d01788e5  ref_w4_mpmath.py
+probe exit 0  rows 1200  throws 0
+ref exit 0  rows 600
+== done: 2026-10-29T08:56:22+02:00
