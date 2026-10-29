@@ -1,0 +1,18 @@
+== 510d263078 (error / tolerance of the test)
+x1 0.5 x2 1e+14  value 0.0011  var 2.1e+10  fvar 2.1e+10
+x1 1e+14 x2 0.5  value 0.0011  var 2.1e+10  fvar 2.1e+10
+x1 1.5 x2 1e+14  value 0  var 4.2e+10  fvar 4.2e+10
+x1 1e+14 x2 1.5  value 0  var 4.2e+10  fvar 4.2e+10
+x1 0.5 x2 1e+08  value 0  var 4e+03  fvar 4e+03
+x1 1e+08 x2 0.5  value 0  var 4e+03  fvar 4e+03
+x1 12.5 x2 1e+10  value 0.0021  var 7.9e+04  fvar 7.9e+04
+x1 1e+10 x2 12.5  value 0.0021  var 7.9e+04  fvar 7.9e+04
+== 35435f53dc (error / tolerance of the test)
+x1 0.5 x2 1e+14  value 0.0011  var 0  fvar 0
+x1 1e+14 x2 0.5  value 0.0011  var 0  fvar 0
+x1 1.5 x2 1e+14  value 0  var 2.9e-05  fvar 2.9e-05
+x1 1e+14 x2 1.5  value 0  var 2.9e-05  fvar 2.9e-05
+x1 0.5 x2 1e+08  value 0  var 1.7e-05  fvar 1.7e-05
+x1 1e+08 x2 0.5  value 0  var 1.7e-05  fvar 1.7e-05
+x1 12.5 x2 1e+10  value 0.0021  var 0  fvar 0
+x1 1e+10 x2 12.5  value 0.0021  var 0  fvar 0

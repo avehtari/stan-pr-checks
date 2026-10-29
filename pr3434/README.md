@@ -21,7 +21,8 @@ Roihu (job 2625261, §"Speed"), the swap tests on Triton on 2026-10-29
 |---|---|---|
 | develop | `510d263078` | merge base of the merged head (develop of 2026-10-28) |
 | PR | `64407093ba` | PR head after the merge of develop (2026-10-28); the probes ran on its tree |
-| PR head | `5005dcaa82` | `64407093ba` with unused includes removed and comments changed; the swap tests ran on its tree |
+| fix commit | `5005dcaa82` | `64407093ba` with unused includes removed and comments changed; the swap tests ran on its tree |
+| PR head | `35435f53dc` | `5005dcaa82` plus the large-argument `lbeta` test (test file only) |
 | old head | `c962588c6d` | PR head that stevieb-bot checked (merge base `d12f488749`) |
 | S6 pair | `0377416157`, `1c8afb741a` | parent and commit of the `log(mu + phi)` change |
 
@@ -559,3 +560,15 @@ python3 review_rows/rows_e1_e2.py    # results/review_rows_refs.txt
   `phi = 0.07`; reference `-(y + phi) phi mu / (mu + phi)^2`, checked
   against `mp.diff`, agreement 4e-97).  Develop: 0 at `theta = 35` and a
   relative error of 1.4e-3 at 27; PR: at most 5.6e-16.
+- `lbeta` derivatives at large arguments (test
+  `mathMixScalFun_lbeta_large_argument_derivatives` in
+  `mix/fun/lbeta_test.cpp`, commit `35435f53dc`): `review_rows/lbeta_rows.py`
+  gives the references (closed-form `digamma` differences against
+  `mp.diff` at 120 digits, agreement 1e-101 or better;
+  `results/review_rows_lbeta_refs.txt`).  `review_rows/probe_lbeta.cpp`
+  prints the error of `x * d/dx` divided by the tolerance of the test, for
+  `var` and `fvar<double>` in both argument orders
+  (`results/review_rows_lbeta.txt`; the `lbeta` files of the PR tree are
+  those of `35435f53dc`).  Develop: 4e3 to 4e10; PR: at most 3e-5.
+  Triton job 21278515: the test fails with the develop `rev` and `fwd`
+  `lbeta` files and passes with the PR files.
