@@ -493,3 +493,40 @@ fixes; jobs 20916196, 20976802), `swap/run_ocl.sh` and
 `swap/run_nb_ocl.sh` (OpenCL on a V100; jobs 20823167, 20916534,
 20976804).  They are the scripts of the runs before the merge of
 `510d263078` and were not adapted to it.
+
+## Test rows added after the review
+
+`review_rows/` chooses and checks the rows of the review commit
+`64407093ba`: the `YSC` and `YSLC` rows and the `NB` row at the point of
+#1578 in `large_shapes_test.cpp`, and the `fvar<var>` Hessian test of
+`neg_binomial_2_log_glm_lpmf` in
+`mix/prob/neg_binomial_2_log_glm_lpmf_test.cpp`.
+
+```sh
+for c in 510d263078 64407093ba; do
+  STAN_MATH=<tree of $c> ./build.sh review_rows/probe_ys.cpp out/ys_$c
+  out/ys_$c > out/review_rows_$c.txt
+  STAN_MATH=<tree of $c> ./build.sh review_rows/probe_glm_hess.cpp out/hess_$c
+  out/hess_$c
+done
+python3 review_rows/score_ys.py      # results/review_rows_ys.txt
+python3 review_rows/rows_e1_e2.py    # results/review_rows_refs.txt
+```
+
+- `yule_simon_cdf` and `_lcdf` are `1 - c` and `log1p(-c)` with
+  `c = n B(n, alpha + 1)`.  Two routes: `loggamma` and `digamma`, and the
+  exact product `n! / prod (alpha + j)` with `sum 1 / (alpha + j)`; they
+  agree to 1e-65 or better.  With the test tolerance
+  `tol * max(1, |ref|)` no point fails on develop, so the test compares
+  these two tags relative to the reference.  Develop's relative error of
+  `alpha d/dalpha`: 5e-7 at `alpha = 1e8`, 4.0e-3 at 1e12, 1.0 at 1e15
+  (`n = 1`).  PR: at most 2.3e-15 for `n <= 5`, and 1.3e-13 at `n = 20`,
+  where `log c` is about -645 and one rounding of it is 1.4e-13.
+- `neg_binomial_lpmf(0 | 1e10 + 1, 0.8)`: the closed form against
+  `mp.diff` at 140 digits, agreement 4e-92.  Develop and the PR give the
+  same value and `alpha` partial; the `beta` partials differ by 1 ulp.
+- `results/review_rows_hessian.txt`: the first two lines are develop
+  `510d263078`, the last two the PR (`d^2/dtheta^2` at `y = 1`,
+  `phi = 0.07`; reference `-(y + phi) phi mu / (mu + phi)^2`, checked
+  against `mp.diff`, agreement 4e-97).  Develop: 0 at `theta = 35` and a
+  relative error of 1.4e-3 at 27; PR: at most 5.6e-16.
