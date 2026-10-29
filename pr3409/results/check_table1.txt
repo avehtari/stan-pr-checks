@@ -1,0 +1,29 @@
+(p, q, x) = (1.5, 11, 0.001); routes A and B agree to inf (I^p) and inf (I^q) digits
+   I     table  8.9170111e-04   ref_mpmath  8.9170111e-04   equal
+   I^p   table -4.5720356e-03   ref_mpmath -4.5720356e-03   equal
+   I^q   table  1.1845673e-04   ref_mpmath  1.1845673e-04   equal
+   I^pp  table  2.3080438e-02   ref_mpmath  2.3080438e-02   equal
+   I^qq  table  5.1418717e-06   ref_mpmath  5.1418717e-06   equal
+   I^pq  table -5.3324285e-04   ref_mpmath -5.3324285e-04   equal
+(p, q, x) = (1.5, 11, 0.5); routes A and B agree to inf (I^p) and inf (I^q) digits
+   I     table  9.9861069e-01   ref_mpmath  9.9861069e-01   equal
+   I^p   table -2.5501997e-03   ref_mpmath -2.5501997e-03   equal
+   I^q   table  9.0824388e-04   ref_mpmath  9.0824388e-04   equal
+   I^pp  table -3.5047111e-03   ref_mpmath -3.5047111e-03   equal
+   I^qq  table -5.8941710e-04   ref_mpmath -5.8941710e-04   equal
+   I^pq  table  1.5603497e-03   ref_mpmath  1.5603497e-03   equal
+(p, q, x) = (1000, 1000, 0.5); routes A and B agree to inf (I^p) and inf (I^q) digits
+   I     table  5.0000000e-01   ref_mpmath  5.0000000e-01   equal
+   I^p   table -8.9224793e-03   ref_mpmath -8.9224793e-03   equal
+   I^q   table  8.9224793e-03   ref_mpmath  8.9224793e-03   equal
+   I^pp  table  4.4630987e-06   ref_mpmath  4.4630987e-06   equal
+   I^qq  table -4.4630987e-06   ref_mpmath -4.4630987e-06   equal
+   I^pq  table  0.0000000e+00   ref_mpmath  0.0000000e+00   equal
+(p, q, x) = (1000, 1000, 0.55); routes A and B agree to inf (I^p) and inf (I^q) digits
+   I     table  9.9999632e-01   ref_mpmath  9.9999632e-01   equal
+   I^p   table -3.6713108e-07   ref_mpmath -3.6713108e-07   equal
+   I^q   table  4.0584118e-07   ref_mpmath  4.0584118e-07   equal
+   I^pp  table -3.4809144e-08   ref_mpmath -3.4809144e-08   equal
+   I^qq  table -4.2964422e-08   ref_mpmath -4.2964422e-08   equal
+   I^pq  table  3.8682578e-08   ref_mpmath  3.8682578e-08   equal
+# 24 of 24 values equal to 8 significant digits

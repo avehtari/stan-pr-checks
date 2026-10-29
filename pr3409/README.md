@@ -74,6 +74,18 @@ digits (the routes agree to the 60 digits of the comparison) at all 21
 points and at the 3 lcdf gradients, and the values equal the constants
 in the test files.  Run time about 30 s on 8 cores.
 
+An external check of the reference: Table 1 of Boik and Robison-Cox
+(1998), https://doi.org/10.18637/jss.v003.i01, gives `I` and its first
+and second derivatives in `p` and `q` at four points to 8 significant
+digits.
+
+```sh
+python3 refs/check_table1.py > out/check_table1.txt
+```
+
+Expected (`results/check_table1.txt`): `24 of 24 values equal to 8
+significant digits`.  Run time about 1 min.
+
 ## Accuracy over 18 000 points
 
 Claims: the accuracy table of the PR text, the develop counts, the worst
