@@ -1,0 +1,17 @@
+routes: worst relative disagreement of route A (digamma difference)
+and route B (mp.diff of the loggamma difference), over n_B points
+region       n    dd ulp  plain ulp  d/dx rel thrown nonfin   routes   n_B  worst (x, d)
+INT_a      600      4.24       28.8   4.4e-09      0      0  1.7e-81   600  (7.723, 10)
+REAL_a     600      3.03   2.93e+06   3.9e-09      0      0  1.5e-81   600  (0.04002, 0.02573)
+HALF_a     600      2.64       63.1   4.0e-16      0      0  1.5e-81   600  (2.444, 0.5)
+INT_b      600      1.32   1.59e+05   4.3e-16      0      0  1.3e-82   600  (54.88, 117)
+REAL_b     600      1.68    9.6e+10   4.7e-16      0      0  8.3e-82   600  (9301, 0.006636)
+HALF_b     600      1.38    2.1e+05   6.5e-16      0      0  3.3e-82   600  (8251, 0.5)
+INT_c      600      1.50   5.71e+10   3.8e-16      0      0  1.9e-82   600  (5.578e+04, 3)
+REAL_c     600      1.78   3.11e+16   4.7e-16      0      0  1.7e-81   600  (3.134e+06, 2.004e+05)
+HALF_c     600      1.38   2.83e+11   4.8e-16      0      0  9.4e-82   600  (6.324e+07, 2.5)
+INT_d      600      1.32   8.96e+15   4.0e-16      0      0  4.4e-82   600  (7.081e+15, 3)
+REAL_d     600      1.39   6.52e+16   3.9e-16      0      0  4.1e-81   600  (5.918e+15, 0.9055)
+HALF_d     600      1.32   1.34e+16   5.2e-16      0      0  1.3e-81   600  (6.593e+15, 2.5)
+EDGE        81      1.97   8.92e+15       inf      0      9  9.7e-82    72  (0.5, 1e-300)
+all regions: 7281 points, worst 4.24 ulp, plain difference 6.52e+16 ulp

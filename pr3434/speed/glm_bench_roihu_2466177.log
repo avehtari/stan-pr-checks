@@ -1,0 +1,498 @@
+--- ./glm_bench_2466177.log ---
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) csc-tools/default
+== host: rc6150   date: 2026-10-22T19:20:05+03:00   g++: g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-14)
+== cpu:  AMD EPYC 9965 192-Core Processor   cores: 384
+5547b3ed801d5e08e50986726dd2d9c3  bench_glm.cpp
+5182b3d3248e729989dd26029ec9e631  bench_dd.cpp
+306c42046bd62a83cc0e6783f3c73c51  glm_trees.tar.gz
+303b3b279f80065deebab33484428583  glm_libs.tar.gz
+== md5 of the changed headers:
+3d7b9958300e158e318ab5ca53d9435f  /tmp/vehtaria/2466177/glm_bench_2466177/t_dev/stan/math/prim/prob/neg_binomial_2_log_glm_lpmf.hpp
+898b4c2baeb8be78417e290a7f45ac46  /tmp/vehtaria/2466177/glm_bench_2466177/t_head/stan/math/prim/prob/neg_binomial_2_log_glm_lpmf.hpp
+e70d2bfb738e0e6136cc0776ec9d05a1  /tmp/vehtaria/2466177/glm_bench_2466177/t_opt/stan/math/prim/prob/neg_binomial_2_log_glm_lpmf.hpp
+6ce1df7147eccac4f2dcd50e69bda7a8  /tmp/vehtaria/2466177/glm_bench_2466177/t_pre/stan/math/prim/prob/neg_binomial_2_log_glm_lpmf.hpp
+fa68c81be59d986c28839f49e6ea7ae2  /tmp/vehtaria/2466177/glm_bench_2466177/t_dev/stan/math/prim/prob/neg_binomial_2_lpmf.hpp
+8844bc474c9b525d6a210797dea9342f  /tmp/vehtaria/2466177/glm_bench_2466177/t_head/stan/math/prim/prob/neg_binomial_2_lpmf.hpp
+8844bc474c9b525d6a210797dea9342f  /tmp/vehtaria/2466177/glm_bench_2466177/t_opt/stan/math/prim/prob/neg_binomial_2_lpmf.hpp
+e0c5f0959754b19ed4c0806517f6cc96  /tmp/vehtaria/2466177/glm_bench_2466177/t_pre/stan/math/prim/prob/neg_binomial_2_lpmf.hpp
+== built: dev head opt   2026-10-22T19:20:17+03:00
+round1 dev VALUE glm_value -0x1.f18c882ce7aa2p+10 0x0p+0 0x0p+0
+round1 dev TIME glm_value 53.306
+round1 dev # glm_value acc=-7960783.2459501522
+round1 dev VALUE glm_grad_ab -0x1.f18c882ce7aa2p+10 0x1.3aaf7139be00ap+4 0x1.3a6db1c6795eep+3
+round1 dev TIME glm_grad_ab 56.634
+round1 dev # glm_grad_ab acc=-1990195.8114874524
+round1 dev VALUE glm_grad_abphi -0x1.f18c882ce7aa2p+10 0x1.3aaf7139be00ap+4 0x1.c3dea838ce97p+5
+round1 dev TIME glm_grad_abphi 64.206
+round1 dev # glm_grad_abphi acc=-1990195.8114874524
+round1 dev VALUE glm_grad_abphi_propto 0x1.b410f4979cbp+6 0x1.3aaf7139be00ap+4 0x1.c3dea838ce97p+5
+round1 dev TIME glm_grad_abphi_propto 51.776
+round1 dev # glm_grad_abphi_propto acc=109016.55804533111
+round1 dev VALUE glm_grad_vecphi -0x1.ff1245f94e078p+10 0x1.0e5cb81a5f19ep+5 0x1.592a858d08ba2p-2
+round1 dev TIME glm_grad_vecphi 86.026
+round1 dev # glm_grad_vecphi acc=-2044285.5208646543
+round1 dev VALUE glm_grad_x -0x1.f18c882ce7aa2p+10 0x1.300ebb9d2fc25p-2 -0x1.c6454a255fd89p-3
+round1 dev TIME glm_grad_x 73.528
+round1 dev # glm_grad_x acc=-995097.90574370476
+round1 dev TIME pair_small_int 14.718
+round1 dev TIME pair_mid_int 14.465
+round1 dev TIME nb2_grad_phi_small_n_small 79.006
+round1 dev TIME nb2_grad_phi_small_n_mid 90.827
+round1 dev TIME nb2_grad_phi_large_n_small 81.370
+round1 dev TIME nb_grad_alpha_small 70.028
+round1 dev TIME nb2log_grad_phi_small 81.972
+round1 dev TIME bb_grad_small 155.864
+round1 dev TIME lbeta_grad_small 57.554
+round1 dev TIME lbeta_grad_mixed 58.202
+round1 dev TIME nb2_vec1000_grad_phi_small 46140.250
+round1 head VALUE glm_value -0x1.f18c882ce79ffp+10 0x0p+0 0x0p+0
+round1 head TIME glm_value 65.925
+round1 head # glm_value acc=-7960783.2459500171
+round1 head VALUE glm_grad_ab -0x1.f18c882ce79ffp+10 0x1.3aaf7139be01ep+4 0x1.3a6db1c6795e7p+3
+round1 head TIME glm_grad_ab 71.648
+round1 head # glm_grad_ab acc=-1990195.8114873299
+round1 head VALUE glm_grad_abphi -0x1.f18c882ce79ffp+10 0x1.3aaf7139be01ep+4 0x1.c3dea838ce92cp+5
+round1 head TIME glm_grad_abphi 75.827
+round1 head # glm_grad_abphi acc=-1990195.8114873299
+round1 head VALUE glm_grad_abphi_propto 0x1.b410f4979d53p+6 0x1.3aaf7139be01ep+4 0x1.c3dea838ce92cp+5
+round1 head TIME glm_grad_abphi_propto 86.734
+round1 head # glm_grad_abphi_propto acc=109016.55804536465
+round1 head VALUE glm_grad_vecphi -0x1.ff1245f94e0c9p+10 0x1.0e5cb81a5f19ap+5 0x1.592a858d08b9ep-2
+round1 head TIME glm_grad_vecphi 73.052
+round1 head # glm_grad_vecphi acc=-2044285.5208646646
+round1 head VALUE glm_grad_x -0x1.f18c882ce79ffp+10 0x1.300ebb9d2fc2p-2 -0x1.c6454a255fd8ep-3
+round1 head TIME glm_grad_x 87.474
+round1 head # glm_grad_x acc=-995097.90574369242
+round1 head TIME dd_small_int 4.321
+round1 head TIME pair_small_int 14.757
+round1 head TIME dd_mid_int 16.989
+round1 head TIME pair_mid_int 14.552
+round1 head TIME dd_half 27.881
+round1 head TIME dd_large_x_small_int 4.315
+round1 head TIME nb2_grad_phi_small_n_small 71.018
+round1 head TIME nb2_grad_phi_small_n_mid 81.963
+round1 head TIME nb2_grad_phi_large_n_small 65.768
+round1 head TIME nb_grad_alpha_small 61.549
+round1 head TIME nb2log_grad_phi_small 73.529
+round1 head TIME bb_grad_small 167.805
+round1 head TIME lbeta_grad_small 57.544
+round1 head TIME lbeta_grad_mixed 68.612
+round1 head TIME nb2_vec1000_grad_phi_small 48020.837
+round1 opt VALUE glm_value -0x1.f18c882ce79ffp+10 0x0p+0 0x0p+0
+round1 opt TIME glm_value 14.809
+round1 opt # glm_value acc=-7960783.2459500171
+round1 opt VALUE glm_grad_ab -0x1.f18c882ce79ffp+10 0x1.3aaf7139be01ep+4 0x1.3a6db1c6795e7p+3
+round1 opt TIME glm_grad_ab 17.338
+round1 opt # glm_grad_ab acc=-1990195.8114873299
+round1 opt VALUE glm_grad_abphi -0x1.f18c882ce79ffp+10 0x1.3aaf7139be01ep+4 0x1.c3dea838ce92ep+5
+round1 opt TIME glm_grad_abphi 19.413
+round1 opt # glm_grad_abphi acc=-1990195.8114873299
+round1 opt VALUE glm_grad_abphi_propto 0x1.b410f4979d85p+6 0x1.3aaf7139be01ep+4 0x1.c3dea838ce92ep+5
+round1 opt TIME glm_grad_abphi_propto 20.348
+round1 opt # glm_grad_abphi_propto acc=109016.55804537608
+round1 opt VALUE glm_grad_vecphi -0x1.ff1245f94e0c9p+10 0x1.0e5cb81a5f19ap+5 0x1.592a858d08b9ep-2
+round1 opt TIME glm_grad_vecphi 59.118
+round1 opt # glm_grad_vecphi acc=-2044285.5208646646
+round1 opt VALUE glm_grad_x -0x1.f18c882ce79ffp+10 0x1.300ebb9d2fc2p-2 -0x1.c6454a255fd8ep-3
+round1 opt TIME glm_grad_x 31.269
+round1 opt # glm_grad_x acc=-995097.90574369242
+round1 opt TIME dd_small_int 4.320
+round1 opt TIME pair_small_int 14.724
+round1 opt TIME dd_mid_int 16.973
+round1 opt TIME pair_mid_int 14.527
+round1 opt TIME dd_half 27.859
+round1 opt TIME dd_large_x_small_int 4.313
+round1 opt TIME nb2_grad_phi_small_n_small 71.011
+round1 opt TIME nb2_grad_phi_small_n_mid 81.421
+round1 opt TIME nb2_grad_phi_large_n_small 65.661
+round1 opt TIME nb_grad_alpha_small 60.505
+round1 opt TIME nb2log_grad_phi_small 73.589
+round1 opt TIME bb_grad_small 165.840
+round1 opt TIME lbeta_grad_small 57.618
+round1 opt TIME lbeta_grad_mixed 67.498
+round1 opt TIME nb2_vec1000_grad_phi_small 48133.201
+round2 dev VALUE glm_value -0x1.f18c882ce7aa2p+10 0x0p+0 0x0p+0
+round2 dev TIME glm_value 53.290
+round2 dev # glm_value acc=-7960783.2459501522
+round2 dev VALUE glm_grad_ab -0x1.f18c882ce7aa2p+10 0x1.3aaf7139be00ap+4 0x1.3a6db1c6795eep+3
+round2 dev TIME glm_grad_ab 56.568
+round2 dev # glm_grad_ab acc=-1990195.8114874524
+round2 dev VALUE glm_grad_abphi -0x1.f18c882ce7aa2p+10 0x1.3aaf7139be00ap+4 0x1.c3dea838ce97p+5
+round2 dev TIME glm_grad_abphi 64.431
+round2 dev # glm_grad_abphi acc=-1990195.8114874524
+round2 dev VALUE glm_grad_abphi_propto 0x1.b410f4979cbp+6 0x1.3aaf7139be00ap+4 0x1.c3dea838ce97p+5
+round2 dev TIME glm_grad_abphi_propto 52.011
+round2 dev # glm_grad_abphi_propto acc=109016.55804533111
+round2 dev VALUE glm_grad_vecphi -0x1.ff1245f94e078p+10 0x1.0e5cb81a5f19ep+5 0x1.592a858d08ba2p-2
+round2 dev TIME glm_grad_vecphi 85.979
+round2 dev # glm_grad_vecphi acc=-2044285.5208646543
+round2 dev VALUE glm_grad_x -0x1.f18c882ce7aa2p+10 0x1.300ebb9d2fc25p-2 -0x1.c6454a255fd89p-3
+round2 dev TIME glm_grad_x 73.362
+round2 dev # glm_grad_x acc=-995097.90574370476
+round2 dev TIME pair_small_int 14.703
+round2 dev TIME pair_mid_int 14.426
+round2 dev TIME nb2_grad_phi_small_n_small 78.869
+round2 dev TIME nb2_grad_phi_small_n_mid 90.488
+round2 dev TIME nb2_grad_phi_large_n_small 80.974
+round2 dev TIME nb_grad_alpha_small 70.595
+round2 dev TIME nb2log_grad_phi_small 82.436
+round2 dev TIME bb_grad_small 169.760
+round2 dev TIME lbeta_grad_small 57.337
+round2 dev TIME lbeta_grad_mixed 57.970
+round2 dev TIME nb2_vec1000_grad_phi_small 46151.442
+round2 head VALUE glm_value -0x1.f18c882ce79ffp+10 0x0p+0 0x0p+0
+round2 head TIME glm_value 66.142
+round2 head # glm_value acc=-7960783.2459500171
+round2 head VALUE glm_grad_ab -0x1.f18c882ce79ffp+10 0x1.3aaf7139be01ep+4 0x1.3a6db1c6795e7p+3
+round2 head TIME glm_grad_ab 71.632
+round2 head # glm_grad_ab acc=-1990195.8114873299
+round2 head VALUE glm_grad_abphi -0x1.f18c882ce79ffp+10 0x1.3aaf7139be01ep+4 0x1.c3dea838ce92cp+5
+round2 head TIME glm_grad_abphi 76.042
+round2 head # glm_grad_abphi acc=-1990195.8114873299
+round2 head VALUE glm_grad_abphi_propto 0x1.b410f4979d53p+6 0x1.3aaf7139be01ep+4 0x1.c3dea838ce92cp+5
+round2 head TIME glm_grad_abphi_propto 86.944
+round2 head # glm_grad_abphi_propto acc=109016.55804536465
+round2 head VALUE glm_grad_vecphi -0x1.ff1245f94e0c9p+10 0x1.0e5cb81a5f19ap+5 0x1.592a858d08b9ep-2
+round2 head TIME glm_grad_vecphi 73.418
+round2 head # glm_grad_vecphi acc=-2044285.5208646646
+round2 head VALUE glm_grad_x -0x1.f18c882ce79ffp+10 0x1.300ebb9d2fc2p-2 -0x1.c6454a255fd8ep-3
+round2 head TIME glm_grad_x 87.673
+round2 head # glm_grad_x acc=-995097.90574369242
+round2 head TIME dd_small_int 4.316
+round2 head TIME pair_small_int 14.721
+round2 head TIME dd_mid_int 16.960
+round2 head TIME pair_mid_int 14.478
+round2 head TIME dd_half 27.822
+round2 head TIME dd_large_x_small_int 4.301
+round2 head TIME nb2_grad_phi_small_n_small 70.859
+round2 head TIME nb2_grad_phi_small_n_mid 81.154
+round2 head TIME nb2_grad_phi_large_n_small 65.470
+round2 head TIME nb_grad_alpha_small 61.443
+round2 head TIME nb2log_grad_phi_small 73.189
+round2 head TIME bb_grad_small 166.583
+round2 head TIME lbeta_grad_small 57.425
+round2 head TIME lbeta_grad_mixed 68.782
+round2 head TIME nb2_vec1000_grad_phi_small 48127.223
+round2 opt VALUE glm_value -0x1.f18c882ce79ffp+10 0x0p+0 0x0p+0
+round2 opt TIME glm_value 14.824
+round2 opt # glm_value acc=-7960783.2459500171
+round2 opt VALUE glm_grad_ab -0x1.f18c882ce79ffp+10 0x1.3aaf7139be01ep+4 0x1.3a6db1c6795e7p+3
+round2 opt TIME glm_grad_ab 17.353
+round2 opt # glm_grad_ab acc=-1990195.8114873299
+round2 opt VALUE glm_grad_abphi -0x1.f18c882ce79ffp+10 0x1.3aaf7139be01ep+4 0x1.c3dea838ce92ep+5
+round2 opt TIME glm_grad_abphi 19.431
+round2 opt # glm_grad_abphi acc=-1990195.8114873299
+round2 opt VALUE glm_grad_abphi_propto 0x1.b410f4979d85p+6 0x1.3aaf7139be01ep+4 0x1.c3dea838ce92ep+5
+round2 opt TIME glm_grad_abphi_propto 20.347
+round2 opt # glm_grad_abphi_propto acc=109016.55804537608
+round2 opt VALUE glm_grad_vecphi -0x1.ff1245f94e0c9p+10 0x1.0e5cb81a5f19ap+5 0x1.592a858d08b9ep-2
+round2 opt TIME glm_grad_vecphi 59.119
+round2 opt # glm_grad_vecphi acc=-2044285.5208646646
+round2 opt VALUE glm_grad_x -0x1.f18c882ce79ffp+10 0x1.300ebb9d2fc2p-2 -0x1.c6454a255fd8ep-3
+round2 opt TIME glm_grad_x 31.385
+round2 opt # glm_grad_x acc=-995097.90574369242
+round2 opt TIME dd_small_int 4.310
+round2 opt TIME pair_small_int 14.658
+round2 opt TIME dd_mid_int 17.015
+round2 opt TIME pair_mid_int 14.528
+round2 opt TIME dd_half 27.799
+round2 opt TIME dd_large_x_small_int 4.307
+round2 opt TIME nb2_grad_phi_small_n_small 71.325
+round2 opt TIME nb2_grad_phi_small_n_mid 84.218
+round2 opt TIME nb2_grad_phi_large_n_small 66.418
+round2 opt TIME nb_grad_alpha_small 61.023
+round2 opt TIME nb2log_grad_phi_small 77.309
+round2 opt TIME bb_grad_small 167.680
+round2 opt TIME lbeta_grad_small 57.822
+round2 opt TIME lbeta_grad_mixed 68.356
+round2 opt TIME nb2_vec1000_grad_phi_small 47977.936
+round3 dev VALUE glm_value -0x1.f18c882ce7aa2p+10 0x0p+0 0x0p+0
+round3 dev TIME glm_value 53.541
+round3 dev # glm_value acc=-7960783.2459501522
+round3 dev VALUE glm_grad_ab -0x1.f18c882ce7aa2p+10 0x1.3aaf7139be00ap+4 0x1.3a6db1c6795eep+3
+round3 dev TIME glm_grad_ab 56.775
+round3 dev # glm_grad_ab acc=-1990195.8114874524
+round3 dev VALUE glm_grad_abphi -0x1.f18c882ce7aa2p+10 0x1.3aaf7139be00ap+4 0x1.c3dea838ce97p+5
+round3 dev TIME glm_grad_abphi 64.676
+round3 dev # glm_grad_abphi acc=-1990195.8114874524
+round3 dev VALUE glm_grad_abphi_propto 0x1.b410f4979cbp+6 0x1.3aaf7139be00ap+4 0x1.c3dea838ce97p+5
+round3 dev TIME glm_grad_abphi_propto 52.031
+round3 dev # glm_grad_abphi_propto acc=109016.55804533111
+round3 dev VALUE glm_grad_vecphi -0x1.ff1245f94e078p+10 0x1.0e5cb81a5f19ep+5 0x1.592a858d08ba2p-2
+round3 dev TIME glm_grad_vecphi 86.450
+round3 dev # glm_grad_vecphi acc=-2044285.5208646543
+round3 dev VALUE glm_grad_x -0x1.f18c882ce7aa2p+10 0x1.300ebb9d2fc25p-2 -0x1.c6454a255fd89p-3
+round3 dev TIME glm_grad_x 73.743
+round3 dev # glm_grad_x acc=-995097.90574370476
+round3 dev TIME pair_small_int 14.718
+round3 dev TIME pair_mid_int 14.429
+round3 dev TIME nb2_grad_phi_small_n_small 78.709
+round3 dev TIME nb2_grad_phi_small_n_mid 90.533
+round3 dev TIME nb2_grad_phi_large_n_small 81.000
+round3 dev TIME nb_grad_alpha_small 69.605
+round3 dev TIME nb2log_grad_phi_small 81.751
+round3 dev TIME bb_grad_small 153.919
+round3 dev TIME lbeta_grad_small 57.105
+round3 dev TIME lbeta_grad_mixed 57.777
+round3 dev TIME nb2_vec1000_grad_phi_small 45931.188
+round3 head VALUE glm_value -0x1.f18c882ce79ffp+10 0x0p+0 0x0p+0
+round3 head TIME glm_value 66.071
+round3 head # glm_value acc=-7960783.2459500171
+round3 head VALUE glm_grad_ab -0x1.f18c882ce79ffp+10 0x1.3aaf7139be01ep+4 0x1.3a6db1c6795e7p+3
+round3 head TIME glm_grad_ab 71.735
+round3 head # glm_grad_ab acc=-1990195.8114873299
+round3 head VALUE glm_grad_abphi -0x1.f18c882ce79ffp+10 0x1.3aaf7139be01ep+4 0x1.c3dea838ce92cp+5
+round3 head TIME glm_grad_abphi 76.478
+round3 head # glm_grad_abphi acc=-1990195.8114873299
+round3 head VALUE glm_grad_abphi_propto 0x1.b410f4979d53p+6 0x1.3aaf7139be01ep+4 0x1.c3dea838ce92cp+5
+round3 head TIME glm_grad_abphi_propto 86.941
+round3 head # glm_grad_abphi_propto acc=109016.55804536465
+round3 head VALUE glm_grad_vecphi -0x1.ff1245f94e0c9p+10 0x1.0e5cb81a5f19ap+5 0x1.592a858d08b9ep-2
+round3 head TIME glm_grad_vecphi 73.083
+round3 head # glm_grad_vecphi acc=-2044285.5208646646
+round3 head VALUE glm_grad_x -0x1.f18c882ce79ffp+10 0x1.300ebb9d2fc2p-2 -0x1.c6454a255fd8ep-3
+round3 head TIME glm_grad_x 87.710
+round3 head # glm_grad_x acc=-995097.90574369242
+round3 head TIME dd_small_int 4.320
+round3 head TIME pair_small_int 14.729
+round3 head TIME dd_mid_int 16.970
+round3 head TIME pair_mid_int 14.589
+round3 head TIME dd_half 27.891
+round3 head TIME dd_large_x_small_int 4.312
+round3 head TIME nb2_grad_phi_small_n_small 71.273
+round3 head TIME nb2_grad_phi_small_n_mid 81.681
+round3 head TIME nb2_grad_phi_large_n_small 65.472
+round3 head TIME nb_grad_alpha_small 61.363
+round3 head TIME nb2log_grad_phi_small 75.055
+round3 head TIME bb_grad_small 165.932
+round3 head TIME lbeta_grad_small 57.768
+round3 head TIME lbeta_grad_mixed 68.147
+round3 head TIME nb2_vec1000_grad_phi_small 47931.987
+round3 opt VALUE glm_value -0x1.f18c882ce79ffp+10 0x0p+0 0x0p+0
+round3 opt TIME glm_value 14.804
+round3 opt # glm_value acc=-7960783.2459500171
+round3 opt VALUE glm_grad_ab -0x1.f18c882ce79ffp+10 0x1.3aaf7139be01ep+4 0x1.3a6db1c6795e7p+3
+round3 opt TIME glm_grad_ab 17.303
+round3 opt # glm_grad_ab acc=-1990195.8114873299
+round3 opt VALUE glm_grad_abphi -0x1.f18c882ce79ffp+10 0x1.3aaf7139be01ep+4 0x1.c3dea838ce92ep+5
+round3 opt TIME glm_grad_abphi 19.403
+round3 opt # glm_grad_abphi acc=-1990195.8114873299
+round3 opt VALUE glm_grad_abphi_propto 0x1.b410f4979d85p+6 0x1.3aaf7139be01ep+4 0x1.c3dea838ce92ep+5
+round3 opt TIME glm_grad_abphi_propto 20.262
+round3 opt # glm_grad_abphi_propto acc=109016.55804537608
+round3 opt VALUE glm_grad_vecphi -0x1.ff1245f94e0c9p+10 0x1.0e5cb81a5f19ap+5 0x1.592a858d08b9ep-2
+round3 opt TIME glm_grad_vecphi 59.170
+round3 opt # glm_grad_vecphi acc=-2044285.5208646646
+round3 opt VALUE glm_grad_x -0x1.f18c882ce79ffp+10 0x1.300ebb9d2fc2p-2 -0x1.c6454a255fd8ep-3
+round3 opt TIME glm_grad_x 31.285
+round3 opt # glm_grad_x acc=-995097.90574369242
+round3 opt TIME dd_small_int 4.323
+round3 opt TIME pair_small_int 14.703
+round3 opt TIME dd_mid_int 16.993
+round3 opt TIME pair_mid_int 14.599
+round3 opt TIME dd_half 27.868
+round3 opt TIME dd_large_x_small_int 4.321
+round3 opt TIME nb2_grad_phi_small_n_small 71.220
+round3 opt TIME nb2_grad_phi_small_n_mid 81.514
+round3 opt TIME nb2_grad_phi_large_n_small 65.934
+round3 opt TIME nb_grad_alpha_small 60.419
+round3 opt TIME nb2log_grad_phi_small 73.621
+round3 opt TIME bb_grad_small 165.492
+round3 opt TIME lbeta_grad_small 57.562
+round3 opt TIME lbeta_grad_mixed 68.506
+round3 opt TIME nb2_vec1000_grad_phi_small 48031.564
+round4 dev VALUE glm_value -0x1.f18c882ce7aa2p+10 0x0p+0 0x0p+0
+round4 dev TIME glm_value 53.035
+round4 dev # glm_value acc=-7960783.2459501522
+round4 dev VALUE glm_grad_ab -0x1.f18c882ce7aa2p+10 0x1.3aaf7139be00ap+4 0x1.3a6db1c6795eep+3
+round4 dev TIME glm_grad_ab 56.647
+round4 dev # glm_grad_ab acc=-1990195.8114874524
+round4 dev VALUE glm_grad_abphi -0x1.f18c882ce7aa2p+10 0x1.3aaf7139be00ap+4 0x1.c3dea838ce97p+5
+round4 dev TIME glm_grad_abphi 64.400
+round4 dev # glm_grad_abphi acc=-1990195.8114874524
+round4 dev VALUE glm_grad_abphi_propto 0x1.b410f4979cbp+6 0x1.3aaf7139be00ap+4 0x1.c3dea838ce97p+5
+round4 dev TIME glm_grad_abphi_propto 51.978
+round4 dev # glm_grad_abphi_propto acc=109016.55804533111
+round4 dev VALUE glm_grad_vecphi -0x1.ff1245f94e078p+10 0x1.0e5cb81a5f19ep+5 0x1.592a858d08ba2p-2
+round4 dev TIME glm_grad_vecphi 85.978
+round4 dev # glm_grad_vecphi acc=-2044285.5208646543
+round4 dev VALUE glm_grad_x -0x1.f18c882ce7aa2p+10 0x1.300ebb9d2fc25p-2 -0x1.c6454a255fd89p-3
+round4 dev TIME glm_grad_x 73.636
+round4 dev # glm_grad_x acc=-995097.90574370476
+round4 dev TIME pair_small_int 14.764
+round4 dev TIME pair_mid_int 14.473
+round4 dev TIME nb2_grad_phi_small_n_small 78.777
+round4 dev TIME nb2_grad_phi_small_n_mid 90.646
+round4 dev TIME nb2_grad_phi_large_n_small 80.913
+round4 dev TIME nb_grad_alpha_small 70.016
+round4 dev TIME nb2log_grad_phi_small 82.051
+round4 dev TIME bb_grad_small 154.920
+round4 dev TIME lbeta_grad_small 57.365
+round4 dev TIME lbeta_grad_mixed 58.042
+round4 dev TIME nb2_vec1000_grad_phi_small 46018.981
+round4 head VALUE glm_value -0x1.f18c882ce79ffp+10 0x0p+0 0x0p+0
+round4 head TIME glm_value 66.592
+round4 head # glm_value acc=-7960783.2459500171
+round4 head VALUE glm_grad_ab -0x1.f18c882ce79ffp+10 0x1.3aaf7139be01ep+4 0x1.3a6db1c6795e7p+3
+round4 head TIME glm_grad_ab 71.519
+round4 head # glm_grad_ab acc=-1990195.8114873299
+round4 head VALUE glm_grad_abphi -0x1.f18c882ce79ffp+10 0x1.3aaf7139be01ep+4 0x1.c3dea838ce92cp+5
+round4 head TIME glm_grad_abphi 75.906
+round4 head # glm_grad_abphi acc=-1990195.8114873299
+round4 head VALUE glm_grad_abphi_propto 0x1.b410f4979d53p+6 0x1.3aaf7139be01ep+4 0x1.c3dea838ce92cp+5
+round4 head TIME glm_grad_abphi_propto 87.138
+round4 head # glm_grad_abphi_propto acc=109016.55804536465
+round4 head VALUE glm_grad_vecphi -0x1.ff1245f94e0c9p+10 0x1.0e5cb81a5f19ap+5 0x1.592a858d08b9ep-2
+round4 head TIME glm_grad_vecphi 73.555
+round4 head # glm_grad_vecphi acc=-2044285.5208646646
+round4 head VALUE glm_grad_x -0x1.f18c882ce79ffp+10 0x1.300ebb9d2fc2p-2 -0x1.c6454a255fd8ep-3
+round4 head TIME glm_grad_x 88.542
+round4 head # glm_grad_x acc=-995097.90574369242
+round4 head TIME dd_small_int 4.326
+round4 head TIME pair_small_int 14.738
+round4 head TIME dd_mid_int 17.043
+round4 head TIME pair_mid_int 14.568
+round4 head TIME dd_half 27.929
+round4 head TIME dd_large_x_small_int 4.319
+round4 head TIME nb2_grad_phi_small_n_small 71.108
+round4 head TIME nb2_grad_phi_small_n_mid 81.513
+round4 head TIME nb2_grad_phi_large_n_small 65.277
+round4 head TIME nb_grad_alpha_small 61.617
+round4 head TIME nb2log_grad_phi_small 73.228
+round4 head TIME bb_grad_small 165.761
+round4 head TIME lbeta_grad_small 57.806
+round4 head TIME lbeta_grad_mixed 68.001
+round4 head TIME nb2_vec1000_grad_phi_small 48179.699
+round4 opt VALUE glm_value -0x1.f18c882ce79ffp+10 0x0p+0 0x0p+0
+round4 opt TIME glm_value 14.812
+round4 opt # glm_value acc=-7960783.2459500171
+round4 opt VALUE glm_grad_ab -0x1.f18c882ce79ffp+10 0x1.3aaf7139be01ep+4 0x1.3a6db1c6795e7p+3
+round4 opt TIME glm_grad_ab 17.322
+round4 opt # glm_grad_ab acc=-1990195.8114873299
+round4 opt VALUE glm_grad_abphi -0x1.f18c882ce79ffp+10 0x1.3aaf7139be01ep+4 0x1.c3dea838ce92ep+5
+round4 opt TIME glm_grad_abphi 19.399
+round4 opt # glm_grad_abphi acc=-1990195.8114873299
+round4 opt VALUE glm_grad_abphi_propto 0x1.b410f4979d85p+6 0x1.3aaf7139be01ep+4 0x1.c3dea838ce92ep+5
+round4 opt TIME glm_grad_abphi_propto 20.327
+round4 opt # glm_grad_abphi_propto acc=109016.55804537608
+round4 opt VALUE glm_grad_vecphi -0x1.ff1245f94e0c9p+10 0x1.0e5cb81a5f19ap+5 0x1.592a858d08b9ep-2
+round4 opt TIME glm_grad_vecphi 59.091
+round4 opt # glm_grad_vecphi acc=-2044285.5208646646
+round4 opt VALUE glm_grad_x -0x1.f18c882ce79ffp+10 0x1.300ebb9d2fc2p-2 -0x1.c6454a255fd8ep-3
+round4 opt TIME glm_grad_x 31.390
+round4 opt # glm_grad_x acc=-995097.90574369242
+round4 opt TIME dd_small_int 4.353
+round4 opt TIME pair_small_int 14.765
+round4 opt TIME dd_mid_int 16.998
+round4 opt TIME pair_mid_int 14.525
+round4 opt TIME dd_half 27.882
+round4 opt TIME dd_large_x_small_int 4.318
+round4 opt TIME nb2_grad_phi_small_n_small 71.052
+round4 opt TIME nb2_grad_phi_small_n_mid 81.488
+round4 opt TIME nb2_grad_phi_large_n_small 65.735
+round4 opt TIME nb_grad_alpha_small 60.223
+round4 opt TIME nb2log_grad_phi_small 73.531
+round4 opt TIME bb_grad_small 164.394
+round4 opt TIME lbeta_grad_small 57.626
+round4 opt TIME lbeta_grad_mixed 67.720
+round4 opt TIME nb2_vec1000_grad_phi_small 48163.591
+round5 dev VALUE glm_value -0x1.f18c882ce7aa2p+10 0x0p+0 0x0p+0
+round5 dev TIME glm_value 53.058
+round5 dev # glm_value acc=-7960783.2459501522
+round5 dev VALUE glm_grad_ab -0x1.f18c882ce7aa2p+10 0x1.3aaf7139be00ap+4 0x1.3a6db1c6795eep+3
+round5 dev TIME glm_grad_ab 56.692
+round5 dev # glm_grad_ab acc=-1990195.8114874524
+round5 dev VALUE glm_grad_abphi -0x1.f18c882ce7aa2p+10 0x1.3aaf7139be00ap+4 0x1.c3dea838ce97p+5
+round5 dev TIME glm_grad_abphi 64.280
+round5 dev # glm_grad_abphi acc=-1990195.8114874524
+round5 dev VALUE glm_grad_abphi_propto 0x1.b410f4979cbp+6 0x1.3aaf7139be00ap+4 0x1.c3dea838ce97p+5
+round5 dev TIME glm_grad_abphi_propto 51.822
+round5 dev # glm_grad_abphi_propto acc=109016.55804533111
+round5 dev VALUE glm_grad_vecphi -0x1.ff1245f94e078p+10 0x1.0e5cb81a5f19ep+5 0x1.592a858d08ba2p-2
+round5 dev TIME glm_grad_vecphi 85.982
+round5 dev # glm_grad_vecphi acc=-2044285.5208646543
+round5 dev VALUE glm_grad_x -0x1.f18c882ce7aa2p+10 0x1.300ebb9d2fc25p-2 -0x1.c6454a255fd89p-3
+round5 dev TIME glm_grad_x 73.675
+round5 dev # glm_grad_x acc=-995097.90574370476
+round5 dev TIME pair_small_int 14.669
+round5 dev TIME pair_mid_int 14.428
+round5 dev TIME nb2_grad_phi_small_n_small 78.414
+round5 dev TIME nb2_grad_phi_small_n_mid 90.042
+round5 dev TIME nb2_grad_phi_large_n_small 80.576
+round5 dev TIME nb_grad_alpha_small 70.408
+round5 dev TIME nb2log_grad_phi_small 81.814
+round5 dev TIME bb_grad_small 154.894
+round5 dev TIME lbeta_grad_small 57.068
+round5 dev TIME lbeta_grad_mixed 57.806
+round5 dev TIME nb2_vec1000_grad_phi_small 45902.126
+round5 head VALUE glm_value -0x1.f18c882ce79ffp+10 0x0p+0 0x0p+0
+round5 head TIME glm_value 66.164
+round5 head # glm_value acc=-7960783.2459500171
+round5 head VALUE glm_grad_ab -0x1.f18c882ce79ffp+10 0x1.3aaf7139be01ep+4 0x1.3a6db1c6795e7p+3
+round5 head TIME glm_grad_ab 71.940
+round5 head # glm_grad_ab acc=-1990195.8114873299
+round5 head VALUE glm_grad_abphi -0x1.f18c882ce79ffp+10 0x1.3aaf7139be01ep+4 0x1.c3dea838ce92cp+5
+round5 head TIME glm_grad_abphi 76.154
+round5 head # glm_grad_abphi acc=-1990195.8114873299
+round5 head VALUE glm_grad_abphi_propto 0x1.b410f4979d53p+6 0x1.3aaf7139be01ep+4 0x1.c3dea838ce92cp+5
+round5 head TIME glm_grad_abphi_propto 87.156
+round5 head # glm_grad_abphi_propto acc=109016.55804536465
+round5 head VALUE glm_grad_vecphi -0x1.ff1245f94e0c9p+10 0x1.0e5cb81a5f19ap+5 0x1.592a858d08b9ep-2
+round5 head TIME glm_grad_vecphi 73.311
+round5 head # glm_grad_vecphi acc=-2044285.5208646646
+round5 head VALUE glm_grad_x -0x1.f18c882ce79ffp+10 0x1.300ebb9d2fc2p-2 -0x1.c6454a255fd8ep-3
+round5 head TIME glm_grad_x 87.866
+round5 head # glm_grad_x acc=-995097.90574369242
+round5 head TIME dd_small_int 4.310
+round5 head TIME pair_small_int 14.735
+round5 head TIME dd_mid_int 16.937
+round5 head TIME pair_mid_int 14.511
+round5 head TIME dd_half 27.826
+round5 head TIME dd_large_x_small_int 4.303
+round5 head TIME nb2_grad_phi_small_n_small 71.102
+round5 head TIME nb2_grad_phi_small_n_mid 82.130
+round5 head TIME nb2_grad_phi_large_n_small 66.215
+round5 head TIME nb_grad_alpha_small 61.828
+round5 head TIME nb2log_grad_phi_small 73.384
+round5 head TIME bb_grad_small 168.519
+round5 head TIME lbeta_grad_small 57.672
+round5 head TIME lbeta_grad_mixed 68.916
+round5 head TIME nb2_vec1000_grad_phi_small 48111.576
+round5 opt VALUE glm_value -0x1.f18c882ce79ffp+10 0x0p+0 0x0p+0
+round5 opt TIME glm_value 14.838
+round5 opt # glm_value acc=-7960783.2459500171
+round5 opt VALUE glm_grad_ab -0x1.f18c882ce79ffp+10 0x1.3aaf7139be01ep+4 0x1.3a6db1c6795e7p+3
+round5 opt TIME glm_grad_ab 17.352
+round5 opt # glm_grad_ab acc=-1990195.8114873299
+round5 opt VALUE glm_grad_abphi -0x1.f18c882ce79ffp+10 0x1.3aaf7139be01ep+4 0x1.c3dea838ce92ep+5
+round5 opt TIME glm_grad_abphi 19.456
+round5 opt # glm_grad_abphi acc=-1990195.8114873299
+round5 opt VALUE glm_grad_abphi_propto 0x1.b410f4979d85p+6 0x1.3aaf7139be01ep+4 0x1.c3dea838ce92ep+5
+round5 opt TIME glm_grad_abphi_propto 20.323
+round5 opt # glm_grad_abphi_propto acc=109016.55804537608
+round5 opt VALUE glm_grad_vecphi -0x1.ff1245f94e0c9p+10 0x1.0e5cb81a5f19ap+5 0x1.592a858d08b9ep-2
+round5 opt TIME glm_grad_vecphi 59.312
+round5 opt # glm_grad_vecphi acc=-2044285.5208646646
+round5 opt VALUE glm_grad_x -0x1.f18c882ce79ffp+10 0x1.300ebb9d2fc2p-2 -0x1.c6454a255fd8ep-3
+round5 opt TIME glm_grad_x 31.527
+round5 opt # glm_grad_x acc=-995097.90574369242
+round5 opt TIME dd_small_int 4.321
+round5 opt TIME pair_small_int 14.733
+round5 opt TIME dd_mid_int 16.975
+round5 opt TIME pair_mid_int 14.561
+round5 opt TIME dd_half 27.865
+round5 opt TIME dd_large_x_small_int 4.312
+round5 opt TIME nb2_grad_phi_small_n_small 71.038
+round5 opt TIME nb2_grad_phi_small_n_mid 82.107
+round5 opt TIME nb2_grad_phi_large_n_small 66.296
+round5 opt TIME nb_grad_alpha_small 60.425
+round5 opt TIME nb2log_grad_phi_small 73.515
+round5 opt TIME bb_grad_small 167.791
+round5 opt TIME lbeta_grad_small 57.503
+round5 opt TIME lbeta_grad_mixed 68.559
+round5 opt TIME nb2_vec1000_grad_phi_small 48015.476
+== load: 56.97 150.51 118.45 1/4471 1179343
+EXIT=0

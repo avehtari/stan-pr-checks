@@ -1,0 +1,8 @@
+develop  36 points: finite 36, nonfinite 0, threw 0, limit 0, died 0
+PR       36 points: finite 35, nonfinite 1, threw 0, limit 0, died 0
+
+transitions develop -> PR (changed only):
+  finite    -> nonfinite 1
+
+develop finite, PR not finite (n, r, alpha, beta: develop value, PR value and gradients):
+  (0, 30, 10, 300): 2.84e-14; nonfinite 0 nan nan nan

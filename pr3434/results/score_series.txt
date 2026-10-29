@@ -1,0 +1,4 @@
+2012 points, h = nu / 2 from 20 to 1e15
+route A against route B, worst relative: C 7.09e-45, D 8.81e-48
+C: worst error 0.51 eps at h = 1.85506e+07
+D: worst error 1.76 eps at h = 20.3162

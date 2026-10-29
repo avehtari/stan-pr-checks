@@ -1,0 +1,2 @@
+nb2_bitwise: identical, 12006 lines
+bench_nb2 VALUE lines identical (label column removed)

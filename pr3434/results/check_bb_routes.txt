@@ -1,0 +1,20 @@
+route A (80 digits) against B (130 digits, mp.diff) and C (sums)
+region   points  value A-B   grad A-B   grad A-C
+EQ_a       1000    4.1e-45    4.8e-45    4.8e-45
+EQ_b       1000    4.1e-45    4.8e-45    4.8e-45
+EQ_c       1000    3.7e-45    4.6e-45    4.6e-45
+EQ_d       1000    4.0e-45    4.9e-45    4.9e-45
+UN_a       1000    4.0e-45    4.8e-45    4.8e-45
+UN_b       1000    4.6e-45    4.8e-45    4.8e-45
+UN_c       1000    4.8e-45    4.8e-45    4.8e-45
+UN_d       1000    4.7e-45    4.6e-45    4.6e-45
+MC_a       1000    4.3e-45    4.7e-45    4.7e-45
+MC_b       1000    4.6e-45    4.8e-45    4.8e-45
+MC_c       1000    4.4e-45    4.8e-45    4.8e-45
+MC_d       1000    4.2e-45    4.7e-45    4.5e-45
+SEAM       1000    4.5e-45    4.8e-45    4.8e-45
+REP         177    1.4e-45    4.5e-45    4.5e-45
+
+real	0m7.979s
+user	1m17.324s
+sys	0m0.129s

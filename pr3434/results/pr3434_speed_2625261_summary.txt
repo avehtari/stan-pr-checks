@@ -1,0 +1,82 @@
+kernel                           dev ns      pr ns     pr/dev  spread
+glm_value                          53.3       14.9       0.28  0.7%/0.3%
+glm_grad_ab                        58.1       17.3       0.30  1.5%/0.3%
+glm_grad_abphi                     65.0       19.4       0.30  1.1%/0.4%
+glm_grad_abphi_propto              52.1       20.1       0.39  0.8%/0.3%
+glm_grad_abphi_propto_distinct       46.3       67.3       1.45  0.9%/0.5%
+glm_grad_abphi_propto_large        46.3       61.6       1.33  0.8%/0.9%
+glm_grad_vecphi                    86.4       59.2       0.69  0.9%/1.2%
+glm_grad_x                         74.2       31.0       0.42  0.9%/0.5%
+pair_small_int                     14.8       14.7       1.00  0.5%/0.5%
+pair_mid_int                       14.5       14.6       1.01  0.6%/1.0%
+nb2_grad_phi_small_n_small         78.8       71.1       0.90  1.9%/0.6%
+nb2_grad_phi_small_n_mid           89.8       82.3       0.92  0.4%/1.1%
+nb2_grad_phi_large_n_small         79.7       66.3       0.83  0.8%/0.9%
+nb_grad_alpha_small                69.8       61.1       0.88  2.8%/5.1%
+nb2log_grad_phi_small              82.1       74.0       0.90  0.7%/4.6%
+bb_grad_small                     156.0      169.3       1.09  1.5%/1.1%
+lbeta_grad_small                   57.3       57.8       1.01  0.8%/1.7%
+lbeta_grad_mixed                   56.9       68.8       1.21  0.7%/1.5%
+nb2_vec1000_grad_phi_small      45227.5    48299.2       1.07  0.4%/6.9%
+A_2-20:ctrl_lgamma                  9.3        9.3       1.00  0.8%/0.2%
+A_2-20:st_value                    26.4       26.6       1.01  1.0%/0.8%
+A_2-20:st_grad                     59.7       63.3       1.06  0.4%/0.5%
+L_2-40:ctrl_lgamma                  8.4        8.4       1.00  0.6%/0.7%
+L_2-40:st_value                    24.1       24.3       1.01  1.1%/1.5%
+L_2-40:st_grad                     59.9       63.5       1.06  0.7%/0.7%
+C_1e2-1e8:ctrl_lgamma               7.7        7.7       1.00  1.2%/0.4%
+C_1e2-1e8:st_value                 21.9        7.3       0.33  1.0%/0.2%
+C_1e2-1e8:st_grad                  57.7       31.0       0.54  0.7%/3.5%
+dd_small_int                          -        4.3          -  -/2.1%
+dd_mid_int                            -       17.0          -  -/0.6%
+dd_half                               -       27.9          -  -/0.4%
+dd_large_x_small_int                  -        4.3          -  -/2.4%
+VALUE lines constant over rounds: yes
+  glm_grad_ab            differs:
+    dev   -0x1.f18c882ce7aa2p+10 0x1.3aaf7139be00ap+4 0x1.3a6db1c6795eep+3
+    pr    -0x1.f18c882ce79ffp+10 0x1.3aaf7139be01ep+4 0x1.3a6db1c6795e7p+3
+  glm_grad_abphi         differs:
+    dev   -0x1.f18c882ce7aa2p+10 0x1.3aaf7139be00ap+4 0x1.c3dea838ce97p+5
+    pr    -0x1.f18c882ce79ffp+10 0x1.3aaf7139be01ep+4 0x1.c3dea838ce92ep+5
+  glm_grad_abphi_propto  differs:
+    dev   0x1.b410f4979cbp+6 0x1.3aaf7139be00ap+4 0x1.c3dea838ce97p+5
+    pr    0x1.b410f4979d85p+6 0x1.3aaf7139be01ep+4 0x1.c3dea838ce92ep+5
+  glm_grad_abphi_propto_distinct differs:
+    dev   0x1.22b3336e0be66p+21 0x1.d1c1b87fc802p+17 -0x1.6324223da95e9p+16
+    pr    0x1.22b3336e0be68p+21 0x1.d1c1b87fc801fp+17 -0x1.6324223da95e8p+16
+  glm_grad_abphi_propto_large differs:
+    dev   0x1.23f8cf4cd73acp+25 0x1.412b021fd1afbp+21 -0x1.fe5f042e41c0ep+19
+    pr    0x1.23f8cf4cd73b4p+25 0x1.412b021fd1afbp+21 -0x1.fe5f042e41c1p+19
+  glm_grad_vecphi        differs:
+    dev   -0x1.ff1245f94e078p+10 0x1.0e5cb81a5f19ep+5 0x1.592a858d08ba2p-2
+    pr    -0x1.ff1245f94e0c9p+10 0x1.0e5cb81a5f19ap+5 0x1.592a858d08b9ep-2
+  glm_grad_x             differs:
+    dev   -0x1.f18c882ce7aa2p+10 0x1.300ebb9d2fc25p-2 -0x1.c6454a255fd89p-3
+    pr    -0x1.f18c882ce79ffp+10 0x1.300ebb9d2fc2p-2 -0x1.c6454a255fd8ep-3
+  glm_value              differs:
+    dev   -0x1.f18c882ce7aa2p+10 0x0p+0 0x0p+0
+    pr    -0x1.f18c882ce79ffp+10 0x0p+0 0x0p+0
+IR cachegrind A value dev 467.4
+IR perf A value dev 467.3
+IR cachegrind A value pr 478.3
+IR perf A value pr 478.3
+IR cachegrind A grad dev 974.5
+IR perf A grad dev 974.5
+IR cachegrind A grad pr 1010.5
+IR perf A grad pr 1010.5
+IR cachegrind B value dev 452.2
+IR perf B value dev 452.2
+IR cachegrind B value pr 290.7
+IR perf B value pr 290.7
+IR cachegrind B grad dev 1009.4
+IR perf B grad dev 1009.3
+IR cachegrind B grad pr 744.6
+IR perf B grad pr 744.6
+IR cachegrind C value dev 452.2
+IR perf C value dev 452.2
+IR cachegrind C value pr 128.1
+IR perf C value pr 128.1
+IR cachegrind C grad dev 1009.4
+IR perf C grad dev 1009.4
+IR cachegrind C grad pr 461.3
+IR perf C grad pr 461.3
