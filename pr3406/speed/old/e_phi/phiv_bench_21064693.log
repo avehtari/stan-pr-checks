@@ -1,0 +1,56 @@
+pe81.int.triton.aalto.fi
+model name	: Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz
+governor: performance
+/appl/scibuilder-mamba/aalto-rhel9/prod/software/scicomp-r-env/2025.1/1c89c1c/bin/g++
+g++ (conda-forge gcc 14.3.0-18) 14.3.0
+6603b4815b2a771c17098d22e6e27c4d  /tmp/phiv_bench_21064693/stan/math/prim/fun/std_normal_lcdf_impl.hpp
+9fd11de58476b19c471488c1681f98c6  phi_variants.hpp
+RESULT central[-0.66,0.66] 1 dev 8.670 pr 37.429 d1 8.906 d2 8.177
+RESULT central[-0.66,0.66] 2 dev 8.494 pr 37.693 d1 8.902 d2 8.149
+RESULT central[-0.66,0.66] 3 dev 8.469 pr 37.418 d1 8.905 d2 8.144
+RESULT probit[-3,3] 1 dev 22.872 pr 42.959 d1 22.500 d2 22.937
+RESULT probit[-3,3] 2 dev 22.891 pr 42.906 d1 22.515 d2 22.950
+RESULT probit[-3,3] 3 dev 22.826 pr 42.911 d1 22.616 d2 22.876
+RESULT mid[-5,5] 1 dev 27.225 pr 42.990 d1 26.488 d2 27.690
+RESULT mid[-5,5] 2 dev 27.299 pr 43.340 d1 26.990 d2 28.310
+RESULT mid[-5,5] 3 dev 27.403 pr 43.052 d1 26.465 d2 27.671
+RESULT lower[-37,-5] 1 dev 30.891 pr 58.886 d1 30.526 d2 31.195
+RESULT lower[-37,-5] 2 dev 30.885 pr 58.873 d1 30.516 d2 31.186
+RESULT lower[-37,-5] 3 dev 30.868 pr 58.880 d1 30.488 d2 31.225
+RESULT upper[5,8] 1 dev 31.052 pr 44.156 d1 29.346 d2 30.238
+RESULT upper[5,8] 2 dev 31.090 pr 44.701 d1 29.350 d2 30.343
+RESULT upper[5,8] 3 dev 31.088 pr 44.141 d1 29.334 d2 30.239
+sink 7.34586e+07
+RESULT central[-0.66,0.66] 1 dev 8.659 pr 37.443 d1 8.932 d2 8.151
+RESULT central[-0.66,0.66] 2 dev 8.478 pr 37.461 d1 8.955 d2 8.164
+RESULT central[-0.66,0.66] 3 dev 8.485 pr 37.428 d1 8.932 d2 8.159
+RESULT probit[-3,3] 1 dev 22.831 pr 42.988 d1 22.569 d2 23.014
+RESULT probit[-3,3] 2 dev 22.789 pr 42.979 d1 22.547 d2 23.057
+RESULT probit[-3,3] 3 dev 22.766 pr 42.978 d1 22.621 d2 23.046
+RESULT mid[-5,5] 1 dev 27.265 pr 43.061 d1 26.504 d2 27.650
+RESULT mid[-5,5] 2 dev 27.251 pr 43.015 d1 26.523 d2 27.662
+RESULT mid[-5,5] 3 dev 27.261 pr 43.107 d1 26.501 d2 27.668
+RESULT lower[-37,-5] 1 dev 30.907 pr 58.792 d1 30.527 d2 31.260
+RESULT lower[-37,-5] 2 dev 30.884 pr 58.791 d1 30.542 d2 31.219
+RESULT lower[-37,-5] 3 dev 30.883 pr 59.934 d1 30.556 d2 31.255
+RESULT upper[5,8] 1 dev 31.080 pr 44.120 d1 29.529 d2 30.363
+RESULT upper[5,8] 2 dev 31.107 pr 44.105 d1 29.345 d2 30.244
+RESULT upper[5,8] 3 dev 31.095 pr 44.107 d1 29.370 d2 30.250
+sink 7.34586e+07
+RESULT central[-0.66,0.66] 1 dev 8.552 pr 37.484 d1 8.949 d2 8.159
+RESULT central[-0.66,0.66] 2 dev 8.474 pr 37.443 d1 8.934 d2 8.153
+RESULT central[-0.66,0.66] 3 dev 8.472 pr 37.420 d1 8.935 d2 8.148
+RESULT probit[-3,3] 1 dev 22.837 pr 42.931 d1 22.552 d2 22.994
+RESULT probit[-3,3] 2 dev 22.835 pr 42.949 d1 22.570 d2 23.007
+RESULT probit[-3,3] 3 dev 22.853 pr 42.947 d1 22.541 d2 23.046
+RESULT mid[-5,5] 1 dev 27.225 pr 42.944 d1 26.536 d2 27.678
+RESULT mid[-5,5] 2 dev 27.257 pr 42.948 d1 26.496 d2 27.692
+RESULT mid[-5,5] 3 dev 27.254 pr 42.959 d1 26.541 d2 27.713
+RESULT lower[-37,-5] 1 dev 30.871 pr 58.805 d1 30.608 d2 31.219
+RESULT lower[-37,-5] 2 dev 30.867 pr 58.784 d1 30.542 d2 31.270
+RESULT lower[-37,-5] 3 dev 30.887 pr 58.833 d1 30.497 d2 31.342
+RESULT upper[5,8] 1 dev 31.070 pr 44.107 d1 29.378 d2 30.225
+RESULT upper[5,8] 2 dev 31.054 pr 44.105 d1 29.330 d2 30.274
+RESULT upper[5,8] 3 dev 31.079 pr 44.122 d1 29.360 d2 30.215
+sink 7.34586e+07
+EXIT=0

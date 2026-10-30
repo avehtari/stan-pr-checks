@@ -1,0 +1,59 @@
+=== node ===
+dgx3.int.triton.aalto.fi
+Tesla V100-SXM2-32GB, 580.173.02, 7.0
+
+=== toolchain ===
+/appl/scibuilder-mamba/aalto-rhel9/prod/software/scicomp-r-env/2025.1/1c89c1c/bin/g++
+g++ (conda-forge gcc 14.3.0-18) 14.3.0
+
+=== the erfcx device function under test ===
+9130212216e8a4abb806da632641866e  /home/ave/smnormal/stan/math/opencl/kernels/device_functions/erfcx.hpp
+3
+
+=== locate libOpenCL ===
+found /usr/lib64/libOpenCL.so.1
+
+=== build ===
+bench_normal_lcdf_ocl.cpp:18:9: warning: "STAN_OPENCL" redefined
+   18 | #define STAN_OPENCL
+      |         ^~~~~~~~~~~
+<command-line>: note: this is the location of the previous definition
+In file included from /home/ave/erfcx_ocl/include/CL/cl.h:20,
+                 from bench_normal_lcdf_ocl.cpp:16:
+/home/ave/erfcx_ocl/include/CL/cl_version.h:22:104: note: '#pragma message: cl_version.h: CL_TARGET_OPENCL_VERSION is not defined. Defaulting to 300 (OpenCL 3.0)'
+   22 | #pragma message("cl_version.h: CL_TARGET_OPENCL_VERSION is not defined. Defaulting to 300 (OpenCL 3.0)")
+      |                                                                                                        ^
+build ok
+
+=== run ===
+device: Tesla V100-SXM2-32GB
+ns per call, 1048576 work items x 2000 iters, baseline subtracted
+
+=== gradient ===
+range (scaled)            develop      erfcx    ratio
+far tail [-40,-10]         0.0188     0.0122     1.55
+Cody     [-10,-4]          0.0131     0.0123     1.06
+Cody edge[-4,-2.5]         0.0134     0.0099     1.35
+interior [-2.5,-0.1]       0.0117     0.0146     0.80
+interior [0.1,2.9]         0.1714     0.0213     8.05
+A&S      [2.9,6]           0.0123     0.0255     0.48
+
+=== value ===
+range (scaled)            develop      erfcx    ratio
+far tail [-40,-10]         0.1831     0.0201     9.12
+Cody     [-10,-4]          0.1831     0.0201     9.12
+Cody edge[-4,-2.5]         0.0234     0.0170     1.37
+interior [-2.5,-0.1]       0.0355     0.0219     1.62
+interior [0.1,2.9]         0.0375     0.0368     1.02
+A&S      [2.9,6]           0.0311     0.0303     1.03
+
+=== both ===
+range (scaled)            develop      erfcx    ratio
+far tail [-40,-10]         0.2077     0.0223     9.33
+Cody     [-10,-4]          0.2019     0.0223     9.06
+Cody edge[-4,-2.5]         0.0363     0.0200     1.82
+interior [-2.5,-0.1]       0.0454     0.0244     1.86
+interior [0.1,2.9]         0.2217     0.0577     3.85
+A&S      [2.9,6]           0.0426     0.0559     0.76
+
+EXIT=0

@@ -1,0 +1,104 @@
+pe81.int.triton.aalto.fi
+model name	: Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz
+governor: performance
+/appl/scibuilder-mamba/aalto-rhel9/prod/software/scicomp-r-env/2025.1/1c89c1c/bin/g++
+g++ (conda-forge gcc 14.3.0-18) 14.3.0
+13e01ef0b6d3e52872b8927f013eaf40  /tmp/phi_bench_21064615/dev/stan/math/prim/fun/Phi.hpp
+1902a74afa52f02a8476afd7287153e9  /tmp/phi_bench_21064615/commit/stan/math/prim/fun/Phi.hpp
+RESULT develop central[-0.66,0.66] 1 double 10.036 var 48.491
+RESULT develop central[-0.66,0.66] 2 double 9.846 var 47.357
+RESULT develop central[-0.66,0.66] 3 double 9.785 var 47.379
+RESULT develop mid[-5,5] 1 double 28.922 var 64.494
+RESULT develop mid[-5,5] 2 double 28.903 var 64.545
+RESULT develop mid[-5,5] 3 double 28.896 var 64.472
+RESULT develop lower[-37,-5] 1 double 33.837 var 71.320
+RESULT develop lower[-37,-5] 2 double 33.767 var 71.273
+RESULT develop lower[-37,-5] 3 double 33.766 var 71.434
+RESULT develop upper[5,8] 1 double 33.195 var 69.393
+RESULT develop upper[5,8] 2 double 33.187 var 69.015
+RESULT develop upper[5,8] 3 double 33.183 var 68.968
+RESULT develop probit[-3,3] 1 double 24.762 var 60.876
+RESULT develop probit[-3,3] 2 double 24.860 var 61.175
+RESULT develop probit[-3,3] 3 double 24.791 var 61.214
+sink 2.14068e+07
+RESULT commit central[-0.66,0.66] 1 double 39.351 var 74.410
+RESULT commit central[-0.66,0.66] 2 double 39.238 var 73.189
+RESULT commit central[-0.66,0.66] 3 double 39.184 var 73.134
+RESULT commit mid[-5,5] 1 double 46.531 var 82.466
+RESULT commit mid[-5,5] 2 double 46.597 var 82.458
+RESULT commit mid[-5,5] 3 double 46.542 var 82.532
+RESULT commit lower[-37,-5] 1 double 63.298 var 99.809
+RESULT commit lower[-37,-5] 2 double 63.250 var 99.649
+RESULT commit lower[-37,-5] 3 double 63.304 var 99.631
+RESULT commit upper[5,8] 1 double 47.719 var 81.309
+RESULT commit upper[5,8] 2 double 47.729 var 81.625
+RESULT commit upper[5,8] 3 double 47.741 var 81.263
+RESULT commit probit[-3,3] 1 double 46.525 var 82.364
+RESULT commit probit[-3,3] 2 double 46.582 var 82.336
+RESULT commit probit[-3,3] 3 double 46.511 var 82.290
+sink 2.14068e+07
+RESULT develop central[-0.66,0.66] 1 double 10.000 var 48.570
+RESULT develop central[-0.66,0.66] 2 double 9.762 var 47.360
+RESULT develop central[-0.66,0.66] 3 double 9.776 var 47.368
+RESULT develop mid[-5,5] 1 double 28.905 var 64.651
+RESULT develop mid[-5,5] 2 double 28.885 var 64.668
+RESULT develop mid[-5,5] 3 double 28.874 var 64.541
+RESULT develop lower[-37,-5] 1 double 33.888 var 71.416
+RESULT develop lower[-37,-5] 2 double 33.800 var 71.404
+RESULT develop lower[-37,-5] 3 double 33.811 var 71.404
+RESULT develop upper[5,8] 1 double 33.242 var 69.133
+RESULT develop upper[5,8] 2 double 33.179 var 69.069
+RESULT develop upper[5,8] 3 double 33.185 var 69.159
+RESULT develop probit[-3,3] 1 double 24.749 var 61.224
+RESULT develop probit[-3,3] 2 double 24.760 var 60.930
+RESULT develop probit[-3,3] 3 double 24.746 var 60.977
+sink 2.14068e+07
+RESULT commit central[-0.66,0.66] 1 double 39.534 var 74.655
+RESULT commit central[-0.66,0.66] 2 double 39.339 var 73.345
+RESULT commit central[-0.66,0.66] 3 double 39.395 var 73.431
+RESULT commit mid[-5,5] 1 double 46.612 var 82.340
+RESULT commit mid[-5,5] 2 double 46.608 var 82.367
+RESULT commit mid[-5,5] 3 double 46.505 var 82.366
+RESULT commit lower[-37,-5] 1 double 63.360 var 99.575
+RESULT commit lower[-37,-5] 2 double 63.219 var 99.525
+RESULT commit lower[-37,-5] 3 double 63.262 var 99.551
+RESULT commit upper[5,8] 1 double 47.790 var 81.441
+RESULT commit upper[5,8] 2 double 47.837 var 81.321
+RESULT commit upper[5,8] 3 double 47.773 var 81.284
+RESULT commit probit[-3,3] 1 double 46.554 var 82.497
+RESULT commit probit[-3,3] 2 double 46.619 var 82.334
+RESULT commit probit[-3,3] 3 double 46.561 var 82.391
+sink 2.14068e+07
+RESULT develop central[-0.66,0.66] 1 double 9.954 var 48.538
+RESULT develop central[-0.66,0.66] 2 double 9.811 var 47.393
+RESULT develop central[-0.66,0.66] 3 double 9.839 var 47.314
+RESULT develop mid[-5,5] 1 double 28.909 var 64.648
+RESULT develop mid[-5,5] 2 double 28.859 var 64.510
+RESULT develop mid[-5,5] 3 double 28.872 var 64.547
+RESULT develop lower[-37,-5] 1 double 33.829 var 71.277
+RESULT develop lower[-37,-5] 2 double 33.773 var 71.407
+RESULT develop lower[-37,-5] 3 double 33.779 var 71.319
+RESULT develop upper[5,8] 1 double 33.270 var 69.099
+RESULT develop upper[5,8] 2 double 33.224 var 69.077
+RESULT develop upper[5,8] 3 double 33.226 var 69.119
+RESULT develop probit[-3,3] 1 double 24.875 var 60.906
+RESULT develop probit[-3,3] 2 double 24.772 var 60.795
+RESULT develop probit[-3,3] 3 double 24.769 var 60.912
+sink 2.14068e+07
+RESULT commit central[-0.66,0.66] 1 double 39.529 var 74.485
+RESULT commit central[-0.66,0.66] 2 double 39.399 var 73.373
+RESULT commit central[-0.66,0.66] 3 double 39.275 var 73.360
+RESULT commit mid[-5,5] 1 double 47.039 var 82.878
+RESULT commit mid[-5,5] 2 double 47.059 var 82.897
+RESULT commit mid[-5,5] 3 double 47.085 var 82.442
+RESULT commit lower[-37,-5] 1 double 63.249 var 99.529
+RESULT commit lower[-37,-5] 2 double 63.175 var 99.554
+RESULT commit lower[-37,-5] 3 double 63.278 var 99.533
+RESULT commit upper[5,8] 1 double 47.815 var 81.251
+RESULT commit upper[5,8] 2 double 47.856 var 81.433
+RESULT commit upper[5,8] 3 double 47.835 var 81.266
+RESULT commit probit[-3,3] 1 double 47.117 var 82.347
+RESULT commit probit[-3,3] 2 double 47.175 var 82.305
+RESULT commit probit[-3,3] 3 double 47.117 var 82.388
+sink 2.14068e+07
+EXIT=0

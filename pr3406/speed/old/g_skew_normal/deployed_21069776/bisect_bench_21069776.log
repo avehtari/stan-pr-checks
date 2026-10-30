@@ -1,0 +1,164 @@
+TREES=a28c1c1637 9b38ecbcb0 fix TARBALL=lpdf_trees.tar.gz
+csl3.int.triton.aalto.fi
+model name	: Intel(R) Xeon(R) Gold 6248 CPU @ 2.50GHz
+governor: performance
+/appl/scibuilder-mamba/aalto-rhel9/prod/software/scicomp-r-env/2025.1/1c89c1c/bin/g++
+g++ (conda-forge gcc 14.3.0-18) 14.3.0
+72a9685932447c90c89e7a68777d6501  /tmp/bisect_bench_21069776/t_9b38ecbcb0/stan/math/prim/prob/exp_mod_normal_lcdf.hpp
+c37f5b43c6aaedf4a8c902ccb5a09626  /tmp/bisect_bench_21069776/t_a28c1c1637/stan/math/prim/prob/exp_mod_normal_lcdf.hpp
+a35b9d5cea0f873695d56e7ca7a4a6bf  /tmp/bisect_bench_21069776/t_develop/stan/math/prim/prob/exp_mod_normal_lcdf.hpp
+72a9685932447c90c89e7a68777d6501  /tmp/bisect_bench_21069776/t_fix/stan/math/prim/prob/exp_mod_normal_lcdf.hpp
+builds done 2026-10-20T10:35:35+03:00
+RESULT develop std_normal_lcdf bulk 1000 1 double 30.245 var 76.627
+RESULT develop std_normal_lcdf bulk 1000 2 double 29.001 var 76.409
+RESULT develop std_normal_lcdf bulk 1000 3 double 28.771 var 76.418
+RESULT develop normal_lcdf bulk 1000 1 double 31.659 var 82.332
+RESULT develop normal_lcdf bulk 1000 2 double 31.550 var 82.256
+RESULT develop normal_lcdf bulk 1000 3 double 31.567 var 82.042
+RESULT develop lognormal_lcdf bulk 1000 1 double 43.018 var 48.320
+RESULT develop lognormal_lcdf bulk 1000 2 double 43.128 var 47.988
+RESULT develop lognormal_lcdf bulk 1000 3 double 43.243 var 49.521
+RESULT develop exp_mod_normal_lcdf bulk 1000 1 double 50.019 var 75.559
+RESULT develop exp_mod_normal_lcdf bulk 1000 2 double 50.152 var 75.271
+RESULT develop exp_mod_normal_lcdf bulk 1000 3 double 49.803 var 75.343
+RESULT develop exp_mod_normal_lpdf bulk 1000 1 double 25.229 var 40.084
+RESULT develop exp_mod_normal_lpdf bulk 1000 2 double 25.323 var 40.000
+RESULT develop exp_mod_normal_lpdf bulk 1000 3 double 25.161 var 39.954
+RESULT develop skew_normal_lpdf bulk 1000 1 double 27.161 var 42.060
+RESULT develop skew_normal_lpdf bulk 1000 2 double 27.056 var 42.024
+RESULT develop skew_normal_lpdf bulk 1000 3 double 27.132 var 42.251
+sink -1.36488e+08
+RESULT a28c1c1637 std_normal_lcdf bulk 1000 1 double 25.217 var 33.700
+RESULT a28c1c1637 std_normal_lcdf bulk 1000 2 double 24.225 var 33.739
+RESULT a28c1c1637 std_normal_lcdf bulk 1000 3 double 24.014 var 33.751
+RESULT a28c1c1637 normal_lcdf bulk 1000 1 double 23.961 var 35.676
+RESULT a28c1c1637 normal_lcdf bulk 1000 2 double 23.896 var 35.773
+RESULT a28c1c1637 normal_lcdf bulk 1000 3 double 23.910 var 35.829
+RESULT a28c1c1637 lognormal_lcdf bulk 1000 1 double 31.044 var 46.464
+RESULT a28c1c1637 lognormal_lcdf bulk 1000 2 double 31.106 var 46.317
+RESULT a28c1c1637 lognormal_lcdf bulk 1000 3 double 31.089 var 46.375
+RESULT a28c1c1637 exp_mod_normal_lcdf bulk 1000 1 double 71.434 var 105.590
+RESULT a28c1c1637 exp_mod_normal_lcdf bulk 1000 2 double 71.418 var 105.456
+RESULT a28c1c1637 exp_mod_normal_lcdf bulk 1000 3 double 71.355 var 105.128
+RESULT a28c1c1637 exp_mod_normal_lpdf bulk 1000 1 double 22.224 var 35.369
+RESULT a28c1c1637 exp_mod_normal_lpdf bulk 1000 2 double 22.279 var 35.218
+RESULT a28c1c1637 exp_mod_normal_lpdf bulk 1000 3 double 22.369 var 35.195
+RESULT a28c1c1637 skew_normal_lpdf bulk 1000 1 double 24.785 var 35.983
+RESULT a28c1c1637 skew_normal_lpdf bulk 1000 2 double 24.964 var 35.875
+RESULT a28c1c1637 skew_normal_lpdf bulk 1000 3 double 25.935 var 38.208
+sink -1.36488e+08
+RESULT 9b38ecbcb0 std_normal_lcdf bulk 1000 1 double 22.012 var 31.143
+RESULT 9b38ecbcb0 std_normal_lcdf bulk 1000 2 double 21.318 var 31.287
+RESULT 9b38ecbcb0 std_normal_lcdf bulk 1000 3 double 21.582 var 31.287
+RESULT 9b38ecbcb0 normal_lcdf bulk 1000 1 double 21.684 var 31.745
+RESULT 9b38ecbcb0 normal_lcdf bulk 1000 2 double 21.522 var 31.650
+RESULT 9b38ecbcb0 normal_lcdf bulk 1000 3 double 21.659 var 31.924
+RESULT 9b38ecbcb0 lognormal_lcdf bulk 1000 1 double 30.490 var 42.051
+RESULT 9b38ecbcb0 lognormal_lcdf bulk 1000 2 double 30.325 var 42.252
+RESULT 9b38ecbcb0 lognormal_lcdf bulk 1000 3 double 30.339 var 42.199
+RESULT 9b38ecbcb0 exp_mod_normal_lcdf bulk 1000 1 double 68.787 var 93.944
+RESULT 9b38ecbcb0 exp_mod_normal_lcdf bulk 1000 2 double 67.631 var 93.466
+RESULT 9b38ecbcb0 exp_mod_normal_lcdf bulk 1000 3 double 67.787 var 93.763
+RESULT 9b38ecbcb0 exp_mod_normal_lpdf bulk 1000 1 double 20.141 var 34.667
+RESULT 9b38ecbcb0 exp_mod_normal_lpdf bulk 1000 2 double 20.152 var 34.695
+RESULT 9b38ecbcb0 exp_mod_normal_lpdf bulk 1000 3 double 20.197 var 34.840
+RESULT 9b38ecbcb0 skew_normal_lpdf bulk 1000 1 double 22.648 var 41.603
+RESULT 9b38ecbcb0 skew_normal_lpdf bulk 1000 2 double 22.701 var 41.629
+RESULT 9b38ecbcb0 skew_normal_lpdf bulk 1000 3 double 22.591 var 41.442
+sink -1.36488e+08
+RESULT fix std_normal_lcdf bulk 1000 1 double 22.563 var 31.341
+RESULT fix std_normal_lcdf bulk 1000 2 double 21.982 var 31.104
+RESULT fix std_normal_lcdf bulk 1000 3 double 21.687 var 31.376
+RESULT fix normal_lcdf bulk 1000 1 double 21.994 var 31.458
+RESULT fix normal_lcdf bulk 1000 2 double 21.962 var 31.295
+RESULT fix normal_lcdf bulk 1000 3 double 21.997 var 31.477
+RESULT fix lognormal_lcdf bulk 1000 1 double 30.320 var 41.935
+RESULT fix lognormal_lcdf bulk 1000 2 double 30.320 var 42.044
+RESULT fix lognormal_lcdf bulk 1000 3 double 30.455 var 42.117
+RESULT fix exp_mod_normal_lcdf bulk 1000 1 double 68.801 var 93.757
+RESULT fix exp_mod_normal_lcdf bulk 1000 2 double 70.259 var 93.925
+RESULT fix exp_mod_normal_lcdf bulk 1000 3 double 68.511 var 93.951
+RESULT fix exp_mod_normal_lpdf bulk 1000 1 double 20.164 var 35.861
+RESULT fix exp_mod_normal_lpdf bulk 1000 2 double 20.104 var 35.856
+RESULT fix exp_mod_normal_lpdf bulk 1000 3 double 20.053 var 35.962
+RESULT fix skew_normal_lpdf bulk 1000 1 double 24.273 var 37.326
+RESULT fix skew_normal_lpdf bulk 1000 2 double 24.333 var 37.250
+RESULT fix skew_normal_lpdf bulk 1000 3 double 24.147 var 37.247
+sink -1.36488e+08
+RESULT develop std_normal_lcdf bulk 1000 1 double 29.494 var 76.202
+RESULT develop std_normal_lcdf bulk 1000 2 double 28.843 var 76.591
+RESULT develop std_normal_lcdf bulk 1000 3 double 28.780 var 76.492
+RESULT develop normal_lcdf bulk 1000 1 double 31.656 var 82.536
+RESULT develop normal_lcdf bulk 1000 2 double 31.607 var 82.201
+RESULT develop normal_lcdf bulk 1000 3 double 31.571 var 82.464
+RESULT develop lognormal_lcdf bulk 1000 1 double 42.771 var 48.233
+RESULT develop lognormal_lcdf bulk 1000 2 double 42.936 var 48.393
+RESULT develop lognormal_lcdf bulk 1000 3 double 42.877 var 48.173
+RESULT develop exp_mod_normal_lcdf bulk 1000 1 double 50.155 var 75.649
+RESULT develop exp_mod_normal_lcdf bulk 1000 2 double 50.044 var 75.421
+RESULT develop exp_mod_normal_lcdf bulk 1000 3 double 50.058 var 75.788
+RESULT develop exp_mod_normal_lpdf bulk 1000 1 double 24.664 var 40.149
+RESULT develop exp_mod_normal_lpdf bulk 1000 2 double 24.590 var 40.272
+RESULT develop exp_mod_normal_lpdf bulk 1000 3 double 24.667 var 40.333
+RESULT develop skew_normal_lpdf bulk 1000 1 double 25.995 var 42.247
+RESULT develop skew_normal_lpdf bulk 1000 2 double 26.055 var 42.154
+RESULT develop skew_normal_lpdf bulk 1000 3 double 25.991 var 42.157
+sink -1.36488e+08
+RESULT a28c1c1637 std_normal_lcdf bulk 1000 1 double 24.271 var 33.847
+RESULT a28c1c1637 std_normal_lcdf bulk 1000 2 double 23.564 var 33.702
+RESULT a28c1c1637 std_normal_lcdf bulk 1000 3 double 23.690 var 33.662
+RESULT a28c1c1637 normal_lcdf bulk 1000 1 double 24.149 var 35.538
+RESULT a28c1c1637 normal_lcdf bulk 1000 2 double 24.169 var 35.781
+RESULT a28c1c1637 normal_lcdf bulk 1000 3 double 24.167 var 35.663
+RESULT a28c1c1637 lognormal_lcdf bulk 1000 1 double 31.038 var 46.454
+RESULT a28c1c1637 lognormal_lcdf bulk 1000 2 double 30.965 var 46.160
+RESULT a28c1c1637 lognormal_lcdf bulk 1000 3 double 31.013 var 46.356
+RESULT a28c1c1637 exp_mod_normal_lcdf bulk 1000 1 double 71.694 var 103.580
+RESULT a28c1c1637 exp_mod_normal_lcdf bulk 1000 2 double 71.649 var 103.832
+RESULT a28c1c1637 exp_mod_normal_lcdf bulk 1000 3 double 71.417 var 103.741
+RESULT a28c1c1637 exp_mod_normal_lpdf bulk 1000 1 double 22.345 var 35.045
+RESULT a28c1c1637 exp_mod_normal_lpdf bulk 1000 2 double 22.350 var 34.791
+RESULT a28c1c1637 exp_mod_normal_lpdf bulk 1000 3 double 22.418 var 34.622
+RESULT a28c1c1637 skew_normal_lpdf bulk 1000 1 double 25.183 var 36.089
+RESULT a28c1c1637 skew_normal_lpdf bulk 1000 2 double 24.866 var 38.086
+RESULT a28c1c1637 skew_normal_lpdf bulk 1000 3 double 24.751 var 38.363
+sink -1.36488e+08
+RESULT 9b38ecbcb0 std_normal_lcdf bulk 1000 1 double 23.666 var 31.302
+RESULT 9b38ecbcb0 std_normal_lcdf bulk 1000 2 double 21.759 var 31.559
+RESULT 9b38ecbcb0 std_normal_lcdf bulk 1000 3 double 21.920 var 31.734
+RESULT 9b38ecbcb0 normal_lcdf bulk 1000 1 double 21.818 var 31.818
+RESULT 9b38ecbcb0 normal_lcdf bulk 1000 2 double 21.689 var 31.783
+RESULT 9b38ecbcb0 normal_lcdf bulk 1000 3 double 21.661 var 31.549
+RESULT 9b38ecbcb0 lognormal_lcdf bulk 1000 1 double 30.328 var 42.305
+RESULT 9b38ecbcb0 lognormal_lcdf bulk 1000 2 double 30.007 var 42.475
+RESULT 9b38ecbcb0 lognormal_lcdf bulk 1000 3 double 29.892 var 42.482
+RESULT 9b38ecbcb0 exp_mod_normal_lcdf bulk 1000 1 double 68.034 var 93.638
+RESULT 9b38ecbcb0 exp_mod_normal_lcdf bulk 1000 2 double 68.372 var 93.780
+RESULT 9b38ecbcb0 exp_mod_normal_lcdf bulk 1000 3 double 69.020 var 93.132
+RESULT 9b38ecbcb0 exp_mod_normal_lpdf bulk 1000 1 double 20.174 var 34.717
+RESULT 9b38ecbcb0 exp_mod_normal_lpdf bulk 1000 2 double 20.078 var 34.710
+RESULT 9b38ecbcb0 exp_mod_normal_lpdf bulk 1000 3 double 20.107 var 34.672
+RESULT 9b38ecbcb0 skew_normal_lpdf bulk 1000 1 double 22.609 var 42.032
+RESULT 9b38ecbcb0 skew_normal_lpdf bulk 1000 2 double 22.596 var 41.460
+RESULT 9b38ecbcb0 skew_normal_lpdf bulk 1000 3 double 22.592 var 41.555
+sink -1.36488e+08
+RESULT fix std_normal_lcdf bulk 1000 1 double 22.362 var 31.143
+RESULT fix std_normal_lcdf bulk 1000 2 double 21.768 var 30.910
+RESULT fix std_normal_lcdf bulk 1000 3 double 21.925 var 30.977
+RESULT fix normal_lcdf bulk 1000 1 double 22.023 var 31.358
+RESULT fix normal_lcdf bulk 1000 2 double 21.698 var 31.466
+RESULT fix normal_lcdf bulk 1000 3 double 21.721 var 31.588
+RESULT fix lognormal_lcdf bulk 1000 1 double 30.438 var 41.816
+RESULT fix lognormal_lcdf bulk 1000 2 double 30.309 var 42.097
+RESULT fix lognormal_lcdf bulk 1000 3 double 30.426 var 41.929
+RESULT fix exp_mod_normal_lcdf bulk 1000 1 double 67.036 var 94.018
+RESULT fix exp_mod_normal_lcdf bulk 1000 2 double 67.506 var 93.783
+RESULT fix exp_mod_normal_lcdf bulk 1000 3 double 67.332 var 93.928
+RESULT fix exp_mod_normal_lpdf bulk 1000 1 double 20.040 var 36.047
+RESULT fix exp_mod_normal_lpdf bulk 1000 2 double 20.043 var 35.887
+RESULT fix exp_mod_normal_lpdf bulk 1000 3 double 20.085 var 35.660
+RESULT fix skew_normal_lpdf bulk 1000 1 double 24.366 var 37.870
+RESULT fix skew_normal_lpdf bulk 1000 2 double 24.070 var 37.375
+RESULT fix skew_normal_lpdf bulk 1000 3 double 24.172 var 37.431
+sink -1.36488e+08
+EXIT=0

@@ -1,0 +1,8 @@
+Xeon Gold 6230, N = 1000: time relative to develop (develop ns), PR head 9b38 / branch
+exp_mod_normal_lcdf   bulk double 1.43 / 1.61 ( 84.7) | var 1.21 / 1.86 (127.8)
+exp_mod_normal_lcdf   wide double 2.02 / 2.61 ( 66.7) | var 1.53 / 2.38 (111.1)
+exp_mod_normal_lccdf  bulk double 1.31 / 1.65 ( 85.6) | var 1.22 / 1.88 (128.5)
+exp_mod_normal_lccdf  wide double 1.84 / 2.57 ( 67.6) | var 1.54 / 2.38 (111.6)
+exp_mod_normal_cdf    bulk double 1.72 / 1.97 ( 70.5) | var 1.35 / 2.07 (114.7)
+exp_mod_normal_cdf    wide double 2.57 / 3.36 ( 52.4) | var 1.75 / 2.71 ( 97.5)
+max spread %: 2.0

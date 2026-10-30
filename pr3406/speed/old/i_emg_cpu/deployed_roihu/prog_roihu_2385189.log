@@ -1,0 +1,130 @@
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) csc-tools/default
+TREES=develop 9b38ecbcb0 emg TARBALL=emg_trees.tar.gz MODE=emg
+== host: rc4172   date: 2026-10-20T12:31:36+03:00
+== cpu:  AMD EPYC 9965 192-Core Processor   cores: 384
+== g++: /usr/bin/g++  g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-14)
+8977fc876f56fffc16b4292cc5aa26a6  /tmp/vehtaria/2385189/prog/t_9b38ecbcb0/stan/math/prim/fun/Phi.hpp
+13e01ef0b6d3e52872b8927f013eaf40  /tmp/vehtaria/2385189/prog/t_develop/stan/math/prim/fun/Phi.hpp
+8977fc876f56fffc16b4292cc5aa26a6  /tmp/vehtaria/2385189/prog/t_emg/stan/math/prim/fun/Phi.hpp
+72a9685932447c90c89e7a68777d6501  /tmp/vehtaria/2385189/prog/t_9b38ecbcb0/stan/math/prim/prob/exp_mod_normal_lcdf.hpp
+a35b9d5cea0f873695d56e7ca7a4a6bf  /tmp/vehtaria/2385189/prog/t_develop/stan/math/prim/prob/exp_mod_normal_lcdf.hpp
+53ebb2e521aabab527a36c9dfe7db740  /tmp/vehtaria/2385189/prog/t_emg/stan/math/prim/prob/exp_mod_normal_lcdf.hpp
+== builds done 2026-10-20T12:31:51+03:00
+RESULT develop exp_mod_normal_lcdf bulk 1000 1 double 25.360 var 33.790
+RESULT develop exp_mod_normal_lcdf bulk 1000 2 double 24.244 var 33.802
+RESULT develop exp_mod_normal_lcdf bulk 1000 3 double 24.256 var 33.709
+RESULT develop exp_mod_normal_lcdf wide 1000 1 double 17.886 var 27.241
+RESULT develop exp_mod_normal_lcdf wide 1000 2 double 17.865 var 27.200
+RESULT develop exp_mod_normal_lcdf wide 1000 3 double 17.859 var 27.220
+RESULT develop exp_mod_normal_lccdf bulk 1000 1 double 24.433 var 33.725
+RESULT develop exp_mod_normal_lccdf bulk 1000 2 double 24.425 var 33.732
+RESULT develop exp_mod_normal_lccdf bulk 1000 3 double 24.435 var 33.732
+RESULT develop exp_mod_normal_lccdf wide 1000 1 double 18.005 var 27.319
+RESULT develop exp_mod_normal_lccdf wide 1000 2 double 18.017 var 27.349
+RESULT develop exp_mod_normal_lccdf wide 1000 3 double 18.039 var 27.315
+RESULT develop exp_mod_normal_cdf bulk 1000 1 double 20.830 var 30.104
+RESULT develop exp_mod_normal_cdf bulk 1000 2 double 20.806 var 30.110
+RESULT develop exp_mod_normal_cdf bulk 1000 3 double 20.806 var 30.063
+RESULT develop exp_mod_normal_cdf wide 1000 1 double 14.562 var 23.766
+RESULT develop exp_mod_normal_cdf wide 1000 2 double 14.540 var 23.775
+RESULT develop exp_mod_normal_cdf wide 1000 3 double 14.550 var 23.698
+sink -1.32287e+08
+RESULT 9b38ecbcb0 exp_mod_normal_lcdf bulk 1000 1 double 36.214 var 46.784
+RESULT 9b38ecbcb0 exp_mod_normal_lcdf bulk 1000 2 double 34.837 var 46.653
+RESULT 9b38ecbcb0 exp_mod_normal_lcdf bulk 1000 3 double 34.955 var 46.655
+RESULT 9b38ecbcb0 exp_mod_normal_lcdf wide 1000 1 double 36.774 var 48.318
+RESULT 9b38ecbcb0 exp_mod_normal_lcdf wide 1000 2 double 36.690 var 48.226
+RESULT 9b38ecbcb0 exp_mod_normal_lcdf wide 1000 3 double 36.713 var 48.185
+RESULT 9b38ecbcb0 exp_mod_normal_lccdf bulk 1000 1 double 36.198 var 47.087
+RESULT 9b38ecbcb0 exp_mod_normal_lccdf bulk 1000 2 double 36.054 var 47.024
+RESULT 9b38ecbcb0 exp_mod_normal_lccdf bulk 1000 3 double 36.239 var 47.040
+RESULT 9b38ecbcb0 exp_mod_normal_lccdf wide 1000 1 double 39.239 var 52.705
+RESULT 9b38ecbcb0 exp_mod_normal_lccdf wide 1000 2 double 39.039 var 52.617
+RESULT 9b38ecbcb0 exp_mod_normal_lccdf wide 1000 3 double 38.919 var 52.571
+RESULT 9b38ecbcb0 exp_mod_normal_cdf bulk 1000 1 double 34.999 var 46.640
+RESULT 9b38ecbcb0 exp_mod_normal_cdf bulk 1000 2 double 35.017 var 46.652
+RESULT 9b38ecbcb0 exp_mod_normal_cdf bulk 1000 3 double 35.101 var 46.769
+RESULT 9b38ecbcb0 exp_mod_normal_cdf wide 1000 1 double 36.887 var 48.741
+RESULT 9b38ecbcb0 exp_mod_normal_cdf wide 1000 2 double 37.034 var 48.531
+RESULT 9b38ecbcb0 exp_mod_normal_cdf wide 1000 3 double 36.786 var 48.552
+sink -8.9579e+08
+RESULT emg exp_mod_normal_lcdf bulk 1000 1 double 53.967 var 91.463
+RESULT emg exp_mod_normal_lcdf bulk 1000 2 double 54.024 var 91.345
+RESULT emg exp_mod_normal_lcdf bulk 1000 3 double 53.964 var 91.099
+RESULT emg exp_mod_normal_lcdf wide 1000 1 double 71.009 var 104.872
+RESULT emg exp_mod_normal_lcdf wide 1000 2 double 70.946 var 104.765
+RESULT emg exp_mod_normal_lcdf wide 1000 3 double 70.871 var 104.810
+RESULT emg exp_mod_normal_lccdf bulk 1000 1 double 49.499 var 91.604
+RESULT emg exp_mod_normal_lccdf bulk 1000 2 double 49.487 var 91.565
+RESULT emg exp_mod_normal_lccdf bulk 1000 3 double 49.526 var 91.553
+RESULT emg exp_mod_normal_lccdf wide 1000 1 double 65.236 var 104.629
+RESULT emg exp_mod_normal_lccdf wide 1000 2 double 65.298 var 104.633
+RESULT emg exp_mod_normal_lccdf wide 1000 3 double 65.310 var 104.628
+RESULT emg exp_mod_normal_cdf bulk 1000 1 double 53.907 var 91.203
+RESULT emg exp_mod_normal_cdf bulk 1000 2 double 53.961 var 91.173
+RESULT emg exp_mod_normal_cdf bulk 1000 3 double 54.010 var 91.200
+RESULT emg exp_mod_normal_cdf wide 1000 1 double 71.030 var 104.707
+RESULT emg exp_mod_normal_cdf wide 1000 2 double 70.991 var 104.559
+RESULT emg exp_mod_normal_cdf wide 1000 3 double 71.055 var 104.649
+sink -8.9579e+08
+RESULT develop exp_mod_normal_lcdf bulk 1000 1 double 24.322 var 33.834
+RESULT develop exp_mod_normal_lcdf bulk 1000 2 double 24.293 var 33.736
+RESULT develop exp_mod_normal_lcdf bulk 1000 3 double 24.295 var 33.762
+RESULT develop exp_mod_normal_lcdf wide 1000 1 double 17.902 var 27.353
+RESULT develop exp_mod_normal_lcdf wide 1000 2 double 17.921 var 27.287
+RESULT develop exp_mod_normal_lcdf wide 1000 3 double 17.916 var 27.289
+RESULT develop exp_mod_normal_lccdf bulk 1000 1 double 24.435 var 33.844
+RESULT develop exp_mod_normal_lccdf bulk 1000 2 double 24.426 var 33.816
+RESULT develop exp_mod_normal_lccdf bulk 1000 3 double 24.422 var 33.809
+RESULT develop exp_mod_normal_lccdf wide 1000 1 double 18.003 var 27.456
+RESULT develop exp_mod_normal_lccdf wide 1000 2 double 17.990 var 27.439
+RESULT develop exp_mod_normal_lccdf wide 1000 3 double 17.984 var 27.405
+RESULT develop exp_mod_normal_cdf bulk 1000 1 double 20.860 var 30.100
+RESULT develop exp_mod_normal_cdf bulk 1000 2 double 20.846 var 30.081
+RESULT develop exp_mod_normal_cdf bulk 1000 3 double 20.840 var 30.108
+RESULT develop exp_mod_normal_cdf wide 1000 1 double 14.568 var 23.750
+RESULT develop exp_mod_normal_cdf wide 1000 2 double 14.561 var 23.733
+RESULT develop exp_mod_normal_cdf wide 1000 3 double 14.561 var 23.795
+sink -1.32287e+08
+RESULT 9b38ecbcb0 exp_mod_normal_lcdf bulk 1000 1 double 36.096 var 46.507
+RESULT 9b38ecbcb0 exp_mod_normal_lcdf bulk 1000 2 double 36.006 var 46.370
+RESULT 9b38ecbcb0 exp_mod_normal_lcdf bulk 1000 3 double 36.014 var 46.360
+RESULT 9b38ecbcb0 exp_mod_normal_lcdf wide 1000 1 double 37.399 var 47.943
+RESULT 9b38ecbcb0 exp_mod_normal_lcdf wide 1000 2 double 37.278 var 47.914
+RESULT 9b38ecbcb0 exp_mod_normal_lcdf wide 1000 3 double 37.280 var 47.985
+RESULT 9b38ecbcb0 exp_mod_normal_lccdf bulk 1000 1 double 37.299 var 46.808
+RESULT 9b38ecbcb0 exp_mod_normal_lccdf bulk 1000 2 double 37.239 var 46.723
+RESULT 9b38ecbcb0 exp_mod_normal_lccdf bulk 1000 3 double 37.190 var 46.693
+RESULT 9b38ecbcb0 exp_mod_normal_lccdf wide 1000 1 double 39.709 var 52.315
+RESULT 9b38ecbcb0 exp_mod_normal_lccdf wide 1000 2 double 39.575 var 52.212
+RESULT 9b38ecbcb0 exp_mod_normal_lccdf wide 1000 3 double 39.408 var 52.225
+RESULT 9b38ecbcb0 exp_mod_normal_cdf bulk 1000 1 double 35.928 var 46.619
+RESULT 9b38ecbcb0 exp_mod_normal_cdf bulk 1000 2 double 35.993 var 46.426
+RESULT 9b38ecbcb0 exp_mod_normal_cdf bulk 1000 3 double 35.994 var 46.382
+RESULT 9b38ecbcb0 exp_mod_normal_cdf wide 1000 1 double 37.640 var 48.488
+RESULT 9b38ecbcb0 exp_mod_normal_cdf wide 1000 2 double 37.553 var 48.364
+RESULT 9b38ecbcb0 exp_mod_normal_cdf wide 1000 3 double 37.537 var 48.345
+sink -8.9579e+08
+RESULT emg exp_mod_normal_lcdf bulk 1000 1 double 54.005 var 93.629
+RESULT emg exp_mod_normal_lcdf bulk 1000 2 double 54.046 var 93.480
+RESULT emg exp_mod_normal_lcdf bulk 1000 3 double 54.052 var 92.267
+RESULT emg exp_mod_normal_lcdf wide 1000 1 double 71.048 var 106.474
+RESULT emg exp_mod_normal_lcdf wide 1000 2 double 71.195 var 105.446
+RESULT emg exp_mod_normal_lcdf wide 1000 3 double 71.134 var 104.495
+RESULT emg exp_mod_normal_lccdf bulk 1000 1 double 49.321 var 91.325
+RESULT emg exp_mod_normal_lccdf bulk 1000 2 double 49.203 var 91.335
+RESULT emg exp_mod_normal_lccdf bulk 1000 3 double 49.187 var 91.366
+RESULT emg exp_mod_normal_lccdf wide 1000 1 double 65.433 var 104.310
+RESULT emg exp_mod_normal_lccdf wide 1000 2 double 65.380 var 104.149
+RESULT emg exp_mod_normal_lccdf wide 1000 3 double 65.449 var 104.191
+RESULT emg exp_mod_normal_cdf bulk 1000 1 double 53.935 var 91.587
+RESULT emg exp_mod_normal_cdf bulk 1000 2 double 54.090 var 91.603
+RESULT emg exp_mod_normal_cdf bulk 1000 3 double 53.898 var 91.569
+RESULT emg exp_mod_normal_cdf wide 1000 1 double 71.149 var 104.592
+RESULT emg exp_mod_normal_cdf wide 1000 2 double 71.146 var 104.652
+RESULT emg exp_mod_normal_cdf wide 1000 3 double 71.101 var 104.570
+sink -8.9579e+08
+EXIT=0

@@ -1,0 +1,115 @@
+=== node ===
+pe66.int.triton.aalto.fi
+model name	: Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz
+cores: 2, governor: performance
+allowed CPUs: Cpus_allowed_list:	10,16
+
+=== toolchain ===
+/appl/scibuilder-mamba/aalto-rhel9/prod/software/scicomp-r-env/2025.1/1c89c1c/bin/g++
+g++ (conda-forge gcc 14.3.0-18) 14.3.0
+
+=== paths ===
+ok /home/ave/smnormal/stan
+ok /home/ave/.cmdstan/cmdstan-2.40.0-rc0/stan/lib/stan_math/lib/boost_1.87.0
+ok /home/ave/.cmdstan/cmdstan-2.40.0-rc0/stan/lib/stan_math/lib/tbb_2020.3/include
+ok /home/ave/smnormal/lib/eigen_5.0.1
+
+=== the erfcx header under test ===
+c58a23fda7da2358136ce4a58fe36fb0  /home/ave/smnormal/stan/math/prim/fun/erfcx.hpp
+3
+
+=== build ===
+build ok
+
+########## rep 1 ##########
+points per range: 2000000
+agreement: gradient 5.74e-05, value 2.22e-16
+
+=== gradient  d/ds log Phi(s * sqrt(2)) ===
+range (scaled)          dev lat    erfcx  ratio    dev thr    erfcx  ratio
+far tail  [-40,-10]       33.30    54.42   0.61      11.29    20.66   0.55
+Cody      [-10,-4]        34.83    54.49   0.64      12.50    20.63   0.61
+Cody edge [-4,-2.5]       34.87    43.60   0.80      13.66    12.42   1.10
+interior  [-2.5,-0.1]     33.90    47.07   0.72      11.74    13.28   0.88
+interior  [0.1,2.9]       51.38    53.21   0.97      33.79    26.99   1.25
+A&S       [2.9,6]         67.42    87.31   0.77      15.87    31.33   0.51
+
+=== value     log Phi(s * sqrt(2)) ===
+range (scaled)          dev lat    erfcx  ratio    dev thr    erfcx  ratio
+far tail  [-40,-10]      210.94    67.74   3.11     198.33    34.24   5.79
+Cody      [-10,-4]       211.26    67.70   3.12     198.13    34.22   5.79
+Cody edge [-4,-2.5]       81.02    57.67   1.40      52.98    28.96   1.83
+interior  [-2.5,-0.1]     64.96    60.48   1.07      39.48    31.86   1.24
+interior  [0.1,2.9]       75.45    75.28   1.00      41.78    41.88   1.00
+A&S       [2.9,6]        109.79   108.99   1.01      44.05    44.10   1.00
+
+=== both, one shared erfcx call (the autodiff case) ===
+range (scaled)          dev lat    erfcx  ratio    dev thr    erfcx  ratio
+far tail  [-40,-10]      212.76    69.24   3.07     203.00    38.21   5.31
+Cody      [-10,-4]       214.37    69.72   3.07     205.28    38.00   5.40
+Cody edge [-4,-2.5]       85.52    57.91   1.48      71.66    30.95   2.32
+interior  [-2.5,-0.1]     69.06    61.20   1.13      53.85    34.23   1.57
+interior  [0.1,2.9]       91.93    90.94   1.01      81.30    71.78   1.13
+A&S       [2.9,6]        114.13   121.73   0.94      66.87    73.65   0.91
+########## rep 2 ##########
+points per range: 2000000
+agreement: gradient 5.74e-05, value 2.22e-16
+
+=== gradient  d/ds log Phi(s * sqrt(2)) ===
+range (scaled)          dev lat    erfcx  ratio    dev thr    erfcx  ratio
+far tail  [-40,-10]       33.08    54.35   0.61      11.28    20.71   0.54
+Cody      [-10,-4]        34.83    54.59   0.64      12.18    20.72   0.59
+Cody edge [-4,-2.5]       34.88    43.83   0.80      13.70    12.34   1.11
+interior  [-2.5,-0.1]     33.81    46.74   0.72      11.74    13.58   0.86
+interior  [0.1,2.9]       51.39    53.36   0.96      35.73    27.13   1.32
+A&S       [2.9,6]         67.36    87.98   0.77      15.88    31.15   0.51
+
+=== value     log Phi(s * sqrt(2)) ===
+range (scaled)          dev lat    erfcx  ratio    dev thr    erfcx  ratio
+far tail  [-40,-10]      211.47    67.78   3.12     197.53    33.07   5.97
+Cody      [-10,-4]       205.41    65.75   3.12     191.96    33.09   5.80
+Cody edge [-4,-2.5]       78.50    55.87   1.41      51.20    27.99   1.83
+interior  [-2.5,-0.1]     63.31    59.00   1.07      38.44    30.95   1.24
+interior  [0.1,2.9]       73.24    73.37   1.00      40.71    40.70   1.00
+A&S       [2.9,6]        106.63   106.44   1.00      42.95    42.96   1.00
+
+=== both, one shared erfcx call (the autodiff case) ===
+range (scaled)          dev lat    erfcx  ratio    dev thr    erfcx  ratio
+far tail  [-40,-10]      208.08    67.35   3.09     197.31    37.00   5.33
+Cody      [-10,-4]       208.41    67.35   3.09     199.34    37.01   5.39
+Cody edge [-4,-2.5]       82.89    56.45   1.47      69.75    30.27   2.30
+interior  [-2.5,-0.1]     67.30    59.68   1.13      52.46    33.49   1.57
+interior  [0.1,2.9]       89.65    88.26   1.02      78.87    69.58   1.13
+A&S       [2.9,6]        110.96   118.00   0.94      64.99    71.53   0.91
+########## rep 3 ##########
+points per range: 2000000
+agreement: gradient 5.74e-05, value 2.22e-16
+
+=== gradient  d/ds log Phi(s * sqrt(2)) ===
+range (scaled)          dev lat    erfcx  ratio    dev thr    erfcx  ratio
+far tail  [-40,-10]       32.22    52.70   0.61      10.91    20.00   0.55
+Cody      [-10,-4]        33.61    52.70   0.64      12.07    20.00   0.60
+Cody edge [-4,-2.5]       33.66    42.31   0.80      13.26    11.96   1.11
+interior  [-2.5,-0.1]     32.74    45.54   0.72      11.30    13.11   0.86
+interior  [0.1,2.9]       49.68    51.49   0.96      33.06    26.30   1.26
+A&S       [2.9,6]         65.33    84.58   0.77      15.34    30.24   0.51
+
+=== value     log Phi(s * sqrt(2)) ===
+range (scaled)          dev lat    erfcx  ratio    dev thr    erfcx  ratio
+far tail  [-40,-10]      204.57    65.67   3.12     192.33    33.06   5.82
+Cody      [-10,-4]       204.68    65.66   3.12     192.46    33.08   5.82
+Cody edge [-4,-2.5]       78.59    55.87   1.41      51.32    27.99   1.83
+interior  [-2.5,-0.1]     63.29    59.00   1.07      38.49    30.95   1.24
+interior  [0.1,2.9]       73.20    73.38   1.00      40.76    40.77   1.00
+A&S       [2.9,6]        106.59   106.38   1.00      43.11    43.07   1.00
+
+=== both, one shared erfcx call (the autodiff case) ===
+range (scaled)          dev lat    erfcx  ratio    dev thr    erfcx  ratio
+far tail  [-40,-10]      207.51    67.32   3.08     197.53    36.92   5.35
+Cody      [-10,-4]       207.78    67.33   3.09     196.37    36.97   5.31
+Cody edge [-4,-2.5]       82.98    56.52   1.47      69.10    30.00   2.30
+interior  [-2.5,-0.1]     67.38    59.76   1.13      52.58    33.39   1.57
+interior  [0.1,2.9]       89.70    88.44   1.01      78.95    69.67   1.13
+A&S       [2.9,6]        110.50   117.85   0.94      65.07    71.71   0.91
+
+EXIT=0

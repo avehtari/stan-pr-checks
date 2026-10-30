@@ -1,0 +1,16 @@
+V100, ps per evaluation (median of 6), baseline subtracted
+range                | Phi: dev / a28c / now      | lcdf: a28c / now  | dlcdf: a28c / now
+central[-0.66,0.66]  |   14.0   26.2    6.2        |   21.3   15.8     |   13.7    8.4
+probit[-3,3]         |   14.3   50.7   19.3        |   46.3   43.7     |   31.5   26.0
+mid[-5,5]            |   13.8   48.0   19.4        |   44.3   43.2     |   31.2   25.8
+lower[-37,-5]        |   25.9   41.3   20.4        |   36.8   36.7     |   19.2   19.0
+upper[5,8]           |   13.4   36.1   23.6        |   31.3   28.5     |   28.2   25.6
+
+Phi time relative to develop: a28c / now
+central[-0.66,0.66]   1.87 /  0.44
+probit[-3,3]          3.56 /  1.35
+mid[-5,5]             3.47 /  1.40
+lower[-37,-5]         1.60 /  0.79
+upper[5,8]            2.69 /  1.76
+
+max relative spread %: 18.0

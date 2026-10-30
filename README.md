@@ -17,6 +17,7 @@ from another one; copy a shared script instead.
 
 | directory | pull request | topic |
 |---|---|---|
+| `pr3406/` | stan-dev/math#3406 | `std_normal_lcdf` kernel, `Phi`, normal, lognormal, `exp_mod_normal`, `skew_normal_lpdf` |
 | `pr3408/` | stan-dev/math#3408 | incomplete gamma gradient roots, 18 cdfs in log space |
 | `pr3409/` | stan-dev/math#3409 | incomplete beta gradient roots (part 1 of 3) |
 | `pr3434/` | stan-dev/math#3434 | lgamma, lbeta, digamma differences at large shapes |
