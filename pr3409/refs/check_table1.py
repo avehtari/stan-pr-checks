@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Compare ref_mpmath.py with Table 1 of Boik and Robison-Cox (1998).
+"""Compare ref_mpmath.py with Table 1 of Boik and Robinson-Cox (1998).
 
-Boik, R. J. and Robison-Cox, J. F. (1998). Derivatives of the Incomplete
+Boik, R. J. and Robinson-Cox, J. F. (1998). Derivatives of the Incomplete
 Beta Function. Journal of Statistical Software 3(1).
 https://doi.org/10.18637/jss.v003.i01 (Table 1 on page 16 of the PDF).
 The table gives I and its first and second derivatives in p and q to 8

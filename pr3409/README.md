@@ -74,7 +74,7 @@ digits (the routes agree to the 60 digits of the comparison) at all 21
 points and at the 3 lcdf gradients, and the values equal the constants
 in the test files.  Run time about 30 s on 8 cores.
 
-An external check of the reference: Table 1 of Boik and Robison-Cox
+An external check of the reference: Table 1 of Boik and Robinson-Cox
 (1998), https://doi.org/10.18637/jss.v003.i01, gives `I` and its first
 and second derivatives in `p` and `q` at four points to 8 significant
 digits.
