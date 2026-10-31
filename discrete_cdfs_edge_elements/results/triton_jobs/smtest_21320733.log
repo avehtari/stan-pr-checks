@@ -1,0 +1,38 @@
+== host csl38.int.triton.aalto.fi  date 2026-10-31T18:31:27+02:00  cpus 16  J=16
+== g++ g++ (conda-forge gcc 14.3.0-18) 14.3.0
+== mode checklist  tree <scratch>/smtest_issue56dev
+== deploy repo=math
+== deploy clone=<workstation>/proj/stan_math_issue56
+== deploy branch=fix-discrete-cdfs-edge-elements
+== deploy head=56872c02d1576674f41dc09808fccec3be3de8c9
+== deploy base_ref=origin/develop
+== deploy base=dc669419692e2cb71d55000a871066b5739c3e48
+== deploy uncommitted_edits=no
+== deploy deployed=2026-10-31T18:15:07+02:00
+== repository math
+== tree matches the manifest (19 files)
+
+######## check cpplint ########
+RESULT check=cpplint status=PASS secs=150
+
+######## check deps ########
+RESULT check=deps status=PASS secs=17
+
+######## check headers ########
+RESULT check=header_stan_math_prim_prob_poisson_binomial_cdf.hpp status=PASS secs=3
+RESULT check=header_stan_math_prim_prob_poisson_binomial_lcdf.hpp status=PASS secs=3
+RESULT check=header_stan_math_prim_prob_poisson_binomial_lccdf.hpp status=PASS secs=3
+RESULT check=header_stan_math_prim_prob_neg_binomial_lcdf.hpp status=PASS secs=4
+RESULT check=header_stan_math_prim_prob_neg_binomial_2_lcdf.hpp status=PASS secs=3
+RESULT check=header_stan_math_prim_prob_bernoulli_lccdf.hpp status=PASS secs=3
+RESULT check=header_stan_math_opencl_prim_bernoulli_lccdf.hpp status=PASS secs=1
+
+######## check test-headers ########
+RESULT check=test-headers status=PASS secs=252
+
+######## check doxygen ########
+RESULT check=doxygen status=PASS secs=29
+
+== final tree check:
+== tree still matches the manifest
+== done 2026-10-31T18:39:15+02:00

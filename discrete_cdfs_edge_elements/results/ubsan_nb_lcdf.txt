@@ -1,0 +1,4 @@
+== develop
+out/trees/develop/stan/math/prim/prob/neg_binomial_lcdf.hpp:77:46: runtime error: signed integer overflow: 2147483647 + 1 cannot be represented in type 'int'
+== pr
+neg_binomial_lcdf({3, INT_MAX} | 2.5, 1.5) = -0.139231, d/dalpha -0.106552

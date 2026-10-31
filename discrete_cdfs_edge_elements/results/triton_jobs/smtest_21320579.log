@@ -1,0 +1,79 @@
+== host csl24.int.triton.aalto.fi  date 2026-10-31T18:15:43+02:00  cpus 16  J=16
+== g++ g++ (conda-forge gcc 14.3.0-18) 14.3.0
+== mode targeted  tree <scratch>/smtest_issue56dev
+== deploy repo=math
+== deploy clone=<workstation>/proj/stan_math_issue56
+== deploy branch=fix-discrete-cdfs-edge-elements
+== deploy head=56872c02d1576674f41dc09808fccec3be3de8c9
+== deploy base_ref=origin/develop
+== deploy base=dc669419692e2cb71d55000a871066b5739c3e48
+== deploy uncommitted_edits=no
+== deploy deployed=2026-10-31T18:15:07+02:00
+== repository math
+== tree matches the manifest (19 files)
+
+######## stage branch ########
+RESULT stage=branch suite=test/unit/math/mix/prob/discrete_cdfs_edge_elements_test status=PASS build_s=62 cases=10 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/poisson_binomial_test status=PASS build_s=15 cases=15 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/poisson_binomial_cdf_log_test status=PASS build_s=13 cases=16 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/poisson_binomial_ccdf_log_test status=FAIL build_s=13 cases=16 failed=1
+FAILED_CASE stage=branch suite=test/unit/math/prim/prob/poisson_binomial_ccdf_log_test ProbDistributionsPoissonBinomial.lccdf_works_on_scalar_arguments
+test/unit/math/prim/prob/poisson_binomial_ccdf_log_test.cpp:41: Failure
+The difference between -36.7368 and poisson_binomial_lccdf(3, p) is inf, which exceeds 1e-4, where
+-36.7368 evaluates to -36.736800000000002,
+poisson_binomial_lccdf(3, p) evaluates to -inf, and
+1e-4 evaluates to 0.0001.
+RESULT stage=branch suite=test/unit/math/prim/fun/poisson_binomial_log_probs_test status=PASS build_s=13 cases=3 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/neg_binomial_test status=BUILD_FAILED build_s=70 cases=0 failed=0
+collect2: error: ld returned 1 exit status
+make: *** [make/tests:27: test/unit/math/prim/prob/neg_binomial_test] Error 1
+rm test/unit/math/prim/prob/neg_binomial_test.o
+RESULT stage=branch suite=test/unit/math/prim/prob/neg_binomial_cdf_log_test status=PASS build_s=13 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/rev/prob/neg_binomial_cdf_log_test status=PASS build_s=17 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/mix/prob/neg_binomial_test status=PASS build_s=28 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/bernoulli_test status=PASS build_s=63 cases=4 failed=0
+RESULT stage=branch suite=test/unit/math/mix/prob/bernoulli_lccdf_test status=PASS build_s=28 cases=1 failed=0
+SUMMARY stage=branch suites=11 failed_suites=2
+
+######## stage develop (swapped: stan/math/prim/prob/bernoulli_lccdf.hpp stan/math/prim/prob/beta_binomial_lccdf.hpp stan/math/prim/prob/beta_neg_binomial_cdf.hpp stan/math/prim/prob/beta_neg_binomial_lccdf.hpp stan/math/prim/prob/beta_neg_binomial_lcdf.hpp stan/math/prim/prob/binomial_lccdf.hpp stan/math/prim/prob/neg_binomial_2_cdf.hpp stan/math/prim/prob/neg_binomial_2_lcdf.hpp stan/math/prim/prob/neg_binomial_cdf.hpp stan/math/prim/prob/neg_binomial_lccdf.hpp stan/math/prim/prob/neg_binomial_lcdf.hpp stan/math/prim/prob/poisson_binomial_cdf.hpp stan/math/prim/prob/poisson_binomial_lccdf.hpp stan/math/prim/prob/poisson_binomial_lcdf.hpp stan/math/prim/prob/yule_simon_cdf.hpp stan/math/prim/prob/yule_simon_lccdf.hpp stan/math/prim/prob/yule_simon_lcdf.hpp ) ########
+RESULT stage=develop suite=test/unit/math/mix/prob/discrete_cdfs_edge_elements_test status=FAIL build_s=58 cases=10 failed=10
+FAILED_CASE stage=develop suite=test/unit/math/mix/prob/discrete_cdfs_edge_elements_test ProbDiscreteCdfsEdgeElements.bernoulli
+FAILED_CASE stage=develop suite=test/unit/math/mix/prob/discrete_cdfs_edge_elements_test ProbDiscreteCdfsEdgeElements.binomial
+FAILED_CASE stage=develop suite=test/unit/math/mix/prob/discrete_cdfs_edge_elements_test ProbDiscreteCdfsEdgeElements.beta_binomial
+FAILED_CASE stage=develop suite=test/unit/math/mix/prob/discrete_cdfs_edge_elements_test ProbDiscreteCdfsEdgeElements.neg_binomial
+FAILED_CASE stage=develop suite=test/unit/math/mix/prob/discrete_cdfs_edge_elements_test ProbDiscreteCdfsEdgeElements.neg_binomial_2
+FAILED_CASE stage=develop suite=test/unit/math/mix/prob/discrete_cdfs_edge_elements_test ProbDiscreteCdfsEdgeElements.beta_neg_binomial
+FAILED_CASE stage=develop suite=test/unit/math/mix/prob/discrete_cdfs_edge_elements_test ProbDiscreteCdfsEdgeElements.yule_simon
+FAILED_CASE stage=develop suite=test/unit/math/mix/prob/discrete_cdfs_edge_elements_test ProbDiscreteCdfsEdgeElements.poisson_binomial
+FAILED_CASE stage=develop suite=test/unit/math/mix/prob/discrete_cdfs_edge_elements_test ProbDiscreteCdfsEdgeElements.vector_parameters
+FAILED_CASE stage=develop suite=test/unit/math/mix/prob/discrete_cdfs_edge_elements_test ProbDiscreteCdfsEdgeElements.neg_binomial_2_lcdf_expect_ad
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.2039728043259361, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.2039728043259361, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.2039728043259361e-12.
+--
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 3.3333333333333335, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 3.3333333333333335, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 3.3333333333333335e-12.
+--
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.2039728043259361, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.2039728043259361, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.2039728043259361e-12.
+SUMMARY stage=develop suites=1 failed_suites=1
+RESULT check=swap_restore status=PASS secs=0
+
+######## stage branch_again ########
+RESULT stage=branch_again suite=test/unit/math/mix/prob/discrete_cdfs_edge_elements_test status=PASS build_s=61 cases=10 failed=0
+SUMMARY stage=branch_again suites=1 failed_suites=0
+
+######## test/prob/neg_binomial (generated), -j6 ########
+RESULT check=prob_neg_binomial status=PASS secs=325 ok_cases=10530 failed_cases=0 compiler_kills=0
+
+== final tree check:
+== tree still matches the manifest
+== done 2026-10-31T18:28:48+02:00

@@ -1,0 +1,46 @@
+== host csl21.int.triton.aalto.fi  date 2026-10-31T20:58:33+02:00  cpus 16  J=16
+== g++ g++ (conda-forge gcc 14.3.0-18) 14.3.0
+== mode checklist  tree <scratch>/smtest_issue56dev
+== deploy repo=math
+== deploy clone=<workstation>/proj/stan_math_issue56
+== deploy branch=fix-discrete-cdfs-edge-elements
+== deploy head=1315143b74d4dc15f4c2fe7a53ed01c0fa721331
+== deploy base_ref=origin/develop
+== deploy base=dc669419692e2cb71d55000a871066b5739c3e48
+== deploy uncommitted_edits=no
+== deploy deployed=2026-10-31T20:58:10+02:00
+== repository math
+== tree matches the manifest (21 files)
+
+######## check deps ########
+RESULT check=deps status=PASS secs=19
+
+######## check headers ########
+RESULT check=header_stan_math_opencl_prim_bernoulli_lccdf.hpp status=PASS secs=0
+RESULT check=header_stan_math_prim_prob_bernoulli_lccdf.hpp status=PASS secs=4
+RESULT check=header_stan_math_prim_prob_beta_binomial_lccdf.hpp status=PASS secs=3
+RESULT check=header_stan_math_prim_prob_beta_neg_binomial_cdf.hpp status=PASS secs=3
+RESULT check=header_stan_math_prim_prob_beta_neg_binomial_lccdf.hpp status=PASS secs=4
+RESULT check=header_stan_math_prim_prob_beta_neg_binomial_lcdf.hpp status=PASS secs=3
+RESULT check=header_stan_math_prim_prob_binomial_lccdf.hpp status=PASS secs=4
+RESULT check=header_stan_math_prim_prob_neg_binomial_2_cdf.hpp status=PASS secs=3
+RESULT check=header_stan_math_prim_prob_neg_binomial_2_lcdf.hpp status=PASS secs=4
+RESULT check=header_stan_math_prim_prob_neg_binomial_cdf.hpp status=PASS secs=3
+RESULT check=header_stan_math_prim_prob_neg_binomial_lccdf.hpp status=PASS secs=4
+RESULT check=header_stan_math_prim_prob_neg_binomial_lcdf.hpp status=PASS secs=3
+RESULT check=header_stan_math_prim_prob_poisson_binomial_cdf.hpp status=PASS secs=3
+RESULT check=header_stan_math_prim_prob_poisson_binomial_lccdf.hpp status=PASS secs=3
+RESULT check=header_stan_math_prim_prob_poisson_binomial_lcdf.hpp status=PASS secs=3
+RESULT check=header_stan_math_prim_prob_yule_simon_cdf.hpp status=PASS secs=2
+RESULT check=header_stan_math_prim_prob_yule_simon_lccdf.hpp status=PASS secs=3
+RESULT check=header_stan_math_prim_prob_yule_simon_lcdf.hpp status=PASS secs=3
+
+######## check test-headers ########
+RESULT check=test-headers status=PASS secs=253
+
+######## check doxygen ########
+RESULT check=doxygen status=PASS secs=29
+
+== final tree check:
+== tree still matches the manifest
+== done 2026-10-31T21:04:29+02:00

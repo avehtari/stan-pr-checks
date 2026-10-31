@@ -1,0 +1,23 @@
+# clang-format 10.0.1 (tools/stan_clang_format.sh branch origin/develop) at 1315143b74
+clean    stan/math/opencl/prim/bernoulli_lccdf.hpp
+clean    stan/math/prim/prob/bernoulli_lccdf.hpp
+clean    stan/math/prim/prob/beta_binomial_lccdf.hpp
+clean    stan/math/prim/prob/beta_neg_binomial_cdf.hpp
+clean    stan/math/prim/prob/beta_neg_binomial_lccdf.hpp
+clean    stan/math/prim/prob/beta_neg_binomial_lcdf.hpp
+clean    stan/math/prim/prob/binomial_lccdf.hpp
+clean    stan/math/prim/prob/neg_binomial_2_cdf.hpp
+clean    stan/math/prim/prob/neg_binomial_2_lcdf.hpp
+clean    stan/math/prim/prob/neg_binomial_cdf.hpp
+clean    stan/math/prim/prob/neg_binomial_lccdf.hpp
+clean    stan/math/prim/prob/neg_binomial_lcdf.hpp
+clean    stan/math/prim/prob/poisson_binomial_cdf.hpp
+clean    stan/math/prim/prob/poisson_binomial_lccdf.hpp
+clean    stan/math/prim/prob/poisson_binomial_lcdf.hpp
+clean    stan/math/prim/prob/yule_simon_cdf.hpp
+clean    stan/math/prim/prob/yule_simon_lccdf.hpp
+clean    stan/math/prim/prob/yule_simon_lcdf.hpp
+clean    test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp
+clean    test/unit/math/opencl/rev/bernoulli_lccdf_test.cpp
+clean    test/unit/math/prim/prob/poisson_binomial_ccdf_log_test.cpp
+all files match clang-format 10

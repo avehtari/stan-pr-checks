@@ -1,0 +1,3250 @@
+Running main() from lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 11 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 11 tests from ProbDiscreteCdfsEdgeElements
+[ RUN      ] ProbDiscreteCdfsEdgeElements.bernoulli
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.2039728043259361, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.2039728043259361, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.2039728043259361e-12.
+rev value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 3.3333333333333335, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 3.3333333333333335, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 3.3333333333333335e-12.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.2039728043259361, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.2039728043259361, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.2039728043259361e-12.
+rev value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 3.3333333333333335, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 3.3333333333333335, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 3.3333333333333335e-12.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.2039728043259361, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.2039728043259361, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.2039728043259361e-12.
+fwd value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 3.3333333333333335, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 3.3333333333333335, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 3.3333333333333335e-12.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.2039728043259361, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.2039728043259361, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.2039728043259361e-12.
+fwd value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 3.3333333333333335, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 3.3333333333333335, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 3.3333333333333335e-12.
+fwd gradient
+[  FAILED  ] ProbDiscreteCdfsEdgeElements.bernoulli (0 ms)
+[ RUN      ] ProbDiscreteCdfsEdgeElements.binomial
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.0487105094288507, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.0487105094288507, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.0487105094288506e-12.
+rev value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 7.615185338477561, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 7.615185338477561, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 7.6151853384775612e-12.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.0487105094288507, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.0487105094288507, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.0487105094288506e-12.
+rev value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 7.615185338477561, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 7.615185338477561, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 7.6151853384775612e-12.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.0487105094288507, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.0487105094288507, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.0487105094288506e-12.
+fwd value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 7.615185338477561, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 7.615185338477561, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 7.6151853384775612e-12.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.0487105094288507, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.0487105094288507, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.0487105094288506e-12.
+fwd value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 7.615185338477561, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 7.615185338477561, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 7.6151853384775612e-12.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 7.61519
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 7.61519
+  0.0
+    Which is: 0
+fwd
+[  FAILED  ] ProbDiscreteCdfsEdgeElements.binomial (1 ms)
+[ RUN      ] ProbDiscreteCdfsEdgeElements.beta_binomial
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.18261151582019522, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.18261151582019522, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.1344288001074026, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.1344288001074026, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.15999727851758627, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.15999727851758627, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.18261151582019522, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.18261151582019522, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.1344288001074026, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.1344288001074026, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.15999727851758627, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.15999727851758627, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.18261151582019522, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.18261151582019522, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.1344288001074026, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.1344288001074026, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.15999727851758627, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.15999727851758627, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.18261151582019522, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.18261151582019522, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.1344288001074026, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.1344288001074026, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.15999727851758627, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.15999727851758627, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.134429
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: -0.159997
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.134429
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: -0.159997
+  0.0
+    Which is: 0
+fwd
+[  FAILED  ] ProbDiscreteCdfsEdgeElements.beta_binomial (159 ms)
+[ RUN      ] ProbDiscreteCdfsEdgeElements.neg_binomial
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.12997302110796582, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 1,
+b evaluates to 0.87002697889203418, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.013848900866903213, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to -0.10655211942330112,
+b evaluates to -0.092703218556397904, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.025661340064906057, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0.19743589743589735,
+b evaluates to 0.17177455737099129, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.12997302110796582, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 1,
+b evaluates to 0.87002697889203418, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.092703218556397904, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.092703218556397904, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.17177455737099129, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.17177455737099129, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.12997302110796582, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 1,
+b evaluates to 0.87002697889203418, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.013848900866903213, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to -0.10655211942330112,
+b evaluates to -0.092703218556397904, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.025661340064906057, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0.19743589743589735,
+b evaluates to 0.17177455737099129, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.12997302110796582, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 1,
+b evaluates to 0.87002697889203418, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.092703218556397904, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.092703218556397904, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.17177455737099129, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.17177455737099129, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.13923105759358567, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.13923105759358567, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.13923105759358567, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.13923105759358567, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.10655211949248619, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.10655211949248619, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.19743589743589723, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.19743589743589723, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.13923105759358567, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.13923105759358567, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.13923105759358567, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.13923105759358567, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.10655211949248619, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.10655211949248619, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.19743589743589723, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.19743589743589723, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 2.0404283800025964, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -2.0404283800025964, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 2.0404283800025964e-12.
+rev value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.71324970233310336, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.71324970233310336, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.3216170241076548, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.3216170241076548, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.3216170241076548e-12.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 2.0404283800025964, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -2.0404283800025964, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 2.0404283800025964e-12.
+rev value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.71324970233310336, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.71324970233310336, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.3216170241076548, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.3216170241076548, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.3216170241076548e-12.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 2.0404283800025964, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -2.0404283800025964, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 2.0404283800025964e-12.
+fwd value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.71324970233310336, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.71324970233310336, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.3216170241076548, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.3216170241076548, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.3216170241076548e-12.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 2.0404283800025964, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -2.0404283800025964, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 2.0404283800025964e-12.
+fwd value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.71324970233310336, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.71324970233310336, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.3216170241076548, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.3216170241076548, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.3216170241076548e-12.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.71325
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: -1.32162
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.71325
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: -1.32162
+  0.0
+    Which is: 0
+fwd
+[  FAILED  ] ProbDiscreteCdfsEdgeElements.neg_binomial (0 ms)
+[ RUN      ] ProbDiscreteCdfsEdgeElements.neg_binomial_2
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.46090534979423869, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 1,
+b evaluates to 0.53909465020576131, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.093822971968292854, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to -0.20356234096692111,
+b evaluates to -0.10973936899862825, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.027859124083162282, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to -0.060444349573289591,
+b evaluates to -0.032585225490127309, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.46090534979423869, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 1,
+b evaluates to 0.53909465020576131, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.10973936899862825, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.10973936899862825, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.032585225490127309, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.032585225490127309, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.46090534979423869, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 1,
+b evaluates to 0.53909465020576131, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.093822971968292854, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to -0.20356234096692111,
+b evaluates to -0.10973936899862825, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.027859124083162282, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to -0.060444349573289591,
+b evaluates to -0.032585225490127309, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.46090534979423869, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 1,
+b evaluates to 0.53909465020576131, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.10973936899862825, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.10973936899862825, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.032585225490127309, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.032585225490127309, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 19.46616597429022, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 19.405721624553408,
+b evaluates to -0.06044434973681187, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 19.46616597429022, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 19.405721624553408,
+b evaluates to -0.06044434973681187, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 19.46616597429022, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 19.405721624553408,
+b evaluates to -0.060444349736811842, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 19.46616597429022, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 19.405721624553408,
+b evaluates to -0.060444349736811842, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.77456257204545387, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.77456257204545387, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.23809523809523811, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.23809523809523811, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.07069830192430665, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.07069830192430665, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.77456257204545387, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.77456257204545387, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.23809523809523811, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.23809523809523811, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.07069830192430665, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.07069830192430665, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.77456257204545387, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.77456257204545387, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.23809523809523811, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.23809523809523811, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.07069830192430665, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.07069830192430665, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.77456257204545387, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.77456257204545387, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.23809523809523811, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.23809523809523811, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.07069830192430665, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.07069830192430665, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.238095
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.0706983
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.238095
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.0706983
+  0.0
+    Which is: 0
+fwd
+[  FAILED  ] ProbDiscreteCdfsEdgeElements.neg_binomial_2 (1 ms)
+[ RUN      ] ProbDiscreteCdfsEdgeElements.beta_neg_binomial
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.24365234374994627, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 1,
+b evaluates to 0.75634765625005373, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.081606970664176146, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.081606970664176146, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.1224693483206931, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.1224693483206931, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.16743385936948554, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.16743385936948554, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.24365234374994627, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 1,
+b evaluates to 0.75634765625005373, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.081606970664176146, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.081606970664176146, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.1224693483206931, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.1224693483206931, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.16743385936948554, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.16743385936948554, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.24365234374994627, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 1,
+b evaluates to 0.75634765625005373, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.081606970664176146, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.081606970664176146, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.1224693483206931, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.1224693483206931, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.16743385936948554, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.16743385936948554, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.24365234374994627, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 1,
+b evaluates to 0.75634765625005373, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.081606970664176146, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.081606970664176146, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.1224693483206931, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.1224693483206931, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.16743385936948554, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.16743385936948554, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.27925414574245871, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.27925414574245871, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.10789611098787662, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.10789611098787662, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.16192203057505594, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.16192203057505594, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.22137155841748357, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.22137155841748357, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.27925414574245871, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.27925414574245871, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.10789611098787662, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.10789611098787662, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.16192203057505594, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.16192203057505594, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.22137155841748357, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.22137155841748357, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.27925414574245871, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.27925414574245871, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.10789611098787662, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.10789611098787662, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.16192203057505594, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.16192203057505594, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.22137155841748357, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.22137155841748357, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.27925414574245871, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.27925414574245871, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.10789611098787662, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.10789611098787662, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.16192203057505594, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.16192203057505594, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.22137155841748357, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.22137155841748357, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.4120128904081004, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.4120128904081004, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.4120128904081005e-12.
+rev value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.33493201587228383, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.33493201587228383, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.50263973018203378, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.50263973018203378, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.68718345488733878, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.68718345488733878, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.4120128904081004, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.4120128904081004, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.4120128904081005e-12.
+rev value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.33493201587228383, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.33493201587228383, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.50263973018203378, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.50263973018203378, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.68718345488733878, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.68718345488733878, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.4120128904081004, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.4120128904081004, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.4120128904081005e-12.
+fwd value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.33493201587228383, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.33493201587228383, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.50263973018203378, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.50263973018203378, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.68718345488733878, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.68718345488733878, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.4120128904081004, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.4120128904081004, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.4120128904081005e-12.
+fwd value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.33493201587228383, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.33493201587228383, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.50263973018203378, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.50263973018203378, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.68718345488733878, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.68718345488733878, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.334932
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: -0.50264
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.687183
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.334932
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: -0.50264
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.687183
+  0.0
+    Which is: 0
+fwd
+[  FAILED  ] ProbDiscreteCdfsEdgeElements.beta_neg_binomial (576 ms)
+[ RUN      ] ProbDiscreteCdfsEdgeElements.yule_simon
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.15238095238095228, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 1,
+b evaluates to 0.84761904761904772, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.13835222978080117, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.13835222978080117, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.15238095238095228, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 1,
+b evaluates to 0.84761904761904772, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.13835222978080117, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.13835222978080117, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.15238095238095228, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 1,
+b evaluates to 0.84761904761904772, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.13835222978080117, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.13835222978080117, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.15238095238095228, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 1,
+b evaluates to 0.84761904761904772, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.13835222978080117, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.13835222978080117, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.16532398042538349, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.16532398042538349, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.16322454075263057, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.16322454075263057, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.16532398042538349, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.16532398042538349, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.16322454075263057, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.16322454075263057, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.16532398042538349, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.16532398042538349, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.16322454075263057, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.16322454075263057, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.16532398042538349, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.16532398042538349, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.16322454075263057, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.16322454075263057, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.8813716279177424, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.8813716279177424, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.8813716279177425e-12.
+rev value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.90793650793650782, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.90793650793650782, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.8813716279177424, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.8813716279177424, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.8813716279177425e-12.
+rev value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.90793650793650782, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.90793650793650782, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.8813716279177424, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.8813716279177424, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.8813716279177425e-12.
+fwd value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.90793650793650782, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.90793650793650782, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.8813716279177424, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.8813716279177424, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.8813716279177425e-12.
+fwd value
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.90793650793650782, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.90793650793650782, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd gradient
+[  FAILED  ] ProbDiscreteCdfsEdgeElements.yule_simon (1 ms)
+[ RUN      ] ProbDiscreteCdfsEdgeElements.poisson_binomial
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:92: Failure
+Expected equality of these values:
+  both.value
+    Which is: -37.2278
+  result
+    Which is: -inf
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.718954
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: -0.486928
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: -0.367647
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:92: Failure
+Expected equality of these values:
+  both.value
+    Which is: -37.2278
+  result
+    Which is: -inf
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: -0.5
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: -0.25
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:92: Failure
+Expected equality of these values:
+  both.value
+    Which is: -37.2278
+  result
+    Which is: -inf
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 1.71895
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 1.01307
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: -0.617647
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:92: Failure
+Expected equality of these values:
+  both.value
+    Which is: -37.2278
+  result
+    Which is: -inf
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 1.71895
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 1.01307
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: -0.617647
+  0.0
+    Which is: 0
+fwd
+[  FAILED  ] ProbDiscreteCdfsEdgeElements.poisson_binomial (0 ms)
+[ RUN      ] ProbDiscreteCdfsEdgeElements.vector_parameters
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.2039728043259361, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.2039728043259361, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.2039728043259361e-12.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 3.3333333333333335, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 3.3333333333333335, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 3.3333333333333335e-12.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.2039728043259361, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.2039728043259361, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.2039728043259361e-12.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 3.3333333333333335, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 3.3333333333333335, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 3.3333333333333335e-12.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.2039728043259361, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.2039728043259361, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.2039728043259361e-12.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 3.3333333333333335, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 3.3333333333333335, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 3.3333333333333335e-12.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.2039728043259361, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.2039728043259361, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.2039728043259361e-12.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 3.3333333333333335, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 3.3333333333333335, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 3.3333333333333335e-12.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.0487105094288507, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.0487105094288507, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.0487105094288506e-12.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 7.615185338477561, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 7.615185338477561, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 7.6151853384775612e-12.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.0487105094288507, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.0487105094288507, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.0487105094288506e-12.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 7.615185338477561, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 7.615185338477561, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 7.6151853384775612e-12.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.0487105094288507, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.0487105094288507, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.0487105094288506e-12.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 7.615185338477561, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 7.615185338477561, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 7.6151853384775612e-12.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.0487105094288507, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.0487105094288507, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.0487105094288506e-12.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 7.615185338477561, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 7.615185338477561, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 7.6151853384775612e-12.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 7.61519
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 7.61519
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.18261151582019522, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.18261151582019522, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.1344288001074026, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.1344288001074026, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.15999727851758627, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.15999727851758627, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.18261151582019522, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.18261151582019522, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.1344288001074026, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.1344288001074026, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.15999727851758627, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.15999727851758627, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.18261151582019522, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.18261151582019522, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.1344288001074026, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.1344288001074026, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.15999727851758627, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.15999727851758627, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.18261151582019522, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.18261151582019522, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.1344288001074026, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.1344288001074026, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.15999727851758627, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.15999727851758627, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.134429
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: -0.159997
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.134429
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: -0.159997
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.12997302110796582, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 1,
+b evaluates to 0.87002697889203418, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.013848900866903213, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to -0.10655211942330112,
+b evaluates to -0.092703218556397904, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.025661340064906057, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0.19743589743589735,
+b evaluates to 0.17177455737099129, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.12997302110796582, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 1,
+b evaluates to 0.87002697889203418, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.092703218556397904, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.092703218556397904, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.17177455737099129, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.17177455737099129, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.12997302110796582, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 1,
+b evaluates to 0.87002697889203418, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.013848900866903213, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to -0.10655211942330112,
+b evaluates to -0.092703218556397904, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.025661340064906057, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0.19743589743589735,
+b evaluates to 0.17177455737099129, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.12997302110796582, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 1,
+b evaluates to 0.87002697889203418, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.092703218556397904, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.092703218556397904, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.17177455737099129, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.17177455737099129, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.13923105759358567, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.13923105759358567, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.13923105759358567, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.13923105759358567, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.10655211949248619, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.10655211949248619, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.19743589743589723, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.19743589743589723, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.13923105759358567, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.13923105759358567, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.13923105759358567, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.13923105759358567, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.10655211949248619, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.10655211949248619, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.19743589743589723, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.19743589743589723, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 2.0404283800025964, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -2.0404283800025964, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 2.0404283800025964e-12.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.71324970233310336, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.71324970233310336, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.3216170241076548, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.3216170241076548, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.3216170241076548e-12.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 2.0404283800025964, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -2.0404283800025964, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 2.0404283800025964e-12.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.71324970233310336, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.71324970233310336, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.3216170241076548, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.3216170241076548, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.3216170241076548e-12.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 2.0404283800025964, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -2.0404283800025964, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 2.0404283800025964e-12.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.71324970233310336, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.71324970233310336, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.3216170241076548, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.3216170241076548, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.3216170241076548e-12.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 2.0404283800025964, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -2.0404283800025964, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 2.0404283800025964e-12.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.71324970233310336, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.71324970233310336, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.3216170241076548, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.3216170241076548, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.3216170241076548e-12.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.71325
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: -1.32162
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.71325
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: -1.32162
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.46090534979423869, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 1,
+b evaluates to 0.53909465020576131, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.093822971968292854, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to -0.20356234096692111,
+b evaluates to -0.10973936899862825, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.027859124083162282, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to -0.060444349573289591,
+b evaluates to -0.032585225490127309, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.46090534979423869, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 1,
+b evaluates to 0.53909465020576131, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.10973936899862825, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.10973936899862825, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.032585225490127309, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.032585225490127309, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.46090534979423869, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 1,
+b evaluates to 0.53909465020576131, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.093822971968292854, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to -0.20356234096692111,
+b evaluates to -0.10973936899862825, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.027859124083162282, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to -0.060444349573289591,
+b evaluates to -0.032585225490127309, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.46090534979423869, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 1,
+b evaluates to 0.53909465020576131, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.10973936899862825, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.10973936899862825, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.032585225490127309, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.032585225490127309, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:136: Failure
+Expected equality of these values:
+  both.grad[2 * j + pos_edge]
+    Which is: 19.826
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:136: Failure
+Expected equality of these values:
+  both.grad[2 * j + pos_edge]
+    Which is: 19.826
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:136: Failure
+Expected equality of these values:
+  both.grad[2 * j + pos_edge]
+    Which is: 19.826
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:136: Failure
+Expected equality of these values:
+  both.grad[2 * j + pos_edge]
+    Which is: 19.826
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.77456257204545387, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.77456257204545387, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.23809523809523811, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.23809523809523811, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.07069830192430665, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.07069830192430665, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.77456257204545387, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.77456257204545387, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.23809523809523811, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.23809523809523811, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.07069830192430665, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.07069830192430665, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.77456257204545387, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.77456257204545387, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.23809523809523811, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.23809523809523811, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.07069830192430665, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.07069830192430665, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.77456257204545387, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.77456257204545387, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.23809523809523811, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.23809523809523811, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.07069830192430665, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.07069830192430665, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.24365234374994627, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 1,
+b evaluates to 0.75634765625005373, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.081606970664176146, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.081606970664176146, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.1224693483206931, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.1224693483206931, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.16743385936948554, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.16743385936948554, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.24365234374994627, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 1,
+b evaluates to 0.75634765625005373, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.081606970664176146, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.081606970664176146, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.1224693483206931, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.1224693483206931, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.16743385936948554, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.16743385936948554, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.24365234374994627, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 1,
+b evaluates to 0.75634765625005373, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.081606970664176146, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.081606970664176146, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.1224693483206931, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.1224693483206931, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.16743385936948554, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.16743385936948554, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.24365234374994627, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 1,
+b evaluates to 0.75634765625005373, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.081606970664176146, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.081606970664176146, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.1224693483206931, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.1224693483206931, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.16743385936948554, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.16743385936948554, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.27925414574245871, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.27925414574245871, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.10789611098787662, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.10789611098787662, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.16192203057505594, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.16192203057505594, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.22137155841748357, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.22137155841748357, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.27925414574245871, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.27925414574245871, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.10789611098787662, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.10789611098787662, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.16192203057505594, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.16192203057505594, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.22137155841748357, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.22137155841748357, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.27925414574245871, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.27925414574245871, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.10789611098787662, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.10789611098787662, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.16192203057505594, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.16192203057505594, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.22137155841748357, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.22137155841748357, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.27925414574245871, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.27925414574245871, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.10789611098787662, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.10789611098787662, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.16192203057505594, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.16192203057505594, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.22137155841748357, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.22137155841748357, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.4120128904081004, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.4120128904081004, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.4120128904081005e-12.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.33493201587228383, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.33493201587228383, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.50263973018203378, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.50263973018203378, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.68718345488733878, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.68718345488733878, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.4120128904081004, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.4120128904081004, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.4120128904081005e-12.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.33493201587228383, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.33493201587228383, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.50263973018203378, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.50263973018203378, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.68718345488733878, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.68718345488733878, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.4120128904081004, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.4120128904081004, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.4120128904081005e-12.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.33493201587228383, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.33493201587228383, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.50263973018203378, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.50263973018203378, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.68718345488733878, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.68718345488733878, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.4120128904081004, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.4120128904081004, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.4120128904081005e-12.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.33493201587228383, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.33493201587228383, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.50263973018203378, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.50263973018203378, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.68718345488733878, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.68718345488733878, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.334932
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: -0.50264
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.687183
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.334932
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: -0.50264
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.687183
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.15238095238095228, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 1,
+b evaluates to 0.84761904761904772, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.13835222978080117, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.13835222978080117, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.15238095238095228, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 1,
+b evaluates to 0.84761904761904772, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.13835222978080117, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.13835222978080117, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.15238095238095228, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 1,
+b evaluates to 0.84761904761904772, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.13835222978080117, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.13835222978080117, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.15238095238095228, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 1,
+b evaluates to 0.84761904761904772, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.13835222978080117, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.13835222978080117, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.16532398042538349, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.16532398042538349, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.16322454075263057, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.16322454075263057, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.16532398042538349, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.16532398042538349, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.16322454075263057, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.16322454075263057, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.16532398042538349, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.16532398042538349, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.16322454075263057, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.16322454075263057, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.16532398042538349, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.16532398042538349, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.16322454075263057, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to 0.16322454075263057, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.8813716279177424, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.8813716279177424, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.8813716279177425e-12.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.90793650793650782, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.90793650793650782, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.8813716279177424, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.8813716279177424, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.8813716279177425e-12.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.90793650793650782, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.90793650793650782, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.8813716279177424, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.8813716279177424, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.8813716279177425e-12.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.90793650793650782, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.90793650793650782, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 1.8813716279177424, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -1.8813716279177424, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 1.8813716279177425e-12.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:59: Failure
+The difference between a and b is 0.90793650793650782, which exceeds 1e-12 * std::fmax(1.0, std::fabs(b)), where
+a evaluates to 0,
+b evaluates to -0.90793650793650782, and
+1e-12 * std::fmax(1.0, std::fabs(b)) evaluates to 9.9999999999999998e-13.
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:153: Failure
+Expected equality of these values:
+  res.grad[k]
+    Which is: 19.4662
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:153: Failure
+Expected equality of these values:
+  res.grad[k]
+    Which is: 19.826
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:153: Failure
+Expected equality of these values:
+  res.grad[k]
+    Which is: 19.4662
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:153: Failure
+Expected equality of these values:
+  res.grad[k]
+    Which is: 19.826
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.238095
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.0706983
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.238095
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.0706983
+  0.0
+    Which is: 0
+fwd
+[  FAILED  ] ProbDiscreteCdfsEdgeElements.vector_parameters (1018 ms)
+[ RUN      ] ProbDiscreteCdfsEdgeElements.poisson_binomial_theta_per_element
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:136: Failure
+Expected equality of these values:
+  both.grad[2 * j + pos_edge]
+    Which is: 5.55112e-17
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:136: Failure
+Expected equality of these values:
+  both.grad[2 * j + pos_edge]
+    Which is: 1.249e-16
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:136: Failure
+Expected equality of these values:
+  both.grad[2 * j + pos_edge]
+    Which is: -6.93889e-18
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:136: Failure
+Expected equality of these values:
+  both.grad[2 * j + pos_edge]
+    Which is: 5.55112e-17
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:136: Failure
+Expected equality of these values:
+  both.grad[2 * j + pos_edge]
+    Which is: 1.249e-16
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:136: Failure
+Expected equality of these values:
+  both.grad[2 * j + pos_edge]
+    Which is: -6.93889e-18
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:136: Failure
+Expected equality of these values:
+  both.grad[2 * j + pos_edge]
+    Which is: 6.4615e-17
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:136: Failure
+Expected equality of these values:
+  both.grad[2 * j + pos_edge]
+    Which is: 8.61533e-17
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:136: Failure
+Expected equality of these values:
+  both.grad[2 * j + pos_edge]
+    Which is: 2.15383e-17
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:136: Failure
+Expected equality of these values:
+  both.grad[2 * j + pos_edge]
+    Which is: 6.4615e-17
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:136: Failure
+Expected equality of these values:
+  both.grad[2 * j + pos_edge]
+    Which is: 8.61533e-17
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:136: Failure
+Expected equality of these values:
+  both.grad[2 * j + pos_edge]
+    Which is: 2.15383e-17
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:136: Failure
+Expected equality of these values:
+  both.grad[2 * j + pos_edge]
+    Which is: 1.66533e-16
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:136: Failure
+Expected equality of these values:
+  both.grad[2 * j + pos_edge]
+    Which is: -2.77556e-17
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:136: Failure
+Expected equality of these values:
+  both.grad[2 * j + pos_edge]
+    Which is: 1.66533e-16
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:136: Failure
+Expected equality of these values:
+  both.grad[2 * j + pos_edge]
+    Which is: -2.77556e-17
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:136: Failure
+Expected equality of these values:
+  both.grad[2 * j + pos_edge]
+    Which is: 1.66533e-16
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:136: Failure
+Expected equality of these values:
+  both.grad[2 * j + pos_edge]
+    Which is: 2.22045e-16
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:136: Failure
+Expected equality of these values:
+  both.grad[2 * j + pos_edge]
+    Which is: 5.55112e-17
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:136: Failure
+Expected equality of these values:
+  both.grad[2 * j + pos_edge]
+    Which is: 1.66533e-16
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:136: Failure
+Expected equality of these values:
+  both.grad[2 * j + pos_edge]
+    Which is: 2.22045e-16
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:136: Failure
+Expected equality of these values:
+  both.grad[2 * j + pos_edge]
+    Which is: 5.55112e-17
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.718954
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: -nan
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 1.01307
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: -nan
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.882353
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: -nan
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:92: Failure
+Expected equality of these values:
+  both.value
+    Which is: -37.3346
+  result
+    Which is: -inf
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.909091
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: -1.5
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 1.34545
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: -1.25
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.909091
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:92: Failure
+Expected equality of these values:
+  both.value
+    Which is: nan
+  result
+    Which is: -inf
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.718954
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 1.01307
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.882353
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:92: Failure
+Expected equality of these values:
+  both.value
+    Which is: -37.3346
+  result
+    Which is: -inf
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 1
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.909091
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 1.34545
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: -1.5
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 0.909091
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:151: Failure
+Expected equality of these values:
+  res.value
+    Which is: 1
+  result
+    Which is: 1
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:153: Failure
+Expected equality of these values:
+  res.grad[k]
+    Which is: -2.22045e-16
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:153: Failure
+Expected equality of these values:
+  res.grad[k]
+    Which is: 1.11022e-16
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:153: Failure
+Expected equality of these values:
+  res.grad[k]
+    Which is: 1.66533e-16
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:153: Failure
+Expected equality of these values:
+  res.grad[k]
+    Which is: 1.38778e-16
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:153: Failure
+Expected equality of these values:
+  res.grad[k]
+    Which is: 1.11022e-16
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:153: Failure
+Expected equality of these values:
+  res.grad[k]
+    Which is: 1.38778e-17
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:151: Failure
+Expected equality of these values:
+  res.value
+    Which is: 1
+  result
+    Which is: 1
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:153: Failure
+Expected equality of these values:
+  res.grad[k]
+    Which is: -1.11022e-16
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:153: Failure
+Expected equality of these values:
+  res.grad[k]
+    Which is: 1.66533e-16
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:153: Failure
+Expected equality of these values:
+  res.grad[k]
+    Which is: 2.22045e-16
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:153: Failure
+Expected equality of these values:
+  res.grad[k]
+    Which is: 1.66533e-16
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:153: Failure
+Expected equality of these values:
+  res.grad[k]
+    Which is: 5.55112e-17
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:151: Failure
+Expected equality of these values:
+  res.value
+    Which is: -1.11022e-16
+  result
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:153: Failure
+Expected equality of these values:
+  res.grad[k]
+    Which is: 1.66533e-16
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:153: Failure
+Expected equality of these values:
+  res.grad[k]
+    Which is: 1.66533e-16
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:153: Failure
+Expected equality of these values:
+  res.grad[k]
+    Which is: 1.38778e-16
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:153: Failure
+Expected equality of these values:
+  res.grad[k]
+    Which is: -2.77556e-17
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:151: Failure
+Expected equality of these values:
+  res.value
+    Which is: -1.11022e-16
+  result
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:153: Failure
+Expected equality of these values:
+  res.grad[k]
+    Which is: -1.11022e-16
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:153: Failure
+Expected equality of these values:
+  res.grad[k]
+    Which is: 1.66533e-16
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:153: Failure
+Expected equality of these values:
+  res.grad[k]
+    Which is: 2.22045e-16
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:153: Failure
+Expected equality of these values:
+  res.grad[k]
+    Which is: 1.66533e-16
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:153: Failure
+Expected equality of these values:
+  res.grad[k]
+    Which is: 5.55112e-17
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:153: Failure
+Expected equality of these values:
+  res.grad[k]
+    Which is: -nan
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:153: Failure
+Expected equality of these values:
+  res.grad[k]
+    Which is: -1.5
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:153: Failure
+Expected equality of these values:
+  res.grad[k]
+    Which is: -nan
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:153: Failure
+Expected equality of these values:
+  res.grad[k]
+    Which is: -1.25
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:153: Failure
+Expected equality of these values:
+  res.grad[k]
+    Which is: -nan
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:151: Failure
+Expected equality of these values:
+  res.value
+    Which is: nan
+  result
+    Which is: -inf
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:153: Failure
+Expected equality of these values:
+  res.grad[k]
+    Which is: 1
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:153: Failure
+Expected equality of these values:
+  res.grad[k]
+    Which is: -1.5
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 3.33333
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 1.66667
+  0.0
+    Which is: 0
+rev
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 3.33333
+  0.0
+    Which is: 0
+fwd
+test/unit/math/mix/prob/discrete_cdfs_edge_elements_test.cpp:94: Failure
+Expected equality of these values:
+  both.grad[k]
+    Which is: 1.66667
+  0.0
+    Which is: 0
+fwd
+[  FAILED  ] ProbDiscreteCdfsEdgeElements.poisson_binomial_theta_per_element (0 ms)
+[ RUN      ] ProbDiscreteCdfsEdgeElements.neg_binomial_2_lcdf_expect_ad
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 19.466165974306858, which exceeds tol_val, where
+x1 evaluates to -0.060444349753450956,
+x2 evaluates to 19.405721624553408, and
+tol_val evaluates to 0.00097330829871534292.
+expect_near_rel_finite in: expect_near_rel; require items x1(0) = x2(0): gradient() grad for finite diff vs auto diff for finite_diff vs var
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 19.466165974306858, which exceeds tol_val, where
+x1 evaluates to -0.060444349753450956,
+x2 evaluates to 19.405721624553408, and
+tol_val evaluates to 0.00097330829871534292.
+expect_near_rel_finite in: expect_near_rel; require items x1(0) = x2(0): gradient_fvar() grad for finite_diff vs fvar<double>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 19.466165974306858, which exceeds tol_val, where
+x1 evaluates to -0.060444349753450956,
+x2 evaluates to 19.405721624553408, and
+tol_val evaluates to 0.00097330829871534292.
+expect_near_rel_finite in: expect_near_rel; require items x1(1) = x2(1): gradient() grad for finite diff vs auto diff for finite_diff vs var
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 19.466165974306858, which exceeds tol_val, where
+x1 evaluates to -0.060444349753450956,
+x2 evaluates to 19.405721624553408, and
+tol_val evaluates to 0.00097330829871534292.
+expect_near_rel_finite in: expect_near_rel; require items x1(1) = x2(1): gradient_fvar() grad for finite_diff vs fvar<double>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 0.083333333363855427, which exceeds tol_val, where
+x1 evaluates to -0.13323977491136904,
+x2 evaluates to -0.21657310827522447, and
+tol_val evaluates to 0.001.
+expect_near_rel_finite in: expect_near_rel; require items x1(1, 0) = x2(1, 0): hessian() Hessian for finite_diff vs fvar<var>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 0.083333333302812285, which exceeds tol_val, where
+x1 evaluates to -0.13323977491136904,
+x2 evaluates to -0.049906441608556756, and
+tol_val evaluates to 0.001.
+expect_near_rel_finite in: expect_near_rel; require items x1(0, 1) = x2(0, 1): hessian() Hessian for finite_diff vs fvar<var>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 0.083333333302812201, which exceeds tol_val, where
+x1 evaluates to -0.13323977491136904,
+x2 evaluates to -0.04990644160855684, and
+tol_val evaluates to 0.001.
+expect_near_rel_finite in: expect_near_rel; require items x1(1, 0) = x2(1, 0): hessian_fvar() Hessian for finite_diff vs fvar<fvar<double>>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 0.083333333302812201, which exceeds tol_val, where
+x1 evaluates to -0.13323977491136904,
+x2 evaluates to -0.04990644160855684, and
+tol_val evaluates to 0.001.
+expect_near_rel_finite in: expect_near_rel; require items x1(0, 1) = x2(0, 1): hessian_fvar() Hessian for finite_diff vs fvar<fvar<double>>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 0.16666666666666777, which exceeds tol_val, where
+x1 evaluates to -0.049906441608556756,
+x2 evaluates to -0.21657310827522452, and
+tol_val evaluates to 0.00013323977494189066.
+expect_near_rel_finite in: expect_near_rel; require items x1(0, 1) = x2(0, 1): grad_hessian() Hessian for finite_diff vs fvar<fvar<var>>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 0.027777777776785684, which exceeds tol_val, where
+x1 evaluates to -0.007841533763196077,
+x2 evaluates to 0.019936244013589607, and
+tol_val evaluates to 0.00013888888888392842.
+expect_near_rel_finite in: expect_near_rel; require items x1(0, 0) = x2(0, 0): grad_hessian() grad Hessian for finite_diff vs fvar<fvar<var>>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 0.027777777778736901, which exceeds tol_val, where
+x1 evaluates to 0.022102637632800282,
+x2 evaluates to 0.049880415411537184, and
+tol_val evaluates to 0.00035991526522168737.
+expect_near_rel_finite in: expect_near_rel; require items x1(0, 1) = x2(0, 1): grad_hessian() grad Hessian for finite_diff vs fvar<fvar<var>>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 20.005162475039544, which exceeds tol_val, where
+x1 evaluates to -0.060444349753450956,
+x2 evaluates to 19.944718125286094, and
+tol_val evaluates to 0.0010002581237519772.
+expect_near_rel_finite in: expect_near_rel; require items x1(0) = x2(0): gradient() grad for finite diff vs auto diff for finite_diff vs var
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 20.005162475039544, which exceeds tol_val, where
+x1 evaluates to -0.060444349753450956,
+x2 evaluates to 19.944718125286094, and
+tol_val evaluates to 0.0010002581237519772.
+expect_near_rel_finite in: expect_near_rel; require items x1(0) = x2(0): gradient_fvar() grad for finite_diff vs fvar<double>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 20.005162475039544, which exceeds tol_val, where
+x1 evaluates to -0.060444349753450956,
+x2 evaluates to 19.944718125286094, and
+tol_val evaluates to 0.0010002581237519772.
+expect_near_rel_finite in: expect_near_rel; require items x1(2) = x2(2): gradient() grad for finite diff vs auto diff for finite_diff vs var
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 20.005162475039544, which exceeds tol_val, where
+x1 evaluates to -0.060444349753450956,
+x2 evaluates to 19.944718125286094, and
+tol_val evaluates to 0.0010002581237519772.
+expect_near_rel_finite in: expect_near_rel; require items x1(2) = x2(2): gradient_fvar() grad for finite_diff vs fvar<double>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 0.14285714278393319, which exceeds tol_val, where
+x1 evaluates to -0.14285714293035251,
+x2 evaluates to -0.2857142857142857, and
+tol_val evaluates to 0.001.
+expect_near_rel_finite in: expect_near_rel; require items x1(2, 1) = x2(2, 1): hessian() Hessian for finite_diff vs fvar<var>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 0.14285714293035251, which exceeds tol_val, where
+x1 evaluates to -0.14285714293035251,
+x2 evaluates to 0, and
+tol_val evaluates to 0.001.
+expect_near_rel_finite in: expect_near_rel; require items x1(1, 2) = x2(1, 2): hessian() Hessian for finite_diff vs fvar<var>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 0.14285714293035251, which exceeds tol_val, where
+x1 evaluates to -0.14285714293035251,
+x2 evaluates to 0, and
+tol_val evaluates to 0.001.
+expect_near_rel_finite in: expect_near_rel; require items x1(2, 1) = x2(2, 1): hessian_fvar() Hessian for finite_diff vs fvar<fvar<double>>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 0.14285714293035251, which exceeds tol_val, where
+x1 evaluates to -0.14285714293035251,
+x2 evaluates to 0, and
+tol_val evaluates to 0.001.
+expect_near_rel_finite in: expect_near_rel; require items x1(1, 2) = x2(1, 2): hessian_fvar() Hessian for finite_diff vs fvar<fvar<double>>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 0.28571428571428564, which exceeds tol_val, where
+x1 evaluates to 0,
+x2 evaluates to -0.28571428571428564, and
+tol_val evaluates to 0.00014285714285714281.
+expect_near_rel_finite in: expect_near_rel; require items x1(1, 2) = x2(1, 2): grad_hessian() Hessian for finite_diff vs fvar<fvar<var>>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 0.081632653061224511, which exceeds tol_val, where
+x1 evaluates to 0,
+x2 evaluates to 0.081632653061224511, and
+tol_val evaluates to 0.00040816326530612257.
+expect_near_rel_finite in: expect_near_rel; require items x1(1, 1) = x2(1, 1): grad_hessian() grad Hessian for finite_diff vs fvar<fvar<var>>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 0.081632653061224761, which exceeds tol_val, where
+x1 evaluates to 0,
+x2 evaluates to 0.081632653061224761, and
+tol_val evaluates to 0.00040816326530612382.
+expect_near_rel_finite in: expect_near_rel; require items x1(1, 2) = x2(1, 2): grad_hessian() grad Hessian for finite_diff vs fvar<fvar<var>>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 19.384147069703456, which exceeds tol_val, where
+x1 evaluates to 0,
+x2 evaluates to 19.384147069703456, and
+tol_val evaluates to 0.00096920735348517281.
+expect_near_rel_finite in: expect_near_rel; require items x1(1) = x2(1): gradient() grad for finite diff vs auto diff for finite_diff vs var
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 19.384147069703456, which exceeds tol_val, where
+x1 evaluates to 0,
+x2 evaluates to 19.384147069703456, and
+tol_val evaluates to 0.00096920735348517281.
+expect_near_rel_finite in: expect_near_rel; require items x1(1) = x2(1): gradient_fvar() grad for finite_diff vs fvar<double>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 19.384147069703456, which exceeds tol_val, where
+x1 evaluates to 0,
+x2 evaluates to 19.384147069703456, and
+tol_val evaluates to 0.00096920735348517281.
+expect_near_rel_finite in: expect_near_rel; require items x1(2) = x2(2): gradient() grad for finite diff vs auto diff for finite_diff vs var
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 19.384147069703456, which exceeds tol_val, where
+x1 evaluates to 0,
+x2 evaluates to 19.384147069703456, and
+tol_val evaluates to 0.00096920735348517281.
+expect_near_rel_finite in: expect_near_rel; require items x1(2) = x2(2): gradient_fvar() grad for finite_diff vs fvar<double>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 0.071428571416412276, which exceeds tol_val, where
+x1 evaluates to -0.071428571440730573,
+x2 evaluates to -0.14285714285714285, and
+tol_val evaluates to 0.001.
+expect_near_rel_finite in: expect_near_rel; require items x1(2, 0) = x2(2, 0): hessian() Hessian for finite_diff vs fvar<var>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 0.071428571440730573, which exceeds tol_val, where
+x1 evaluates to -0.071428571440730573,
+x2 evaluates to 0, and
+tol_val evaluates to 0.001.
+expect_near_rel_finite in: expect_near_rel; require items x1(0, 2) = x2(0, 2): hessian() Hessian for finite_diff vs fvar<var>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 0.071428571440730573, which exceeds tol_val, where
+x1 evaluates to -0.071428571440730573,
+x2 evaluates to 0, and
+tol_val evaluates to 0.001.
+expect_near_rel_finite in: expect_near_rel; require items x1(2, 0) = x2(2, 0): hessian_fvar() Hessian for finite_diff vs fvar<fvar<double>>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 0.071428571440730573, which exceeds tol_val, where
+x1 evaluates to -0.071428571440730573,
+x2 evaluates to 0, and
+tol_val evaluates to 0.001.
+expect_near_rel_finite in: expect_near_rel; require items x1(0, 2) = x2(0, 2): hessian_fvar() Hessian for finite_diff vs fvar<fvar<double>>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 0.14285714285714285, which exceeds tol_val, where
+x1 evaluates to 0,
+x2 evaluates to -0.14285714285714285, and
+tol_val evaluates to 7.142857142857142e-05.
+expect_near_rel_finite in: expect_near_rel; require items x1(0, 2) = x2(0, 2): grad_hessian() Hessian for finite_diff vs fvar<fvar<var>>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 0.020408163265306114, which exceeds tol_val, where
+x1 evaluates to 0,
+x2 evaluates to 0.020408163265306114, and
+tol_val evaluates to 0.00010204081632653058.
+expect_near_rel_finite in: expect_near_rel; require items x1(0, 0) = x2(0, 0): grad_hessian() grad Hessian for finite_diff vs fvar<fvar<var>>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 0.020408163265305413, which exceeds tol_val, where
+x1 evaluates to 0,
+x2 evaluates to 0.020408163265305413, and
+tol_val evaluates to 0.00010204081632652707.
+expect_near_rel_finite in: expect_near_rel; require items x1(0, 2) = x2(0, 2): grad_hessian() grad Hessian for finite_diff vs fvar<fvar<var>>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 19.825979821982497, which exceeds tol_val, where
+x1 evaluates to 0,
+x2 evaluates to 19.825979821982497, and
+tol_val evaluates to 0.00099129899109912491.
+expect_near_rel_finite in: expect_near_rel; require items x1(1) = x2(1): gradient() grad for finite diff vs auto diff for finite_diff vs var
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 19.825979821982497, which exceeds tol_val, where
+x1 evaluates to 0,
+x2 evaluates to 19.825979821982497, and
+tol_val evaluates to 0.00099129899109912491.
+expect_near_rel_finite in: expect_near_rel; require items x1(1) = x2(1): gradient_fvar() grad for finite_diff vs fvar<double>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 19.825979821982497, which exceeds tol_val, where
+x1 evaluates to 0,
+x2 evaluates to 19.825979821982497, and
+tol_val evaluates to 0.00099129899109912491.
+expect_near_rel_finite in: expect_near_rel; require items x1(3) = x2(3): gradient() grad for finite diff vs auto diff for finite_diff vs var
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 19.825979821982497, which exceeds tol_val, where
+x1 evaluates to 0,
+x2 evaluates to 19.825979821982497, and
+tol_val evaluates to 0.00099129899109912491.
+expect_near_rel_finite in: expect_near_rel; require items x1(3) = x2(3): gradient_fvar() grad for finite_diff vs fvar<double>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 0.111111111108494, which exceeds tol_val, where
+x1 evaluates to -0.11111111111372821,
+x2 evaluates to -0.22222222222222221, and
+tol_val evaluates to 0.001.
+expect_near_rel_finite in: expect_near_rel; require items x1(3, 1) = x2(3, 1): hessian() Hessian for finite_diff vs fvar<var>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 0.11111111111372821, which exceeds tol_val, where
+x1 evaluates to -0.11111111111372821,
+x2 evaluates to 0, and
+tol_val evaluates to 0.001.
+expect_near_rel_finite in: expect_near_rel; require items x1(1, 3) = x2(1, 3): hessian() Hessian for finite_diff vs fvar<var>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 0.11111111111372821, which exceeds tol_val, where
+x1 evaluates to -0.11111111111372821,
+x2 evaluates to 0, and
+tol_val evaluates to 0.001.
+expect_near_rel_finite in: expect_near_rel; require items x1(3, 1) = x2(3, 1): hessian_fvar() Hessian for finite_diff vs fvar<fvar<double>>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 0.11111111111372821, which exceeds tol_val, where
+x1 evaluates to -0.11111111111372821,
+x2 evaluates to 0, and
+tol_val evaluates to 0.001.
+expect_near_rel_finite in: expect_near_rel; require items x1(1, 3) = x2(1, 3): hessian_fvar() Hessian for finite_diff vs fvar<fvar<double>>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 0.22222222222222221, which exceeds tol_val, where
+x1 evaluates to 0,
+x2 evaluates to -0.22222222222222221, and
+tol_val evaluates to 0.0001111111111111111.
+expect_near_rel_finite in: expect_near_rel; require items x1(1, 3) = x2(1, 3): grad_hessian() Hessian for finite_diff vs fvar<fvar<var>>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 0.04938271604938272, which exceeds tol_val, where
+x1 evaluates to 0,
+x2 evaluates to 0.04938271604938272, and
+tol_val evaluates to 0.00024691358024691359.
+expect_near_rel_finite in: expect_near_rel; require items x1(1, 1) = x2(1, 1): grad_hessian() grad Hessian for finite_diff vs fvar<fvar<var>>
+
+./test/unit/math/expect_near_rel.hpp:36: Failure
+The difference between x1 and x2 is 0.049382716049382457, which exceeds tol_val, where
+x1 evaluates to 0,
+x2 evaluates to 0.049382716049382457, and
+tol_val evaluates to 0.00024691358024691229.
+expect_near_rel_finite in: expect_near_rel; require items x1(1, 3) = x2(1, 3): grad_hessian() grad Hessian for finite_diff vs fvar<fvar<var>>
+
+[  FAILED  ] ProbDiscreteCdfsEdgeElements.neg_binomial_2_lcdf_expect_ad (19 ms)
+[----------] 11 tests from ProbDiscreteCdfsEdgeElements (1775 ms total)
+
+[----------] Global test environment tear-down
+[==========] 11 tests from 1 test suite ran. (1775 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 11 tests, listed below:
+[  FAILED  ] ProbDiscreteCdfsEdgeElements.bernoulli
+[  FAILED  ] ProbDiscreteCdfsEdgeElements.binomial
+[  FAILED  ] ProbDiscreteCdfsEdgeElements.beta_binomial
+[  FAILED  ] ProbDiscreteCdfsEdgeElements.neg_binomial
+[  FAILED  ] ProbDiscreteCdfsEdgeElements.neg_binomial_2
+[  FAILED  ] ProbDiscreteCdfsEdgeElements.beta_neg_binomial
+[  FAILED  ] ProbDiscreteCdfsEdgeElements.yule_simon
+[  FAILED  ] ProbDiscreteCdfsEdgeElements.poisson_binomial
+[  FAILED  ] ProbDiscreteCdfsEdgeElements.vector_parameters
+[  FAILED  ] ProbDiscreteCdfsEdgeElements.poisson_binomial_theta_per_element
+[  FAILED  ] ProbDiscreteCdfsEdgeElements.neg_binomial_2_lcdf_expect_ad
+
+11 FAILED TESTS

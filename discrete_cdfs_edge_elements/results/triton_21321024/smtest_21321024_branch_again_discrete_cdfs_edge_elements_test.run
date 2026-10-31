@@ -1,0 +1,31 @@
+Running main() from lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 11 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 11 tests from ProbDiscreteCdfsEdgeElements
+[ RUN      ] ProbDiscreteCdfsEdgeElements.bernoulli
+[       OK ] ProbDiscreteCdfsEdgeElements.bernoulli (0 ms)
+[ RUN      ] ProbDiscreteCdfsEdgeElements.binomial
+[       OK ] ProbDiscreteCdfsEdgeElements.binomial (0 ms)
+[ RUN      ] ProbDiscreteCdfsEdgeElements.beta_binomial
+[       OK ] ProbDiscreteCdfsEdgeElements.beta_binomial (178 ms)
+[ RUN      ] ProbDiscreteCdfsEdgeElements.neg_binomial
+[       OK ] ProbDiscreteCdfsEdgeElements.neg_binomial (0 ms)
+[ RUN      ] ProbDiscreteCdfsEdgeElements.neg_binomial_2
+[       OK ] ProbDiscreteCdfsEdgeElements.neg_binomial_2 (1 ms)
+[ RUN      ] ProbDiscreteCdfsEdgeElements.beta_neg_binomial
+[       OK ] ProbDiscreteCdfsEdgeElements.beta_neg_binomial (866 ms)
+[ RUN      ] ProbDiscreteCdfsEdgeElements.yule_simon
+[       OK ] ProbDiscreteCdfsEdgeElements.yule_simon (0 ms)
+[ RUN      ] ProbDiscreteCdfsEdgeElements.poisson_binomial
+[       OK ] ProbDiscreteCdfsEdgeElements.poisson_binomial (0 ms)
+[ RUN      ] ProbDiscreteCdfsEdgeElements.vector_parameters
+[       OK ] ProbDiscreteCdfsEdgeElements.vector_parameters (1564 ms)
+[ RUN      ] ProbDiscreteCdfsEdgeElements.poisson_binomial_theta_per_element
+[       OK ] ProbDiscreteCdfsEdgeElements.poisson_binomial_theta_per_element (0 ms)
+[ RUN      ] ProbDiscreteCdfsEdgeElements.neg_binomial_2_lcdf_expect_ad
+[       OK ] ProbDiscreteCdfsEdgeElements.neg_binomial_2_lcdf_expect_ad (17 ms)
+[----------] 11 tests from ProbDiscreteCdfsEdgeElements (2626 ms total)
+
+[----------] Global test environment tear-down
+[==========] 11 tests from 1 test suite ran. (2626 ms total)
+[  PASSED  ] 11 tests.

@@ -1,0 +1,11 @@
+neg_binomial_lccdf(3 | 2.5, 1.5)                     route A       -2.0404283800026  route B       -2.0404283800026  rel diff 4.5e-41
+neg_binomial_2_lcdf(3 | 4, 2)                        route A     -0.617864120139397  route B     -0.617864120139397  rel diff 3.72e-41
+d/dmu neg_binomial_2_lcdf(3 | 4, 2)                  route A     -0.203562340966921  route B     -0.203562340966921  rel diff 0.0
+d/dphi neg_binomial_2_lcdf(3 | 4, 2)                 route A     -0.060444349736812  route B     -0.060444349736812  rel diff 0.0
+P(Y = 0), poisson_binomial(0.5, 0.2, 0.7)            route A                   0.12  route B                   0.12  rel diff 0.0
+P(Y = 1), poisson_binomial(0.5, 0.2, 0.7)            route A                   0.43  route B                   0.43  rel diff 0.0
+P(Y = 2), poisson_binomial(0.5, 0.2, 0.7)            route A                   0.38  route B                   0.38  rel diff 0.0
+P(Y = 3), poisson_binomial(0.5, 0.2, 0.7)            route A                   0.07  route B                   0.07  rel diff 0.0
+P(Y <= 3)                                            route A                    1.0  route B                    1.0  rel diff 0.0
+poisson_binomial_lccdf(3 | 0.5, 0.2, 0.7) = log(1 - P(Y <= 3)) = log(0) = -inf
+log(2^-53) = -36.736800569677101

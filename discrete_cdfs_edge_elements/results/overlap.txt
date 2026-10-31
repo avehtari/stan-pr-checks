@@ -1,0 +1,11 @@
+headers changed by this PR: 18
+#3408 (head 8e50c47c0e): 0 common: 
+#3433 (head 709a1a4d76): 5 common: binomial_lccdf neg_binomial_2_cdf neg_binomial_cdf neg_binomial_lccdf neg_binomial_lcdf
+#3434 (head 35435f53dc): 7 common: beta_binomial_lccdf beta_neg_binomial_cdf beta_neg_binomial_lccdf beta_neg_binomial_lcdf yule_simon_cdf yule_simon_lccdf yule_simon_lcdf
+#3437 (head 8d0cf249f7): 7 common: beta_binomial_lccdf beta_neg_binomial_cdf beta_neg_binomial_lccdf beta_neg_binomial_lcdf yule_simon_cdf yule_simon_lccdf yule_simon_lcdf
+#3441 (head 091d98e8fa): 7 common: beta_binomial_lccdf beta_neg_binomial_cdf beta_neg_binomial_lccdf beta_neg_binomial_lcdf yule_simon_cdf yule_simon_lccdf yule_simon_lcdf
+#3445 (head 447530c7e2): 7 common: beta_binomial_lccdf beta_neg_binomial_cdf beta_neg_binomial_lccdf beta_neg_binomial_lcdf yule_simon_cdf yule_simon_lccdf yule_simon_lcdf
+headers that at least one open PR also changes: 12
+#3437 contains 14 of the 23 commits of #3434
+#3441 contains 16 of the 23 commits of #3434
+#3445 contains 14 of the 23 commits of #3434

@@ -1,0 +1,8 @@
+== host dgx5.int.triton.aalto.fi  date 2026-10-31T18:16:40+02:00
+== gpu GPU 0: Tesla V100-SXM2-32GB (UUID: GPU-d09ea645-c017-fabc-a17b-8520c610b1dd)
+
+######## stage branch (GPU) ########
+RESULT stage=branch suite=test/unit/math/opencl/rev/bernoulli_lccdf_test status=PASS build_s=0 cases=7 failed=0
+SUMMARY stage=branch suites=1 failed_suites=0
+
+== done 2026-10-31T18:16:41+02:00
