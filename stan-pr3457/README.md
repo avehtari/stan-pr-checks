@@ -49,7 +49,7 @@ md5 `49a48975` of `initialize.hpp`, which is the develop version.
 | `cmdstan/` | `run_3088.R` and the models of the CmdStan runs (develop only) |
 | `grad/grad_check.cpp` | gradients of the offset/multiplier form at small scales (for the #3088 comment and the docs PR) |
 | `triton/` | the Triton job scripts, with placeholders for the paths |
-| `results/` | outputs of 2026-11-01 and the Triton logs |
+| `results/` | outputs of 2026-11-01 and the Triton logs (`triton_cmdstan_pr/`: section 8) |
 
 Run commands from this directory.  New outputs go to `out/`, which git
 does not track; compare them with `results/`.
@@ -212,6 +212,27 @@ Stan clone.
 
 Lint (`results/lint.txt`): clang-format 14 and cpplint 2.0.2 with the
 filters of `make/cpplint` report nothing on the two C++ files.
+
+## 8. The reprex of #3088 with the PR, end to end
+
+Not quoted in the PR text (added 2026-11-01).  `cmdstan/run_3088.R`,
+step 1, with CmdStan `3ab132c` built with Stan `78b495834` (the PR head)
+and Stan Math `dc66941969`, through `tools/cmdstan_run.sh` of the
+workspace (job 21345228, log `results/triton_cmdstan_pr/csrun_21345228.log`).
+The same 20 seeds as section 1:
+
+| case | develop (section 1) | PR |
+|---|---|---|
+| `multiplier=sigma`, `sigma = 1e-20`: largest unconstrained `x` | 5.53e20 | 1.82 |
+| same: `lp__` at init | -9.32e37 to -1.53e41 | -47.7 to -46.1 |
+| same: stuck chains in sampling | 20/20 | 0/20 |
+| `offset=mu`, `mu = 5`: largest unconstrained `x` | 28 | 1.8 |
+| `lower=a`, `a = 10`: initialization | fails, 100 rejections per seed | same |
+
+With the PR, the built-in `multiplier=sigma` model and the manual model
+of the first post (`r1_manual`) have the same smallest and largest
+unconstrained values and `lp__` at init over the 20 seeds (the log
+prints only these summaries).
 
 ## Other data in this directory
 

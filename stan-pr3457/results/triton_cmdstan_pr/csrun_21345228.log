@@ -1,0 +1,341 @@
+== host csl8.int.triton.aalto.fi,  Intel(R) Xeon(R) Gold 6248 CPU @ 2.50GHz, g++ (conda-forge gcc 14.3.0-18) 14.3.0
+== cmdstan=3ab132c80fc8bceaec7f2388f53d0e3445038199 stan=78b49583403073cd6b59982ecfe4797efc80ff65 math=dc669419692e2cb71d55000a871066b5739c3e48
+RESULT step=build status=PASS secs=90
+== stanc3 v2.40.0 (Unix)
+This is cmdstanr version 0.9.0.9000
+- CmdStanR documentation and vignettes: mc-stan.org/cmdstanr
+- CmdStan path: <scratch>/cmdstan_cache/3ab132c80_78b495834_dc66941969
+- CmdStan version: 2.40.0
+This is posterior version 1.7.0
+
+Attaching package: ‘posterior’
+
+The following objects are masked from ‘package:stats’:
+
+    mad, sd, var
+
+The following objects are masked from ‘package:base’:
+
+    %in%, match
+
+CmdStan path set to: <scratch>/cmdstan_cache/3ab132c80_78b495834_dc66941969
+cmdstan 2.40.0, cmdstanr 0.9.0.9000, cores 16, seeds 20
+
+== Step 1: partial inits, diagnose at the initial point ==
+r1_m[sigma=1e-20]            init ok 20/20; rejected inits per seed: min 0 max 0
+   unconstrained[1]: |min|      46.1  |max|      46.1
+   unconstrained[2]: |min|     0.278  |max|      1.82
+   lp at init: min     -47.7  max     -46.1
+r1_manual[sigma=1e-20]       init ok 20/20; rejected inits per seed: min 0 max 0
+   unconstrained[1]: |min|      46.1  |max|      46.1
+   unconstrained[2]: |min|     0.278  |max|      1.82
+   lp at init: min     -47.7  max     -46.1
+r1_om[sigma=1e-20]           init ok 20/20; rejected inits per seed: min 0 max 0
+   unconstrained[1]: |min|     0.138  |max|      1.99
+   unconstrained[2]: |min|      46.1  |max|      46.1
+   unconstrained[3]: |min|     0.024  |max|       1.8
+   lp at init: min       -48  max     -46.1
+r1_om[mu=5]                  init ok 20/20; rejected inits per seed: min 0 max 0
+   unconstrained[1]: |min|         5  |max|         5
+   unconstrained[2]: |min|     0.278  |max|      1.82
+   unconstrained[3]: |min|     0.024  |max|       1.8
+   lp at init: min     -26.3  max     -13.1
+r1_lower[a=10]               init ok  0/20; rejected inits per seed: min 100 max 100
+   first error: Partial user-specified initialization failed. Initialization of non user specified parameters between (-2, 2) failed after 100 attempts.  |  Try specifying full initial values, reducing the range of c
+r1_lower[a=-10]              init ok 20/20; rejected inits per seed: min 0 max 0
+   unconstrained[1]: |min|        10  |max|        10
+   unconstrained[2]: |min|     0.278  |max|      1.82
+   lp at init: min     -10.5  max     -1.72
+
+== Step 1b: sampling with init sigma = 1e-20 ==
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x_raw
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x_raw
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x_raw
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x_raw
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x_raw
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x_raw
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x_raw
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x_raw
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Warning: 1 of 1000 (0.0%) transitions ended with a divergence.
+See https://mc-stan.org/misc/warnings for details.
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Warning: 5 of 1000 (0.0%) transitions ended with a divergence.
+See https://mc-stan.org/misc/warnings for details.
+
+Warning: 2 of 1000 (0.0%) transitions ended with a divergence.
+See https://mc-stan.org/misc/warnings for details.
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Warning: 3 of 1000 (0.0%) transitions ended with a divergence.
+See https://mc-stan.org/misc/warnings for details.
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x_raw
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Warning: 1 of 1000 (0.0%) transitions ended with a divergence.
+See https://mc-stan.org/misc/warnings for details.
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x_raw
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x_raw
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x_raw
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Warning: 1 of 1000 (0.0%) transitions ended with a divergence.
+See https://mc-stan.org/misc/warnings for details.
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x_raw
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x_raw
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x_raw
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x_raw
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Warning: 2 of 1000 (0.0%) transitions ended with a divergence.
+See https://mc-stan.org/misc/warnings for details.
+
+Warning: 1 of 1000 (0.0%) transitions ended with a divergence.
+See https://mc-stan.org/misc/warnings for details.
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x_raw
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x_raw
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x_raw
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Warning: 9 of 1000 (1.0%) transitions ended with a divergence.
+See https://mc-stan.org/misc/warnings for details.
+
+Warning: 5 of 1000 (0.0%) transitions ended with a divergence.
+See https://mc-stan.org/misc/warnings for details.
+
+Warning: 1 of 1000 (0.0%) transitions ended with a divergence.
+See https://mc-stan.org/misc/warnings for details.
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Init values were only set for a subset of parameters. 
+Missing init values for the following parameters:
+x_raw
+
+To disable this message use options(cmdstanr_warn_inits = FALSE).
+
+Warning: 1 of 1000 (0.0%) transitions ended with a divergence.
+See https://mc-stan.org/misc/warnings for details.
+
+Warning: 4 of 1000 (0.0%) transitions ended with a divergence.
+See https://mc-stan.org/misc/warnings for details.
+
+Warning: 1 of 1000 (0.0%) transitions ended with a divergence.
+See https://mc-stan.org/misc/warnings for details.
+
+Warning: 1 of 1000 (0.0%) transitions ended with a divergence.
+See https://mc-stan.org/misc/warnings for details.
+
+r1_m       stuck (sd_sigma == 0)  0/20; lp_mean range     -1.75      -1.5; stepsize med     0.515
+r1_manual  stuck (sd_sigma == 0)  0/20; lp_mean range     -1.79     -1.55; stepsize med     0.578
+
+EXIT=0
+RESULT step=driver status=PASS rc=0 secs=15
+== outputs in <scratch>/cmdstan_run/cs3457_t2/out: 2 files
