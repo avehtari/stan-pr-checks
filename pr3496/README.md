@@ -1,9 +1,10 @@
-# Checks for the discrete-cdf edge-element PR (issue stan-dev/math#56)
+# Checks for stan-dev/math#3496 (discrete cdfs, part of issue #56)
 
 This directory holds the scripts behind the numbers in the PR "Fix
 discrete cdfs when one element of a vector has probability 0 or 1"
-for issue stan-dev/math#56.  Rename the directory to `pr<N>/` when the PR has a
-number.  Sections 1 to 8 quote the claims of the PR text and give the
+(stan-dev/math#3496, part of issue #56).  Until 2026-10-31 this directory
+was `discrete_cdfs_edge_elements/`; the PR body links that name at commit
+`e7fceb3`.  Sections 1 to 8 quote the claims of the PR text and give the
 commands and the expected output.
 
 An edge element is an element with probability 0 or 1.  A swap test

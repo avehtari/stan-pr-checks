@@ -16,7 +16,7 @@ Last run: 2026-10-31 on a laptop (`results/versions.txt`: g++ 11.4.0,
 | #3433 | `709a1a4d76` | head of stan-dev/math#3433, which is stacked on #3490, #3489 and #3409; "#3433" below means this head |
 
 Export `stan/` of both commits, for example with
-`../discrete_cdfs_edge_elements/make_trees.sh`, which writes
+`../pr3496/make_trees.sh`, which writes
 `out/trees/develop` and `out/trees/pr3433` in that directory.  Set
 `STAN_MATH_LIB` to the `lib/` of a stan-dev/math clone and `TBB_LIB` to a
 directory with a built `libtbb.so`.
@@ -34,7 +34,7 @@ routes: the log of the lower incomplete beta, and `log1p(-I)` with `I`
 the upper incomplete beta.  The routes agree to 2e-32 or better.
 
 ```sh
-T=../discrete_cdfs_edge_elements/out/trees
+T=../pr3496/out/trees
 for t in develop pr3433; do
   STAN_MATH=$T/$t OPT=-O1 ./build.sh probe_beta_lcdf.cpp out/probe_$t
   ./out/probe_$t > out/beta_lcdf_$t.txt
