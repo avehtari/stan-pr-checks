@@ -23,7 +23,7 @@ machine paths.
 |---|---|---|
 | develop | `dc66941969` | merge base of the PR (develop of 2026-10-29) |
 | PR | `1315143b74` | PR head, tree `1741248cd7` |
-| #3433 | `709a1a4d76` | head of stan-dev/math#3433, for section 4 only |
+| #3433 | `709a1a4d76` | head of stan-dev/math#3433, stacked on #3490, #3489 and #3409; for section 4 only |
 
 Most Triton jobs in `results/` ran before the squash of three follow-up
 commits, at the commits that their logs name.  The last ones ran at
@@ -167,10 +167,11 @@ PR, `neg_binomial_lcdf({3, INT_MAX} | 2.5, 1.5) = -0.139231`.
 ## 4. Large finite counts in neg_binomial_2_lcdf
 
 > Large finite counts still go through `beta_lcdf`, and this PR does not
-> change that path. There the `phi` derivative has the same error. At
+> change that path. There the `phi` derivative is also wrong. At
 > `mu = 4`, `phi = 2`, it is 11.8 for `n = 10^6` and 18.7 for
-> `n = 10^9`. The correct derivative is below `1e-176000`. #3433 fixes this
-> (the derivative becomes 0).
+> `n = 10^9`. The correct derivative is below `1e-176000`. At the head of
+> #3433, which is stacked on #3409, #3489 and #3490, the derivative
+> becomes 0.
 
 `neg_binomial_2_lcdf(n | mu, phi)` is `beta_lcdf(phi / (mu + phi) | phi,
 n + 1)`.  The PR removes only the `n = INT_MAX` elements before the call.
@@ -188,7 +189,7 @@ gives the computed value.
 The develop and PR outputs are identical: the PR changes only the path
 for `n = INT_MAX`.
 
-| n | mu | PR (= develop) | with #3433 |
+| n | mu | PR (= develop) | head of #3433 (with #3409, #3489, #3490) |
 |---|---|---|---|
 | 10 | 4 | all within 2.4e-14 | within 2.9e-15 |
 | 1e3 | 4 | `d/dphi` -1.9e-13; true 2.9e-172 | correct |
@@ -196,26 +197,36 @@ for `n = INT_MAX`.
 | 1e3, 1e6 | = n | within 3.1e-9 | within 8.1e-9 |
 | 1e9, 2^31 - 2 | = n | value 6.9e-8, `d/dmu` 3.0e-6, `d/dphi` 1.4e-5 | `d/dphi` 3.5e-5, the others the same |
 
-At `n = mu = 1e9`, #3433 does not fix the error.
+At `n = mu = 1e9`, the head of #3433 does not fix the error.  I did not
+check which PR of the stack makes the tail derivative 0.
 
 ## 5. The merge-order note
 
-> Five of them change 12 of the 18 headers in this PR. #3433 changes
-> `binomial_lccdf` and four `neg_binomial` cdf headers. #3434, #3437,
-> #3441 and #3445 change `beta_binomial_lccdf` and the
-> `beta_neg_binomial` and `yule_simon` cdf headers. #3408 changes none of
-> these headers.
+> Six of them change 12 of the 18 headers in this PR. #3490 changes the
+> four `neg_binomial` cdf headers, and #3433 changes `binomial_lccdf` and
+> `neg_binomial_lccdf`. #3434 changes `beta_binomial_lccdf` and the
+> `beta_neg_binomial` and `yule_simon` cdf headers. #3437 and #3445 also
+> change `beta_binomial_lccdf`, and #3441 also changes the three
+> `beta_neg_binomial` headers. #3408, #3409 and #3489 change none of these
+> headers. #3490 and #3433 are stacked on #3409 and #3489.
 
-`overlap/overlap.sh` (`results/overlap.txt`):
+Several of these PRs are stacked, so `overlap/overlap.sh` compares each
+PR with its own base branch (`results/overlap.txt`):
 
-- this PR changes 18 headers;
-- #3408: 0 of them;
-- #3433: 5 (`binomial_lccdf`, `neg_binomial_2_cdf`, `neg_binomial_cdf`,
-  `neg_binomial_lccdf`, `neg_binomial_lcdf`);
-- #3434, #3437, #3441 and #3445: the same 7 (`beta_binomial_lccdf`, the
-  three `beta_neg_binomial` and the three `yule_simon` headers).  #3437,
-  #3441 and #3445 contain 14, 16 and 14 of the 23 commits of #3434;
-- 12 in total.
+| PR | base branch | headers of this PR that it changes |
+|---|---|---|
+| #3408 | `develop` | 0 |
+| #3409 | `develop` | 0 |
+| #3489 | `stable-inc-beta` (#3409) | 0 |
+| #3490 | `stable-inc-beta-rev` (#3489) | 4: `neg_binomial_2_cdf`, `neg_binomial_cdf`, `neg_binomial_lccdf`, `neg_binomial_lcdf` |
+| #3433 | `stable-inc-beta-cdfs` (#3490) | 2: `binomial_lccdf`, `neg_binomial_lccdf` |
+| #3434 | `develop` | 7: `beta_binomial_lccdf`, the three `beta_neg_binomial` and the three `yule_simon` headers |
+| #3437 | `stable-beta-binomial-lpmf` (#3434) | 1: `beta_binomial_lccdf` |
+| #3441 | `stable-beta-binomial-lpmf` (#3434) | 3: the three `beta_neg_binomial` headers |
+| #3445 | `fix-hypergeometric-3F2-termination` | 1: `beta_binomial_lccdf` |
+
+12 headers in total.  The same lists come from the GitHub file list of
+each PR (`gh api repos/stan-dev/math/pulls/<N>/files`).
 
 ## 6. Swap test
 
