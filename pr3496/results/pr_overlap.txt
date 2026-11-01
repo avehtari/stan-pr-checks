@@ -1,0 +1,19 @@
+change: #3496, 18 files under stan/
+#3490 (base stable-inc-beta-rev, stacked on #3489): 4 common: neg_binomial_2_cdf.hpp neg_binomial_cdf.hpp neg_binomial_lccdf.hpp neg_binomial_lcdf.hpp 
+#3433 (base stable-inc-beta-cdfs, stacked on #3490): 2 common: binomial_lccdf.hpp neg_binomial_lccdf.hpp 
+#3434 (base develop): 7 common: beta_binomial_lccdf.hpp beta_neg_binomial_cdf.hpp beta_neg_binomial_lccdf.hpp beta_neg_binomial_lcdf.hpp yule_simon_cdf.hpp yule_simon_lccdf.hpp yule_simon_lcdf.hpp 
+#3437 (base stable-beta-binomial-lpmf, stacked on #3434): 1 common: beta_binomial_lccdf.hpp 
+#3441 (base stable-beta-binomial-lpmf, stacked on #3434): 3 common: beta_neg_binomial_cdf.hpp beta_neg_binomial_lccdf.hpp beta_neg_binomial_lcdf.hpp 
+#3445 (base fix-hypergeometric-3F2-termination, stacked on #3437): 1 common: beta_binomial_lccdf.hpp 
+#3470 (base develop): 14 common: bernoulli_lccdf.hpp beta_binomial_lccdf.hpp beta_neg_binomial_cdf.hpp binomial_lccdf.hpp neg_binomial_2_cdf.hpp neg_binomial_cdf.hpp neg_binomial_lccdf.hpp neg_binomial_lcdf.hpp poisson_binomial_cdf.hpp poisson_binomial_lccdf.hpp poisson_binomial_lcdf.hpp yule_simon_cdf.hpp yule_simon_lccdf.hpp yule_simon_lcdf.hpp 
+stacked open PRs (each line: PR on the open PR whose branch is its base):
+  #3398 on #3452 (base branch fix-fwd-tanh-corr-jacobian)
+  #3433 on #3490 (base branch stable-inc-beta-cdfs)
+  #3437 on #3434 (base branch stable-beta-binomial-lpmf)
+  #3441 on #3434 (base branch stable-beta-binomial-lpmf)
+  #3445 on #3437 (base branch fix-hypergeometric-3F2-termination)
+  #3475 on #3463 (base branch cmake-math)
+  #3476 on #3408 (base branch stable-inc-gamma)
+  #3489 on #3409 (base branch stable-inc-beta)
+  #3490 on #3489 (base branch stable-inc-beta-rev)
+distinct files that at least one open PR also changes: 16

@@ -203,16 +203,22 @@ check which PR of the stack makes the tail derivative 0.
 
 ## 5. The merge-order note
 
-> Six of them change 12 of the 18 headers in this PR. #3490 changes the
+> Seven of them change 16 of the 18 headers in this PR. #3490 changes the
 > four `neg_binomial` cdf headers, and #3433 changes `binomial_lccdf` and
 > `neg_binomial_lccdf`. #3434 changes `beta_binomial_lccdf` and the
 > `beta_neg_binomial` and `yule_simon` cdf headers. #3437 and #3445 also
 > change `beta_binomial_lccdf`, and #3441 also changes the three
 > `beta_neg_binomial` headers. #3408, #3409 and #3489 change none of these
-> headers. #3490 and #3433 are stacked on #3409 and #3489.
+> headers. #3490 and #3433 are stacked on #3409 and #3489. #3470 removes
+> unused `#include` lines from 14 of the 18 headers, so its conflicts are
+> in the include blocks. One of these includes must stay: #3470 removes
+> `select.hpp` from `bernoulli_lccdf.hpp`, because `develop` does not use
+> `select` there, but this PR does.
 
-Several of these PRs are stacked, so `overlap/overlap.sh` compares each
-PR with its own base branch (`results/overlap.txt`):
+`tools/pr_overlap.sh --pr 3496 --paths stan/` of the `wip` repository
+reads the GitHub file list of each open PR, which GitHub gives against
+the PR's own base branch, so a stacked PR shows only its own files
+(`results/pr_overlap.txt`, 2026-10-31):
 
 | PR | base branch | headers of this PR that it changes |
 |---|---|---|
@@ -224,10 +230,18 @@ PR with its own base branch (`results/overlap.txt`):
 | #3434 | `develop` | 7: `beta_binomial_lccdf`, the three `beta_neg_binomial` and the three `yule_simon` headers |
 | #3437 | `stable-beta-binomial-lpmf` (#3434) | 1: `beta_binomial_lccdf` |
 | #3441 | `stable-beta-binomial-lpmf` (#3434) | 3: the three `beta_neg_binomial` headers |
-| #3445 | `fix-hypergeometric-3F2-termination` | 1: `beta_binomial_lccdf` |
+| #3445 | `fix-hypergeometric-3F2-termination` (#3437) | 1: `beta_binomial_lccdf` |
+| #3470 | `develop` | 14 (include lines only) |
 
-12 headers in total.  The same lists come from the GitHub file list of
-each PR (`gh api repos/stan-dev/math/pulls/<N>/files`).
+16 headers in total.  `overlap/overlap.sh` (`results/overlap.txt`) is
+the first version of this check; it compares only the first 9 PRs and
+gives 12 headers.
+
+In #3470, the changed lines of these 14 headers are `#include` lines
+only (`gh api repos/stan-dev/math/pulls/3470/files`, head `796618ed89`).
+Its patch of `bernoulli_lccdf.hpp` removes
+`#include <stan/math/prim/fun/select.hpp>`; the #3496 version of that
+file calls `select`.
 
 ## 6. Swap test
 
