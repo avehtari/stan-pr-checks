@@ -10,7 +10,12 @@ A pull request links to its directory at a fixed commit, for example
 
 ## Layout
 
-One directory per pull request, named `pr<number>`.  Each directory is
+One directory per pull request.  A stan-dev/math PR has `pr<number>`; a
+PR to another repository has `<repo>-pr<number>` (for example
+`stan-pr3457`), because the numbers of the repositories overlap.  Before
+the PR has a number, name the directory `<repo>-<branch>` and rename it
+when the PR exists; the first PR text links the old name at a fixed
+commit, so the link stays valid.  Each directory is
 self-contained: it has its own `README.md`, `build.sh` and data files,
 and its commands run from that directory.  A directory does not import
 from another one; copy a shared script instead.
@@ -24,7 +29,7 @@ from another one; copy a shared script instead.
 | `pr3438/` | stan-dev/math#3438 | Laplace latent mean, solver-3 log determinant |
 | `pr3442/` | stan-dev/math#3442 | Wiener functions: underflow, gradients, `hcubature` |
 | `pr3496/` | stan-dev/math#3496 (part of #56) | discrete cdfs with an element of probability 0 or 1 |
-| `stan_partial_init/` | stan-dev/stan PR, not yet opened (part of stan#3088) | partial inits with transforms that use other parameters |
+| `stan-pr3457/` | stan-dev/stan#3457 (part of stan#3088), stan-dev/docs#1004 | partial inits with transforms that use other parameters |
 
 ## Conventions for a PR directory
 

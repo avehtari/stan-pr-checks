@@ -1,10 +1,13 @@
-# Checks for the Stan PR "Draw missing parameters of a partial init on the unconstrained scale"
+# Checks for stan-dev/stan#3457 (partial inits, part of stan#3088)
 
-This directory holds the scripts and logs behind the numbers in the
-stan-dev/stan PR from branch `fix-partial-init-dependent-transforms`
-(addresses part of stan-dev/stan#3088).  The PR has no number yet; rename
-this directory to `pr<N>` when it has one.  Sections 1 to 7 quote
-the claims of the PR text and give the commands and the expected output.
+This directory holds the scripts and logs behind the numbers in the PR
+"Draw missing parameters of a partial init on the unconstrained scale"
+(stan-dev/stan#3457, branch `fix-partial-init-dependent-transforms`,
+addresses part of stan-dev/stan#3088) and in the documentation PR
+stan-dev/docs#1004.  Until 2026-11-01 this directory was
+`stan_partial_init/`; both PR texts link that name at commit `02b93f1`.
+Sections 1 to 7 quote the claims of the PR text and give the commands and
+the expected output.
 
 Terms: a *supplied* parameter has a user initial value; a *missing*
 parameter has none.
