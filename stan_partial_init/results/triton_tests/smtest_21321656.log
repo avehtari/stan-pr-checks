@@ -1,0 +1,92 @@
+== host csl25.int.triton.aalto.fi  date 2026-10-31T20:13:40+02:00  cpus 16  J=16
+== g++ g++ (conda-forge gcc 14.3.0-18) 14.3.0
+== mode targeted  tree <scratch>/stantest_3088
+== deploy repo=stan
+== deploy clone=<workstation>/proj/stan_3088
+== deploy branch=fix-partial-init-dependent-transforms
+== deploy head=a8ec3d18f955e6bddc5b589f55cf2bb414d6f558
+== deploy base_ref=origin/develop
+== deploy base=a8ec3d18f955e6bddc5b589f55cf2bb414d6f558
+== deploy uncommitted_edits=yes
+== deploy math_commit=dc669419692e2cb71d55000a871066b5739c3e48
+== deploy deployed=2026-10-31T20:13:19+02:00
+== repository stan
+== tree matches the manifest (3 files)
+RESULT check=test_models status=PASS secs=1 models=11
+
+######## stage branch ########
+RESULT stage=branch suite=src/test/unit/services/util/initialize_partial_test status=PASS build_s=34 cases=7 failed=0
+RESULT stage=branch suite=src/test/unit/services/util/initialize_test status=PASS build_s=35 cases=16 failed=0
+RESULT stage=branch suite=src/test/unit/services/util/fail_init_test status=PASS build_s=28 cases=1 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/defaults_test status=PASS build_s=4 cases=15 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/fixed_param_parallel_test status=PASS build_s=29 cases=4 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/fixed_param_test status=PASS build_s=28 cases=4 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/hmc_nuts_dense_e_adapt_no_params_test status=PASS build_s=36 cases=3 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/hmc_nuts_dense_e_adapt_parallel_match_test status=PASS build_s=39 cases=1 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/hmc_nuts_dense_e_adapt_parallel_test status=PASS build_s=37 cases=3 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/hmc_nuts_dense_e_adapt_test status=PASS build_s=36 cases=4 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/hmc_nuts_dense_e_parallel_test status=PASS build_s=36 cases=3 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/hmc_nuts_dense_e_test status=PASS build_s=35 cases=4 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/hmc_nuts_dense_inv_metric_test status=PASS build_s=42 cases=4 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/hmc_nuts_diag_e_adapt_parallel_match_test status=PASS build_s=35 cases=1 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/hmc_nuts_diag_e_adapt_parallel_test status=PASS build_s=32 cases=3 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/hmc_nuts_diag_e_adapt_test status=PASS build_s=33 cases=10 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/hmc_nuts_diag_e_parallel_test status=PASS build_s=32 cases=3 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/hmc_nuts_diag_e_test status=PASS build_s=31 cases=4 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/hmc_nuts_diag_inv_metric_test status=PASS build_s=38 cases=4 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/hmc_nuts_unit_e_adapt_parallel_test status=PASS build_s=33 cases=3 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/hmc_nuts_unit_e_adapt_test status=PASS build_s=30 cases=4 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/hmc_nuts_unit_e_parallel_test status=PASS build_s=31 cases=3 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/hmc_nuts_unit_e_test status=PASS build_s=29 cases=4 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/hmc_static_dense_e_adapt_test status=PASS build_s=35 cases=4 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/hmc_static_dense_e_test status=PASS build_s=34 cases=4 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/hmc_static_dense_inv_metric_test status=PASS build_s=42 cases=4 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/hmc_static_diag_e_adapt_test status=PASS build_s=31 cases=4 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/hmc_static_diag_e_test status=PASS build_s=30 cases=4 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/hmc_static_diag_inv_metric_test status=PASS build_s=37 cases=4 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/hmc_static_unit_e_adapt_test status=PASS build_s=27 cases=4 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/standalone_gqs_2390_test status=PASS build_s=21 cases=1 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/standalone_gqs_bad_test status=PASS build_s=19 cases=1 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/standalone_gqs_multidim_test status=PASS build_s=27 cases=1 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/standalone_gqs_parallel_test status=PASS build_s=31 cases=5 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/standalone_gqs_test status=PASS build_s=30 cases=3 failed=0
+RESULT stage=branch suite=src/test/unit/services/sample/standalone_gqs_zero_sized_test status=PASS build_s=24 cases=0 failed=0
+SUMMARY stage=branch suites=36 failed_suites=0
+
+######## stage develop (swapped: src/stan/services/util/initialize.hpp) ########
+RESULT stage=develop suite=src/test/unit/services/util/initialize_partial_test status=FAIL build_s=34 cases=7 failed=6
+FAILED_CASE stage=develop suite=src/test/unit/services/util/initialize_partial_test ServicesUtilInitializePartial.small_multiplier
+FAILED_CASE stage=develop suite=src/test/unit/services/util/initialize_partial_test ServicesUtilInitializePartial.provided_offset
+FAILED_CASE stage=develop suite=src/test/unit/services/util/initialize_partial_test ServicesUtilInitializePartial.radius_zero
+FAILED_CASE stage=develop suite=src/test/unit/services/util/initialize_partial_test ServicesUtilInitializePartial.provided_dependent_parameter
+FAILED_CASE stage=develop suite=src/test/unit/services/util/initialize_partial_test ServicesUtilInitializePartial.chain_provided_a_c
+FAILED_CASE stage=develop suite=src/test/unit/services/util/initialize_partial_test ServicesUtilInitializePartial.chain_provided_b_d
+src/test/unit/services/util/initialize_partial_test.cpp:67: Failure
+Expected equality of these values:
+  u_random[n]
+    Which is: 0.0604822
+  params[n]
+--
+src/test/unit/services/util/initialize_partial_test.cpp:67: Failure
+Expected equality of these values:
+  u_random[n]
+    Which is: 0.718314
+  params[n]
+--
+src/test/unit/services/util/initialize_partial_test.cpp:67: Failure
+Expected equality of these values:
+  u_random[n]
+    Which is: 0.523135
+  params[n]
+RESULT stage=develop suite=src/test/unit/services/util/initialize_test status=PASS build_s=35 cases=16 failed=0
+SUMMARY stage=develop suites=2 failed_suites=1
+RESULT check=swap_restore status=PASS secs=0
+
+######## stage branch_again ########
+RESULT stage=branch_again suite=src/test/unit/services/util/initialize_partial_test status=PASS build_s=34 cases=7 failed=0
+RESULT stage=branch_again suite=src/test/unit/services/util/initialize_test status=PASS build_s=35 cases=16 failed=0
+SUMMARY stage=branch_again suites=2 failed_suites=0
+
+== final tree check:
+== tree still matches the manifest
+== done 2026-10-31T20:34:51+02:00

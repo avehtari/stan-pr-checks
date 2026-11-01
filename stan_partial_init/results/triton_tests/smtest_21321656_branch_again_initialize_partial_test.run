@@ -1,0 +1,23 @@
+Running main() from lib/stan_math/lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 7 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 7 tests from ServicesUtilInitializePartial
+[ RUN      ] ServicesUtilInitializePartial.small_multiplier
+[       OK ] ServicesUtilInitializePartial.small_multiplier (1 ms)
+[ RUN      ] ServicesUtilInitializePartial.provided_offset
+[       OK ] ServicesUtilInitializePartial.provided_offset (0 ms)
+[ RUN      ] ServicesUtilInitializePartial.radius_zero
+[       OK ] ServicesUtilInitializePartial.radius_zero (0 ms)
+[ RUN      ] ServicesUtilInitializePartial.provided_dependent_parameter
+[       OK ] ServicesUtilInitializePartial.provided_dependent_parameter (0 ms)
+[ RUN      ] ServicesUtilInitializePartial.chain_provided_a_c
+[       OK ] ServicesUtilInitializePartial.chain_provided_a_c (1 ms)
+[ RUN      ] ServicesUtilInitializePartial.chain_provided_b_d
+[       OK ] ServicesUtilInitializePartial.chain_provided_b_d (0 ms)
+[ RUN      ] ServicesUtilInitializePartial.bound_on_provided_value_is_rejected
+[       OK ] ServicesUtilInitializePartial.bound_on_provided_value_is_rejected (0 ms)
+[----------] 7 tests from ServicesUtilInitializePartial (2 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 1 test suite ran. (2 ms total)
+[  PASSED  ] 7 tests.

@@ -1,0 +1,19 @@
+Running main() from lib/stan_math/lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 5 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 5 tests from ServicesStandaloneGQ
+[ RUN      ] ServicesStandaloneGQ.genDraws_bernoulli
+[       OK ] ServicesStandaloneGQ.genDraws_bernoulli (18 ms)
+[ RUN      ] ServicesStandaloneGQ.genDraws_bernoulli_chain_id_rng
+[       OK ] ServicesStandaloneGQ.genDraws_bernoulli_chain_id_rng (14 ms)
+[ RUN      ] ServicesStandaloneGQ.genDraws_bernoulli_init_chain_id_offset
+[       OK ] ServicesStandaloneGQ.genDraws_bernoulli_init_chain_id_offset (22 ms)
+[ RUN      ] ServicesStandaloneGQ.genDraws_bernoulli_multi_chain_column_count
+[       OK ] ServicesStandaloneGQ.genDraws_bernoulli_multi_chain_column_count (9 ms)
+[ RUN      ] ServicesStandaloneGQ.genDraws_bernoulli_multi_chain_matches_single
+[       OK ] ServicesStandaloneGQ.genDraws_bernoulli_multi_chain_matches_single (30 ms)
+[----------] 5 tests from ServicesStandaloneGQ (94 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 1 test suite ran. (94 ms total)
+[  PASSED  ] 5 tests.

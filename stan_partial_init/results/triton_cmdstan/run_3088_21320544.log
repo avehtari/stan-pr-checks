@@ -1,0 +1,53 @@
+== host pht89.int.triton.aalto.fi,  Intel(R) Xeon(R) Gold 6230 CPU @ 2.10GHz
+== g++ (conda-forge gcc 14.3.0-18) 14.3.0
+stanc3 v2.40.0 (Unix)
+49a489753bd2317a8398dfbff963a3a7  stan/src/stan/services/util/initialize.hpp
+1739834008166f439ebf7c746f2593d9  stan/lib/stan_math/stan/math/prim/constraint/offset_multiplier_constrain.hpp
+This is cmdstanr version 0.9.0.9000
+- CmdStanR documentation and vignettes: mc-stan.org/cmdstanr
+- CmdStan path: <scratch>/stan3088/cmdstan
+- CmdStan version: 2.40.0
+This is posterior version 1.7.0
+
+Attaching package: ‘posterior’
+
+The following objects are masked from ‘package:stats’:
+
+    mad, sd, var
+
+The following objects are masked from ‘package:base’:
+
+    %in%, match
+
+CmdStan path set to: <scratch>/stan3088/cmdstan
+cmdstan 2.40.0, cmdstanr 0.9.0.9000, cores 16, seeds 20
+
+== Step 2: default inits ==
+Warning: 200 of 200 (100.0%) transitions ended with a divergence.
+See https://mc-stan.org/misc/warnings for details.
+
+Warning: 200 of 200 (100.0%) transitions ended with a divergence.
+See https://mc-stan.org/misc/warnings for details.
+
+Warning: 200 of 200 (100.0%) transitions ended with a divergence.
+See https://mc-stan.org/misc/warnings for details.
+
+Warning: 200 of 200 (100.0%) transitions hit the maximum treedepth limit of 10.
+See https://mc-stan.org/misc/warnings for details.
+
+Warning: 200 of 200 (100.0%) transitions hit the maximum treedepth limit of 10.
+See https://mc-stan.org/misc/warnings for details.
+
+Warning: 200 of 200 (100.0%) transitions hit the maximum treedepth limit of 10.
+See https://mc-stan.org/misc/warnings for details.
+
+Warning: 200 of 200 (100.0%) transitions hit the maximum treedepth limit of 10.
+See https://mc-stan.org/misc/warnings for details.
+
+model  runs    minscW   n<1e-12     stuck   divW   divS  stepsize   tdS
+d_om     20   2.6e-52         9         7   3321    600     0.142  5.68
+d_ncp    20   4.7e-78        13         0    517      0     0.142  5.00
+
+EXIT=0
+Error: unexpected ',' in ","
+Execution halted

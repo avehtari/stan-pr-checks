@@ -1,0 +1,11 @@
+Running main() from lib/stan_math/lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ServicesStandaloneGQ2
+[ RUN      ] ServicesStandaloneGQ2.genDraws_gq_test_multidim
+[       OK ] ServicesStandaloneGQ2.genDraws_gq_test_multidim (152 ms)
+[----------] 1 test from ServicesStandaloneGQ2 (152 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (152 ms total)
+[  PASSED  ] 1 test.

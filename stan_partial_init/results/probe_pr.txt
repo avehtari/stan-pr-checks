@@ -1,0 +1,186 @@
+none_r2 seed  0 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.94 rng_next 2192666205886875948
+none_r2 seed  0 params 0x1.7e3979a7a8c2p-1 -0x1.d76f15b982bfep+0 0x1.ef787238381cp-5 0x1.6fc6e155d47a4p-1 0x1.0bd85c51ea038p-1 -0x1.23a0a8d51131p-3 0x1.b17349f982e68p+0 0x1.8809ef04b2cp+0 0x1.4cf405b02ea38p-1 -0x1.d604d9dcea5bp-4 -0x1.976d333fe25fp-1 -0x1.f197cca4d75bp+0 0x1.a093f4b2fc838p-1 0x1.7f24f002031b8p-2 -0x1.e740e24d8c2f4p-1
+none_r2 seed  1 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.48 rng_next 1353876050235642439
+none_r2 seed  1 params 0x1.1ecf0abbaeefcp+0 0x1.39d2fd30cbe64p-1 -0x1.9c54c089357d8p-2 0x1.564bfdcc03c26p+0 0x1.7b4eb0e17e66p+0 0x1.66c34407d7a18p-1 0x1.6d7737f7539p-6 -0x1.74e83f8a079d2p+0 -0x1.deaa2f6ce994p-3 0x1.6b2df106e15p-2 0x1.14f5eb7bf10b8p-2 0x1.52bff4efe8a9cp-1 0x1.2bb6b07b28p-1 0x1.06afaadc302dcp+0 0x1.26ce828128e36p+0
+none_r2 seed  2 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.92 rng_next 1678443375070599003
+none_r2 seed  2 params -0x1.b4fd72dd54e64p-2 0x1.b51353bad0fa6p+0 -0x1.77663976e8974p-1 0x1.374d6374869p-5 0x1.ea576ca07d4b4p+0 -0x1.00f7b13b2eb4cp-1 -0x1.39f63c5d74eeep-1 0x1.697af3e0709fp-2 -0x1.302443ae9503p-4 0x1.b0d8dfc5b101p-3 0x1.ead1a4850825p-3 -0x1.7748dd7126cf4p-1 0x1.d087d07e16f14p+0 -0x1.af2856a10288p-3 0x1.8720e398dd2bcp-1
+none_r2 seed  3 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.8 rng_next 256801008939691851
+none_r2 seed  3 params 0x1.ddb6c1690c76p-3 0x1.72798d16f675ep+0 -0x1.cdf01f1bd21f3p+0 0x1.815a6c563a93ep+0 0x1.151bf9c410038p+0 0x1.c00b167540a4ep+0 0x1.5a59845d5ce8p+0 -0x1.4482a89b5b4fep+0 -0x1.87c3b1a19f6ffp+0 0x1.b26f16c051ap-1 0x1.b29c62427f0bcp-1 0x1.dc1752d5648fp-2 -0x1.0e2c69f7fbf03p+0 0x1.2abe5a4299f2p+0 0x1.1c03898479d04p-1
+none_r2 seed  4 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.6 rng_next 1435539776203069742
+none_r2 seed  4 params -0x1.3f51cac90b342p+0 0x1.bd3b5c6467104p-1 -0x1.27495b99c1b0ap+0 -0x1.03428b715c766p+0 0x1.838378f952172p+0 0x1.2b6c94ddec362p+0 0x1.9a3ee73098b52p+0 0x1.3e331cb433604p+0 -0x1.70e0494b9fab4p+0 -0x1.103f4e11522a2p-1 -0x1.0373d60730a7p-2 0x1.68e07bd097a12p+0 0x1.290d07ee422dp-3 0x1.c97b0fe1e7c84p-1 0x1.250298d9d5fcp-2
+none_r2 seed  5 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.96 rng_next 651858674845286218
+none_r2 seed  5 params 0x1.841d7da60d97p-2 0x1.356015ae3f0cp-1 0x1.89e354b991b8p-6 0x1.1086338dd2a56p+0 0x1.3ccc5e53b1d9cp+0 -0x1.aeadd18be142ap-1 -0x1.843dd3dc8f252p-1 0x1.e56ed96b2369cp-1 -0x1.2824bdf28bacp-5 -0x1.4a92d89dc96e8p+0 0x1.5e6e2b23ae74p-1 0x1.f6f78d201976cp+0 -0x1.d54ac42b16142p-1 0x1.be9f8b840e92ep+0 0x1.e1dea59f52ea4p-1
+none_r2 seed  6 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.79 rng_next 43430919379459005
+none_r2 seed  6 params 0x1.428ea019dbecap+0 0x1.974e435c03af4p-1 0x1.1ee8ac858f498p-1 -0x1.b25be64d14614p-2 0x1.232f78612c1p-2 -0x1.ca4b7ed6f2833p+0 0x1.ad6b176c543acp-1 -0x1.44d39da544c2p+0 -0x1.9501d04fe99f4p+0 0x1.7c5c9391faa8p+0 -0x1.59dc37cfe0022p+0 -0x1.172508cd3306p-4 0x1.63c730507d682p+0 0x1.50599af699c02p+0 0x1.8e9adeb29cafp+0
+none_r2 seed  7 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.83 rng_next 931770023341676031
+none_r2 seed  7 params 0x1.1b5ec8ca508ep-3 -0x1.354cc5f3a7d7cp-1 -0x1.1911aa0abcc1ap+0 0x1.d4d166c3622bp+0 -0x1.2ad223e2792bcp-1 -0x1.c04cf0c2e5eb2p+0 0x1.e7e6f48bde468p-2 0x1.a779750f841e8p-1 0x1.b9e97494d467cp-1 0x1.853ebe76bb35ep+0 -0x1.4961a2a2a31bap-1 0x1.c6f7f83fe1428p-1 0x1.5b175dfa574ep-1 -0x1.a869c7f69e0aap+0 0x1.3e926a8adfc8p-1
+none_r2 seed  8 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.79 rng_next 83567494367101952
+none_r2 seed  8 params 0x1.8a1df4e8dfb58p-2 0x1.1c7e8f956d1c8p-2 0x1.c8055e487998p-6 -0x1.8a8830044df54p+0 -0x1.63f632496a412p+0 0x1.86ed3bb7fc638p-2 -0x1.897d8ff18b46p+0 0x1.34c18ced4ad16p+0 -0x1.c4e89346ae987p+0 -0x1.02b272bea65fap+0 0x1.1016370735b9p-2 -0x1.8fb6482055e05p+0 0x1.c98597e23104ep+0 -0x1.0bc3b837d16dp+0 -0x1.bce966bd6166ep-1
+none_r2 seed  9 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.68 rng_next 1851579004733253756
+none_r2 seed  9 params 0x1.08a04ddd5a296p+0 -0x1.ad4e7820a6ed1p+0 0x1.04d3e7be2cb5p-2 -0x1.6282131e6571ap+0 -0x1.832ea0292f6e5p+0 -0x1.26221cb838c1cp+0 -0x1.4315204bc95aep-1 0x1.6d2429cb065p-6 0x1.25a48e10cdb64p-1 0x1.f67ae2c316dep-2 0x1.f8e75b5b35ecp-4 0x1.400791749ef84p-1 -0x1.3cabf83aeb1d6p-1 -0x1.50cc9a5baeffdp+0 0x1.0add87214d6b6p+0
+none_r2 seed 10 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.82 rng_next 2270692705552007709
+none_r2 seed 10 params 0x1.90cea07f0092p-2 -0x1.d2184090a70b8p+0 0x1.b75cab3d2b238p-2 -0x1.9b76f5cce76ecp-1 -0x1.c7fc6b3f46062p-1 0x1.1472f927ffd06p+0 0x1.348588e8f6408p-2 -0x1.45199c45b211p+0 -0x1.6af61a51e879p-1 -0x1.195e501b130f6p+0 0x1.6d004ee97bdbcp-1 -0x1.139283aa1fa54p-1 0x1.14923d5d26afap+0 -0x1.11d09de4ef548p-1 0x1.44c3c45d1d0d4p-1
+none_r2 seed 11 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.98 rng_next 2183867746422319975
+none_r2 seed 11 params -0x1.b18a09018ccedp+0 -0x1.7c15deb74a90cp-1 0x1.9898bc453a914p-1 0x1.c31c480eabff4p-1 -0x1.24520b35f7f6cp-2 0x1.154fa2d9e2342p+0 0x1.b7b1bb8004a86p+0 -0x1.0a198821a8f2ap+0 -0x1.a2ed4dd1c86c6p+0 -0x1.f46ad0d4f5e47p+0 0x1.f9b04b13f1eacp+0 0x1.579893a978e1cp+0 -0x1.4e4ef2ffc292ap+0 0x1.db4fdd1ca149p+0 -0x1.70c3dc432ae48p-2
+none_r2 seed 12 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.68 rng_next 2037825193397547583
+none_r2 seed 12 params 0x1.8dc824454136p-2 0x1.723cb2c99b498p-2 0x1.d954b5ab42a8p-5 -0x1.018de30961052p+0 0x1.51beee2961902p+0 0x1.469834ca101dcp+0 -0x1.95004d6e5539p-4 -0x1.6862f7d4792fp-1 -0x1.43a95da368f48p+0 -0x1.bc8c875a6643ap-1 -0x1.ae8d33d57cf94p+0 0x1.5d8a6e0b501aep+0 -0x1.9762cc244441fp+0 -0x1.bd2254c0a5638p-1 0x1.6b35f6090b01cp-1
+none_r2 seed 13 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.89 rng_next 1390514674752665448
+none_r2 seed 13 params 0x1.bf9d2c0b2ff9p-2 -0x1.b3fb2b42ea5bep+0 -0x1.427b2b1aee426p+0 -0x1.07b65b2293ffap-1 -0x1.795ec01598eap-1 -0x1.1f9d0a0ebf0cp-6 -0x1.9d42f56fc66b8p+0 -0x1.756150540237ep+0 -0x1.92d9d49149b38p-2 -0x1.0e4c2ff36ccd2p-1 0x1.c6f2a87d34f32p+0 -0x1.6757899d01be2p-1 -0x1.b3c6cb34df4b6p+0 0x1.e48dedd57fbfp+0 0x1.03cc87edd7e2p-4
+none_r2 seed 14 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.47 rng_next 1167937780169135215
+none_r2 seed 14 params 0x1.55133cf4e1544p-1 0x1.77f2f55c35ed2p+0 -0x1.85ea28540d0fap-1 0x1.1f9550d65affcp+0 -0x1.471f3601831e4p-2 -0x1.194080330aeecp+0 0x1.6bde7fded29c4p+0 0x1.364215824e054p-1 -0x1.96dd7d39255d8p-3 0x1.cb8395234f5d4p-1 0x1.7e4ec7f925ep-2 -0x1.dc96cfdc07b16p-1 -0x1.e8efa33bf78b8p-3 0x1.1990fa2f41bacp-1 -0x1.ea2864038f6aep-1
+none_r2 seed 15 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.87 rng_next 494480922462651299
+none_r2 seed 15 params 0x1.6b7677d180ddap+0 0x1.745d1cc85a224p-1 -0x1.4d05a918c54f4p-1 0x1.6fdd96f0a977ep+0 -0x1.c4bfa6d5908aep-1 0x1.b5b0d70668a8p-4 0x1.6b4e7fd126128p-2 0x1.c85f1d5ed0c9ap+0 0x1.c841e8827f884p-1 -0x1.b9cc5999444p-2 0x1.b33120ce87406p+0 0x1.ddd8c6c4fe5fep+0 0x1.c530dfcee9b9p-1 -0x1.a909f82b45a8dp+0 0x1.70ab9765a1478p+0
+none_r2 seed 16 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.98 rng_next 2196443432730091270
+none_r2 seed 16 params -0x1.8e4117a8856p-3 0x1.14f21c7814088p-1 -0x1.b22fd77dd6948p+0 -0x1.e0574c2dba8e9p+0 0x1.3b32bff91fffp-3 0x1.6e8d7bd1c9fb4p+0 -0x1.fbb6b3cc601d6p+0 -0x1.90cbb87ecd939p+0 -0x1.0caf8c52e906ap+0 0x1.70563fb95abcp+0 -0x1.b505648a0c0f3p+0 -0x1.3a6af57e5d0a4p-2 0x1.976cdc5ef8df4p+0 0x1.7fbb57afc464p-4 0x1.3c541a3e146fp-3
+none_r2 seed 17 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.99 rng_next 78953294033068592
+none_r2 seed 17 params 0x1.fe8f247dd332cp+0 0x1.814e246bb96acp-1 0x1.71bcc80b4ef2cp-1 0x1.f44036eb8314cp+0 0x1.fa0d17ec4ebcp-3 0x1.d0337094b315p-1 0x1.a930bf8d8f718p-1 0x1.47a2c4ee70584p+0 0x1.1e3b3e85b4a2p-4 -0x1.4b7a23d505d2p-4 -0x1.56c489d86ede8p+0 0x1.cd5d9a031ac8ep+0 -0x1.59c9398a349c9p+0 -0x1.569276ae06966p+0 -0x1.43b39ce0a283ep-1
+none_r2 seed 18 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.95 rng_next 1949375644205958649
+none_r2 seed 18 params -0x1.1b7457607300cp+0 0x1.c7a03024b759cp-1 0x1.776fd960d7a68p+0 -0x1.24f41baef1c4ep-1 0x1.261ce4e4f7852p+0 0x1.f3035dd293ebap+0 -0x1.f7263459324acp-1 0x1.e9605eb877626p+0 0x1.5fc562a0fec54p+0 0x1.aec62f29fc16cp-1 -0x1.675f081cba31p+0 -0x1.4cc0c1f4fe198p+0 -0x1.308fd630d1888p+0 0x1.9fb9329ff65e8p-1 -0x1.2ce49b386eba8p+0
+none_r2 seed 19 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.97 rng_next 1885059054489633810
+none_r2 seed 19 params 0x1.b128d97da6926p+0 -0x1.586be9389aba4p-2 0x1.779a16c94103ap+0 -0x1.a85b846697c7ap-1 -0x1.007fafac68ccdp+0 -0x1.2aa39c31d4ad6p-1 -0x1.f890b7baca15dp+0 0x1.c311a79f357fp-3 0x1.deaf583bcd66cp-1 0x1.0e40c9de9df64p-1 -0x1.7fa49afd382cep+0 -0x1.7417da5484174p+0 0x1.19cf5e89bb3cp-4 -0x1.876e0142341fep-1 0x1.cc3cdff33f068p-2
+none_r0 seed  0 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 0 rng_next 1583268047687452607
+none_r0 seed  0 params 0x0p+0 0x0p+0 0x0p+0 0x0p+0 0x0p+0 0x0p+0 0x0p+0 0x0p+0 0x0p+0 0x0p+0 0x0p+0 0x0p+0 0x0p+0 0x0p+0 0x0p+0
+full_r2 seed  0 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 2.22e-16 max_abs_unconstrained 1 rng_next 2192666205886875948
+full_r2 seed  0 params 0x1p-1 0x1.9f323ecbf984cp-2 -0x1.9999999999999p-3 -0x1.25968da030794p-2 -0x1.2a4ce1c55d305p-1 0x1.1111111111111p-4 -0x1.1111111111111p-3 0x1.3333333333333p-2 -0x1.1111111111111p-2 0x1p+0 0x1.9999999999998p-2 -0x1.9999999999998p-1 0x1.3333333333334p-1 0x0p+0 0x1.62e42fefa39efp-1
+full_r2 seed  1 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 2.22e-16 max_abs_unconstrained 1 rng_next 1353876050235642439
+full_r2 seed  1 params 0x1p-1 0x1.9f323ecbf984cp-2 -0x1.9999999999999p-3 -0x1.25968da030794p-2 -0x1.2a4ce1c55d305p-1 0x1.1111111111111p-4 -0x1.1111111111111p-3 0x1.3333333333333p-2 -0x1.1111111111111p-2 0x1p+0 0x1.9999999999998p-2 -0x1.9999999999998p-1 0x1.3333333333334p-1 0x0p+0 0x1.62e42fefa39efp-1
+full_r2 seed  2 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 2.22e-16 max_abs_unconstrained 1 rng_next 1678443375070599003
+full_r2 seed  2 params 0x1p-1 0x1.9f323ecbf984cp-2 -0x1.9999999999999p-3 -0x1.25968da030794p-2 -0x1.2a4ce1c55d305p-1 0x1.1111111111111p-4 -0x1.1111111111111p-3 0x1.3333333333333p-2 -0x1.1111111111111p-2 0x1p+0 0x1.9999999999998p-2 -0x1.9999999999998p-1 0x1.3333333333334p-1 0x0p+0 0x1.62e42fefa39efp-1
+full_r2 seed  3 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 2.22e-16 max_abs_unconstrained 1 rng_next 256801008939691851
+full_r2 seed  3 params 0x1p-1 0x1.9f323ecbf984cp-2 -0x1.9999999999999p-3 -0x1.25968da030794p-2 -0x1.2a4ce1c55d305p-1 0x1.1111111111111p-4 -0x1.1111111111111p-3 0x1.3333333333333p-2 -0x1.1111111111111p-2 0x1p+0 0x1.9999999999998p-2 -0x1.9999999999998p-1 0x1.3333333333334p-1 0x0p+0 0x1.62e42fefa39efp-1
+full_r2 seed  4 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 2.22e-16 max_abs_unconstrained 1 rng_next 1435539776203069742
+full_r2 seed  4 params 0x1p-1 0x1.9f323ecbf984cp-2 -0x1.9999999999999p-3 -0x1.25968da030794p-2 -0x1.2a4ce1c55d305p-1 0x1.1111111111111p-4 -0x1.1111111111111p-3 0x1.3333333333333p-2 -0x1.1111111111111p-2 0x1p+0 0x1.9999999999998p-2 -0x1.9999999999998p-1 0x1.3333333333334p-1 0x0p+0 0x1.62e42fefa39efp-1
+full_r2 seed  5 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 2.22e-16 max_abs_unconstrained 1 rng_next 651858674845286218
+full_r2 seed  5 params 0x1p-1 0x1.9f323ecbf984cp-2 -0x1.9999999999999p-3 -0x1.25968da030794p-2 -0x1.2a4ce1c55d305p-1 0x1.1111111111111p-4 -0x1.1111111111111p-3 0x1.3333333333333p-2 -0x1.1111111111111p-2 0x1p+0 0x1.9999999999998p-2 -0x1.9999999999998p-1 0x1.3333333333334p-1 0x0p+0 0x1.62e42fefa39efp-1
+full_r2 seed  6 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 2.22e-16 max_abs_unconstrained 1 rng_next 43430919379459005
+full_r2 seed  6 params 0x1p-1 0x1.9f323ecbf984cp-2 -0x1.9999999999999p-3 -0x1.25968da030794p-2 -0x1.2a4ce1c55d305p-1 0x1.1111111111111p-4 -0x1.1111111111111p-3 0x1.3333333333333p-2 -0x1.1111111111111p-2 0x1p+0 0x1.9999999999998p-2 -0x1.9999999999998p-1 0x1.3333333333334p-1 0x0p+0 0x1.62e42fefa39efp-1
+full_r2 seed  7 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 2.22e-16 max_abs_unconstrained 1 rng_next 931770023341676031
+full_r2 seed  7 params 0x1p-1 0x1.9f323ecbf984cp-2 -0x1.9999999999999p-3 -0x1.25968da030794p-2 -0x1.2a4ce1c55d305p-1 0x1.1111111111111p-4 -0x1.1111111111111p-3 0x1.3333333333333p-2 -0x1.1111111111111p-2 0x1p+0 0x1.9999999999998p-2 -0x1.9999999999998p-1 0x1.3333333333334p-1 0x0p+0 0x1.62e42fefa39efp-1
+full_r2 seed  8 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 2.22e-16 max_abs_unconstrained 1 rng_next 83567494367101952
+full_r2 seed  8 params 0x1p-1 0x1.9f323ecbf984cp-2 -0x1.9999999999999p-3 -0x1.25968da030794p-2 -0x1.2a4ce1c55d305p-1 0x1.1111111111111p-4 -0x1.1111111111111p-3 0x1.3333333333333p-2 -0x1.1111111111111p-2 0x1p+0 0x1.9999999999998p-2 -0x1.9999999999998p-1 0x1.3333333333334p-1 0x0p+0 0x1.62e42fefa39efp-1
+full_r2 seed  9 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 2.22e-16 max_abs_unconstrained 1 rng_next 1851579004733253756
+full_r2 seed  9 params 0x1p-1 0x1.9f323ecbf984cp-2 -0x1.9999999999999p-3 -0x1.25968da030794p-2 -0x1.2a4ce1c55d305p-1 0x1.1111111111111p-4 -0x1.1111111111111p-3 0x1.3333333333333p-2 -0x1.1111111111111p-2 0x1p+0 0x1.9999999999998p-2 -0x1.9999999999998p-1 0x1.3333333333334p-1 0x0p+0 0x1.62e42fefa39efp-1
+full_r2 seed 10 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 2.22e-16 max_abs_unconstrained 1 rng_next 2270692705552007709
+full_r2 seed 10 params 0x1p-1 0x1.9f323ecbf984cp-2 -0x1.9999999999999p-3 -0x1.25968da030794p-2 -0x1.2a4ce1c55d305p-1 0x1.1111111111111p-4 -0x1.1111111111111p-3 0x1.3333333333333p-2 -0x1.1111111111111p-2 0x1p+0 0x1.9999999999998p-2 -0x1.9999999999998p-1 0x1.3333333333334p-1 0x0p+0 0x1.62e42fefa39efp-1
+full_r2 seed 11 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 2.22e-16 max_abs_unconstrained 1 rng_next 2183867746422319975
+full_r2 seed 11 params 0x1p-1 0x1.9f323ecbf984cp-2 -0x1.9999999999999p-3 -0x1.25968da030794p-2 -0x1.2a4ce1c55d305p-1 0x1.1111111111111p-4 -0x1.1111111111111p-3 0x1.3333333333333p-2 -0x1.1111111111111p-2 0x1p+0 0x1.9999999999998p-2 -0x1.9999999999998p-1 0x1.3333333333334p-1 0x0p+0 0x1.62e42fefa39efp-1
+full_r2 seed 12 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 2.22e-16 max_abs_unconstrained 1 rng_next 2037825193397547583
+full_r2 seed 12 params 0x1p-1 0x1.9f323ecbf984cp-2 -0x1.9999999999999p-3 -0x1.25968da030794p-2 -0x1.2a4ce1c55d305p-1 0x1.1111111111111p-4 -0x1.1111111111111p-3 0x1.3333333333333p-2 -0x1.1111111111111p-2 0x1p+0 0x1.9999999999998p-2 -0x1.9999999999998p-1 0x1.3333333333334p-1 0x0p+0 0x1.62e42fefa39efp-1
+full_r2 seed 13 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 2.22e-16 max_abs_unconstrained 1 rng_next 1390514674752665448
+full_r2 seed 13 params 0x1p-1 0x1.9f323ecbf984cp-2 -0x1.9999999999999p-3 -0x1.25968da030794p-2 -0x1.2a4ce1c55d305p-1 0x1.1111111111111p-4 -0x1.1111111111111p-3 0x1.3333333333333p-2 -0x1.1111111111111p-2 0x1p+0 0x1.9999999999998p-2 -0x1.9999999999998p-1 0x1.3333333333334p-1 0x0p+0 0x1.62e42fefa39efp-1
+full_r2 seed 14 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 2.22e-16 max_abs_unconstrained 1 rng_next 1167937780169135215
+full_r2 seed 14 params 0x1p-1 0x1.9f323ecbf984cp-2 -0x1.9999999999999p-3 -0x1.25968da030794p-2 -0x1.2a4ce1c55d305p-1 0x1.1111111111111p-4 -0x1.1111111111111p-3 0x1.3333333333333p-2 -0x1.1111111111111p-2 0x1p+0 0x1.9999999999998p-2 -0x1.9999999999998p-1 0x1.3333333333334p-1 0x0p+0 0x1.62e42fefa39efp-1
+full_r2 seed 15 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 2.22e-16 max_abs_unconstrained 1 rng_next 494480922462651299
+full_r2 seed 15 params 0x1p-1 0x1.9f323ecbf984cp-2 -0x1.9999999999999p-3 -0x1.25968da030794p-2 -0x1.2a4ce1c55d305p-1 0x1.1111111111111p-4 -0x1.1111111111111p-3 0x1.3333333333333p-2 -0x1.1111111111111p-2 0x1p+0 0x1.9999999999998p-2 -0x1.9999999999998p-1 0x1.3333333333334p-1 0x0p+0 0x1.62e42fefa39efp-1
+full_r2 seed 16 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 2.22e-16 max_abs_unconstrained 1 rng_next 2196443432730091270
+full_r2 seed 16 params 0x1p-1 0x1.9f323ecbf984cp-2 -0x1.9999999999999p-3 -0x1.25968da030794p-2 -0x1.2a4ce1c55d305p-1 0x1.1111111111111p-4 -0x1.1111111111111p-3 0x1.3333333333333p-2 -0x1.1111111111111p-2 0x1p+0 0x1.9999999999998p-2 -0x1.9999999999998p-1 0x1.3333333333334p-1 0x0p+0 0x1.62e42fefa39efp-1
+full_r2 seed 17 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 2.22e-16 max_abs_unconstrained 1 rng_next 78953294033068592
+full_r2 seed 17 params 0x1p-1 0x1.9f323ecbf984cp-2 -0x1.9999999999999p-3 -0x1.25968da030794p-2 -0x1.2a4ce1c55d305p-1 0x1.1111111111111p-4 -0x1.1111111111111p-3 0x1.3333333333333p-2 -0x1.1111111111111p-2 0x1p+0 0x1.9999999999998p-2 -0x1.9999999999998p-1 0x1.3333333333334p-1 0x0p+0 0x1.62e42fefa39efp-1
+full_r2 seed 18 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 2.22e-16 max_abs_unconstrained 1 rng_next 1949375644205958649
+full_r2 seed 18 params 0x1p-1 0x1.9f323ecbf984cp-2 -0x1.9999999999999p-3 -0x1.25968da030794p-2 -0x1.2a4ce1c55d305p-1 0x1.1111111111111p-4 -0x1.1111111111111p-3 0x1.3333333333333p-2 -0x1.1111111111111p-2 0x1p+0 0x1.9999999999998p-2 -0x1.9999999999998p-1 0x1.3333333333334p-1 0x0p+0 0x1.62e42fefa39efp-1
+full_r2 seed 19 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 2.22e-16 max_abs_unconstrained 1 rng_next 1885059054489633810
+full_r2 seed 19 params 0x1p-1 0x1.9f323ecbf984cp-2 -0x1.9999999999999p-3 -0x1.25968da030794p-2 -0x1.2a4ce1c55d305p-1 0x1.1111111111111p-4 -0x1.1111111111111p-3 0x1.3333333333333p-2 -0x1.1111111111111p-2 0x1p+0 0x1.9999999999998p-2 -0x1.9999999999998p-1 0x1.3333333333334p-1 0x0p+0 0x1.62e42fefa39efp-1
+sigma_1e-20 seed  0 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 7.52e-16 max_abs_unconstrained 46.1 rng_next 2192666205886875948
+sigma_1e-20 seed  1 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 7.52e-16 max_abs_unconstrained 46.1 rng_next 1353876050235642439
+sigma_1e-20 seed  2 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 7.52e-16 max_abs_unconstrained 46.1 rng_next 1678443375070599003
+sigma_1e-20 seed  3 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 7.52e-16 max_abs_unconstrained 46.1 rng_next 256801008939691851
+sigma_1e-20 seed  4 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 7.52e-16 max_abs_unconstrained 46.1 rng_next 1435539776203069742
+sigma_1e-20 seed  5 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 7.52e-16 max_abs_unconstrained 46.1 rng_next 651858674845286218
+sigma_1e-20 seed  6 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 7.52e-16 max_abs_unconstrained 46.1 rng_next 43430919379459005
+sigma_1e-20 seed  7 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 7.52e-16 max_abs_unconstrained 46.1 rng_next 931770023341676031
+sigma_1e-20 seed  8 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 7.52e-16 max_abs_unconstrained 46.1 rng_next 83567494367101952
+sigma_1e-20 seed  9 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 7.52e-16 max_abs_unconstrained 46.1 rng_next 1851579004733253756
+sigma_1e-20 seed 10 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 7.52e-16 max_abs_unconstrained 46.1 rng_next 2270692705552007709
+sigma_1e-20 seed 11 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 7.52e-16 max_abs_unconstrained 46.1 rng_next 2183867746422319975
+sigma_1e-20 seed 12 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 7.52e-16 max_abs_unconstrained 46.1 rng_next 2037825193397547583
+sigma_1e-20 seed 13 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 7.52e-16 max_abs_unconstrained 46.1 rng_next 1390514674752665448
+sigma_1e-20 seed 14 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 7.52e-16 max_abs_unconstrained 46.1 rng_next 1167937780169135215
+sigma_1e-20 seed 15 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 7.52e-16 max_abs_unconstrained 46.1 rng_next 494480922462651299
+sigma_1e-20 seed 16 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 7.52e-16 max_abs_unconstrained 46.1 rng_next 2196443432730091270
+sigma_1e-20 seed 17 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 7.52e-16 max_abs_unconstrained 46.1 rng_next 78953294033068592
+sigma_1e-20 seed 18 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 7.52e-16 max_abs_unconstrained 46.1 rng_next 1949375644205958649
+sigma_1e-20 seed 19 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 7.52e-16 max_abs_unconstrained 46.1 rng_next 1885059054489633810
+mu_5 seed  0 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 5 rng_next 2192666205886875948
+mu_5 seed  1 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 5 rng_next 1353876050235642439
+mu_5 seed  2 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 5 rng_next 1678443375070599003
+mu_5 seed  3 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 5 rng_next 256801008939691851
+mu_5 seed  4 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 5 rng_next 1435539776203069742
+mu_5 seed  5 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 5 rng_next 651858674845286218
+mu_5 seed  6 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 5 rng_next 43430919379459005
+mu_5 seed  7 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 5 rng_next 931770023341676031
+mu_5 seed  8 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 5 rng_next 83567494367101952
+mu_5 seed  9 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 5 rng_next 1851579004733253756
+mu_5 seed 10 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 5 rng_next 2270692705552007709
+mu_5 seed 11 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 5 rng_next 2183867746422319975
+mu_5 seed 12 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 5 rng_next 2037825193397547583
+mu_5 seed 13 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 5 rng_next 1390514674752665448
+mu_5 seed 14 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 5 rng_next 1167937780169135215
+mu_5 seed 15 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 5 rng_next 494480922462651299
+mu_5 seed 16 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 5 rng_next 2196443432730091270
+mu_5 seed 17 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 5 rng_next 78953294033068592
+mu_5 seed 18 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 5 rng_next 1949375644205958649
+mu_5 seed 19 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 5 rng_next 1885059054489633810
+mu_5_r0 seed  0 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 5 rng_next 1583268047687452607
+x_3 seed  0 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 14.2 rng_next 2192666205886875948
+x_3 seed  1 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.48 rng_next 1353876050235642439
+x_3 seed  2 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.92 rng_next 1678443375070599003
+x_3 seed  3 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.75 rng_next 256801008939691851
+x_3 seed  4 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 1.48e-16 max_abs_unconstrained 1.78 rng_next 1435539776203069742
+x_3 seed  5 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.96 rng_next 651858674845286218
+x_3 seed  6 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.79 rng_next 43430919379459005
+x_3 seed  7 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 5.24 rng_next 931770023341676031
+x_3 seed  8 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.98 rng_next 83567494367101952
+x_3 seed  9 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 10.5 rng_next 1851579004733253756
+x_3 seed 10 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 1.48e-16 max_abs_unconstrained 16.1 rng_next 2270692705552007709
+x_3 seed 11 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 1.48e-16 max_abs_unconstrained 9.86 rng_next 2183867746422319975
+x_3 seed 12 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.82 rng_next 2037825193397547583
+x_3 seed 13 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 14.1 rng_next 1390514674752665448
+x_3 seed 14 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.47 rng_next 1167937780169135215
+x_3 seed 15 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.87 rng_next 494480922462651299
+x_3 seed 16 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.98 rng_next 2196443432730091270
+x_3 seed 17 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.99 rng_next 78953294033068592
+x_3 seed 18 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.95 rng_next 1949375644205958649
+x_3 seed 19 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 1.97 rng_next 1885059054489633810
+a_1_c_4 seed  0 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 6.8 rng_next 2192666205886875948
+a_1_c_4 seed  1 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 5.73 rng_next 1353876050235642439
+a_1_c_4 seed  2 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 5.76 rng_next 1678443375070599003
+a_1_c_4 seed  3 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 5.15 rng_next 256801008939691851
+a_1_c_4 seed  4 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 6.25 rng_next 1435539776203069742
+a_1_c_4 seed  5 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 5.32 rng_next 651858674845286218
+a_1_c_4 seed  6 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 7.35 rng_next 43430919379459005
+a_1_c_4 seed  7 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 6.64 rng_next 931770023341676031
+a_1_c_4 seed  8 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 5.73 rng_next 83567494367101952
+a_1_c_4 seed  9 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 5.88 rng_next 1851579004733253756
+a_1_c_4 seed 10 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 5.29 rng_next 2270692705552007709
+a_1_c_4 seed 11 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 4.02 rng_next 2183867746422319975
+a_1_c_4 seed 12 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 7.68 rng_next 2037825193397547583
+a_1_c_4 seed 13 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 4.22 rng_next 1390514674752665448
+a_1_c_4 seed 14 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 5.63 rng_next 1167937780169135215
+a_1_c_4 seed 15 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 4.3 rng_next 494480922462651299
+a_1_c_4 seed 16 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 7.71 rng_next 2196443432730091270
+a_1_c_4 seed 17 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 7.34 rng_next 78953294033068592
+a_1_c_4 seed 18 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 7.4 rng_next 1949375644205958649
+a_1_c_4 seed 19 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 7.5 rng_next 1885059054489633810
+b_2_d_-3 seed  0 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 8.06 rng_next 2192666205886875948
+b_2_d_-3 seed  1 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 10.7 rng_next 1353876050235642439
+b_2_d_-3 seed  2 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 9.27 rng_next 1678443375070599003
+b_2_d_-3 seed  3 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 1.48e-16 max_abs_unconstrained 10.5 rng_next 256801008939691851
+b_2_d_-3 seed  4 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 1.11e-16 max_abs_unconstrained 11.4 rng_next 1435539776203069742
+b_2_d_-3 seed  5 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 1.48e-16 max_abs_unconstrained 12 rng_next 651858674845286218
+b_2_d_-3 seed  6 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 9.93 rng_next 43430919379459005
+b_2_d_-3 seed  7 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 1.48e-16 max_abs_unconstrained 10.9 rng_next 931770023341676031
+b_2_d_-3 seed  8 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 1.48e-16 max_abs_unconstrained 8.44 rng_next 83567494367101952
+b_2_d_-3 seed  9 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 10.6 rng_next 1851579004733253756
+b_2_d_-3 seed 10 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 9.46 rng_next 2270692705552007709
+b_2_d_-3 seed 11 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 1.48e-16 max_abs_unconstrained 11.3 rng_next 2183867746422319975
+b_2_d_-3 seed 12 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 1.48e-16 max_abs_unconstrained 11.4 rng_next 2037825193397547583
+b_2_d_-3 seed 13 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 1.48e-16 max_abs_unconstrained 9.3 rng_next 1390514674752665448
+b_2_d_-3 seed 14 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 1.48e-16 max_abs_unconstrained 9.07 rng_next 1167937780169135215
+b_2_d_-3 seed 15 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 11.9 rng_next 494480922462651299
+b_2_d_-3 seed 16 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 9.69 rng_next 2196443432730091270
+b_2_d_-3 seed 17 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 11.8 rng_next 78953294033068592
+b_2_d_-3 seed 18 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 0 max_abs_unconstrained 8.7 rng_next 1949375644205958649
+b_2_d_-3 seed 19 status ok max_abs_missing 0 max_rel_missing 0 max_rel_supplied 1.48e-16 max_abs_unconstrained 8.55 rng_next 1885059054489633810
+lb_10 seed  0 status throw rejections 100
+lb_10 seed  1 status throw rejections 100
+lb_10 seed  2 status throw rejections 100

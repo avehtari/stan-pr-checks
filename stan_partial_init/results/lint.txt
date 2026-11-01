@@ -1,0 +1,7 @@
+# 2026-11-01, Stan branch fix-partial-init-dependent-transforms at 78b495834
+## clang-format version 14.0.0, --dry-run -Werror --style=file
+exit 0
+## cpplint 2.0.2 with the filters of make/cpplint
+Done processing src/stan/services/util/initialize.hpp
+Done processing src/test/unit/services/util/initialize_partial_test.cpp
+exit 0
