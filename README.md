@@ -24,8 +24,13 @@ from another one; copy a shared script instead.
 | `pr3438/` | stan-dev/math#3438 | Laplace latent mean, solver-3 log determinant |
 | `pr3442/` | stan-dev/math#3442 | Wiener functions: underflow, gradients, `hcubature` |
 | `pr3496/` | stan-dev/math#3496 (part of #56) | discrete cdfs with an element of probability 0 or 1 |
+| `stan_partial_init/` | stan-dev/stan PR, not yet opened (part of stan#3088) | partial inits with transforms that use other parameters |
 
 ## Conventions for a PR directory
+
+Start a new directory from `_template/` (`cp -r _template pr<N>`): it has
+`build.sh`, `make_trees.sh`, `run_probes.sh`, a probe and a scorer
+skeleton, and a README skeleton with the checks before posting.
 
 - `README.md`: the requirements, then one section per claim of the PR
   text.  Each section gives the quoted claim, the commands, the expected
