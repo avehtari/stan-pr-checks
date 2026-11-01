@@ -1,0 +1,97 @@
+== host csl10.int.triton.aalto.fi  date 2026-11-01T22:36:18+02:00  cpus 16  J=16
+== g++ g++ (conda-forge gcc 14.3.0-18) 14.3.0
+== mode targeted  tree <scratch>/smtest_betafn
+== deploy repo=math
+== deploy clone=<workstation>/proj/stan_math_beta_fn
+== deploy branch=stable-beta-function
+== deploy head=a64c3679faab9dd4f1608c42e91072dd9fe02190
+== deploy base_ref=origin/develop
+== deploy base=dc669419692e2cb71d55000a871066b5739c3e48
+== deploy uncommitted_edits=no
+== deploy deployed=2026-11-01T22:34:55+02:00
+== repository math
+== tree matches the manifest (7 files)
+
+######## stage branch ########
+RESULT stage=branch suite=test/unit/math/prim/fun/beta_test status=PASS build_s=22 cases=5 failed=0
+RESULT stage=branch suite=test/unit/math/mix/fun/beta_test status=PASS build_s=91 cases=2 failed=0
+RESULT stage=branch suite=test/unit/math/mix/fun/beta2_test status=PASS build_s=46 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/rev/prob/beta_lcdf_test status=PASS build_s=18 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/prim/fun/grad_reg_inc_beta_test status=PASS build_s=14 cases=2 failed=0
+RESULT stage=branch suite=test/unit/math/fwd/fun/grad_reg_inc_beta_test status=PASS build_s=15 cases=2 failed=0
+RESULT stage=branch suite=test/unit/math/mix/fun/grad_reg_inc_beta_test status=PASS build_s=21 cases=5 failed=0
+RESULT stage=branch suite=test/unit/math/prim/fun/inc_beta_test status=PASS build_s=31 cases=7 failed=0
+RESULT stage=branch suite=test/unit/math/prim/fun/inc_beta_dda_test status=PASS build_s=12 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/prim/fun/inc_beta_ddb_test status=PASS build_s=13 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/prim/fun/inc_beta_ddz_test status=PASS build_s=12 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/mix/fun/inc_beta_test status=PASS build_s=181 cases=2 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/beta_test status=PASS build_s=69 cases=5 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/beta_cdf_log_test status=PASS build_s=12 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/beta_ccdf_log_test status=PASS build_s=13 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/beta_proportion_test status=PASS build_s=32 cases=5 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/beta_proportion_cdf_log_test status=PASS build_s=13 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/beta_proportion_ccdf_log_test status=PASS build_s=12 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/binomial_test status=PASS build_s=32 cases=4 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/binomial_cdf_log_test status=PASS build_s=12 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/binomial_ccdf_log_test status=PASS build_s=13 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/neg_binomial_test status=PASS build_s=71 cases=8 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/neg_binomial_cdf_log_test status=PASS build_s=12 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/neg_binomial_ccdf_log_test status=PASS build_s=13 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/rev/prob/neg_binomial_test status=PASS build_s=17 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/rev/prob/neg_binomial_cdf_test status=PASS build_s=18 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/rev/prob/neg_binomial_cdf_log_test status=PASS build_s=19 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/rev/prob/neg_binomial_ccdf_log_test status=PASS build_s=19 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/rev/prob/neg_binomial_2_cdf_test status=PASS build_s=18 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/rev/prob/neg_binomial_2_cdf_log_test status=PASS build_s=20 cases=2 failed=0
+RESULT stage=branch suite=test/unit/math/rev/prob/neg_binomial_2_ccdf_log_test status=PASS build_s=19 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/student_t_test status=PASS build_s=101 cases=4 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/student_t_cdf_log_test status=PASS build_s=14 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/prim/prob/student_t_ccdf_log_test status=PASS build_s=14 cases=1 failed=0
+SUMMARY stage=branch suites=34 failed_suites=0
+
+######## stage develop (swapped: stan/math/prim/fun/beta.hpp) ########
+RESULT stage=develop suite=test/unit/math/prim/fun/beta_test status=FAIL build_s=21 cases=5 failed=1
+FAILED_CASE stage=develop suite=test/unit/math/prim/fun/beta_test MathFunctions.beta_large_arguments
+test/unit/math/prim/fun/beta_test.cpp:30: Failure
+The difference between r[2] and beta(r[0], r[1]) is 1.696026782557758e-12, which exceeds 1e-13 * r[2], where
+r[2] evaluates to 0.0017724540724622611,
+beta(r[0], r[1]) evaluates to 0.0017724540707662344, and
+1e-13 * r[2] evaluates to 1.7724540724622612e-16.
+--
+test/unit/math/prim/fun/beta_test.cpp:30: Failure
+The difference between r[2] and beta(r[0], r[1]) is 1.696026782557758e-12, which exceeds 1e-13 * r[2], where
+r[2] evaluates to 0.0017724540724622611,
+beta(r[0], r[1]) evaluates to 0.0017724540707662344, and
+1e-13 * r[2] evaluates to 1.7724540724622612e-16.
+--
+test/unit/math/prim/fun/beta_test.cpp:30: Failure
+The difference between r[2] and beta(r[0], r[1]) is 2.9046673344303078e-11, which exceeds 1e-13 * r[2], where
+r[2] evaluates to 5.6049912170985526e-05,
+beta(r[0], r[1]) evaluates to 5.6049883124312182e-05, and
+1e-13 * r[2] evaluates to 5.6049912170985529e-18.
+RESULT stage=develop suite=test/unit/math/rev/prob/beta_lcdf_test status=FAIL build_s=18 cases=1 failed=1
+FAILED_CASE stage=develop suite=test/unit/math/rev/prob/beta_lcdf_test AgradRev.ProbDistributionsBeta_lcdf_large_beta_d_y
+test/unit/math/rev/prob/beta_lcdf_test.cpp:25: Failure
+The difference between r[4] and y.adj() is 988.69030672311783, which exceeds 1e-12 * r[4], where
+r[4] evaluates to 489281430.6449945,
+y.adj() evaluates to 489282419.33530122, and
+1e-12 * r[4] evaluates to 0.00048928143064499454.
+--
+test/unit/math/rev/prob/beta_lcdf_test.cpp:25: Failure
+The difference between r[4] and y.adj() is 21505.339361190796, which exceeds 1e-12 * r[4], where
+r[4] evaluates to 7219826854.6410484,
+y.adj() evaluates to 7219848359.9804096, and
+1e-12 * r[4] evaluates to 0.0072198268546410484.
+RESULT stage=develop suite=test/unit/math/mix/fun/beta_test status=PASS build_s=102 cases=2 failed=0
+SUMMARY stage=develop suites=3 failed_suites=2
+RESULT check=swap_restore status=PASS secs=0
+
+######## stage branch_again ########
+RESULT stage=branch_again suite=test/unit/math/prim/fun/beta_test status=PASS build_s=21 cases=5 failed=0
+RESULT stage=branch_again suite=test/unit/math/rev/prob/beta_lcdf_test status=PASS build_s=18 cases=1 failed=0
+RESULT stage=branch_again suite=test/unit/math/mix/fun/beta_test status=PASS build_s=99 cases=2 failed=0
+SUMMARY stage=branch_again suites=3 failed_suites=0
+
+== final tree check:
+== tree still matches the manifest
+== done 2026-11-01T22:58:25+02:00

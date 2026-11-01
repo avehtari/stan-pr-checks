@@ -1,0 +1,33 @@
+== host: csl3.int.triton.aalto.fi   date: 2026-11-01T22:34:17+02:00   g++: g++ (conda-forge gcc 14.3.0-18) 14.3.0
+== cpu:  Intel(R) Xeon(R) Gold 6248 CPU @ 2.50GHz
+== governor: performance
+ca9d8787ce4189afd8e708c62a9b3064  bench_beta.cpp
+9b6234b5196608dc7155a14b1d34ee78  beta_trees.tar.gz
+7cdd61c20a935f9022a10c8a903164b3  /tmp/beta_bench_21346662/branch/stan/math/prim/fun/beta.hpp
+9e26d270d1b7c546e7d1f97414d9bf6d  /tmp/beta_bench_21346662/develop/stan/math/prim/fun/beta.hpp
+== pinned to core 32
+TIME round1 develop beta_small 85.12
+TIME round1 develop beta_mixed 78.91
+TIME round1 develop beta_large 63.83
+TIME round1 branch beta_small 87.64
+TIME round1 branch beta_mixed 74.71
+TIME round1 branch beta_large 55.69
+TIME round1 develop beta_lcdf_var_b1e9 3417.98
+TIME round1 branch beta_lcdf_var_b1e9 3412.25
+TIME round2 develop beta_small 84.90
+TIME round2 develop beta_mixed 78.92
+TIME round2 develop beta_large 63.83
+TIME round2 branch beta_small 88.49
+TIME round2 branch beta_mixed 74.94
+TIME round2 branch beta_large 55.59
+TIME round2 develop beta_lcdf_var_b1e9 3409.54
+TIME round2 branch beta_lcdf_var_b1e9 3417.20
+TIME round3 develop beta_small 84.94
+TIME round3 develop beta_mixed 79.22
+TIME round3 develop beta_large 63.74
+TIME round3 branch beta_small 87.71
+TIME round3 branch beta_mixed 74.44
+TIME round3 branch beta_large 55.47
+TIME round3 develop beta_lcdf_var_b1e9 3427.55
+TIME round3 branch beta_lcdf_var_b1e9 3406.70
+EXIT=0

@@ -1,0 +1,5 @@
+# group            points  underflow  max_ulp_cpu_device  at (a, b)                 points_above_4_ulp  cpu_worst_rel  device_worst_rel
+reference rows        18          0                   0  -                                          0       2.93e-14          2.93e-14
+small               1000          0                  31  (0.002512, 0.01)                         287       5.93e-15          5.93e-15
+mixed               1000          0                 238  (3.548e+08, 8.913)                       107       3.41e-14          3.41e-14
+large               1000        793                 939  (375.8, 375.8)                            97       1.54e-13          1.70e-13

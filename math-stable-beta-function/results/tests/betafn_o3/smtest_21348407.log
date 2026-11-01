@@ -1,0 +1,30 @@
+== host csl21.int.triton.aalto.fi  date 2026-11-02T00:43:20+02:00  cpus 16  J=16
+== g++ g++ (conda-forge gcc 14.3.0-18) 14.3.0
+== mode targeted  tree <scratch>/smtest_betafn_ocl
+== deploy repo=math
+== deploy clone=<workstation>/proj/stan_math_beta_fn
+== deploy branch=stable-beta-function
+== deploy head=b40012df742fd9b7cdc32c7b9c080a7004012d03
+== deploy base_ref=origin/develop
+== deploy base=dc669419692e2cb71d55000a871066b5739c3e48
+== deploy uncommitted_edits=no
+== deploy deployed=2026-11-02T00:42:55+02:00
+== OpenCL build: make/local written (build on CPU, run on GPU)
+== repository math
+== tree matches the manifest (7 files)
+
+######## OpenCL build, stage branch ########
+BUILT stage=branch suite=test/unit/math/opencl/rev/beta_test build_s=43
+BUILT stage=branch suite=test/unit/math/opencl/rev/beta_reference_test build_s=26
+BUILT stage=branch suite=test/unit/math/opencl/kernel_generator/elt_function_cl_test build_s=64
+BUILT stage=branch suite=test/unit/math/opencl/device_functions/lbeta_test build_s=21
+
+######## OpenCL build, stage develop (swapped: stan/math/opencl/kernels/device_functions/beta.hpp stan/math/opencl/kernel_generator/elt_function_cl.hpp) ########
+BUILT stage=develop suite=test/unit/math/opencl/rev/beta_reference_test build_s=23
+RESULT check=swap_restore status=PASS secs=0
+GPU_JOB 21348415
+== the GPU job runs the binaries and prints the RESULT lines (log smtest_ocl_run_<id>.log)
+
+== final tree check:
+== tree still matches the manifest
+== done 2026-11-02T00:46:17+02:00

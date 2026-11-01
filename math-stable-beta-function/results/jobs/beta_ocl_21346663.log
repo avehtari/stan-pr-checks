@@ -1,0 +1,19 @@
+== host: dgx10.int.triton.aalto.fi   date: 2026-11-01T22:34:21+02:00   g++: g++ (conda-forge gcc 14.3.0-18) 14.3.0
+Tesla V100-SXM2-16GB, 580.173.02
+72540e921ce62440624a1e7c7beea926  probe_ocl.cpp
+1b6981cef24fee7d898c09aada23244b  grid.hpp
+6c2a4e4755ec520923959e71f818c160  score_ocl.py
+9b6234b5196608dc7155a14b1d34ee78  beta_trees.tar.gz
+5fa0e27ebea276e055a9b122eb260952  /tmp/beta_ocl_21346663/branch/stan/math/opencl/kernels/device_functions/beta.hpp
+87142b7dd32bbaf108748a215c8ef0a5  /tmp/beta_ocl_21346663/branch/stan/math/opencl/kernel_generator/elt_function_cl.hpp
+3018 ocl_branch.txt
+
+Lmod is automatically replacing "scicomp-r-env/2025.1" with
+"scicomp-python-env/2025.2".
+
+# group            points  underflow  max_ulp_cpu_device  at (a, b)                 points_above_4_ulp  cpu_worst_rel  device_worst_rel
+reference rows        18          0                   0  -                                          0       2.93e-14          2.93e-14
+small               1000          0                  31  (0.002512, 0.01)                         287       5.93e-15          5.93e-15
+mixed               1000          0                 238  (3.548e+08, 8.913)                       107       3.41e-14          3.41e-14
+large               1000        793                 939  (375.8, 375.8)                            97       1.54e-13          1.70e-13
+EXIT=0

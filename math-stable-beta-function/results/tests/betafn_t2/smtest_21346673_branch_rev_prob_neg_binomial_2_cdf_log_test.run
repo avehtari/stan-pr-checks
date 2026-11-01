@@ -1,0 +1,13 @@
+Running main() from lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 2 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 2 tests from AgradRev
+[ RUN      ] AgradRev.ProbDistributionsNegBinomial2_derivatives_lcdf_1
+[       OK ] AgradRev.ProbDistributionsNegBinomial2_derivatives_lcdf_1 (0 ms)
+[ RUN      ] AgradRev.ProbDistributionsNegBinomial2_derivatives_lcdf_2
+[       OK ] AgradRev.ProbDistributionsNegBinomial2_derivatives_lcdf_2 (16 ms)
+[----------] 2 tests from AgradRev (16 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 1 test suite ran. (16 ms total)
+[  PASSED  ] 2 tests.

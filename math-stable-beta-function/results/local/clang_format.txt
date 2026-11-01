@@ -1,0 +1,9 @@
+# stan_clang_format.sh branch origin/develop (clang-format 10.0.1) at b40012df74, 2026-11-02
+  clean    stan/math/opencl/kernel_generator/elt_function_cl.hpp
+  clean    stan/math/opencl/kernels/device_functions/beta.hpp
+  clean    stan/math/prim/fun/beta.hpp
+  clean    test/unit/math/opencl/rev/beta_reference_test.cpp
+  clean    test/unit/math/prim/fun/beta_reference.hpp
+  clean    test/unit/math/prim/fun/beta_test.cpp
+  clean    test/unit/math/rev/prob/beta_lcdf_test.cpp
+all files match clang-format 10

@@ -1,0 +1,18 @@
+# summary of smtest_21346950_prob_neg_binomial_2.log (1721589 bytes): programs built, gtest totals, failures
+## programs built:
+test/prob/neg_binomial_2/neg_binomial_2_ccdf_log_00000_generated_ffv_test.o
+test/prob/neg_binomial_2/neg_binomial_2_ccdf_log_00000_generated_v_test.o
+test/prob/neg_binomial_2/neg_binomial_2_ccdf_log_00000_generated_vv_test.o
+test/prob/neg_binomial_2/neg_binomial_2_ccdf_log_00001_generated_v_test.o
+test/prob/neg_binomial_2/neg_binomial_2_cdf_00000_generated_ffv_test.o
+test/prob/neg_binomial_2/neg_binomial_2_cdf_00000_generated_v_test.o
+test/prob/neg_binomial_2/neg_binomial_2_cdf_00000_generated_vv_test.o
+test/prob/neg_binomial_2/neg_binomial_2_cdf_00001_generated_v_test.o
+test/prob/neg_binomial_2/neg_binomial_2_cdf_log_00000_generated_ffv_test.o
+test/prob/neg_binomial_2/neg_binomial_2_cdf_log_00000_generated_v_test.o
+test/prob/neg_binomial_2/neg_binomial_2_cdf_log_00000_generated_vv_test.o
+test/prob/neg_binomial_2/neg_binomial_2_cdf_log_00001_generated_v_test.o
+## gtest totals:
+programs run: 12  PASSED lines: 12  passed tests: 8100
+## failures:
+## lpdf/lpmf lines: 0

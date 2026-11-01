@@ -1,0 +1,19 @@
+Running main() from lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 5 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 5 tests from MathFunctions
+[ RUN      ] MathFunctions.beta
+[       OK ] MathFunctions.beta (0 ms)
+[ RUN      ] MathFunctions.beta_nan
+[       OK ] MathFunctions.beta_nan (0 ms)
+[ RUN      ] MathFunctions.beta_large_arguments
+[       OK ] MathFunctions.beta_large_arguments (1 ms)
+[ RUN      ] MathFunctions.beta_small_arguments_unchanged
+[       OK ] MathFunctions.beta_small_arguments_unchanged (0 ms)
+[ RUN      ] MathFunctions.beta_vec
+[       OK ] MathFunctions.beta_vec (1 ms)
+[----------] 5 tests from MathFunctions (2 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 1 test suite ran. (2 ms total)
+[  PASSED  ] 5 tests.

@@ -1,0 +1,25 @@
+== host dgx1.int.triton.aalto.fi  date 2026-11-02T00:46:19+02:00
+== gpu GPU 0: Tesla V100-SXM2-16GB (UUID: GPU-f7c984b5-279c-1905-27da-287b2503116e)
+
+######## stage branch (GPU) ########
+RESULT stage=branch suite=test/unit/math/opencl/rev/beta_test status=PASS build_s=0 cases=4 failed=0
+RESULT stage=branch suite=test/unit/math/opencl/rev/beta_reference_test status=PASS build_s=0 cases=3 failed=0
+RESULT stage=branch suite=test/unit/math/opencl/kernel_generator/elt_function_cl_test status=PASS build_s=0 cases=61 failed=0
+RESULT stage=branch suite=test/unit/math/opencl/device_functions/lbeta_test status=PASS build_s=0 cases=2 failed=0
+SUMMARY stage=branch suites=4 failed_suites=0
+
+######## stage develop (GPU) ########
+RESULT stage=develop suite=test/unit/math/opencl/rev/beta_reference_test status=FAIL build_s=0 cases=3 failed=3
+FAILED_CASE stage=develop suite=test/unit/math/opencl/rev/beta_reference_test OpenCL_beta.prim_matches_reference
+FAILED_CASE stage=develop suite=test/unit/math/opencl/rev/beta_reference_test OpenCL_beta.rev_value_matches_reference
+FAILED_CASE stage=develop suite=test/unit/math/opencl/rev/beta_reference_test OpenCL_beta.edge_values_match_cpu
+[----------] 3 tests from OpenCL_beta
+[ RUN      ] OpenCL_beta.prim_matches_reference
+test/unit/math/opencl/rev/beta_reference_test.cpp:33: Failure
+The difference between rows[i][2] and res[i] is 1.696026782557758e-12, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 0.0017724540724622611,
+res[i] evaluates to 0.0017724540707662344, and
+1e-12 * rows[i][2] evaluates to 1.7724540724622612e-15.
+SUMMARY stage=develop suites=1 failed_suites=1
+
+== done 2026-11-02T00:46:22+02:00

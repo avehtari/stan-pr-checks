@@ -1,0 +1,22 @@
+pairs 289; identical 229; class changes 21; other finite value changes 39; of these with both arguments below 10: 0; branch differs from its rule column: 0
+CLASS a=4.9406564584124654e-324 b=1.6999999999999999e+308 develop=-nan branch=inf
+CLASS a=1e-300 b=1.6999999999999999e+308 develop=-nan branch=9.9999999999997626e+299
+CLASS a=0.001 b=1.6999999999999999e+308 develop=-nan branch=491.49513855006552
+CLASS a=0.5 b=1.6999999999999999e+308 develop=-nan branch=1.359410047992259e-154
+CLASS a=1 b=1.6999999999999999e+308 develop=-nan branch=5.8823529411766552e-309
+CLASS a=2 b=1.6999999999999999e+308 develop=-nan branch=0
+CLASS a=9.9900000000000002 b=1.6999999999999999e+308 develop=-nan branch=0
+CLASS a=10 b=1.6999999999999999e+308 develop=-nan branch=0
+CLASS a=1000 b=1.6999999999999999e+308 develop=-nan branch=0
+CLASS a=1000000000 b=1.6999999999999999e+308 develop=-nan branch=0
+CLASS a=1.6999999999999999e+308 b=4.9406564584124654e-324 develop=-nan branch=inf
+CLASS a=1.6999999999999999e+308 b=1e-300 develop=-nan branch=9.9999999999997626e+299
+CLASS a=1.6999999999999999e+308 b=0.001 develop=-nan branch=491.49513855006552
+CLASS a=1.6999999999999999e+308 b=0.5 develop=-nan branch=1.359410047992259e-154
+CLASS a=1.6999999999999999e+308 b=1 develop=-nan branch=5.8823529411766552e-309
+CLASS a=1.6999999999999999e+308 b=2 develop=-nan branch=0
+CLASS a=1.6999999999999999e+308 b=9.9900000000000002 develop=-nan branch=0
+CLASS a=1.6999999999999999e+308 b=10 develop=-nan branch=0
+CLASS a=1.6999999999999999e+308 b=1000 develop=-nan branch=0
+CLASS a=1.6999999999999999e+308 b=1000000000 develop=-nan branch=0
+CLASS a=1.6999999999999999e+308 b=1.6999999999999999e+308 develop=-nan branch=0

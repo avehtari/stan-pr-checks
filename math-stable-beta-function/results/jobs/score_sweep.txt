@@ -1,0 +1,206 @@
+# two mpmath routes: largest relative difference 1.77e-40
+# region     points  develop_worst  at (a, b)               branch_worst  at (a, b)               worse  nonfinite_d/b  bitwise_diff  scaled_d  scaled_b
+small        25600      1.00e-14  (7.499, 9.441)              1.00e-14  (7.499, 9.441)              0       0/0            0      21.3      21.3
+mixed       107200      1.78e-05  (0.002113, 1.995e+09)       4.49e-14  (8.913, 1e+09)             58       0/0       106700  4.71e+10      3.17
+large        24039      1.62e-05  (11.22, 1.995e+09)          2.27e-13  (37.58, 1.059e+08)         78       0/0        23677  3.22e+08      2.02
+underflow    88186      5.07e+09  (37.58, 2.113e+09)          2.16e+02  (118.9, 1.679e+04)          0       0/0          230         0         0
+# underflow errors are in units of 4.9e-324, not relative
+# scaled: the worst relative error / ((1 + |log B|) eps)
+WORSE mixed a=0.0025118864315095794 b=10.592537251772898 develop=1.224e-16 branch=1.129e-15 branch_scaled=0.729
+WORSE mixed a=0.010592537251772886 b=17.782794100389228 develop=1.485e-16 branch=1.085e-15 branch_scaled=0.887
+WORSE mixed a=0.013335214321633241 b=37.583740428844429 develop=5.950e-17 branch=1.061e-15 branch_scaled=0.908
+WORSE mixed a=1.0592537251772887 b=94.40608762859226 develop=1.855e-16 branch=1.071e-15 branch_scaled=0.824
+WORSE mixed a=2.3713737056616551 b=10 develop=1.250e-17 branch=1.742e-15 branch_scaled=1.22
+WORSE mixed a=2.6607250597988084 b=10 develop=1.043e-16 branch=1.082e-15 branch_scaled=0.703
+WORSE mixed a=2.818382931264455 b=35.481338923357534 develop=6.152e-16 branch=2.977e-15 branch_scaled=1.27
+WORSE mixed a=2.9853826189179604 b=112.2018454301963 develop=1.890e-16 branch=1.554e-15 branch_scaled=0.485
+WORSE mixed a=3.5481338923357533 b=10 develop=2.868e-16 branch=1.528e-15 branch_scaled=0.826
+WORSE mixed a=3.5481338923357533 b=149.62356560944329 develop=3.287e-16 branch=3.980e-15 branch_scaled=1.02
+WORSE mixed a=4.2169650342858223 b=17.782794100389228 develop=3.597e-16 branch=2.184e-15 branch_scaled=0.861
+WORSE mixed a=4.46683592150963 b=14.962356560944327 develop=1.208e-17 branch=1.754e-15 branch_scaled=0.708
+WORSE mixed a=4.46683592150963 b=26.607250597988084 develop=1.498e-16 branch=1.717e-15 branch_scaled=0.572
+WORSE mixed a=4.7315125896148027 b=22.387211385683379 develop=5.217e-16 branch=2.378e-15 branch_scaled=0.805
+WORSE mixed a=4.7315125896148027 b=29.853826189179571 develop=4.889e-18 branch=1.818e-15 branch_scaled=0.562
+WORSE mixed a=4.7315125896148027 b=59.566214352901092 develop=1.414e-15 branch=5.699e-15 branch_scaled=1.45
+WORSE mixed a=4.7315125896148027 b=63.0957344480193 develop=3.942e-16 branch=3.158e-15 branch_scaled=0.792
+WORSE mixed a=5.3088444423098844 b=16.78804018122559 develop=2.271e-16 branch=1.924e-15 branch_scaled=0.669
+WORSE mixed a=5.9566214352901037 b=18.83649089489802 develop=3.302e-16 branch=2.167e-15 branch_scaled=0.674
+WORSE mixed a=7.0794578438413804 b=13.33521432163324 develop=2.167e-16 branch=1.674e-15 branch_scaled=0.538
+WORSE mixed a=7.9432823472428131 b=17.782794100389228 develop=2.493e-16 branch=1.523e-15 branch_scaled=0.408
+WORSE mixed a=7.9432823472428131 b=19.952623149688787 develop=3.698e-16 branch=3.282e-15 branch_scaled=0.84
+WORSE mixed a=7.9432823472428131 b=37.583740428844429 develop=2.819e-16 branch=3.846e-15 branch_scaled=0.784
+WORSE mixed a=8.4139514164519476 b=10 develop=4.815e-16 branch=2.341e-15 branch_scaled=0.78
+WORSE mixed a=8.4139514164519476 b=35.481338923357534 develop=5.216e-16 branch=4.043e-15 branch_scaled=0.81
+WORSE mixed a=8.4139514164519476 b=354.81338923357532 develop=1.383e-15 branch=8.333e-15 branch_scaled=0.913
+WORSE mixed a=9.4406087628592363 b=11.88502227437019 develop=8.533e-16 branch=4.570e-15 branch_scaled=1.32
+WORSE mixed a=9.4406087628592363 b=14.962356560944327 develop=2.541e-16 branch=3.308e-15 branch_scaled=0.865
+WORSE mixed a=9.4406087628592363 b=35.481338923357534 develop=1.049e-15 branch=4.644e-15 branch_scaled=0.865
+WORSE mixed a=10 b=2.3713737056616551 develop=1.250e-17 branch=1.742e-15 branch_scaled=1.22
+WORSE mixed a=10 b=2.6607250597988084 develop=1.043e-16 branch=1.082e-15 branch_scaled=0.703
+WORSE mixed a=10 b=3.5481338923357533 develop=2.868e-16 branch=1.528e-15 branch_scaled=0.826
+WORSE mixed a=10 b=8.4139514164519476 develop=4.815e-16 branch=2.341e-15 branch_scaled=0.78
+WORSE large a=10 b=10.592537251772898 develop=1.304e-16 branch=3.691e-15 branch_scaled=1.1
+WORSE large a=10 b=42.169650342858226 develop=1.028e-16 branch=3.529e-15 branch_scaled=0.597
+WORSE mixed a=10.592537251772898 b=0.0025118864315095794 develop=1.224e-16 branch=1.129e-15 branch_scaled=0.729
+WORSE large a=10.592537251772898 b=10 develop=1.304e-16 branch=3.691e-15 branch_scaled=1.1
+WORSE large a=10.592537251772898 b=13.33521432163324 develop=7.155e-17 branch=3.389e-15 branch_scaled=0.878
+WORSE large a=10.592537251772898 b=15.848931924611142 develop=5.209e-16 branch=3.026e-15 branch_scaled=0.725
+WORSE mixed a=11.88502227437019 b=9.4406087628592363 develop=8.533e-16 branch=4.570e-15 branch_scaled=1.32
+WORSE large a=12.589254117941662 b=33.496543915782794 develop=4.077e-16 branch=3.968e-15 branch_scaled=0.634
+WORSE mixed a=13.33521432163324 b=7.0794578438413804 develop=2.167e-16 branch=1.674e-15 branch_scaled=0.538
+WORSE large a=13.33521432163324 b=10.592537251772898 develop=7.155e-17 branch=3.389e-15 branch_scaled=0.878
+WORSE large a=13.33521432163324 b=211.34890398366477 develop=1.112e-16 branch=7.018e-15 branch_scaled=0.609
+WORSE mixed a=14.962356560944327 b=4.46683592150963 develop=1.208e-17 branch=1.754e-15 branch_scaled=0.708
+WORSE mixed a=14.962356560944327 b=9.4406087628592363 develop=2.541e-16 branch=3.308e-15 branch_scaled=0.865
+WORSE large a=15.848931924611142 b=10.592537251772898 develop=5.209e-16 branch=3.026e-15 branch_scaled=0.725
+WORSE large a=15.848931924611142 b=42.169650342858226 develop=5.589e-16 branch=7.680e-15 branch_scaled=0.979
+WORSE mixed a=16.78804018122559 b=5.3088444423098844 develop=2.271e-16 branch=1.924e-15 branch_scaled=0.669
+WORSE mixed a=17.782794100389228 b=0.010592537251772886 develop=1.485e-16 branch=1.085e-15 branch_scaled=0.887
+WORSE mixed a=17.782794100389228 b=4.2169650342858223 develop=3.597e-16 branch=2.184e-15 branch_scaled=0.861
+WORSE mixed a=17.782794100389228 b=7.9432823472428131 develop=2.493e-16 branch=1.523e-15 branch_scaled=0.408
+WORSE large a=17.782794100389228 b=281.83829312644548 develop=2.437e-16 branch=1.447e-14 branch_scaled=0.945
+WORSE mixed a=18.83649089489802 b=5.9566214352901037 develop=3.302e-16 branch=2.167e-15 branch_scaled=0.674
+WORSE large a=18.83649089489802 b=25.11886431509582 develop=6.788e-16 branch=2.892e-15 branch_scaled=0.416
+WORSE large a=18.83649089489802 b=59.566214352901092 develop=1.130e-15 branch=8.224e-15 branch_scaled=0.83
+WORSE mixed a=19.952623149688787 b=7.9432823472428131 develop=3.698e-16 branch=3.282e-15 branch_scaled=0.84
+WORSE mixed a=22.387211385683379 b=4.7315125896148027 develop=5.217e-16 branch=2.378e-15 branch_scaled=0.805
+WORSE large a=22.387211385683379 b=251.18864315095823 develop=2.734e-15 branch=1.702e-14 branch_scaled=0.97
+WORSE large a=25.11886431509582 b=18.83649089489802 develop=6.788e-16 branch=2.892e-15 branch_scaled=0.416
+WORSE mixed a=26.607250597988084 b=4.46683592150963 develop=1.498e-16 branch=1.717e-15 branch_scaled=0.572
+WORSE large a=28.183829312644551 b=39.810717055349691 develop=2.052e-16 branch=7.307e-15 branch_scaled=0.691
+WORSE mixed a=29.853826189179571 b=4.7315125896148027 develop=4.889e-18 branch=1.818e-15 branch_scaled=0.562
+WORSE large a=31.622776601683793 b=158.48931924611142 develop=2.692e-15 branch=1.153e-14 branch_scaled=0.595
+WORSE large a=33.496543915782794 b=12.589254117941662 develop=4.077e-16 branch=3.968e-15 branch_scaled=0.634
+WORSE mixed a=35.481338923357534 b=2.818382931264455 develop=6.152e-16 branch=2.977e-15 branch_scaled=1.27
+WORSE mixed a=35.481338923357534 b=8.4139514164519476 develop=5.216e-16 branch=4.043e-15 branch_scaled=0.81
+WORSE mixed a=35.481338923357534 b=9.4406087628592363 develop=1.049e-15 branch=4.644e-15 branch_scaled=0.865
+WORSE mixed a=37.583740428844429 b=0.013335214321633241 develop=5.950e-17 branch=1.061e-15 branch_scaled=0.908
+WORSE mixed a=37.583740428844429 b=7.9432823472428131 develop=2.819e-16 branch=3.846e-15 branch_scaled=0.784
+WORSE large a=37.583740428844429 b=473.15125896148027 develop=9.719e-16 branch=2.738e-14 branch_scaled=0.906
+WORSE large a=37.583740428844429 b=630.957344480193 develop=1.890e-17 branch=2.848e-14 branch_scaled=0.875
+WORSE large a=39.810717055349691 b=28.183829312644551 develop=2.052e-16 branch=7.307e-15 branch_scaled=0.691
+WORSE large a=39.810717055349691 b=112.2018454301963 develop=3.000e-15 branch=1.719e-14 branch_scaled=0.868
+WORSE large a=42.169650342858226 b=10 develop=1.028e-16 branch=3.529e-15 branch_scaled=0.597
+WORSE large a=42.169650342858226 b=15.848931924611142 develop=5.589e-16 branch=7.680e-15 branch_scaled=0.979
+WORSE large a=42.169650342858226 b=94.40608762859226 develop=1.654e-15 branch=1.589e-14 branch_scaled=0.83
+WORSE large a=47.315125896148025 b=59.566214352901092 develop=2.740e-15 branch=1.153e-14 branch_scaled=0.691
+WORSE large a=47.315125896148025 b=89.12509381337459 develop=1.869e-16 branch=1.441e-14 branch_scaled=0.722
+WORSE large a=47.315125896148025 b=630.957344480193 develop=1.772e-15 branch=2.658e-14 branch_scaled=0.69
+WORSE large a=50.118723362727252 b=70.794578438413737 develop=4.348e-15 branch=1.854e-14 branch_scaled=0.996
+WORSE large a=53.088444423098792 b=167.88040181225588 develop=2.538e-15 branch=1.173e-14 branch_scaled=0.427
+WORSE large a=56.234132519034908 b=94.40608762859226 develop=3.316e-15 branch=1.750e-14 branch_scaled=0.777
+WORSE mixed a=59.566214352901092 b=4.7315125896148027 develop=1.414e-15 branch=5.699e-15 branch_scaled=1.45
+WORSE large a=59.566214352901092 b=18.83649089489802 develop=1.130e-15 branch=8.224e-15 branch_scaled=0.83
+WORSE large a=59.566214352901092 b=47.315125896148025 develop=2.740e-15 branch=1.153e-14 branch_scaled=0.691
+WORSE large a=59.566214352901092 b=70.794578438413737 develop=4.850e-16 branch=1.481e-14 branch_scaled=0.727
+WORSE mixed a=63.0957344480193 b=4.7315125896148027 develop=3.942e-16 branch=3.158e-15 branch_scaled=0.792
+WORSE large a=66.834391756861493 b=237.13737056616552 develop=2.366e-15 branch=2.601e-14 branch_scaled=0.722
+WORSE large a=70.794578438413737 b=50.118723362727252 develop=4.348e-15 branch=1.854e-14 branch_scaled=0.996
+WORSE large a=70.794578438413737 b=59.566214352901092 develop=4.850e-16 branch=1.481e-14 branch_scaled=0.727
+WORSE large a=70.794578438413737 b=100 develop=1.218e-16 branch=1.418e-14 branch_scaled=0.542
+WORSE large a=70.794578438413737 b=237.13737056616552 develop=4.510e-15 branch=3.290e-14 branch_scaled=0.881
+WORSE large a=70.794578438413737 b=3548.133892335753 develop=6.771e-15 branch=6.367e-14 branch_scaled=0.817
+WORSE large a=84.139514164519468 b=707.94578438413737 develop=1.305e-14 branch=6.982e-14 branch_scaled=1.16
+WORSE large a=89.12509381337459 b=47.315125896148025 develop=1.869e-16 branch=1.441e-14 branch_scaled=0.722
+WORSE large a=89.12509381337459 b=2985.3826189179572 develop=1.490e-14 branch=7.167e-14 branch_scaled=0.796
+WORSE mixed a=94.40608762859226 b=1.0592537251772887 develop=1.855e-16 branch=1.071e-15 branch_scaled=0.824
+WORSE large a=94.40608762859226 b=42.169650342858226 develop=1.654e-15 branch=1.589e-14 branch_scaled=0.83
+WORSE large a=94.40608762859226 b=56.234132519034908 develop=3.316e-15 branch=1.750e-14 branch_scaled=0.777
+WORSE large a=94.40608762859226 b=251.18864315095823 develop=3.324e-15 branch=2.512e-14 branch_scaled=0.552
+WORSE large a=100 b=70.794578438413737 develop=1.218e-16 branch=1.418e-14 branch_scaled=0.542
+WORSE mixed a=112.2018454301963 b=2.9853826189179604 develop=1.890e-16 branch=1.554e-15 branch_scaled=0.485
+WORSE large a=112.2018454301963 b=39.810717055349691 develop=3.000e-15 branch=1.719e-14 branch_scaled=0.868
+WORSE large a=112.2018454301963 b=749.89420933245583 develop=1.052e-14 branch=1.032e-13 branch_scaled=1.38
+WORSE large a=118.85022274370189 b=1995.2623149688789 develop=4.278e-16 branch=1.132e-13 branch_scaled=1.11
+WORSE large a=133.35214321633239 b=316.22776601683796 develop=1.857e-16 branch=5.714e-14 branch_scaled=0.933
+WORSE large a=141.25375446227554 b=334.96543915782792 develop=1.372e-15 branch=5.829e-14 branch_scaled=0.899
+WORSE large a=141.25375446227554 b=841.39514164519471 develop=5.747e-15 branch=5.098e-14 branch_scaled=0.564
+WORSE large a=141.25375446227554 b=5308.844442309879 develop=2.656e-14 branch=1.402e-13 branch_scaled=0.959
+WORSE mixed a=149.62356560944329 b=3.5481338923357533 develop=3.287e-16 branch=3.980e-15 branch_scaled=1.02
+WORSE large a=158.48931924611142 b=31.622776601683793 develop=2.692e-15 branch=1.153e-14 branch_scaled=0.595
+WORSE large a=167.88040181225588 b=53.088444423098792 develop=2.538e-15 branch=1.173e-14 branch_scaled=0.427
+WORSE large a=188.3649089489802 b=199.52623149688787 develop=1.776e-15 branch=5.872e-14 branch_scaled=0.976
+WORSE large a=199.52623149688787 b=188.3649089489802 develop=1.776e-15 branch=5.872e-14 branch_scaled=0.976
+WORSE large a=211.34890398366477 b=13.33521432163324 develop=1.112e-16 branch=7.018e-15 branch_scaled=0.609
+WORSE large a=237.13737056616552 b=66.834391756861493 develop=2.366e-15 branch=2.601e-14 branch_scaled=0.722
+WORSE large a=237.13737056616552 b=70.794578438413737 develop=4.510e-15 branch=3.290e-14 branch_scaled=0.881
+WORSE large a=237.13737056616552 b=298.53826189179574 develop=1.899e-15 branch=5.888e-14 branch_scaled=0.716
+WORSE large a=251.18864315095823 b=22.387211385683379 develop=2.734e-15 branch=1.702e-14 branch_scaled=0.97
+WORSE large a=251.18864315095823 b=94.40608762859226 develop=3.324e-15 branch=2.512e-14 branch_scaled=0.552
+WORSE large a=281.83829312644548 b=17.782794100389228 develop=2.437e-16 branch=1.447e-14 branch_scaled=0.945
+WORSE large a=298.53826189179574 b=237.13737056616552 develop=1.899e-15 branch=5.888e-14 branch_scaled=0.716
+WORSE large a=316.22776601683796 b=133.35214321633239 develop=1.857e-16 branch=5.714e-14 branch_scaled=0.933
+WORSE large a=334.96543915782792 b=141.25375446227554 develop=1.372e-15 branch=5.829e-14 branch_scaled=0.899
+WORSE mixed a=354.81338923357532 b=8.4139514164519476 develop=1.383e-15 branch=8.333e-15 branch_scaled=0.913
+WORSE large a=473.15125896148027 b=37.583740428844429 develop=9.719e-16 branch=2.738e-14 branch_scaled=0.906
+WORSE large a=630.957344480193 b=37.583740428844429 develop=1.890e-17 branch=2.848e-14 branch_scaled=0.875
+WORSE large a=630.957344480193 b=47.315125896148025 develop=1.772e-15 branch=2.658e-14 branch_scaled=0.69
+WORSE large a=707.94578438413737 b=84.139514164519468 develop=1.305e-14 branch=6.982e-14 branch_scaled=1.16
+WORSE large a=749.89420933245583 b=112.2018454301963 develop=1.052e-14 branch=1.032e-13 branch_scaled=1.38
+WORSE large a=841.39514164519471 b=141.25375446227554 develop=5.747e-15 branch=5.098e-14 branch_scaled=0.564
+WORSE large a=1995.2623149688789 b=118.85022274370189 develop=4.278e-16 branch=1.132e-13 branch_scaled=1.11
+WORSE large a=2985.3826189179572 b=89.12509381337459 develop=1.490e-14 branch=7.167e-14 branch_scaled=0.796
+WORSE large a=3548.133892335753 b=70.794578438413737 develop=6.771e-15 branch=6.367e-14 branch_scaled=0.817
+WORSE large a=5308.844442309879 b=141.25375446227554 develop=2.656e-14 branch=1.402e-13 branch_scaled=0.959
+# edge inputs: develop -> branch, where they differ
+EDGE a=5e-324 b=1.7e+308 develop=-nan branch=inf
+EDGE a=1e-300 b=1000.0 develop=0x1.7e43c88007df2p+996 branch=0x1.7e43c880074fcp+996
+EDGE a=1e-300 b=1000000000.0 develop=0x1.7e43c9e674dc2p+996 branch=0x1.7e43c880074fcp+996
+EDGE a=1e-300 b=1.7e+308 develop=-nan branch=0x1.7e43c880074fcp+996
+EDGE a=0.001 b=10.0 develop=0x1.f2968082979b7p+9 branch=0x1.f2968082979ap+9
+EDGE a=0.001 b=1000.0 develop=0x1.f045ab14ccb62p+9 branch=0x1.f045ab14ce2d4p+9
+EDGE a=0.001 b=1000000000.0 develop=0x1.e976769a00e1fp+9 branch=0x1.e9767948fe7f4p+9
+EDGE a=0.001 b=1.7e+308 develop=-nan branch=0x1.eb7ec16667853p+8
+EDGE a=0.5 b=10.0 develop=0x1.2295709965ac9p-1 branch=0x1.2295709965ab5p-1
+EDGE a=0.5 b=1000.0 develop=0x1.cb37e124502c1p-5 branch=0x1.cb37e12451b0ap-5
+EDGE a=0.5 b=1000000000.0 develop=0x1.d62e351d867f6p-15 branch=0x1.d62e45157b31cp-15
+EDGE a=0.5 b=1.7e+308 develop=-nan branch=0x1.d29a8f16363b6p-512
+EDGE a=1.0 b=10.0 develop=0x1.9999999999992p-4 branch=0x1.9999999999995p-4
+EDGE a=1.0 b=1000.0 develop=0x1.0624dd2f1a874p-10 branch=0x1.0624dd2f1a9fdp-10
+EDGE a=1.0 b=1000000000.0 develop=0x1.12e0b0bc4268bp-30 branch=0x1.12e0be826d698p-30
+EDGE a=1.0 b=1.7e+308 develop=-nan branch=0x0.43ad882e210a1p-1022
+EDGE a=2.0 b=10.0 develop=0x1.29e4129e412a1p-7 branch=0x1.29e4129e4129cp-7
+EDGE a=2.0 b=1000.0 develop=0x1.0c2ad36ed6eeap-20 branch=0x1.0c2ad36ed7f9cp-20
+EDGE a=2.0 b=1000000000.0 develop=0x1.2725bf88c19fbp-60 branch=0x1.2725dd1830937p-60
+EDGE a=2.0 b=1.7e+308 develop=-nan branch=0x0p+0
+EDGE a=9.99 b=10.0 develop=0x1.24ae4212036b1p-20 branch=0x1.24ae4212036bap-20
+EDGE a=9.99 b=1000.0 develop=0x1.c208a338c58fp-82 branch=0x1.c208a338c505ep-82
+EDGE a=9.99 b=1000000000.0 develop=0x1.b22a68e2614efp-281 branch=0x1.b22a3d44e4c22p-281
+EDGE a=9.99 b=1.7e+308 develop=-nan branch=0x0p+0
+EDGE a=10.0 b=0.001 develop=0x1.f2968082979b7p+9 branch=0x1.f2968082979ap+9
+EDGE a=10.0 b=0.5 develop=0x1.2295709965ac9p-1 branch=0x1.2295709965ab5p-1
+EDGE a=10.0 b=1.0 develop=0x1.9999999999992p-4 branch=0x1.9999999999995p-4
+EDGE a=10.0 b=2.0 develop=0x1.29e4129e412a1p-7 branch=0x1.29e4129e4129cp-7
+EDGE a=10.0 b=9.99 develop=0x1.24ae4212036b1p-20 branch=0x1.24ae4212036bap-20
+EDGE a=10.0 b=10.0 develop=0x1.2295709965acp-20 branch=0x1.2295709965aa5p-20
+EDGE a=10.0 b=1000.0 develop=0x1.ad8482de80be8p-82 branch=0x1.ad8482de807b7p-82
+EDGE a=10.0 b=1000000000.0 develop=0x1.68efdb8f6f289p-281 branch=0x1.68eff29e56611p-281
+EDGE a=10.0 b=1.7e+308 develop=-nan branch=0x0p+0
+EDGE a=1000.0 b=1e-300 develop=0x1.7e43c88007df2p+996 branch=0x1.7e43c880074fcp+996
+EDGE a=1000.0 b=0.001 develop=0x1.f045ab14ccb62p+9 branch=0x1.f045ab14ce2d4p+9
+EDGE a=1000.0 b=0.5 develop=0x1.cb37e124502c1p-5 branch=0x1.cb37e12451b0ap-5
+EDGE a=1000.0 b=1.0 develop=0x1.0624dd2f1a874p-10 branch=0x1.0624dd2f1a9fdp-10
+EDGE a=1000.0 b=2.0 develop=0x1.0c2ad36ed6eeap-20 branch=0x1.0c2ad36ed7f9cp-20
+EDGE a=1000.0 b=9.99 develop=0x1.c208a338c58fp-82 branch=0x1.c208a338c505ep-82
+EDGE a=1000.0 b=10.0 develop=0x1.ad8482de80be8p-82 branch=0x1.ad8482de807b7p-82
+EDGE a=1000.0 b=1.7e+308 develop=-nan branch=0x0p+0
+EDGE a=1000000000.0 b=1e-300 develop=0x1.7e43c9e674dc2p+996 branch=0x1.7e43c880074fcp+996
+EDGE a=1000000000.0 b=0.001 develop=0x1.e976769a00e1fp+9 branch=0x1.e9767948fe7f4p+9
+EDGE a=1000000000.0 b=0.5 develop=0x1.d62e351d867f6p-15 branch=0x1.d62e45157b31cp-15
+EDGE a=1000000000.0 b=1.0 develop=0x1.12e0b0bc4268bp-30 branch=0x1.12e0be826d698p-30
+EDGE a=1000000000.0 b=2.0 develop=0x1.2725bf88c19fbp-60 branch=0x1.2725dd1830937p-60
+EDGE a=1000000000.0 b=9.99 develop=0x1.b22a68e2614efp-281 branch=0x1.b22a3d44e4c22p-281
+EDGE a=1000000000.0 b=10.0 develop=0x1.68efdb8f6f289p-281 branch=0x1.68eff29e56611p-281
+EDGE a=1000000000.0 b=1.7e+308 develop=-nan branch=0x0p+0
+EDGE a=1.7e+308 b=5e-324 develop=-nan branch=inf
+EDGE a=1.7e+308 b=1e-300 develop=-nan branch=0x1.7e43c880074fcp+996
+EDGE a=1.7e+308 b=0.001 develop=-nan branch=0x1.eb7ec16667853p+8
+EDGE a=1.7e+308 b=0.5 develop=-nan branch=0x1.d29a8f16363b6p-512
+EDGE a=1.7e+308 b=1.0 develop=-nan branch=0x0.43ad882e210a1p-1022
+EDGE a=1.7e+308 b=2.0 develop=-nan branch=0x0p+0
+EDGE a=1.7e+308 b=9.99 develop=-nan branch=0x0p+0
+EDGE a=1.7e+308 b=10.0 develop=-nan branch=0x0p+0
+EDGE a=1.7e+308 b=1000.0 develop=-nan branch=0x0p+0
+EDGE a=1.7e+308 b=1000000000.0 develop=-nan branch=0x0p+0
+EDGE a=1.7e+308 b=1.7e+308 develop=-nan branch=0x0p+0
+# edge inputs: 60 of 289 differ

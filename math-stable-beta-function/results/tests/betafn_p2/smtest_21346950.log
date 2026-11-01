@@ -1,0 +1,39 @@
+== host csl10.int.triton.aalto.fi  date 2026-11-01T22:59:35+02:00  cpus 16  J=16
+== g++ g++ (conda-forge gcc 14.3.0-18) 14.3.0
+== mode targeted  tree <scratch>/smtest_betafn
+== deploy repo=math
+== deploy clone=<workstation>/proj/stan_math_beta_fn
+== deploy branch=stable-beta-function
+== deploy head=a64c3679faab9dd4f1608c42e91072dd9fe02190
+== deploy base_ref=origin/develop
+== deploy base=dc669419692e2cb71d55000a871066b5739c3e48
+== deploy uncommitted_edits=no
+== deploy deployed=2026-11-01T22:34:55+02:00
+== repository math
+== tree matches the manifest (7 files)
+
+######## stage branch ########
+RESULT stage=branch suite=test/unit/math/prim/fun/beta_test status=PASS build_s=21 cases=5 failed=0
+SUMMARY stage=branch suites=1 failed_suites=0
+
+######## test/prob/beta (generated), -j6, filter: cdf ########
+RESULT check=prob_beta filter=cdf status=PASS secs=548 ok_cases=17820 failed_cases=0 compiler_kills=0
+
+######## test/prob/beta_proportion (generated), -j6, filter: cdf ########
+RESULT check=prob_beta_proportion filter=cdf status=PASS secs=379 ok_cases=11880 failed_cases=0 compiler_kills=0
+
+######## test/prob/binomial (generated), -j6, filter: cdf ########
+RESULT check=prob_binomial filter=cdf status=PASS secs=146 ok_cases=3240 failed_cases=0 compiler_kills=0
+
+######## test/prob/neg_binomial (generated), -j6, filter: cdf ########
+RESULT check=prob_neg_binomial filter=cdf status=PASS secs=285 ok_cases=8100 failed_cases=0 compiler_kills=0
+
+######## test/prob/neg_binomial_2 (generated), -j6, filter: cdf ########
+RESULT check=prob_neg_binomial_2 filter=cdf status=PASS secs=290 ok_cases=8100 failed_cases=0 compiler_kills=0
+
+######## test/prob/student_t (generated), -j6, filter: cdf ########
+RESULT check=prob_student_t filter=cdf status=PASS secs=3296 ok_cases=111780 failed_cases=0 compiler_kills=0
+
+== final tree check:
+== tree still matches the manifest
+== done 2026-11-02T00:22:20+02:00

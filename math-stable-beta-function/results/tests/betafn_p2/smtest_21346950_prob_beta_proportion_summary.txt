@@ -1,0 +1,20 @@
+# summary of smtest_21346950_prob_beta_proportion.log (2688975 bytes): programs built, gtest totals, failures
+## programs built:
+test/prob/beta_proportion/beta_proportion_ccdf_log_00000_generated_ffv_test.o
+test/prob/beta_proportion/beta_proportion_ccdf_log_00000_generated_v_test.o
+test/prob/beta_proportion/beta_proportion_ccdf_log_00000_generated_vv_test.o
+test/prob/beta_proportion/beta_proportion_ccdf_log_00001_generated_ffv_test.o
+test/prob/beta_proportion/beta_proportion_ccdf_log_00001_generated_v_test.o
+test/prob/beta_proportion/beta_proportion_ccdf_log_00001_generated_vv_test.o
+test/prob/beta_proportion/beta_proportion_ccdf_log_00002_generated_v_test.o
+test/prob/beta_proportion/beta_proportion_cdf_log_00000_generated_ffv_test.o
+test/prob/beta_proportion/beta_proportion_cdf_log_00000_generated_v_test.o
+test/prob/beta_proportion/beta_proportion_cdf_log_00000_generated_vv_test.o
+test/prob/beta_proportion/beta_proportion_cdf_log_00001_generated_ffv_test.o
+test/prob/beta_proportion/beta_proportion_cdf_log_00001_generated_v_test.o
+test/prob/beta_proportion/beta_proportion_cdf_log_00001_generated_vv_test.o
+test/prob/beta_proportion/beta_proportion_cdf_log_00002_generated_v_test.o
+## gtest totals:
+programs run: 14  PASSED lines: 14  passed tests: 11880
+## failures:
+## lpdf/lpmf lines: 0

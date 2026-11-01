@@ -1,0 +1,15 @@
+# summary of smtest_21346950_prob_binomial.log (661187 bytes): programs built, gtest totals, failures
+## programs built:
+test/prob/binomial/binomial_ccdf_log_00000_generated_ffv_test.o
+test/prob/binomial/binomial_ccdf_log_00000_generated_v_test.o
+test/prob/binomial/binomial_ccdf_log_00000_generated_vv_test.o
+test/prob/binomial/binomial_cdf_00000_generated_ffv_test.o
+test/prob/binomial/binomial_cdf_00000_generated_v_test.o
+test/prob/binomial/binomial_cdf_00000_generated_vv_test.o
+test/prob/binomial/binomial_cdf_log_00000_generated_ffv_test.o
+test/prob/binomial/binomial_cdf_log_00000_generated_v_test.o
+test/prob/binomial/binomial_cdf_log_00000_generated_vv_test.o
+## gtest totals:
+programs run: 9  PASSED lines: 9  passed tests: 3240
+## failures:
+## lpdf/lpmf lines: 0

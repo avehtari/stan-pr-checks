@@ -1,0 +1,30 @@
+== host csl47.int.triton.aalto.fi  date 2026-11-02T00:52:09+02:00  cpus 16  J=16
+== g++ g++ (conda-forge gcc 14.3.0-18) 14.3.0
+== mode checklist  tree <scratch>/smtest_betafn
+== deploy repo=math
+== deploy clone=<workstation>/proj/stan_math_beta_fn
+== deploy branch=stable-beta-function
+== deploy head=b40012df742fd9b7cdc32c7b9c080a7004012d03
+== deploy base_ref=origin/develop
+== deploy base=dc669419692e2cb71d55000a871066b5739c3e48
+== deploy uncommitted_edits=no
+== deploy deployed=2026-11-02T00:42:50+02:00
+== repository math
+== tree matches the manifest (7 files)
+
+######## check cpplint ########
+RESULT check=cpplint status=PASS secs=145
+
+######## check deps ########
+RESULT check=deps status=PASS secs=16
+
+######## check headers ########
+RESULT check=header_stan_math_opencl_kernels_device_functions_beta.hpp status=PASS secs=1
+RESULT check=header_stan_math_prim_fun_beta.hpp status=PASS secs=3
+
+######## check doxygen ########
+RESULT check=doxygen status=PASS secs=28
+
+== final tree check:
+== tree still matches the manifest
+== done 2026-11-02T00:55:22+02:00
