@@ -1,8 +1,9 @@
 # beta(a, b) without cancellation at large arguments
 
-This directory holds the scripts behind the numbers of the stan-dev/math
-PR "Compute beta(a, b) without cancellation at large arguments" (branch
-`stable-beta-function`).  Sections 1 to 8 quote the claims of the PR text
+This directory holds the scripts behind the numbers of stan-dev/math#3497,
+"Compute beta(a, b) without cancellation at large arguments" (branch
+`stable-beta-function`).  The PR text links this directory under its
+first name, `math-stable-beta-function/`, at commit `23abe61`.  Sections 1 to 8 quote the claims of the PR text
 and give the commands, the expected output and the commits.
 
 ## Commits and trees

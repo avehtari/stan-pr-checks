@@ -29,7 +29,7 @@ from another one; copy a shared script instead.
 | `pr3438/` | stan-dev/math#3438 | Laplace latent mean, solver-3 log determinant |
 | `pr3442/` | stan-dev/math#3442 | Wiener functions: underflow, gradients, `hcubature` |
 | `pr3496/` | stan-dev/math#3496 (part of #56) | discrete cdfs with an element of probability 0 or 1 |
-| `math-stable-beta-function/` | stan-dev/math, branch `stable-beta-function` (no PR number yet) | `beta(a, b)` as `exp(lbeta(a, b))` at large arguments |
+| `pr3497/` | stan-dev/math#3497 | `beta(a, b)` as `exp(lbeta(a, b))` at large arguments |
 | `stan-pr3457/` | stan-dev/stan#3457 (part of stan#3088), stan-dev/docs#1004 | partial inits with transforms that use other parameters |
 
 ## Conventions for a PR directory
