@@ -1,0 +1,20 @@
+== host pht111.int.triton.aalto.fi  date 2026-11-02T20:43:35+02:00  cpus 16  J=16
+== g++ g++ (conda-forge gcc 14.3.0-18) 14.3.0
+== mode checklist  tree <scratch>/smtest_normal_lpdf
+== deploy repo=math
+== deploy clone=<workstation>/proj/stan_math_normal_lpdf
+== deploy branch=faster-normal-lpdf
+== deploy head=421386dec558b31493c85a103182311f16d0b977
+== deploy base_ref=origin/develop
+== deploy base=dc669419692e2cb71d55000a871066b5739c3e48
+== deploy uncommitted_edits=no
+== deploy deployed=2026-11-02T20:40:33+02:00
+== repository math
+== tree matches the manifest (3 files)
+
+######## check doxygen ########
+RESULT check=doxygen status=PASS secs=55
+
+== final tree check:
+== tree still matches the manifest
+== done 2026-11-02T20:44:30+02:00

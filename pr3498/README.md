@@ -2,8 +2,9 @@
 
 This directory holds the scripts behind the numbers in the PR "Make
 vectorized normal_lpdf faster without heap arrays" (stan-dev/math#3498,
-branch `faster-normal-lpdf`).  Sections 1 to 6 quote the claims of the
-PR text and give the commands and the expected output.
+branch `faster-normal-lpdf`).  Sections 1 to 7 quote the claims of the
+PR text and give the commands and the expected output.  Section 8
+answers a review question about `to_ref`.
 
 Last run: 2026-11-01 and 2026-11-02.  All jobs ran on Triton (Aalto),
 with g++ 14.3.0 (conda-forge) and `-O3`; the timings on Xeon Gold 6248
@@ -16,17 +17,18 @@ machine paths.
 | name in this file | commit | what |
 |---|---|---|
 | develop | `dc66941969` | merge base of the PR (develop of 2026-10-29) |
-| PR | `760f6a1f65` | PR head (6 commits) |
+| PR | `421386dec5` | PR head (8 commits) |
 | 3a66 | `3a66fcf6aa` | first commit: the change of `normal_lpdf.hpp` |
 | 620a | `620ab901f5` | fourth commit |
+| 760f | `760f6a1f65` | sixth commit: PR head before the review |
 | dde6 | `dde60be194` | seventh commit, after the review: `sigma` is checked first |
-| 4213 | `421386dec5` | eighth commit: tests of an invalid varmat and `std::vector<var>` `sigma`; a comment |
 
 From `3a66fcf6aa` to `760f6a1f65`, the commits change `stan/` only in
 comment lines, so the timings and the check (made with `3a66fcf6aa` and
 `620ab901f5`) apply to `760f6a1f65`.  `dde60be194` removes the code that
-kept the develop error order when `sigma` is invalid; section 7 gives
-its checks and those of `421386dec5`.
+kept the develop error order when `sigma` is invalid; `421386dec5`
+changes a comment and adds tests.  The timings were not made again
+after `dde60be194`.  Section 7 gives the check of `dde60be194`.
 
 ## Layout
 
@@ -132,8 +134,10 @@ Median ns per element over the 5 rounds:
 
 ## 3. Behavior against develop
 
-> All 1692 comparisons give the same exception text, or the same value
+> 1512 of the 1692 comparisons give the same exception text, or values
 > and gradients with an error below 1e-12 times max(1, |reference|). The
+> other 180 comparisons have an invalid `sigma` together with an invalid
+> `y` or `mu`; there the branch gives the `sigma` exception text. The
 > largest error is 2.4e-15 for the values and 1.4e-15 for the gradients.
 > A `malloc` counter finds no allocation of 8 N bytes or more on the
 > branch in any of the 25 type cases; `develop` makes up to 7 such
@@ -150,9 +154,12 @@ lines count the `malloc` calls of at least 8 N bytes during one warm
 gradient evaluation (interposer on `__libc_malloc`; `HEAP_SELFTEST`
 must be 1).
 
-Expected (`results/jobs/nl_branch_21348124.log`): `CHECK_SUMMARY ok 1692
-fail 0`; largest `rel` 2.4e-15 (a value), largest `rel_plain` 1.4e-15;
+Expected at `620ab901f5` (`results/jobs/nl_branch_21348124.log`):
+`CHECK_SUMMARY ok 1692 fail 0`; largest `rel` 2.4e-15 (a value), largest `rel_plain` 1.4e-15;
 `HEAP ... branch 0` in all 50 lines; largest develop count 7 (case I).
+At `dde60be194` (`results/jobs/nl_branch_21361765.log`):
+`CHECK_SUMMARY ok 1512 fail 180`, the same largest errors, see
+section 7.
 
 ```sh
 awk '$1=="CHECK" && $NF=="value" {if ($8+0>r) r=$8+0; if ($10+0>p) p=$10+0}
@@ -161,12 +168,16 @@ awk '$1=="CHECK" && $NF=="value" {if ($8+0>r) r=$8+0; if ($10+0>p) p=$10+0}
 
 ## 4. Unit tests and the mutants
 
-> The new tests also pass with the `develop` header, because the change
-> keeps the behavior. To show that the tests cover the new code, I
-> removed each of the two checks after the sum in turn. Without the
+> The new tests also pass with the `develop` header, because each call
+> in them has at most one invalid argument. To show that the tests cover
+> the new code, I removed each of the two checks after the sum of
+> squares (one per code path) in turn. At `760f6a1f65`, without the
 > first, 8 assertions fail; without the second, 5 assertions fail.
 
-All at the PR head `760f6a1f65`, CPU builds on batch nodes.
+The jobs of this section ran at `760f6a1f65`, CPU builds on batch
+nodes.  At the PR head, `results/tests/nlu_t2/` (job 21362182) and
+`results/tests/nlf_t3/` (job 21362690) give the same suites; see
+section 5.  The mutants were not run again.
 
 - `results/tests/nlf_a/` (job 21348417): `prim/prob/normal_test` (8
   tests), `mix/prob/normal_test` (5), `rev/prob/normal_log_test` (1),
@@ -199,9 +210,23 @@ grep -c "Failure" results/tests/nlf_m2/smtest_21348419_branch_{prim,mix}_prob_no
 > test-headers` and clang-format 10 pass. `make doxygen` with doxygen
 > 1.9.7 gives no warnings.
 
-> The generated tests, the OpenCL test, `make test-math-dependencies`
-> and `make test-headers` ran at earlier commits of this PR; after them,
-> the PR changed only comments and tests.
+> I ran the unit tests, the generated tests, the OpenCL test and the
+> checklist items at `421386dec5`, with the change on `develop` at
+> `dc66941969`, with g++ 14.3.0.
+
+At the PR head.  Jobs 21362182 and 21362474 ran on the working tree on
+top of `dde60be194`; its three changed files had the md5 of
+`421386dec5`.
+
+| check | commit | job | log |
+|---|---|---|---|
+| prim, mix `normal_test`, branch and develop header; `test/prob/normal` `-f normal_0`, 5346 checks | `421386dec5` | 21362182 | `results/tests/nlu_t2/` |
+| `rev/prob/normal_log_test` (1), `normal_id_glm_lpdf_test` (26) | `421386dec5` | 21362690 | `results/tests/nlf_t3/` |
+| `opencl/rev/normal_lpdf_test`, 6 tests, V100 | `421386dec5` | 21362691, 21362694 | `results/tests/nl_d3/` |
+| cpplint, deps, header, test-headers | `421386dec5` | 21362474 | `results/tests/nlu_c2/` |
+| doxygen, 0 warnings | `421386dec5` | 21362696 | `results/tests/nlf_c3/` |
+
+Earlier runs:
 
 | check | commit | job | log |
 |---|---|---|---|
@@ -231,6 +256,11 @@ Expected: `scalar_sigma value -6.3968830540223898`, `vector_sigma value
 
 ## 7. Commit `dde60be194`: `normal_lpdf` checks `sigma` first
 
+> Values and gradients agree with `develop` up to rounding. Exception
+> types are the same as on `develop`. Exception texts are also the same,
+> except when `sigma` is invalid together with `y` or `mu`: then the
+> text is about `sigma`.
+
 `check_positive(sigma)` now runs before the arithmetic, also when `y` or
 `mu` is invalid.  The checks of `y` and `mu` stay where they were: after
 the sum of squares, and before the size-zero and all-data `propto`
@@ -241,20 +271,13 @@ argument gives an exception text different from develop.
   the uncommitted working tree that became `dde60be194`): 1692
   comparisons, 1512 the same as develop.  The other 180 are the input
   cases `y_nan_sigma_neg` and `mu_inf_sigma_neg` (90 each): develop
-  gives the `y` or `mu` message, the branch the `sigma` message.
+  gives the `y` or `mu` message, the branch the `sigma` message.  Both
+  messages come from `check_not_nan`, `check_finite` or
+  `check_positive`, which all throw `std::domain_error`.
   `HEAP ... branch 0` in all 50 lines.
-- Job 21361795 (log `~/smtest_jobs/nlu_t1/` on Triton, not copied):
-  `prim/prob/normal_test` (8 tests) and `mix/prob/normal_test` (5) pass
-  with the branch header and with the develop header.  Job 21361959
-  (`nlu_c1`): cpplint passes.
-- At the working tree that became `421386dec5` (logs `~/smtest_jobs/nlu_t2/`
-  and `nlu_c2/` on Triton, not copied): job 21362182, the two suites
-  pass with the branch and the develop header, and the generated
-  `test/prob/normal` lpdf tests (`-f normal_0`) pass, 5346 checks; job
-  21362474, cpplint, `make test-math-dependencies`, the header check and
-  `make test-headers` pass.
+- The unit tests and the checklist at the PR head `421386dec5`: section 5.
 - The mutant counts of section 4 (8 and 5) are from `760f6a1f65`; they
-  were not run again at `dde60be194`.
+  were not run again.
 
 ```sh
 grep "^CHECK .* FAIL" results/jobs/nl_branch_21361765.log | awk '{print $3}' | sort | uniq -c
@@ -263,10 +286,10 @@ grep "^CHECK .* FAIL" results/jobs/nl_branch_21361765.log | awk '{print $3}' | s
 ## 8. `to_ref` of a value view (review question)
 
 The body of `to_ref(T&& a)` is `return std::forward<T>(a);`, but its
-return type is `ref_type_t<T&&>`.  `ref_type_t` is `plain_type_t<T>` when `Eigen::Ref`
-cannot match the expression (`stan/math/prim/meta/ref_type.hpp`).  The
+return type is `ref_type_t<T&&>`.  `ref_type_t` is `plain_type_t<T>`
+when `Eigen::Ref` cannot refer to the expression (`stan/math/prim/meta/ref_type.hpp`).  The
 value view of a `Matrix<var>` reads the values through the `vari`
-pointers, so `Eigen::Ref` cannot match it.  The return statement then
+pointers, so `Eigen::Ref` cannot refer to it.  The return statement then
 evaluates the view into a new array.  Develop's `normal_lpdf` calls
 `to_ref(as_value_column_array_or_scalar(...))` for each argument (for
 `y`: `y_ref`).

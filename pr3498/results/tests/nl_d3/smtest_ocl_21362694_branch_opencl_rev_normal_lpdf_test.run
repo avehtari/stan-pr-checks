@@ -1,0 +1,21 @@
+Running main() from lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 6 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 6 tests from ProbDistributionsNormal
+[ RUN      ] ProbDistributionsNormal.error_checking
+[       OK ] ProbDistributionsNormal.error_checking (463 ms)
+[ RUN      ] ProbDistributionsNormal.opencl_matches_cpu_small
+[       OK ] ProbDistributionsNormal.opencl_matches_cpu_small (1753 ms)
+[ RUN      ] ProbDistributionsNormal.opencl_broadcast_y
+[       OK ] ProbDistributionsNormal.opencl_broadcast_y (2062 ms)
+[ RUN      ] ProbDistributionsNormal.opencl_broadcast_mu
+[       OK ] ProbDistributionsNormal.opencl_broadcast_mu (2097 ms)
+[ RUN      ] ProbDistributionsNormal.opencl_broadcast_sigma
+[       OK ] ProbDistributionsNormal.opencl_broadcast_sigma (1782 ms)
+[ RUN      ] ProbDistributionsNormal.opencl_matches_cpu_big
+[       OK ] ProbDistributionsNormal.opencl_matches_cpu_big (138 ms)
+[----------] 6 tests from ProbDistributionsNormal (8295 ms total)
+
+[----------] Global test environment tear-down
+[==========] 6 tests from 1 test suite ran. (8296 ms total)
+[  PASSED  ] 6 tests.

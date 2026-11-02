@@ -1,0 +1,25 @@
+Running main() from lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 8 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 8 tests from ProbDistributionsNormal
+[ RUN      ] ProbDistributionsNormal.errorCheck
+[       OK ] ProbDistributionsNormal.errorCheck (18 ms)
+[ RUN      ] ProbDistributionsNormal.distributionTest
+[       OK ] ProbDistributionsNormal.distributionTest (246 ms)
+[ RUN      ] ProbDistributionsNormal.error_check
+[       OK ] ProbDistributionsNormal.error_check (0 ms)
+[ RUN      ] ProbDistributionsNormal.chiSquareGoodnessFitTest
+[       OK ] ProbDistributionsNormal.chiSquareGoodnessFitTest (1 ms)
+[ RUN      ] ProbDistributionsNormal.lpdfAllDataChecks
+[       OK ] ProbDistributionsNormal.lpdfAllDataChecks (0 ms)
+[ RUN      ] ProbDistributionsNormal.lpdfVectorArgumentMessages
+[       OK ] ProbDistributionsNormal.lpdfVectorArgumentMessages (0 ms)
+[ RUN      ] ProbDistributionsNormal.lpdfInfiniteY
+[       OK ] ProbDistributionsNormal.lpdfInfiniteY (0 ms)
+[ RUN      ] ProbDistributionsNormal.lpdfSizeZeroChecksScalars
+[       OK ] ProbDistributionsNormal.lpdfSizeZeroChecksScalars (0 ms)
+[----------] 8 tests from ProbDistributionsNormal (265 ms total)
+
+[----------] Global test environment tear-down
+[==========] 8 tests from 1 test suite ran. (266 ms total)
+[  PASSED  ] 8 tests.
