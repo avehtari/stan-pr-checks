@@ -1,0 +1,40 @@
+== host csl26.int.triton.aalto.fi, g++ (conda-forge gcc 14.3.0-18) 14.3.0
+== run directory <home>/stan_probe/rvc_p1/run_21362046
+== tree <scratch>/stantest_3088
+   repo=stan
+   clone=<workstation>/proj/stan_3088
+   branch=fix-partial-init-dependent-transforms
+   head=78b49583403073cd6b59982ecfe4797efc80ff65
+   base_ref=origin/develop
+   base=a8ec3d18f955e6bddc5b589f55cf2bb414d6f558
+   uncommitted_edits=yes
+   math_commit=dc669419692e2cb71d55000a871066b5739c3e48
+   deployed=2026-11-02T19:40:13+02:00
+== Stan Math for both builds: dc669419692e2cb71d55000a871066b5739c3e48 (the branch submodule)
+== base headers: 2 from .develop, 0 new-in-branch stubs
+   stan/services/util/initialize.hpp
+   test/unit/services/util/initialize_test.cpp
+== stanc rvc_tuples.stan -> rvc_tuples.hpp (stanc3 v2.39.0-15-geec8928 (Unix))
+RESULT stage=base step=build status=PASS secs=20
+RESULT stage=base step=run status=PASS secs=0 lines=8
+RESULT stage=branch step=build status=PASS secs=19
+RESULT stage=branch step=run status=PASS secs=0 lines=8
+== out_base.txt (first 200 lines; full file in <home>/stan_probe/rvc_p1/run_21362046)
+write_array order: a=1.120347 at.1:1=11.845846 at.1:2=-0.668535 at.2:1=13.807973 at.2:2=-4.400286
+random_var_context vals_r("at.1"): 11.845846 -0.668535
+random_var_context vals_r("at.2"): 13.807973 -4.400286
+RESULT init partial=0 radius=2 seed=1 result=OK rejections=0
+RESULT init partial=1 radius=0 seed=1 result=FAILED rejections=1
+RESULT init partial=1 radius=2 seed=1 result=FAILED rejections=100
+RESULT init partial=1 radius=2 seed=2 result=FAILED rejections=100
+RESULT init partial=1 radius=2 seed=3 result=FAILED rejections=100
+== out_branch.txt (first 200 lines; full file in <home>/stan_probe/rvc_p1/run_21362046)
+write_array order: a=1.120347 at.1:1=11.845846 at.1:2=-0.668535 at.2:1=13.807973 at.2:2=-4.400286
+random_var_context vals_r("at.1"): 11.845846 -0.668535
+random_var_context vals_r("at.2"): 13.807973 -4.400286
+RESULT init partial=0 radius=2 seed=1 result=OK rejections=0
+RESULT init partial=1 radius=0 seed=1 result=FAILED rejections=1
+RESULT init partial=1 radius=2 seed=1 result=FAILED rejections=100
+RESULT init partial=1 radius=2 seed=2 result=FAILED rejections=100
+RESULT init partial=1 radius=2 seed=3 result=FAILED rejections=100
+SUMMARY probe ok

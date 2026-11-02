@@ -39,8 +39,19 @@ static stan::io::array_var_context make_context(const std::vector<Var>& vars) {
   return stan::io::array_var_context(names, values, dims);
 }
 
-static std::string base_name(const std::string& name) {
-  return name.substr(0, name.find_first_of(".:"));
+// var_context name of a flat name: keep each ":k" (tuple slot) as ".k" and
+// drop each ".i" (index), so "at.1:2" -> "at.2" and "w:2:1" -> "w.2.1".
+static std::string slot_name(const std::string& flat) {
+  size_t pos = flat.find_first_of(".:");
+  std::string slot = flat.substr(0, pos);
+  while (pos != std::string::npos) {
+    size_t next = flat.find_first_of(".:", pos + 1);
+    if (flat[pos] == ':') {
+      slot += "." + flat.substr(pos + 1, next - pos - 1);
+    }
+    pos = next;
+  }
+  return slot;
 }
 
 // One initialization; prints one line per seed.
@@ -48,9 +59,9 @@ static void run_case(stan_model& model, const std::string& label,
                      const std::vector<Var>& supplied, double radius,
                      int n_seeds, bool print_params) {
   stan::io::array_var_context init_context = make_context(supplied);
-  std::set<std::string> supplied_bases;
+  std::set<std::string> supplied_slots;
   for (const auto& v : supplied) {
-    supplied_bases.insert(base_name(v.name));
+    supplied_slots.insert(v.name);
   }
   std::vector<std::string> u_names, c_names;
   model.unconstrained_param_names(u_names, false, false);
@@ -85,7 +96,7 @@ static void run_case(stan_model& model, const std::string& label,
     // missing entries against the first random draw
     double max_abs_missing = 0, max_rel_missing = 0;
     for (size_t n = 0; n < params.size(); ++n) {
-      if (supplied_bases.count(base_name(u_names[n])) == 0) {
+      if (supplied_slots.count(slot_name(u_names[n])) == 0) {
         double d = std::fabs(params[n] - u_random[n]);
         max_abs_missing = std::max(max_abs_missing, d);
         if (u_random[n] != 0) {
@@ -99,22 +110,31 @@ static void run_case(stan_model& model, const std::string& label,
     stan::rng_t rng_wa = stan::services::util::create_rng(0, 1);
     model.write_array(rng_wa, params, params_i, vars, false, false);
     double max_rel_supplied = 0;
+    // The flat entries of a slot come in var_context order for the
+    // variables of this probe (1-d arrays of tuples with scalar slots).
+    size_t unmatched = 0;
     for (const auto& v : supplied) {
-      for (size_t k = 0; k < v.values.size(); ++k) {
-        std::string name = v.name;
-        if (!v.dims.empty()) {
-          name += "." + std::to_string(k + 1);
-        }
-        for (size_t n = 0; n < c_names.size(); ++n) {
-          if (c_names[n] == name) {
-            double d = std::fabs(vars[n] - v.values[k]);
-            if (v.values[k] != 0) {
-              d /= std::fabs(v.values[k]);
-            }
-            max_rel_supplied = std::max(max_rel_supplied, d);
-          }
+      std::vector<size_t> idx;
+      for (size_t n = 0; n < c_names.size(); ++n) {
+        if (slot_name(c_names[n]) == v.name) {
+          idx.push_back(n);
         }
       }
+      if (idx.size() != v.values.size()) {
+        ++unmatched;
+        continue;
+      }
+      for (size_t k = 0; k < v.values.size(); ++k) {
+        double d = std::fabs(vars[idx[k]] - v.values[k]);
+        if (v.values[k] != 0) {
+          d /= std::fabs(v.values[k]);
+        }
+        max_rel_supplied = std::max(max_rel_supplied, d);
+      }
+    }
+    if (unmatched > 0) {
+      std::printf("%s seed %2d WARNING %zu supplied variables not matched\n",
+                  label.c_str(), seed, unmatched);
     }
     unsigned long long next = rng();  // the next draw: same stream?
     std::printf(
@@ -149,8 +169,12 @@ int main() {
       {"v", {0.1, -0.2}, {2}},  {"t.1", {0.3}, {}},
       {"t.2", {-0.4}, {}},      {"a", {1}, {}},
       {"b", {1.2}, {}},         {"c", {0.8}, {}},
-      {"d", {1.1}, {}},         {"lb", {0}, {}},
-      {"y", {2}, {}}};
+      {"d", {1.1}, {}},         {"e", {0.9}, {}},
+      {"lb", {0}, {}},          {"y", {2}, {}},
+      {"at.1", {0.3, -0.2}, {2}}, {"at.2", {0.5, 0.6}, {2}},
+      {"z", {0.1}, {}},         {"tv.1", {0.2}, {}},
+      {"tv.2", {0.3, -0.3}, {2}}, {"w.1", {0.1}, {}},
+      {"w.2.1", {0.2}, {}},     {"w.2.2", {0.3}, {}}};
 
   // runs that must not change (bitwise; compare_outputs.py)
   run_case(model, "none_r2", {}, 2, n_seeds, true);
@@ -165,6 +189,13 @@ int main() {
            false);
   run_case(model, "b_2_d_-3", {{"b", {2}, {}}, {"d", {-3}, {}}}, 2, n_seeds,
            false);
+  run_case(model, "a_c_e", {{"a", {1}, {}}, {"c", {4}, {}}, {"e", {-2}, {}}},
+           2, n_seeds, false);
+  run_case(model, "z_2", {{"z", {2}, {}}}, 2, n_seeds, false);
+  run_case(model, "t1_sigma", {{"sigma", {1e-20}, {}}, {"t.1", {0.7}, {}}}, 2,
+           n_seeds, false);
+  run_case(model, "w21_sigma", {{"sigma", {1e-20}, {}}, {"w.2.1", {0.4}, {}}},
+           2, n_seeds, false);
   run_case(model, "lb_10", {{"lb", {10}, {}}}, 2, 3, false);
   return 0;
 }

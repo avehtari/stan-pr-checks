@@ -1,0 +1,8 @@
+write_array order: a=1.120347 at.1:1=11.845846 at.1:2=-0.668535 at.2:1=13.807973 at.2:2=-4.400286
+random_var_context vals_r("at.1"): 11.845846 -0.668535
+random_var_context vals_r("at.2"): 13.807973 -4.400286
+RESULT init partial=0 radius=2 seed=1 result=OK rejections=0
+RESULT init partial=1 radius=0 seed=1 result=FAILED rejections=1
+RESULT init partial=1 radius=2 seed=1 result=FAILED rejections=100
+RESULT init partial=1 radius=2 seed=2 result=FAILED rejections=100
+RESULT init partial=1 radius=2 seed=3 result=FAILED rejections=100

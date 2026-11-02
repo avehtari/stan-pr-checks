@@ -1,0 +1,15 @@
+Running main() from lib/stan_math/lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 3 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 3 tests from ServicesStandaloneGQ
+[ RUN      ] ServicesStandaloneGQ.genDraws_bernoulli
+[       OK ] ServicesStandaloneGQ.genDraws_bernoulli (6 ms)
+[ RUN      ] ServicesStandaloneGQ.genDraws_empty_draws
+[       OK ] ServicesStandaloneGQ.genDraws_empty_draws (1 ms)
+[ RUN      ] ServicesStandaloneGQ.genDraws_bad
+[       OK ] ServicesStandaloneGQ.genDraws_bad (0 ms)
+[----------] 3 tests from ServicesStandaloneGQ (7 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (7 ms total)
+[  PASSED  ] 3 tests.

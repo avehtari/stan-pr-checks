@@ -1,0 +1,17 @@
+Running main() from lib/stan_math/lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 4 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 4 tests from ServicesSampleHmcStaticDenseEAdapt
+[ RUN      ] ServicesSampleHmcStaticDenseEAdapt.call_count
+[       OK ] ServicesSampleHmcStaticDenseEAdapt.call_count (5 ms)
+[ RUN      ] ServicesSampleHmcStaticDenseEAdapt.parameter_checks
+[       OK ] ServicesSampleHmcStaticDenseEAdapt.parameter_checks (5 ms)
+[ RUN      ] ServicesSampleHmcStaticDenseEAdapt.output_sizes
+[       OK ] ServicesSampleHmcStaticDenseEAdapt.output_sizes (5 ms)
+[ RUN      ] ServicesSampleHmcStaticDenseEAdapt.output_regression
+[       OK ] ServicesSampleHmcStaticDenseEAdapt.output_regression (5 ms)
+[----------] 4 tests from ServicesSampleHmcStaticDenseEAdapt (20 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 1 test suite ran. (20 ms total)
+[  PASSED  ] 4 tests.

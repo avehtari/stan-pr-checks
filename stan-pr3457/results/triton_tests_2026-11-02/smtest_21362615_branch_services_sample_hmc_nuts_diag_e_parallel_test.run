@@ -1,0 +1,15 @@
+Running main() from lib/stan_math/lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 3 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 3 tests from ServicesSampleHmcNutsDiagEAdaptPar
+[ RUN      ] ServicesSampleHmcNutsDiagEAdaptPar.call_count
+[       OK ] ServicesSampleHmcNutsDiagEAdaptPar.call_count (8 ms)
+[ RUN      ] ServicesSampleHmcNutsDiagEAdaptPar.parameter_checks
+[       OK ] ServicesSampleHmcNutsDiagEAdaptPar.parameter_checks (7 ms)
+[ RUN      ] ServicesSampleHmcNutsDiagEAdaptPar.output_regression
+[       OK ] ServicesSampleHmcNutsDiagEAdaptPar.output_regression (8 ms)
+[----------] 3 tests from ServicesSampleHmcNutsDiagEAdaptPar (23 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (23 ms total)
+[  PASSED  ] 3 tests.

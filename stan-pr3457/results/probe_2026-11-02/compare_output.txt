@@ -1,0 +1,36 @@
+== compare (compare_outputs.py out_base.txt out_branch.txt)
+case         build     ok throw abs_missing rel_missing rel_supplied max_abs_u
+none_r2      develop   20     0           0           0            0      1.99
+none_r0      develop    1     0           0           0            0         0
+full_r2      develop   20     0           0           0     2.78e-16         1
+sigma_1e-20  develop   20     0    1.05e+21    5.37e+21     7.52e-16  1.05e+21
+mu_5         develop   20     0        28.5         443            0        28
+mu_5_r0      develop    1     0           5           0            0         5
+x_3          develop   20     0         8.7        65.7     1.48e-16      16.1
+a_1_c_4      develop   20     0        11.3         144            0      11.6
+b_2_d_-3     develop   20     0        9.96        90.2     1.48e-16      10.3
+a_c_e        develop   20     0        11.3         144     2.22e-16      11.6
+z_2          develop   20     0         8.7        14.6     4.44e-16      9.84
+t1_sigma     develop   20     0    1.05e+21    5.37e+21     7.52e-16  1.05e+21
+w21_sigma    develop   20     0    1.05e+21    5.37e+21     7.52e-16  1.05e+21
+lb_10        develop    0     3         nan         nan          nan       nan
+case         build     ok throw abs_missing rel_missing rel_supplied max_abs_u
+none_r2      PR        20     0           0           0            0      1.99
+none_r0      PR         1     0           0           0            0         0
+full_r2      PR        20     0           0           0     2.78e-16         1
+sigma_1e-20  PR        20     0           0           0     7.52e-16      46.1
+mu_5         PR        20     0           0           0            0         5
+mu_5_r0      PR         1     0           0           0            0         5
+x_3          PR        20     0           0           0     1.48e-16      16.1
+a_1_c_4      PR        20     0           0           0            0      7.71
+b_2_d_-3     PR        20     0           0           0     1.48e-16        12
+a_c_e        PR        20     0           0           0     4.44e-16      13.8
+z_2          PR        20     0           0           0     4.44e-16      3.99
+t1_sigma     PR        20     0           0           0     7.52e-16      46.1
+w21_sigma    PR        20     0           0           0     7.52e-16      46.1
+lb_10        PR         0     3         nan         nan          nan       nan
+
+runs without partial inits: 41 of 41 parameter vectors bitwise equal
+next RNG draw after initialize: 222 of 222 equal
+RESULT step=compare status=PASS
+SUMMARY probe ok

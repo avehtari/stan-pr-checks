@@ -1,0 +1,15 @@
+Running main() from lib/stan_math/lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 3 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 3 tests from ServicesSampleHMCNutsDenseENoParams
+[ RUN      ] ServicesSampleHMCNutsDenseENoParams.call_count
+[       OK ] ServicesSampleHMCNutsDenseENoParams.call_count (3 ms)
+[ RUN      ] ServicesSampleHMCNutsDenseENoParams.parameter_checks
+[       OK ] ServicesSampleHMCNutsDenseENoParams.parameter_checks (2 ms)
+[ RUN      ] ServicesSampleHMCNutsDenseENoParams.output_regression
+[       OK ] ServicesSampleHMCNutsDenseENoParams.output_regression (2 ms)
+[----------] 3 tests from ServicesSampleHMCNutsDenseENoParams (7 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (7 ms total)
+[  PASSED  ] 3 tests.

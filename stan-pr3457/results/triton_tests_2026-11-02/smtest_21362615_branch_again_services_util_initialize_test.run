@@ -1,0 +1,41 @@
+Running main() from lib/stan_math/lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 16 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 16 tests from ServicesUtilInitialize
+[ RUN      ] ServicesUtilInitialize.radius_zero_print_false
+[       OK ] ServicesUtilInitialize.radius_zero_print_false (0 ms)
+[ RUN      ] ServicesUtilInitialize.radius_zero__initialize_with_Jacobian
+[       OK ] ServicesUtilInitialize.radius_zero__initialize_with_Jacobian (0 ms)
+[ RUN      ] ServicesUtilInitialize.radius_two__print_false
+[       OK ] ServicesUtilInitialize.radius_two__print_false (0 ms)
+[ RUN      ] ServicesUtilInitialize.radius_two__print_true
+[       OK ] ServicesUtilInitialize.radius_two__print_true (0 ms)
+[ RUN      ] ServicesUtilInitialize.full_init__print_false
+[       OK ] ServicesUtilInitialize.full_init__print_false (0 ms)
+[ RUN      ] ServicesUtilInitialize.full_init__print_true
+[       OK ] ServicesUtilInitialize.full_init__print_true (0 ms)
+[ RUN      ] ServicesUtilInitialize.model_throws_radius_zero
+[       OK ] ServicesUtilInitialize.model_throws_radius_zero (0 ms)
+[ RUN      ] ServicesUtilInitialize.model_throws__radius_two
+[       OK ] ServicesUtilInitialize.model_throws__radius_two (0 ms)
+[ RUN      ] ServicesUtilInitialize.model_throws__full_init
+[       OK ] ServicesUtilInitialize.model_throws__full_init (1 ms)
+[ RUN      ] ServicesUtilInitialize.model_errors__radius_zero
+[       OK ] ServicesUtilInitialize.model_errors__radius_zero (0 ms)
+[ RUN      ] ServicesUtilInitialize.model_errors__radius_two
+[       OK ] ServicesUtilInitialize.model_errors__radius_two (0 ms)
+[ RUN      ] ServicesUtilInitialize.model_errors__full_init
+[       OK ] ServicesUtilInitialize.model_errors__full_init (0 ms)
+[ RUN      ] ServicesUtilInitialize.model_throws_in_write_array__radius_zero
+[       OK ] ServicesUtilInitialize.model_throws_in_write_array__radius_zero (0 ms)
+[ RUN      ] ServicesUtilInitialize.model_throws_in_write_array__radius_two
+[       OK ] ServicesUtilInitialize.model_throws_in_write_array__radius_two (0 ms)
+[ RUN      ] ServicesUtilInitialize.model_throws_in_write_array__full_init
+[       OK ] ServicesUtilInitialize.model_throws_in_write_array__full_init (1 ms)
+[ RUN      ] ServicesUtilInitialize.model_errors_retries
+[       OK ] ServicesUtilInitialize.model_errors_retries (0 ms)
+[----------] 16 tests from ServicesUtilInitialize (2 ms total)
+
+[----------] Global test environment tear-down
+[==========] 16 tests from 1 test suite ran. (2 ms total)
+[  PASSED  ] 16 tests.

@@ -1,0 +1,13 @@
+# 2026-11-02, working tree on 7a63912c4
+40d26b78a9e4149df546b28eff6bdcc4  src/stan/services/util/initialize.hpp
+3c986e02381cd3f73ec81977e17f2f24  src/test/unit/services/util/initialize_partial_test.cpp
+540f6518f077744dfa78cc012c6f7585  src/test/unit/services/util/initialize_test.cpp
+## cpplint 2.0.2 (Triton login node, tree <scratch>/stantest_3088, filters of make/cpplint)
+40d26b78a9e4149df546b28eff6bdcc4  src/stan/services/util/initialize.hpp
+3c986e02381cd3f73ec81977e17f2f24  src/test/unit/services/util/initialize_partial_test.cpp
+540f6518f077744dfa78cc012c6f7585  src/test/unit/services/util/initialize_test.cpp
+Done processing src/stan/services/util/initialize.hpp
+Done processing src/test/unit/services/util/initialize_partial_test.cpp
+exit 0
+## Ubuntu clang-format version 14.0.0-1ubuntu1.1 (laptop), --dry-run
+exit 0

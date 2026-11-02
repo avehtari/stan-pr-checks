@@ -5,15 +5,21 @@ This directory holds the scripts and logs behind the numbers in the PR
 (stan-dev/stan#3457, branch `fix-partial-init-dependent-transforms`,
 addresses part of stan-dev/stan#3088) and in the documentation PR
 stan-dev/docs#1004.  Until 2026-11-01 this directory was
-`stan_partial_init/`; both PR texts link that name at commit `02b93f1`.
+`stan_partial_init/`; the docs PR text and the first #3457 text link
+that name at commit `02b93f1`.  The 2026-11-02 #3457 text links
+`stan-pr3457/`.
 Sections 1 to 7 quote the claims of the PR text and give the commands and
 the expected output.
 
 Terms: a *supplied* parameter has a user initial value; a *missing*
 parameter has none.
 
-Last run: 2026-11-01.  The tests, the probe and the CmdStan runs ran on
-Triton batch nodes (Intel Xeon, g++ 14.3.0); lint ran on a laptop.  In the logs, the
+Last run: 2026-11-02 (probe and unit tests at the PR version after
+WardBrian's review); 2026-11-01 (CmdStan runs, sections 1, 2 and 8).
+The tests, the probe and the CmdStan runs ran on
+Triton batch nodes (Intel Xeon, g++ 14.3.0).  Lint ran on a laptop on
+2026-11-01; on 2026-11-02 cpplint ran on the Triton login node and
+clang-format on a laptop.  In the logs, the
 placeholders `<workstation>`, `<scratch>` and `<home>` replace the machine
 paths.
 
@@ -22,7 +28,9 @@ paths.
 | name in this file | commit | what |
 |---|---|---|
 | develop | Stan `a8ec3d18f`, Stan Math `dc66941969` | merge base of the PR (develop of 2026-10-30) |
-| PR | Stan `78b495834` | PR head |
+| PR v1 | Stan `78b495834` | first PR head (2026-11-01 results) |
+| PR v2 | Stan `7a63912c4` | flat vectors and `unconstrain_array` instead of `get_dims` |
+| PR | `7a63912c4` + working tree | one decision per tuple slot (2026-11-02 results) |
 | CmdStan develop | `3ab132c` | CmdStan with Stan `a8ec3d18f`, stanc3 v2.40.0 (section 1 and `cmdstan/` step 2) |
 
 The unit-test job 21321656 (job name `smtest`) ran on the uncommitted
@@ -49,7 +57,8 @@ md5 `49a48975` of `initialize.hpp`, which is the develop version.
 | `cmdstan/` | `run_3088.R` and the models of the CmdStan runs (develop only) |
 | `grad/grad_check.cpp` | gradients of the offset/multiplier form at small scales (for the #3088 comment and the docs PR) |
 | `triton/` | the Triton job scripts, with placeholders for the paths |
-| `results/` | outputs of 2026-11-01 and the Triton logs (`triton_cmdstan_pr/`: section 8) |
+| `results/` | outputs of 2026-11-01 and the Triton logs (`triton_cmdstan_pr/`: section 8); 2026-11-02 in `probe_2026-11-02/` and `triton_tests_2026-11-02/` |
+| `random_var_context_tuples/` | probe of the develop defect of section 9 |
 
 Run commands from this directory.  New outputs go to `out/`, which git
 does not track; compare them with `results/`.
@@ -91,22 +100,39 @@ seeds for `lb_10`) and prints per seed:
 For the runs without partial inits (`none_r2`, `none_r0`, `full_r2`) it
 also prints all parameters in hexadecimal for the bitwise comparison.
 
-## Probe results (job 21342688, `results/compare.txt`)
+## Probe results (job 21362578, `results/probe_2026-11-02/compare_output.txt`)
 
-| case | supplied | develop: max_abs_missing | PR: max_abs_missing | max_rel_supplied (both) |
+PR version with one decision per tuple slot, built with
+`tools/stan_probe.sh` of the workspace (develop headers vs the working
+tree), stanc v2.39.0-15:
+
+| case | supplied | develop: max_abs_missing | PR: max_abs_missing | max_rel_supplied (PR) |
 |---|---|---|---|---|
-| `sigma_1e-20` | `sigma = 1e-20` | 7.67e20 | 0 | 7.52e-16 |
+| `sigma_1e-20` | `sigma = 1e-20` | 1.05e21 | 0 | 7.52e-16 |
 | `mu_5` | `mu = 5` | 28.5 | 0 | 0 |
 | `mu_5_r0` | `mu = 5`, `init_radius = 0` | 5 | 0 | 0 |
-| `x_3` | `x = 3` | 6.66e-16 | 0 | 1.48e-16 |
+| `x_3` | `x = 3` | 8.7 | 0 | 1.48e-16 |
 | `a_1_c_4` | `a = 1`, `c = 4` | 11.3 | 0 | 0 |
-| `b_2_d_-3` | `b = 2`, `d = -3` | 7.42 | 0 | 1.48e-16 |
+| `b_2_d_-3` | `b = 2`, `d = -3` | 9.96 | 0 | 1.48e-16 |
+| `a_c_e` | `a = 1`, `c = 4`, `e = -2` | 11.3 | 0 | 4.44e-16 |
+| `z_2` | `z = 2` (`offset=at[2].1`) | 8.7 | 0 | 4.44e-16 |
+| `t1_sigma` | `sigma = 1e-20`, `t.1 = 0.7` | 1.05e21 | 0 | 7.52e-16 |
+| `w21_sigma` | `sigma = 1e-20`, `w.2.1 = 0.4` | 1.05e21 | 0 | 7.52e-16 |
 | `lb_10` | `lb = 10` | throws, 100 rejections per seed | same | |
 
 ```
 runs without partial inits: 41 of 41 parameter vectors bitwise equal
-next RNG draw after initialize: 142 of 142 equal
+next RNG draw after initialize: 222 of 222 equal
 ```
+
+On develop, every case also includes the missing array of tuples `at`.
+`random_var_context` puts its values into the wrong slots (section 9),
+so on develop `at`, and `z` through `offset=at[2].1`, move away from
+their draws.  This gives the 8.7 of `x_3`.
+
+The 2026-11-01 run at PR v1 (job 21342688, `results/compare.txt`) used
+the smaller model without `e`, `at`, `z`, `tv` and `w`.  Section 2 uses
+it.
 
 ## 1. The reprex of #3088 on develop
 
@@ -136,8 +162,9 @@ r1_manual  stuck (sd_sigma == 0)  0/20; lp_mean range     -1.79     -1.55; steps
 The two `stuck` lines are the sampling step 1b of the same job.  "Stuck"
 means that `sigma` has standard deviation 0 over the 1000 draws.  The
 probe shows the same defect with the test model of the PR (case
-`sigma_1e-20`: unconstrained values up to 7.67e20 on develop, at most
-46.1 = |log(1e-20)| with the PR).
+`sigma_1e-20`: unconstrained values up to 1.05e21 on develop in job
+21362578 and 7.67e20 in job 21342688, at most 46.1 = |log(1e-20)| with
+the PR).
 
 ## 2. Develop already handles the reverse dependency
 
@@ -146,9 +173,9 @@ probe shows the same defect with the test model of the PR (case
 > value, because develop frees it with the same random constrained values
 > that the missing parameters start from.
 
-Probe case `x_3` on develop: the missing entries differ from the random
-draws by at most 6.66e-16 (relative 2.84e-15), and `x` comes back within
-1.48e-16.
+Probe case `x_3` on develop in the 2026-11-01 run (job 21342688, model
+without `at`): the missing entries differ from the random draws by at
+most 6.66e-16 (relative 2.84e-15), and `x` comes back within 1.48e-16.
 
 ## 3. Missing and supplied parameters with the PR
 
@@ -158,8 +185,10 @@ draws by at most 6.66e-16 (relative 2.84e-15), and `x` comes back within
 > constrained scale, up to the rounding of `transform_inits` followed by
 > `write_array`, as on develop.
 
-Probe, PR build: `max_abs_missing` is 0 in every case; `mu_5_r0` gives 0
-(develop: 5).  `max_rel_supplied` is at most 7.52e-16 in both builds.
+Probe (job 21362578), PR build: `max_abs_missing` is 0 in every case,
+also with a partly supplied tuple (`t1_sigma`, `w21_sigma`); `mu_5_r0`
+gives 0 (develop: 5).  `max_rel_supplied` is at most 7.52e-16 in both
+builds.
 
 ## 4. Runs without partial inits and the RNG stream
 
@@ -167,19 +196,22 @@ Probe, PR build: `max_abs_missing` is 0 in every case; `mu_5_r0` gives 0
 > and the number of random draws per attempt is the same as on develop, so
 > the RNG stream does not change.
 
-Probe: the 41 parameter vectors of `none_r2` (20 seeds), `none_r0` and
-`full_r2` (20 seeds) are bitwise equal between the builds.  The next RNG
-draw after `initialize` is equal in all 142 runs except the 3 `lb_10`
-runs, which throw.
+Probe (job 21362578): the 41 parameter vectors of `none_r2` (20 seeds),
+`none_r0` and `full_r2` (20 seeds) are bitwise equal between the builds.
+The next RNG draw after `initialize` is equal in all 222 runs except the
+3 `lb_10` runs, which throw.
 
 ## 5. The fixed-point iteration needs more than one pass
 
 > More than one pass is needed when a supplied parameter depends on a
 > missing parameter that depends on a supplied one.
 
-Test `chain_provided_b_d` and probe case `b_2_d_-3`: `b` (supplied)
-depends on `a` (missing), `c` (missing) on `b`, and `d` (supplied) on `c`.
-Develop gives missing entries up to 7.42 from their random draws; the PR gives 0.
+Test `chain_provided_a_c_e` and probe case `a_c_e`: `a`, `c` and `e`
+are supplied, `b` and `d` are missing, and each has `offset=` the
+previous one.  The first pass corrects `c`, the second pass corrects
+`e`, and a third pass confirms.  Develop gives missing entries up to 11.3
+from their random draws; the PR gives 0.  Test `chain_provided_b_d` and
+probe case `b_2_d_-3` need one correction pass (develop: 9.96).
 
 ## 6. The bound case is not fixed
 
@@ -195,23 +227,33 @@ both builds throw after 100 rejections per seed.
 
 > | `initialize.hpp` | `initialize_partial_test` | `initialize_test` |
 > |---|---|---|
-> | this PR | 7/7 pass | 16/16 pass |
-> | develop | 1/7 pass | 16/16 pass |
+> | this PR | 16/16 pass | 16/16 pass |
+> | develop | 1/16 pass | 16/16 pass |
 
-Job 21321656 (`results/triton_tests/smtest_21321656.log` and the `.run`
-files): the job ran each suite with the PR header, with the develop
-header, and with the PR header again.  On develop,
-`initialize_partial_test` fails `small_multiplier`, `provided_offset`,
-`radius_zero`, `provided_dependent_parameter`, `chain_provided_a_c` and
-`chain_provided_b_d`.  `provided_dependent_parameter` fails because its
-check of the missing entries uses exact equality, and develop differs in
-the last bits (section 2).  With the PR header, `fail_init_test` and the
-33 suites in `src/test/unit/services/sample` also pass (one `.run` file
-each).  `swap/swap_test.sh` runs the new tests with the develop header in a local
-Stan clone.
+Job 21362615 (`results/triton_tests_2026-11-02/smtest_21362615.log` and
+the `.run` files): the job ran 36 suites with the PR header, and the two
+`initialize` suites also with the develop header and with the PR header
+again.  On develop, all `initialize_partial_test` cases fail except
+`bound_on_provided_value_is_rejected`.  `provided_dependent_parameter`
+fails because its check of the missing entries uses exact equality and
+develop differs in the last bits (section 2), and because `at` and `z`
+move on develop (section 9).  With the PR header,
+`fail_init_test` and the 33 suites in `src/test/unit/services/sample`
+also pass (one `.run` file each).
 
-Lint (`results/lint.txt`): clang-format 14 and cpplint 2.0.2 with the
-filters of `make/cpplint` report nothing on the two C++ files.
+Earlier versions: job 21361639 (tag `pi_t5`) shows that
+`offset_from_array_of_tuples` fails with PR v1, and job 21362559 (tag
+`pi_t10`) shows that the four `partially_provided_*` tests fail with PR
+v2 and the other 12 pass.  The 2026-11-01 run of PR v1 (job 21321656,
+7 tests) is in `results/triton_tests/`.  `swap/swap_test.sh` runs the
+new tests with the develop header in a local Stan clone.
+
+Lint (`results/lint.txt`, 2026-11-01): clang-format 14 and cpplint 2.0.2
+with the filters of `make/cpplint` report nothing on the two C++ files.
+2026-11-02 (`results/lint_2026-11-02.txt`, with the md5 sums of the
+files): cpplint 2.0.2 on Triton (same filters) reports nothing on
+`initialize.hpp` and `initialize_partial_test.cpp`; clang-format 14 on
+the laptop reports nothing on these and `initialize_test.cpp`.
 
 ## 8. The reprex of #3088 with the PR, end to end
 
@@ -233,6 +275,30 @@ With the PR, the built-in `multiplier=sigma` model and the manual model
 of the first post (`r1_manual`) have the same smallest and largest
 unconstrained values and `lp__` at init over the 20 seeds (the log
 prints only these summaries).
+
+## 9. random_var_context and arrays of tuples (develop defect)
+
+`random_var_context_tuples/` holds the probe of the issue draft about
+`random_var_context` (WardBrian's review of #3457).  The model
+`rvc_tuples.stan` has a missing `array[2] tuple(real<lower=10>,
+real<upper=0>) at`.  `probe_rvc_tuples.cpp` prints the `write_array`
+order and `vals_r`, and runs `initialize` without inits and with the
+partial init `a = 0.5`.  Job 21362046 (tag `rvc_p1`), built with
+`tools/stan_probe.sh` against develop `a8ec3d18f` and against the
+working-tree `initialize.hpp` that was later committed as PR v2
+`7a63912c4` (the job log records head `78b49583` with uncommitted
+edits; the agent checked md5 `fa1043d7` on Triton before the job, the
+md5 of the file in `7a63912c4`):
+
+| run | develop | #3457 |
+|---|---|---|
+| `vals_r("at.1")` | at[1].1, at[1].2 (wrong) | same |
+| no inits, radius 2 | OK | OK |
+| `a = 0.5`, radius 0 | fails, 1 rejection | same |
+| `a = 0.5`, radius 2, seeds 1-3 | fails, 100 rejections | same |
+
+The outputs are in `random_var_context_tuples/results/`
+(`out_base.txt` = develop, `out_branch.txt` = #3457; identical).
 
 ## Other data in this directory
 
