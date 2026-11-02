@@ -30,7 +30,7 @@ paths.
 | develop | Stan `a8ec3d18f`, Stan Math `dc66941969` | merge base of the PR (develop of 2026-10-30) |
 | PR v1 | Stan `78b495834` | first PR head (2026-11-01 results) |
 | PR v2 | Stan `7a63912c4` | flat vectors and `unconstrain_array` instead of `get_dims` |
-| PR | `7a63912c4` + working tree | one decision per tuple slot (2026-11-02 results) |
+| PR | Stan `a5786800d` | one decision per tuple slot (2026-11-02 results; the jobs ran on the uncommitted files, same md5) |
 | CmdStan develop | `3ab132c` | CmdStan with Stan `a8ec3d18f`, stanc3 v2.40.0 (section 1 and `cmdstan/` step 2) |
 
 The unit-test job 21321656 (job name `smtest`) ran on the uncommitted
