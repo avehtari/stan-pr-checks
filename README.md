@@ -31,6 +31,7 @@ from another one; copy a shared script instead.
 | `pr3496/` | stan-dev/math#3496 (part of #56) | discrete cdfs with an element of probability 0 or 1 |
 | `pr3497/` | stan-dev/math#3497 | `beta(a, b)` as `exp(lbeta(a, b))` at large arguments |
 | `stan-pr3457/` | stan-dev/stan#3457 (part of stan#3088), stan-dev/docs#1004 | partial inits with transforms that use other parameters |
+| `stanc3-offset-multiplier-std-normal/` | stanc3 feature request (from stan#3088; prototype, no PR) | `std_normal` for a parameter with offset/multiplier |
 
 ## Conventions for a PR directory
 

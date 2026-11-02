@@ -1,0 +1,362 @@
+diff --git a/src/analysis_and_optimization/Optimize.ml b/src/analysis_and_optimization/Optimize.ml
+index 2e0e0dd3e..bf7eb24ad 100644
+--- a/src/analysis_and_optimization/Optimize.ml
++++ b/src/analysis_and_optimization/Optimize.ml
+@@ -1429,12 +1429,25 @@ let optimize_ad_levels (mir : Program.Typed.t) =
+               @@ Expr.Typed.adlevel_of (update_expr_ad_levels ad_variables e) ->
+         Set.Poly.singleton (Stmt.Helpers.lhs_variable lval)
+     | _ -> Set.Poly.empty in
++  (* Parameter reads of other variables than the output variables, for example
++     the [x_raw__] of [Offset_multiplier_std_normal] *)
++  let param_reads =
++    List.filter_map mir.log_prob ~f:(fun (s : Stmt.Located.t) ->
++        match s.pattern with
++        | Decl
++            { decl_id
++            ; initialize=
++                Assign {pattern= FunApp (CompilerInternal (FnReadParam _), _); _}
++            ; _ } ->
++            Some decl_id
++        | _ -> None) in
+   let global_initial_ad_variables =
+     Set.Poly.of_list
+-      (List.filter_map
+-         ~f:(fun (v, _, Program.{out_block; _}) ->
+-           match out_block with Parameters -> Some v | _ -> None)
+-         mir.output_vars) in
++      (param_reads
++      @ List.filter_map
++          ~f:(fun (v, _, Program.{out_block; _}) ->
++            match out_block with Parameters -> Some v | _ -> None)
++          mir.output_vars) in
+   let initial_ad_variables fundef_opt _ =
+     match (fundef_opt : Stmt.Located.t Program.fun_def option) with
+     | Some {fdargs; fdbody= Some s; _} ->
+@@ -1540,7 +1553,8 @@ type optimization_settings =
+   ; lazy_code_motion: bool
+   ; optimize_ad_levels: bool
+   ; preserve_stability: bool
+-  ; optimize_soa: bool }
++  ; optimize_soa: bool
++  ; offset_multiplier_std_normal: bool }
+ 
+ let settings_const b =
+   { function_inlining= b
+@@ -1558,7 +1572,8 @@ let settings_const b =
+   ; lazy_code_motion= b
+   ; optimize_ad_levels= b
+   ; preserve_stability= not b
+-  ; optimize_soa= b }
++  ; optimize_soa= b
++  ; offset_multiplier_std_normal= b }
+ 
+ let all_optimizations : optimization_settings = settings_const true
+ let no_optimizations : optimization_settings = settings_const false
+@@ -1580,6 +1595,7 @@ type optimization_pass =
+   | Optimize_ad_levels
+   | Preserve_stability
+   | Optimize_soa
++  | Offset_multiplier_std_normal
+ 
+ let set_optimization pass enabled settings =
+   match pass with
+@@ -1600,6 +1616,8 @@ let set_optimization pass enabled settings =
+   | Optimize_ad_levels -> {settings with optimize_ad_levels= enabled}
+   | Preserve_stability -> {settings with preserve_stability= enabled}
+   | Optimize_soa -> {settings with optimize_soa= enabled}
++  | Offset_multiplier_std_normal ->
++      {settings with offset_multiplier_std_normal= enabled}
+ 
+ let optimization_pass_names =
+   [ ("inlining", Function_inlining)
+@@ -1614,7 +1632,8 @@ let optimization_pass_names =
+   ; ("dead-code-elimination", Dead_code_elimination)
+   ; ("partial-evaluation", Partial_evaluation)
+   ; ("lazy-code-motion", Lazy_code_motion); ("ad-levels", Optimize_ad_levels)
+-  ; ("preserve-stability", Preserve_stability); ("soa", Optimize_soa) ]
++  ; ("preserve-stability", Preserve_stability); ("soa", Optimize_soa)
++  ; ("offset-multiplier-std-normal", Offset_multiplier_std_normal) ]
+ 
+ let optimization_flags =
+   List.concat_map optimization_pass_names ~f:(fun (name, pass) ->
+@@ -1641,17 +1660,21 @@ let level_optimizations (lvl : optimization_level) : optimization_settings =
+       ; allow_uninitialized_decls= true
+       ; optimize_ad_levels= false
+       ; preserve_stability= false
+-      ; optimize_soa= true }
++      ; optimize_soa= true
++      ; offset_multiplier_std_normal= false }
+   | Oexperimental -> all_optimizations
+ 
+ let optimization_suite ?(settings = all_optimizations) mir =
+   let preserve_stability = settings.preserve_stability in
+   let maybe_optimizations =
+     [ (* Phase order. See phase-ordering-nodes.org for details *)
++      (* Uses the unoptimized form of the parameter reads *)
++      ( Offset_multiplier_std_normal.offset_multiplier_std_normal
++    , settings.offset_multiplier_std_normal )
+       (* Book section A *)
+       (* Book section B *)
+       (* Book: Procedure integration *)
+-      (function_inlining, settings.function_inlining)
++    ; (function_inlining, settings.function_inlining)
+       (* Book: Sparse conditional constant propagation *)
+     ; (constant_propagation ~preserve_stability, settings.constant_propagation)
+       (* Book section C *)
+diff --git a/src/analysis_and_optimization/Optimize.mli b/src/analysis_and_optimization/Optimize.mli
+index e45751386..2db4f6d29 100644
+--- a/src/analysis_and_optimization/Optimize.mli
++++ b/src/analysis_and_optimization/Optimize.mli
+@@ -85,7 +85,8 @@ type optimization_settings =
+   ; lazy_code_motion: bool
+   ; optimize_ad_levels: bool
+   ; preserve_stability: bool
+-  ; optimize_soa: bool }
++  ; optimize_soa: bool
++  ; offset_multiplier_std_normal: bool }
+ 
+ val all_optimizations : optimization_settings
+ val no_optimizations : optimization_settings
+diff --git a/src/analysis_and_optimization/Offset_multiplier_std_normal.ml b/src/analysis_and_optimization/Offset_multiplier_std_normal.ml
+new file mode 100644
+index 000000000..fc9f043e8
+--- /dev/null
++++ b/src/analysis_and_optimization/Offset_multiplier_std_normal.ml
+@@ -0,0 +1,237 @@
++(** Rewrite [x ~ normal(m, s)] for a parameter [x] declared with
++    [<offset=m, multiplier=s>] so that the statement uses the unconstrained
++    value [x_raw__].
++
++    In [log_prob], the pass reads [x_raw__] without a transform and generates
++    [x = offset_multiplier_constrain(x_raw__, m, s)],
++    [x_log_scale__ = L] and [jacobian += x_log_scale__], where [L] is
++    [sum(log(s))] over the elements of [x]. Each matching statement becomes
++    [target += std_normal_lpdf(x_raw__) - x_log_scale__]. Per statement,
++    [normal_lpdf(x | m, s) = std_normal_lpdf((x - m) / s) - L], so the target is
++    the same in exact arithmetic for each value of [propto__] and [jacobian__].
++    The rewrite avoids the computation of [(x - m) / s] from the rounded [x],
++    which loses the [raw] and [m] gradients when [|s * raw|] is far below
++    [|m|].
++
++    The pass changes only [log_prob] and [reverse_mode_log_prob].
++    [write_array], [transform_inits] and [generate_quantities] keep the
++    constrained read, which computes the same [x]. The pass runs before the
++    other optimizations because it matches the [FnReadParam] declarations that
++    [Transform_Mir] generates. *)
++
++open Std
++open Middle
++
++type candidate =
++  { name: string
++  ; offset: Expr.Typed.t option
++  ; multiplier: Expr.Typed.t option
++  ; decl: (Expr.Typed.t, Stmt.Located.t) Stmt.Pattern.t
++  ; read: Expr.Typed.t
++  ; read_param: Expr.Typed.t Internal_fun.t }
++
++let raw_name name = name ^ "_raw__"
++let log_scale_name name = name ^ "_log_scale__"
++
++let rec strip_promotions (e : Expr.Typed.t) =
++  match e.pattern with Promotion (e', _, _) -> strip_promotions e' | _ -> e
++
++let same_expr a b =
++  Expr.Helpers.compare_ignore_meta (strip_promotions a) (strip_promotions b)
++  = 0
++
++let is_literal value (e : Expr.Typed.t) =
++  match (strip_promotions e).pattern with
++  | Lit ((Int | Real), s) -> (
++      match Stdlib.Float.of_string_opt s with
++      | Some v -> Stdlib.Float.equal v value
++      | None -> false)
++  | _ -> false
++
++let matches_arg decl default arg =
++  match decl with
++  | Some d -> same_expr d arg
++  | None -> is_literal default arg
++
++(* The types that [std_normal_lpdf] accepts *)
++let supported_type = function
++  | UnsizedType.UReal | UVector | URowVector | UArray UReal -> true
++  | _ -> false
++
++let candidate_of_stmt (s : Stmt.Located.t) =
++  match s.pattern with
++  | Decl
++      { decl_id
++      ; decl_type= Sized st
++      ; initialize=
++          Assign
++            ({ pattern=
++                 FunApp
++                   (CompilerInternal (FnReadParam {constrain; _} as read_param), [])
++             ; _ } as read)
++      ; _ }
++    when supported_type (SizedType.to_unsized st) -> (
++      let mk offset multiplier =
++        Some
++          {name= decl_id; offset; multiplier; decl= s.pattern; read; read_param}
++      in
++      match constrain with
++      | Transformation.Offset m -> mk (Some m) None
++      | Multiplier sc -> mk None (Some sc)
++      | OffsetMultiplier (m, sc) -> mk (Some m) (Some sc)
++      | _ -> None)
++  | _ -> None
++
++let rec to_real = function
++  | UnsizedType.UInt -> UnsizedType.UReal
++  | UArray t -> UArray (to_real t)
++  | t -> t
++
++(** [sum(log(s))] over the elements of the parameter *)
++let log_scale_sum (sc : Expr.Typed.t) (raw : Expr.Typed.t) =
++  let meta type_ = Expr.Typed.Meta.{sc.meta with type_} in
++  let log_s =
++    Expr.
++      { pattern= FunApp (StanLib ("log", FnPlain), [sc])
++      ; meta= meta (to_real sc.meta.type_) } in
++  match (UnsizedType.is_container sc.meta.type_, raw.meta.type_) with
++  | true, _ ->
++      Expr.
++        {pattern= FunApp (StanLib ("sum", FnPlain), [log_s]); meta= meta UReal}
++  | false, UReal -> log_s
++  | false, _ ->
++      let n =
++        Expr.
++          { pattern= FunApp (StanLib ("num_elements", FnPlain), [raw])
++          ; meta= Typed.Meta.{raw.meta with type_= UInt; adlevel= DataOnly} }
++      in
++      Expr.{pattern= FunApp (Operator Times, [log_s; n]); meta= meta UReal}
++
++let raw_var c = Expr.{c.read with pattern= Var (raw_name c.name)}
++
++let log_scale_var c =
++  Option.map c.multiplier ~f:(fun (sc : Expr.Typed.t) ->
++      Expr.
++        { pattern= Var (log_scale_name c.name)
++        ; meta= Typed.Meta.{sc.meta with type_= UReal} })
++
++(** The candidate whose statement [e] is, if any *)
++let matching_candidate candidates (e : Expr.Typed.t) =
++  match e.pattern with
++  | FunApp
++      ( StanLib ("normal_lpdf", FnDist (Density, propto))
++      , [{pattern= Var x; _}; m; sc] ) -> (
++      match String.Map.find_opt x candidates with
++      | Some c when matches_arg c.offset 0. m && matches_arg c.multiplier 1. sc
++        ->
++          Some (c, propto)
++      | _ -> None)
++  | _ -> None
++
++let rec matched_names candidates acc (s : Stmt.Located.t) =
++  match s.pattern with
++  | TargetPE e -> (
++      match matching_candidate candidates e with
++      | Some (c, _) -> String.Set.add c.name acc
++      | None -> acc)
++  | _ ->
++      Stmt.Pattern.fold
++        (fun acc _ -> acc)
++        (matched_names candidates) acc s.pattern
++
++let rec rewrite_stmt candidates (s : Stmt.Located.t) =
++  match s.pattern with
++  | TargetPE e -> (
++      match matching_candidate candidates e with
++      | Some (c, propto) ->
++          let std =
++            Expr.
++              { pattern=
++                  FunApp
++                    ( StanLib ("std_normal_lpdf", FnDist (Density, propto))
++                    , [raw_var c] )
++              ; meta= e.meta } in
++          let e' =
++            match log_scale_var c with
++            | Some l ->
++                Expr.{pattern= FunApp (Operator Minus, [std; l]); meta= e.meta}
++            | None -> std in
++          {s with pattern= TargetPE e'}
++      | None -> s)
++  | _ -> {s with pattern= Stmt.Pattern.map Fun.id (rewrite_stmt candidates) s.pattern}
++
++let expand_decl candidates (s : Stmt.Located.t) =
++  match s.pattern with
++  | Decl {decl_id; _} when String.Map.mem decl_id candidates -> (
++      let c = String.Map.find decl_id candidates in
++      match (c.decl, c.read_param) with
++      | Decl decl, FnReadParam rp ->
++          let raw = raw_var c in
++          let read_raw =
++            Expr.
++              { (c.read) with
++                pattern=
++                  FunApp
++                    ( CompilerInternal (FnReadParam {rp with constrain= Identity})
++                    , [] ) } in
++          let offset = Option.value c.offset ~default:Expr.Helpers.zero in
++          let multiplier = Option.value c.multiplier ~default:Expr.Helpers.one in
++          let constrained =
++            Expr.
++              { (c.read) with
++                pattern=
++                  FunApp
++                    ( StanLib ("offset_multiplier_constrain", FnPlain)
++                    , [raw; offset; multiplier] ) } in
++          let log_scale =
++            match (c.multiplier, log_scale_var c) with
++            | Some sc, Some l ->
++                (* A separate assignment: [optimize_ad_levels] propagates
++                   through assignments, not through declarations *)
++                let lhs = Stmt.Helpers.lvariable (log_scale_name c.name) in
++                Stmt.
++                  [ { s with
++                      pattern=
++                        Decl
++                          { decl_adtype= sc.meta.adlevel
++                          ; decl_id= log_scale_name c.name
++                          ; decl_type= Sized SReal
++                          ; initialize= Default } }
++                  ; { s with
++                      pattern=
++                        Assignment (lhs, UReal, log_scale_sum sc raw) }
++                  ; {s with pattern= JacobianPE l} ]
++            | _ -> [] in
++          Stmt.
++            [ { s with
++                pattern=
++                  Decl
++                    { decl with
++                      decl_id= raw_name c.name
++                    ; initialize= Assign read_raw } }
++            ; {s with pattern= Decl {decl with initialize= Assign constrained}}
++            ]
++          @ log_scale
++      | _ -> [s])
++  | _ -> [s]
++
++let rewrite_log_prob (stmts : Stmt.Located.t list) =
++  let candidates =
++    List.filter_map ~f:candidate_of_stmt stmts
++    |> List.map ~f:(fun c -> (c.name, c))
++    |> List.to_seq |> String.Map.of_seq in
++  let matched =
++    List.fold_left ~f:(matched_names candidates) ~init:String.Set.empty stmts
++  in
++  let candidates =
++    String.Map.filter ~f:(fun name _ -> String.Set.mem name matched) candidates
++  in
++  if String.Map.is_empty candidates then stmts
++  else
++    List.map ~f:(rewrite_stmt candidates) stmts
++    |> List.concat_map ~f:(expand_decl candidates)
++
++let offset_multiplier_std_normal (mir : Program.Typed.t) =
++  { mir with
++    log_prob= rewrite_log_prob mir.log_prob
++  ; reverse_mode_log_prob= rewrite_log_prob mir.reverse_mode_log_prob }

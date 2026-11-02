@@ -1,0 +1,197 @@
+== host pht70.int.triton.aalto.fi,  Intel(R) Xeon(R) Gold 6230 CPU @ 2.10GHz, g++ (conda-forge gcc 14.3.0-18) 14.3.0
+== cmdstan=3ab132c80fc8bceaec7f2388f53d0e3445038199 stan=78b49583403073cd6b59982ecfe4797efc80ff65 math=dc669419692e2cb71d55000a871066b5739c3e48
+RESULT step=build status=CACHED secs=0
+== stanc3 10361e1 (Unix)
+This is cmdstanr version 0.9.0.9000
+- CmdStanR documentation and vignettes: mc-stan.org/cmdstanr
+- CmdStan path: /scratch/work/ave/cmdstan_cache/3ab132c80_78b495834_dc66941969
+- CmdStan version: 2.40.0
+This is posterior version 1.7.0
+
+Attaching package: ‘posterior’
+
+The following objects are masked from ‘package:stats’:
+
+    mad, sd, var
+
+The following objects are masked from ‘package:base’:
+
+    %in%, match
+
+CmdStan path set to: /scratch/work/ave/cmdstan_cache/3ab132c80_78b495834_dc66941969
+cmdstan 2.40.0, cmdstanr 0.9.0.9000, cores 32, seeds 20
+stanc: %%NAME%%3 %%VERSION%% (Unix)
+j_om      std_normal_lpdf lines: base 0, om 2
+k_om      std_normal_lpdf lines: base 0, om 2
+d_om      std_normal_lpdf lines: base 0, om 2
+j_ncp     std_normal_lpdf lines: base 2, om 2
+om_cases  std_normal_lpdf lines: base 0, om 16
+Warning messages:
+1: In readLines(hpp) :
+  incomplete final line found on '/tmp/RtmpdVE2zT/file985552a18f800.hpp'
+2: In readLines(hpp) :
+  incomplete final line found on '/tmp/RtmpdVE2zT/file98555e30b827.hpp'
+3: In readLines(hpp) :
+  incomplete final line found on '/tmp/RtmpdVE2zT/file9855526b75520.hpp'
+4: In readLines(hpp) :
+  incomplete final line found on '/tmp/RtmpdVE2zT/file985557850be41.hpp'
+5: In readLines(hpp) :
+  incomplete final line found on '/tmp/RtmpdVE2zT/file985553fcaadac.hpp'
+6: In readLines(hpp) :
+  incomplete final line found on '/tmp/RtmpdVE2zT/file9855519680c04.hpp'
+7: In readLines(hpp) :
+  incomplete final line found on '/tmp/RtmpdVE2zT/file98555179c59f3.hpp'
+8: In readLines(hpp) :
+  incomplete final line found on '/tmp/RtmpdVE2zT/file9855548e21701.hpp'
+9: In readLines(hpp) :
+  incomplete final line found on '/tmp/RtmpdVE2zT/file9855578d2a66c.hpp'
+10: In readLines(hpp) :
+  incomplete final line found on '/tmp/RtmpdVE2zT/file9855528c1bcb7.hpp'
+wrapper calls: base 5, om 4
+
+== Step 1: om_cases, om against base at random unconstrained points ==
+jacobian=TRUE  points 20: max |lp diff| 1.1 (|lp| up to 1.24e+03), max grad rel diff 1.1e-14
+jacobian=FALSE points 20: max |lp diff| 1.1 (|lp| up to 1.26e+03), max grad rel diff 1.1e-14
+
+== Step 2: grad_log_prob of j_om (base, om) against j_ncp ==
+model          mu    sigma     ref_mu     err_mu   err_lsig    err_raw
+j_om__base      0    1e-02       -113    2.8e-13    1.3e-13    6.7e-16
+j_om__om        0    1e-02       -113    7.1e-14    1.1e-15    2.2e-16
+j_om__base      0    1e-06       -115    3.3e-08      1e-12    4.4e-16
+j_om__om        0    1e-06       -115    1.3e-13          0          0
+j_om__base      0    1e-10       -115     0.0008    1.2e-12    6.7e-16
+j_om__om        0    1e-10       -115    3.8e-13          0          0
+j_om__base      0    1e-14       -115        2.7    1.2e-12    6.7e-16
+j_om__om        0    1e-14       -115    1.8e-13          0          0
+j_om__base      0    1e-18       -115    2.5e+04    5.2e-13    4.4e-16
+j_om__om        0    1e-18       -115      2e-13          0          0
+j_om__base      0    1e-22       -115    6.7e+08    6.4e-13    4.4e-16
+j_om__om        0    1e-22       -115      2e-13          0          0
+j_om__base      0    1e-26       -115    6.6e+12    8.8e-13    4.4e-16
+j_om__om        0    1e-26       -115      2e-13          0          0
+j_om__base      0    1e-30       -115      9e+15    2.9e-13    4.4e-16
+j_om__om        0    1e-30       -115      2e-13          0          0
+j_om__base      1    1e-02  -5.11e+03    2.7e-11      1e-12    1.1e-14
+j_om__om        1    1e-02  -5.11e+03    2.1e-11    7.1e-15    2.2e-16
+j_om__base      1    1e-06  -5.11e+03    4.2e-08    2.6e-09    1.1e-10
+j_om__om        1    1e-06  -5.11e+03    1.8e-12          0          0
+j_om__base      1    1e-10  -5.11e+03    0.00074    3.2e-06    1.1e-06
+j_om__om        1    1e-10  -5.11e+03    1.8e-12          0          0
+j_om__base      1    1e-14  -5.11e+03        6.3      0.024      0.011
+j_om__om        1    1e-14  -5.11e+03      2e-11          0          0
+j_om__base      1    1e-18  -5.11e+03    1.2e-11    2.5e-12          2
+j_om__om        1    1e-18  -5.11e+03    1.2e-11          0          0
+j_om__base      1    1e-22  -5.11e+03    1.2e-11    6.4e-13          2
+j_om__om        1    1e-22  -5.11e+03    1.2e-11          0          0
+j_om__base      1    1e-26  -5.11e+03    1.2e-11    3.2e-12          2
+j_om__om        1    1e-26  -5.11e+03    1.2e-11          0          0
+j_om__base      1    1e-30  -5.11e+03    1.2e-11    3.6e-12          2
+j_om__om        1    1e-30  -5.11e+03    1.2e-11          0          0
+j_om__base   1000    1e-02     -5e+06    1.8e-08    5.1e-11    5.5e-12
+j_om__om     1000    1e-02     -5e+06      1e-08    9.1e-13    1.4e-14
+j_om__base   1000    1e-06     -5e+06    2.4e-08    1.6e-06    5.7e-08
+j_om__om     1000    1e-06     -5e+06    2.8e-09          0    2.2e-16
+j_om__base   1000    1e-10     -5e+06    5.8e-05      0.011    0.00057
+j_om__om     1000    1e-10     -5e+06    1.4e-08          0          0
+j_om__base   1000    1e-14     -5e+06    1.1e-08      1e-12          2
+j_om__om     1000    1e-14     -5e+06    1.1e-08          0          0
+j_om__base   1000    1e-18     -5e+06    1.1e-08    2.6e-12          2
+j_om__om     1000    1e-18     -5e+06    1.1e-08          0          0
+j_om__base   1000    1e-22     -5e+06    1.1e-08    6.4e-13          2
+j_om__om     1000    1e-22     -5e+06    1.1e-08          0          0
+j_om__base   1000    1e-26     -5e+06    1.1e-08    3.2e-12          2
+j_om__om     1000    1e-26     -5e+06    1.1e-08          0          0
+j_om__base   1000    1e-30     -5e+06    1.1e-08    3.6e-12          2
+j_om__om     1000    1e-30     -5e+06    1.1e-08          0          0
+
+== Step 3: default inits (stuck: median scale after warmup < 1e-6) ==
+Warning: 200 of 200 (100.0%) transitions ended with a divergence.
+See https://mc-stan.org/misc/warnings for details.
+
+Warning: 200 of 200 (100.0%) transitions ended with a divergence.
+See https://mc-stan.org/misc/warnings for details.
+
+Warning: 200 of 200 (100.0%) transitions ended with a divergence.
+See https://mc-stan.org/misc/warnings for details.
+
+Warning: 1000 of 1000 (100.0%) transitions ended with a divergence.
+See https://mc-stan.org/misc/warnings for details.
+
+Warning: 1000 of 1000 (100.0%) transitions ended with a divergence.
+See https://mc-stan.org/misc/warnings for details.
+
+Warning: 1000 of 1000 (100.0%) transitions ended with a divergence.
+See https://mc-stan.org/misc/warnings for details.
+
+Warning: 1000 of 1000 (100.0%) transitions ended with a divergence.
+See https://mc-stan.org/misc/warnings for details.
+
+Warning: 1000 of 1000 (100.0%) transitions ended with a divergence.
+See https://mc-stan.org/misc/warnings for details.
+
+Warning: 1000 of 1000 (100.0%) transitions hit the maximum treedepth limit of 10.
+See https://mc-stan.org/misc/warnings for details.
+
+Warning: 1000 of 1000 (100.0%) transitions hit the maximum treedepth limit of 10.
+See https://mc-stan.org/misc/warnings for details.
+
+Warning: 200 of 200 (100.0%) transitions hit the maximum treedepth limit of 10.
+See https://mc-stan.org/misc/warnings for details.
+
+Warning: 200 of 200 (100.0%) transitions hit the maximum treedepth limit of 10.
+See https://mc-stan.org/misc/warnings for details.
+
+Warning: 200 of 200 (100.0%) transitions hit the maximum treedepth limit of 10.
+See https://mc-stan.org/misc/warnings for details.
+
+Warning: 200 of 200 (100.0%) transitions hit the maximum treedepth limit of 10.
+See https://mc-stan.org/misc/warnings for details.
+
+model       runs    minscW  stuck   divW   divS  stepsize   tdS    secs
+j_om__base    20   9.9e-18      2    382      0      0.24  4.60      18
+j_om__om      20   2.3e-21      0    409      0     0.237  4.00      18
+k_om__base    20     8e-25      5   3444   5000     0.332  3.70       1
+k_om__om      20   1.9e-10      0    155      0     0.353  3.98       1
+d_om__base    20   2.6e-52      7   3321    600     0.142  5.68     184
+d_om__om      20   4.7e-78      0    477      0      0.14  5.00     179
+
+== Step 4: om_nodata, C++ probe, variants against base (--O0) ==
+base      std_normal_lpdf lines: 0
+om        std_normal_lpdf lines: 28
+om_O1     std_normal_lpdf lines: 28
+om_Oexp   std_normal_lpdf lines: 28
+base_Oexp std_normal_lpdf lines: 0
+om_nodata: 43 unconstrained parameters
+variant    propto jacobian  min lpdiff  max lpdiff   grad rel
+om              1        1     -0.6527     -0.6527    8.4e-15
+om              1        0     -0.6527     -0.6527    8.4e-15
+om              0        1  -5.684e-14   5.684e-14    8.4e-15
+om              0        0  -1.421e-14   1.421e-14    8.4e-15
+om_O1           1        1     -0.6527     -0.6527    8.4e-15
+om_O1           1        0     -0.6527     -0.6527      8e-15
+om_O1           0        1  -4.263e-14   5.684e-14    8.4e-15
+om_O1           0        0  -1.421e-14   1.421e-14      8e-15
+om_Oexp         1        1     -0.6527     -0.6527    8.4e-15
+om_Oexp         1        0     -0.6527     -0.6527      8e-15
+om_Oexp         0        1  -4.263e-14   5.684e-14    8.4e-15
+om_Oexp         0        0  -2.842e-14   2.842e-14      8e-15
+base_Oexp       1        1  -1.421e-14   2.842e-14    8.5e-15
+base_Oexp       1        0  -1.421e-14   1.421e-14    8.5e-15
+base_Oexp       0        1  -1.421e-14   2.842e-14    8.5e-15
+base_Oexp       0        0  -1.421e-14   2.842e-14    8.5e-15
+expected propto lp shift: -0.652742
+Warning messages:
+1: In readLines(hpp) :
+  incomplete final line found on '/tmp/RtmpdVE2zT/file985555c373307.hpp'
+2: In readLines(hpp) :
+  incomplete final line found on '/tmp/RtmpdVE2zT/file9855561ad15f0.hpp'
+3: In readLines(hpp) :
+  incomplete final line found on '/tmp/RtmpdVE2zT/file98555d0e7f35.hpp'
+4: In readLines(hpp) :
+  incomplete final line found on '/tmp/RtmpdVE2zT/file985552a62c41f.hpp'
+5: In readLines(hpp) :
+  incomplete final line found on '/tmp/RtmpdVE2zT/file985553e6e0650.hpp'
+
+EXIT=0
+RESULT step=driver status=PASS rc=0 secs=1923
+== outputs in /scratch/work/ave/cmdstan_run/om_std_normal_t3/out: 4 files
