@@ -1,0 +1,39 @@
+== host csl21.int.triton.aalto.fi  date 2026-11-02T00:46:23+02:00  cpus 16  J=16
+== g++ g++ (conda-forge gcc 14.3.0-18) 14.3.0
+== mode targeted  tree <scratch>/smtest_normal_lpdf
+== deploy repo=math
+== deploy clone=<workstation>/proj/stan_math_normal_lpdf
+== deploy branch=faster-normal-lpdf
+== deploy head=760f6a1f652274178768cc17ae5612875608dcbf
+== deploy base_ref=origin/develop
+== deploy base=dc669419692e2cb71d55000a871066b5739c3e48
+== deploy uncommitted_edits=no
+== deploy deployed=2026-11-02T00:45:40+02:00
+== repository math
+== tree matches the manifest (3 files)
+
+######## stage branch ########
+RESULT stage=branch suite=test/unit/math/prim/prob/normal_test status=PASS build_s=70 cases=8 failed=0
+RESULT stage=branch suite=test/unit/math/mix/prob/normal_test status=PASS build_s=90 cases=5 failed=0
+RESULT stage=branch suite=test/unit/math/rev/prob/normal_log_test status=PASS build_s=17 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/rev/prob/normal_id_glm_lpdf_test status=PASS build_s=34 cases=26 failed=0
+SUMMARY stage=branch suites=4 failed_suites=0
+
+######## stage develop (swapped: stan/math/prim/prob/normal_lpdf.hpp) ########
+RESULT stage=develop suite=test/unit/math/prim/prob/normal_test status=PASS build_s=68 cases=8 failed=0
+RESULT stage=develop suite=test/unit/math/mix/prob/normal_test status=PASS build_s=83 cases=5 failed=0
+RESULT stage=develop suite=test/unit/math/rev/prob/normal_log_test status=PASS build_s=16 cases=1 failed=0
+RESULT stage=develop suite=test/unit/math/rev/prob/normal_id_glm_lpdf_test status=PASS build_s=34 cases=26 failed=0
+SUMMARY stage=develop suites=4 failed_suites=0
+RESULT check=swap_restore status=PASS secs=0
+
+######## stage branch_again ########
+RESULT stage=branch_again suite=test/unit/math/prim/prob/normal_test status=PASS build_s=68 cases=8 failed=0
+RESULT stage=branch_again suite=test/unit/math/mix/prob/normal_test status=PASS build_s=90 cases=5 failed=0
+RESULT stage=branch_again suite=test/unit/math/rev/prob/normal_log_test status=PASS build_s=15 cases=1 failed=0
+RESULT stage=branch_again suite=test/unit/math/rev/prob/normal_id_glm_lpdf_test status=PASS build_s=34 cases=26 failed=0
+SUMMARY stage=branch_again suites=4 failed_suites=0
+
+== final tree check:
+== tree still matches the manifest
+== done 2026-11-02T00:56:43+02:00

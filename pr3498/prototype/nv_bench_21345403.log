@@ -1,0 +1,277 @@
+== host: csl35.int.triton.aalto.fi   date: 2026-11-01T20:48:04+02:00
+== cpu:  Intel(R) Xeon(R) Gold 6248 CPU @ 2.50GHz   cpus: 4
+== governor: performance
+== g++: /appl/scibuilder-mamba/aalto-rhel9/prod/software/scicomp-r-env/2025.1/1c89c1c/bin/g++  g++ (conda-forge gcc 14.3.0-18) 14.3.0
+c56eb505f136129a87727bea0b8f92f8  normal_variants.hpp
+67e21d85f5f73db8a91f97fb0390e223  bench_normal.cpp
+3b5ec815e9c9c935028fd15b4445122b  check_normal.cpp
+14cb3bee20391944184255560c4ddad0  dev_dc66941969.tar.gz
+== build
+== build done in 46 s
+== check
+CHECK regular f1 OK sig_rel 0 | value
+CHECK regular f2 OK sig_rel 1.4e-16 | value
+CHECK regular f3 OK sig_rel 1.4e-16 | value
+CHECK regular f4 OK sig_rel 1.4e-16 | value
+CHECK small_sigma f1 OK sig_rel 0 | value
+CHECK small_sigma f2 OK sig_rel 1.2e-16 | value
+CHECK small_sigma f3 OK sig_rel 1.2e-16 | value
+CHECK small_sigma f4 OK sig_rel 1.2e-16 | value
+CHECK sigma_inf f1 OK sig_rel 0 | value
+CHECK sigma_inf f2 OK sig_rel 0 | value
+CHECK sigma_inf f3 OK sig_rel 0 | value
+CHECK sigma_inf f4 OK sig_rel 0 | value
+CHECK y_nan f1 OK sig_rel 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK y_nan f2 OK sig_rel 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK y_nan f3 OK sig_rel 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK y_nan f4 OK sig_rel 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK y_inf f1 OK sig_rel nan | value
+CHECK y_inf f2 OK sig_rel nan | value
+CHECK y_inf f3 OK sig_rel nan | value
+CHECK y_inf f4 OK sig_rel nan | value
+CHECK mu_inf f1 OK sig_rel 0 | normal_lpdf: Location parameter[6] is -inf, but must be finite!
+CHECK mu_inf f2 OK sig_rel 0 | normal_lpdf: Location parameter[6] is -inf, but must be finite!
+CHECK mu_inf f3 OK sig_rel 0 | normal_lpdf: Location parameter[6] is -inf, but must be finite!
+CHECK mu_inf f4 OK sig_rel 0 | normal_lpdf: Location parameter[6] is -inf, but must be finite!
+CHECK mu_nan f1 OK sig_rel 0 | normal_lpdf: Location parameter[6] is nan, but must be finite!
+CHECK mu_nan f2 OK sig_rel 0 | normal_lpdf: Location parameter[6] is nan, but must be finite!
+CHECK mu_nan f3 OK sig_rel 0 | normal_lpdf: Location parameter[6] is nan, but must be finite!
+CHECK mu_nan f4 OK sig_rel 0 | normal_lpdf: Location parameter[6] is nan, but must be finite!
+CHECK sigma_zero f1 OK sig_rel 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK sigma_zero f2 OK sig_rel 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK sigma_zero f3 OK sig_rel 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK sigma_zero f4 OK sig_rel 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK sigma_neg f1 OK sig_rel 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK sigma_neg f2 OK sig_rel 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK sigma_neg f3 OK sig_rel 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK sigma_neg f4 OK sig_rel 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK sigma_nan f1 OK sig_rel 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK sigma_nan f2 OK sig_rel 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK sigma_nan f3 OK sig_rel 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK sigma_nan f4 OK sig_rel 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK y_nan_sigma_neg f1 OK sig_rel 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK y_nan_sigma_neg f2 OK sig_rel 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK y_nan_sigma_neg f3 OK sig_rel 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK y_nan_sigma_neg f4 OK sig_rel 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK y_inf_mu_inf f1 OK sig_rel 0 | normal_lpdf: Location parameter[4] is inf, but must be finite!
+CHECK y_inf_mu_inf f2 OK sig_rel 0 | normal_lpdf: Location parameter[4] is inf, but must be finite!
+CHECK y_inf_mu_inf f3 OK sig_rel 0 | normal_lpdf: Location parameter[4] is inf, but must be finite!
+CHECK y_inf_mu_inf f4 OK sig_rel 0 | normal_lpdf: Location parameter[4] is inf, but must be finite!
+CHECK size_zero f1 OK sig_rel 0 | value
+CHECK size_zero f2 OK sig_rel 0 | value
+CHECK size_zero f3 OK sig_rel 0 | value
+CHECK size_zero f4 OK sig_rel 0 | value
+CHECK size_mismatch f1 OK sig_rel 0 | normal_lpdf: Random variable has size = 1000, but Location parameter h
+CHECK size_mismatch f2 OK sig_rel 0 | normal_lpdf: Random variable has size = 1000, but Location parameter h
+CHECK size_mismatch f3 OK sig_rel 0 | normal_lpdf: Random variable has size = 1000, but Location parameter h
+CHECK size_mismatch f4 OK sig_rel 0 | normal_lpdf: Random variable has size = 1000, but Location parameter h
+CHECK_SUMMARY 0
+CHECK_EXIT=0
+== timing on core 31
+== round 1 2026-11-01T20:48:50+02:00
+RESULT r1 dev 100 499.7 497.0 36941
+RESULT r1 dev 1000 4304.6 4284.8 4601
+RESULT r1 dev 10000 88018.8 84260.4 232
+RESULT r1 dev 100000 1071099.9 1060650.0 18
+SINK -1.31678e+07
+RESULT r1 f1 100 332.8 330.9 55565
+RESULT r1 f1 1000 2886.1 2863.3 6845
+RESULT r1 f1 10000 74093.9 73869.0 268
+RESULT r1 f1 100000 999042.1 991076.0 16
+SINK -1.74228e+07
+RESULT r1 f2 100 269.6 269.4 67942
+RESULT r1 f2 1000 2239.0 2227.9 8790
+RESULT r1 f2 10000 42837.9 41765.4 490
+RESULT r1 f2 100000 844276.5 828555.3 23
+SINK -2.3931e+07
+RESULT r1 f3 100 240.6 240.1 76964
+RESULT r1 f3 1000 2070.2 2061.7 9427
+RESULT r1 f3 10000 22509.1 22391.9 891
+RESULT r1 f3 100000 392060.3 391099.4 51
+SINK -3.26505e+07
+RESULT r1 f4 100 208.5 207.7 85627
+RESULT r1 f4 1000 1906.3 1893.3 10245
+RESULT r1 f4 10000 20562.5 20478.1 952
+RESULT r1 f4 100000 343080.0 338872.9 58
+SINK -3.58466e+07
+RESULT r1 compute_only 100 191.3 191.0 98600
+RESULT r1 compute_only 1000 1547.0 1510.1 12694
+RESULT r1 compute_only 10000 34132.5 33602.2 608
+RESULT r1 compute_only 100000 644085.9 643418.6 30
+SINK -3.25103e+07
+RESULT r1 glm_k1 100 404.8 404.6 45995
+RESULT r1 glm_k1 1000 2149.6 2136.4 9342
+RESULT r1 glm_k1 10000 41777.6 41163.8 491
+RESULT r1 glm_k1 100000 873938.0 859096.6 22
+SINK -2.45631e+07
+RESULT r1 matvec_k1 100 108.7 108.2 172003
+RESULT r1 matvec_k1 1000 599.4 597.3 33373
+RESULT r1 matvec_k1 10000 8322.8 8310.2 2394
+RESULT r1 matvec_k1 100000 158071.4 156395.0 123
+SINK 6.58399e+08
+== round 2 2026-11-01T20:48:55+02:00
+RESULT r2 dev 100 499.8 498.3 37194
+RESULT r2 dev 1000 4332.2 4313.3 4603
+RESULT r2 dev 10000 87167.5 84688.6 236
+RESULT r2 dev 100000 1102787.1 1040155.9 19
+SINK -1.33386e+07
+RESULT r2 f1 100 328.0 327.8 56651
+RESULT r2 f1 1000 2865.7 2838.6 6888
+RESULT r2 f1 10000 76154.4 75228.8 268
+RESULT r2 f1 100000 998928.7 967244.8 19
+SINK -1.78753e+07
+RESULT r2 f2 100 265.9 265.7 69049
+RESULT r2 f2 1000 2245.2 2226.8 8672
+RESULT r2 f2 10000 43449.4 42462.7 471
+RESULT r2 f2 100000 831928.4 829842.6 23
+SINK -2.36237e+07
+RESULT r2 f3 100 249.1 247.7 74934
+RESULT r2 f3 1000 2109.1 2099.0 9318
+RESULT r2 f3 10000 21840.0 21555.3 898
+RESULT r2 f3 100000 392266.7 389314.3 50
+SINK -3.22605e+07
+RESULT r2 f4 100 208.0 207.5 89742
+RESULT r2 f4 1000 1938.6 1923.9 10285
+RESULT r2 f4 10000 20409.3 20226.5 957
+RESULT r2 f4 100000 333438.5 331386.8 59
+SINK -3.63198e+07
+RESULT r2 compute_only 100 182.7 181.9 100390
+RESULT r2 compute_only 1000 1540.4 1531.4 12505
+RESULT r2 compute_only 10000 33691.7 33258.9 614
+RESULT r2 compute_only 100000 683979.1 680787.1 28
+SINK -3.23493e+07
+RESULT r2 glm_k1 100 404.7 402.8 46242
+RESULT r2 glm_k1 1000 2146.0 2142.5 9301
+RESULT r2 glm_k1 10000 41550.1 40904.1 483
+RESULT r2 glm_k1 100000 881481.2 872361.8 22
+SINK -2.43812e+07
+RESULT r2 matvec_k1 100 108.2 108.0 171941
+RESULT r2 matvec_k1 1000 596.8 595.5 33518
+RESULT r2 matvec_k1 10000 8301.2 8245.2 2396
+RESULT r2 matvec_k1 100000 159038.7 152543.0 130
+SINK 6.64397e+08
+== round 3 2026-11-01T20:49:00+02:00
+RESULT r3 dev 100 497.4 496.6 37482
+RESULT r3 dev 1000 4276.3 4237.0 4618
+RESULT r3 dev 10000 87889.7 87185.0 233
+RESULT r3 dev 100000 1100128.1 1092559.0 17
+SINK -1.30485e+07
+RESULT r3 f1 100 335.4 334.4 55186
+RESULT r3 f1 1000 2876.1 2859.5 6860
+RESULT r3 f1 10000 74846.4 74383.2 268
+RESULT r3 f1 100000 988405.9 959529.1 20
+SINK -1.78352e+07
+RESULT r3 f2 100 264.7 263.6 70604
+RESULT r3 f2 1000 2248.2 2243.4 8708
+RESULT r3 f2 10000 42580.2 41731.4 484
+RESULT r3 f2 100000 828656.2 823037.9 24
+SINK -2.40623e+07
+RESULT r3 f3 100 241.6 239.8 76393
+RESULT r3 f3 1000 2066.7 2054.3 9419
+RESULT r3 f3 10000 21587.6 21261.2 900
+RESULT r3 f3 100000 384101.0 376044.0 51
+SINK -3.26845e+07
+RESULT r3 f4 100 226.0 225.5 82721
+RESULT r3 f4 1000 1912.8 1873.3 10300
+RESULT r3 f4 10000 20617.1 20363.6 946
+RESULT r3 f4 100000 353706.6 353300.9 56
+SINK -3.5509e+07
+RESULT r3 compute_only 100 193.6 193.1 94786
+RESULT r3 compute_only 1000 1557.0 1551.9 12624
+RESULT r3 compute_only 10000 30224.8 30029.6 671
+RESULT r3 compute_only 100000 663700.6 658818.1 29
+SINK -3.25352e+07
+RESULT r3 glm_k1 100 405.2 403.3 46121
+RESULT r3 glm_k1 1000 2134.3 2132.3 9355
+RESULT r3 glm_k1 10000 41389.2 40492.3 493
+RESULT r3 glm_k1 100000 864737.5 863231.6 22
+SINK -2.45687e+07
+RESULT r3 matvec_k1 100 108.7 108.1 172670
+RESULT r3 matvec_k1 1000 595.6 593.9 33342
+RESULT r3 matvec_k1 10000 8254.6 8251.9 2418
+RESULT r3 matvec_k1 100000 161715.2 156697.3 131
+SINK 6.65914e+08
+== round 4 2026-11-01T20:49:04+02:00
+RESULT r4 dev 100 501.6 499.1 36929
+RESULT r4 dev 1000 4314.8 4284.6 4609
+RESULT r4 dev 10000 86750.7 85305.1 229
+RESULT r4 dev 100000 1083408.1 1064305.8 18
+SINK -1.31471e+07
+RESULT r4 f1 100 336.1 334.4 55512
+RESULT r4 f1 1000 2872.1 2857.8 6831
+RESULT r4 f1 10000 76794.6 76285.6 263
+RESULT r4 f1 100000 1005796.3 995588.5 19
+SINK -1.76618e+07
+RESULT r4 f2 100 263.1 262.9 70528
+RESULT r4 f2 1000 2242.2 2211.3 8719
+RESULT r4 f2 10000 42152.0 41576.1 480
+RESULT r4 f2 100000 829593.1 797809.5 24
+SINK -2.40315e+07
+RESULT r4 f3 100 248.9 248.6 74744
+RESULT r4 f3 1000 2051.8 2032.5 9592
+RESULT r4 f3 10000 21868.6 21803.1 888
+RESULT r4 f3 100000 399240.6 387729.3 51
+SINK -3.26655e+07
+RESULT r4 f4 100 206.6 205.9 89715
+RESULT r4 f4 1000 1911.5 1902.4 10187
+RESULT r4 f4 10000 20729.5 20542.8 953
+RESULT r4 f4 100000 345354.0 342785.2 58
+SINK -3.60419e+07
+RESULT r4 compute_only 100 184.8 184.2 100743
+RESULT r4 compute_only 1000 1533.0 1513.2 12693
+RESULT r4 compute_only 10000 33667.5 33337.2 612
+RESULT r4 compute_only 100000 663258.6 637744.6 30
+SINK -3.27896e+07
+RESULT r4 glm_k1 100 402.7 402.5 46202
+RESULT r4 glm_k1 1000 2140.6 2136.4 9305
+RESULT r4 glm_k1 10000 41679.3 40920.9 494
+RESULT r4 glm_k1 100000 862843.0 856683.4 23
+SINK -2.45831e+07
+RESULT r4 matvec_k1 100 108.7 108.3 172979
+RESULT r4 matvec_k1 1000 595.8 594.9 33512
+RESULT r4 matvec_k1 10000 8275.6 8265.7 2401
+RESULT r4 matvec_k1 100000 162075.0 159524.3 121
+SINK 6.57214e+08
+== round 5 2026-11-01T20:49:09+02:00
+RESULT r5 dev 100 499.2 496.8 37185
+RESULT r5 dev 1000 4342.0 4316.9 4555
+RESULT r5 dev 10000 86231.8 83630.1 233
+RESULT r5 dev 100000 1082727.7 1063636.6 18
+SINK -1.31161e+07
+RESULT r5 f1 100 329.2 328.5 56433
+RESULT r5 f1 1000 2881.2 2863.9 6861
+RESULT r5 f1 10000 73896.5 73756.9 268
+RESULT r5 f1 100000 1008702.8 986744.8 14
+SINK -1.73035e+07
+RESULT r5 f2 100 262.8 262.7 70559
+RESULT r5 f2 1000 2220.2 2206.5 8751
+RESULT r5 f2 10000 42443.0 42117.2 491
+RESULT r5 f2 100000 844071.6 828056.9 23
+SINK -2.41106e+07
+RESULT r5 f3 100 241.2 240.6 76732
+RESULT r5 f3 1000 2111.7 2100.8 9355
+RESULT r5 f3 10000 22538.6 22293.6 886
+RESULT r5 f3 100000 391071.9 390213.5 51
+SINK -3.2464e+07
+RESULT r5 f4 100 211.9 210.9 87981
+RESULT r5 f4 1000 1917.9 1900.8 10126
+RESULT r5 f4 10000 20751.6 20629.3 955
+RESULT r5 f4 100000 341109.2 337753.2 58
+SINK -3.58866e+07
+RESULT r5 compute_only 100 180.1 179.3 104241
+RESULT r5 compute_only 1000 1543.3 1504.0 12777
+RESULT r5 compute_only 10000 34302.9 33198.7 614
+RESULT r5 compute_only 100000 643330.9 642128.2 30
+SINK -3.33132e+07
+RESULT r5 glm_k1 100 404.6 403.2 46019
+RESULT r5 glm_k1 1000 2138.7 2134.9 9386
+RESULT r5 glm_k1 10000 41419.4 40947.1 494
+RESULT r5 glm_k1 100000 890853.1 890160.8 22
+SINK -2.46089e+07
+RESULT r5 matvec_k1 100 108.7 108.4 171998
+RESULT r5 matvec_k1 1000 597.8 596.4 33438
+RESULT r5 matvec_k1 10000 8304.4 8296.2 2402
+RESULT r5 matvec_k1 100000 160313.4 159837.2 123
+SINK 6.59162e+08
+== end 2026-11-01T20:49:14+02:00
+EXIT=0

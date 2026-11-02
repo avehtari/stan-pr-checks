@@ -1,0 +1,19 @@
+Running main() from lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 5 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 5 tests from AgradRev
+[ RUN      ] AgradRev.mathMixScalFun_normal_lpdf
+[       OK ] AgradRev.mathMixScalFun_normal_lpdf (0 ms)
+[ RUN      ] AgradRev.mathMixScalFun_normal_lpdf_vectors
+[       OK ] AgradRev.mathMixScalFun_normal_lpdf_vectors (6 ms)
+[ RUN      ] AgradRev.mathMixScalFun_normal_lpdf_reference
+[       OK ] AgradRev.mathMixScalFun_normal_lpdf_reference (0 ms)
+[ RUN      ] AgradRev.mathMixScalFun_normal_lpdf_messages
+[       OK ] AgradRev.mathMixScalFun_normal_lpdf_messages (1 ms)
+[ RUN      ] AgradRev.mathMixScalFun_normal_lpdf_infinite_y
+[       OK ] AgradRev.mathMixScalFun_normal_lpdf_infinite_y (0 ms)
+[----------] 5 tests from AgradRev (8 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 1 test suite ran. (8 ms total)
+[  PASSED  ] 5 tests.

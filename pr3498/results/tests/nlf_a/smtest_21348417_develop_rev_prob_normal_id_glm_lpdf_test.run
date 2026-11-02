@@ -1,0 +1,67 @@
+Running main() from lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 26 tests from 3 test suites.
+[----------] Global test environment set-up.
+[----------] 4 tests from AgradRev
+[ RUN      ] AgradRev.normal_glm_matches_normal_id_doubles
+[       OK ] AgradRev.normal_glm_matches_normal_id_doubles (0 ms)
+[ RUN      ] AgradRev.normal_glm_matches_normal_id_doubles_rand
+[       OK ] AgradRev.normal_glm_matches_normal_id_doubles_rand (0 ms)
+[ RUN      ] AgradRev.ProbDistributionsNormalIdGLM_glm_matches_normal_id_error_checking
+[       OK ] AgradRev.ProbDistributionsNormalIdGLM_glm_matches_normal_id_error_checking (0 ms)
+[ RUN      ] AgradRev.ProbDistributionsNormalIdGLM_glm_type_issue_3189
+[       OK ] AgradRev.ProbDistributionsNormalIdGLM_glm_type_issue_3189 (0 ms)
+[----------] 4 tests from AgradRev (0 ms total)
+
+[----------] 11 tests from ProbDistributionsNormalIdGLM/0, where TypeParam = stan::math::test::var_matrix_types<false>
+[ RUN      ] ProbDistributionsNormalIdGLM/0.glm_matches_normal_id_vars
+[       OK ] ProbDistributionsNormalIdGLM/0.glm_matches_normal_id_vars (0 ms)
+[ RUN      ] ProbDistributionsNormalIdGLM/0.glm_matches_normal_id_simple
+[       OK ] ProbDistributionsNormalIdGLM/0.glm_matches_normal_id_simple (0 ms)
+[ RUN      ] ProbDistributionsNormalIdGLM/0.broadcast_x
+[       OK ] ProbDistributionsNormalIdGLM/0.broadcast_x (0 ms)
+[ RUN      ] ProbDistributionsNormalIdGLM/0.broadcast_y
+[       OK ] ProbDistributionsNormalIdGLM/0.broadcast_y (0 ms)
+[ RUN      ] ProbDistributionsNormalIdGLM/0.glm_matches_normal_id_vars_zero_instances
+[       OK ] ProbDistributionsNormalIdGLM/0.glm_matches_normal_id_vars_zero_instances (0 ms)
+[ RUN      ] ProbDistributionsNormalIdGLM/0.glm_matches_normal_id_vars_zero_attributes
+[       OK ] ProbDistributionsNormalIdGLM/0.glm_matches_normal_id_vars_zero_attributes (0 ms)
+[ RUN      ] ProbDistributionsNormalIdGLM/0.glm_matches_normal_id_vars_rand
+[       OK ] ProbDistributionsNormalIdGLM/0.glm_matches_normal_id_vars_rand (0 ms)
+[ RUN      ] ProbDistributionsNormalIdGLM/0.glm_matches_normal_id_vars_rand_scal_beta
+[       OK ] ProbDistributionsNormalIdGLM/0.glm_matches_normal_id_vars_rand_scal_beta (0 ms)
+[ RUN      ] ProbDistributionsNormalIdGLM/0.glm_matches_normal_id_varying_intercept
+[       OK ] ProbDistributionsNormalIdGLM/0.glm_matches_normal_id_varying_intercept (0 ms)
+[ RUN      ] ProbDistributionsNormalIdGLM/0.glm_matches_normal_id_varying_intercept_and_scale
+[       OK ] ProbDistributionsNormalIdGLM/0.glm_matches_normal_id_varying_intercept_and_scale (0 ms)
+[ RUN      ] ProbDistributionsNormalIdGLM/0.glm_matches_normal_id_interface_types
+[       OK ] ProbDistributionsNormalIdGLM/0.glm_matches_normal_id_interface_types (0 ms)
+[----------] 11 tests from ProbDistributionsNormalIdGLM/0 (0 ms total)
+
+[----------] 11 tests from ProbDistributionsNormalIdGLM/1, where TypeParam = stan::math::test::var_matrix_types<true>
+[ RUN      ] ProbDistributionsNormalIdGLM/1.glm_matches_normal_id_vars
+[       OK ] ProbDistributionsNormalIdGLM/1.glm_matches_normal_id_vars (0 ms)
+[ RUN      ] ProbDistributionsNormalIdGLM/1.glm_matches_normal_id_simple
+[       OK ] ProbDistributionsNormalIdGLM/1.glm_matches_normal_id_simple (0 ms)
+[ RUN      ] ProbDistributionsNormalIdGLM/1.broadcast_x
+[       OK ] ProbDistributionsNormalIdGLM/1.broadcast_x (0 ms)
+[ RUN      ] ProbDistributionsNormalIdGLM/1.broadcast_y
+[       OK ] ProbDistributionsNormalIdGLM/1.broadcast_y (0 ms)
+[ RUN      ] ProbDistributionsNormalIdGLM/1.glm_matches_normal_id_vars_zero_instances
+[       OK ] ProbDistributionsNormalIdGLM/1.glm_matches_normal_id_vars_zero_instances (0 ms)
+[ RUN      ] ProbDistributionsNormalIdGLM/1.glm_matches_normal_id_vars_zero_attributes
+[       OK ] ProbDistributionsNormalIdGLM/1.glm_matches_normal_id_vars_zero_attributes (0 ms)
+[ RUN      ] ProbDistributionsNormalIdGLM/1.glm_matches_normal_id_vars_rand
+[       OK ] ProbDistributionsNormalIdGLM/1.glm_matches_normal_id_vars_rand (1 ms)
+[ RUN      ] ProbDistributionsNormalIdGLM/1.glm_matches_normal_id_vars_rand_scal_beta
+[       OK ] ProbDistributionsNormalIdGLM/1.glm_matches_normal_id_vars_rand_scal_beta (0 ms)
+[ RUN      ] ProbDistributionsNormalIdGLM/1.glm_matches_normal_id_varying_intercept
+[       OK ] ProbDistributionsNormalIdGLM/1.glm_matches_normal_id_varying_intercept (0 ms)
+[ RUN      ] ProbDistributionsNormalIdGLM/1.glm_matches_normal_id_varying_intercept_and_scale
+[       OK ] ProbDistributionsNormalIdGLM/1.glm_matches_normal_id_varying_intercept_and_scale (0 ms)
+[ RUN      ] ProbDistributionsNormalIdGLM/1.glm_matches_normal_id_interface_types
+[       OK ] ProbDistributionsNormalIdGLM/1.glm_matches_normal_id_interface_types (0 ms)
+[----------] 11 tests from ProbDistributionsNormalIdGLM/1 (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 26 tests from 3 test suites ran. (1 ms total)
+[  PASSED  ] 26 tests.

@@ -1,0 +1,111 @@
+== host csl43.int.triton.aalto.fi  date 2026-11-01T22:58:03+02:00  cpus 16  J=16
+== g++ g++ (conda-forge gcc 14.3.0-18) 14.3.0
+== mode targeted  tree <scratch>/smtest_normal_lpdf
+== deploy repo=math
+== deploy clone=<workstation>/proj/stan_math_normal_lpdf
+== deploy branch=faster-normal-lpdf
+== deploy head=f83aee2c10744c7aa2274aa6ccb9aecea5bad9ad
+== deploy base_ref=origin/develop
+== deploy base=dc669419692e2cb71d55000a871066b5739c3e48
+== deploy uncommitted_edits=no
+== deploy deployed=2026-11-01T22:57:25+02:00
+== repository math
+== tree matches the manifest (3 files)
+
+######## stage branch ########
+RESULT stage=branch suite=test/unit/math/prim/prob/normal_test status=PASS build_s=73 cases=8 failed=0
+RESULT stage=branch suite=test/unit/math/mix/prob/normal_test status=BUILD_FAILED build_s=29 cases=0 failed=0
+test/unit/math/mix/prob/normal_test.cpp:55: error: request for member 'adj' in '(& x)->Eigen::Matrix<double, -1, 1>::Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >.Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::coeff(i)', which is of non-class type 'const Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::Scalar' {aka 'const double'}
+   55 |         out.push_back(x.coeff(i).adj());
+test/unit/math/mix/prob/normal_test.cpp: In instantiation of 'normal_lpdf_test::value_and_adjoints<true, expect_varmat_matches_matrix_var<true>()::<lambda()>, expect_varmat_matches_matrix_var<true>()::<lambda()>, expect_varmat_matches_matrix_var<true>()::<lambda()> >(const expect_varmat_matches_matrix_var<true>()::<lambda()>&, const expect_varmat_matches_matrix_var<true>()::<lambda()>&, const expect_varmat_matches_matrix_var<true>()::<lambda()>&)::<lambda(const auto:1108&)> [with auto:1108 = Eigen::Matrix<double, -1, 1>]':
+test/unit/math/mix/prob/normal_test.cpp:59:0:   required from 'std::vector<double, std::allocator<double> > normal_lpdf_test::value_and_adjoints(const MakeY&, const MakeMu&, const MakeSigma&) [with bool propto = true; MakeY = expect_varmat_matches_matrix_var<true>()::<lambda()>; MakeMu = expect_varmat_matches_matrix_var<true>()::<lambda()>; MakeSigma = expect_varmat_matches_matrix_var<true>()::<lambda()>]'
+--
+test/unit/math/mix/prob/normal_test.cpp:55: error: request for member 'adj' in '(& x)->Eigen::Matrix<double, -1, 1>::Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >.Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::coeff(i)', which is of non-class type 'const Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::Scalar' {aka 'const double'}
+   55 |         out.push_back(x.coeff(i).adj());
+test/unit/math/mix/prob/normal_test.cpp: In instantiation of 'normal_lpdf_test::value_and_adjoints<true, expect_varmat_matches_matrix_var<true>()::<lambda()>, expect_varmat_matches_matrix_var<true>()::<lambda()>, expect_varmat_matches_matrix_var<true>()::<lambda()> >(const expect_varmat_matches_matrix_var<true>()::<lambda()>&, const expect_varmat_matches_matrix_var<true>()::<lambda()>&, const expect_varmat_matches_matrix_var<true>()::<lambda()>&)::<lambda(const auto:1108&)> [with auto:1108 = stan::math::var_value<Eigen::Matrix<double, -1, 1> >]':
+test/unit/math/mix/prob/normal_test.cpp:60:0:   required from 'std::vector<double, std::allocator<double> > normal_lpdf_test::value_and_adjoints(const MakeY&, const MakeMu&, const MakeSigma&) [with bool propto = true; MakeY = expect_varmat_matches_matrix_var<true>()::<lambda()>; MakeMu = expect_varmat_matches_matrix_var<true>()::<lambda()>; MakeSigma = expect_varmat_matches_matrix_var<true>()::<lambda()>]'
+--
+test/unit/math/mix/prob/normal_test.cpp:47: error: no matching function for call to 'std::vector<double, std::allocator<double> >::push_back(stan::math::arena_matrix<Eigen::Matrix<double, -1, 1> >&)'
+   47 |       out.push_back(x.adj());
+In file included from /appl/scibuilder-mamba/aalto-rhel9/prod/software/scicomp-r-env/2025.1/1c89c1c/lib/gcc/x86_64-conda-linux-gnu/14.3.0/include/c++/vector:66,
+                 from /appl/scibuilder-mamba/aalto-rhel9/prod/software/scicomp-r-env/2025.1/1c89c1c/lib/gcc/x86_64-conda-linux-gnu/14.3.0/include/c++/functional:64,
+--
+test/unit/math/mix/prob/normal_test.cpp:55: error: request for member 'adj' in '(& x)->Eigen::Matrix<double, -1, 1>::Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >.Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::coeff(i)', which is of non-class type 'const Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::Scalar' {aka 'const double'}
+   55 |         out.push_back(x.coeff(i).adj());
+test/unit/math/mix/prob/normal_test.cpp: In instantiation of 'normal_lpdf_test::value_and_adjoints<true, expect_varmat_matches_matrix_var<true>()::<lambda()>, expect_varmat_matches_matrix_var<true>()::<lambda()>, expect_varmat_matches_matrix_var<true>()::<lambda()> >(const expect_varmat_matches_matrix_var<true>()::<lambda()>&, const expect_varmat_matches_matrix_var<true>()::<lambda()>&, const expect_varmat_matches_matrix_var<true>()::<lambda()>&)::<lambda(const auto:1108&)> [with auto:1108 = Eigen::Matrix<double, -1, 1>]':
+test/unit/math/mix/prob/normal_test.cpp:59:0:   required from 'std::vector<double, std::allocator<double> > normal_lpdf_test::value_and_adjoints(const MakeY&, const MakeMu&, const MakeSigma&) [with bool propto = true; MakeY = expect_varmat_matches_matrix_var<true>()::<lambda()>; MakeMu = expect_varmat_matches_matrix_var<true>()::<lambda()>; MakeSigma = expect_varmat_matches_matrix_var<true>()::<lambda()>]'
+--
+test/unit/math/mix/prob/normal_test.cpp:55: error: request for member 'adj' in '(& x)->Eigen::Matrix<double, -1, 1>::Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >.Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::coeff(i)', which is of non-class type 'const Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::Scalar' {aka 'const double'}
+   55 |         out.push_back(x.coeff(i).adj());
+test/unit/math/mix/prob/normal_test.cpp: In instantiation of 'normal_lpdf_test::value_and_adjoints<true, expect_varmat_matches_matrix_var<true>()::<lambda()>, expect_varmat_matches_matrix_var<true>()::<lambda()>, expect_varmat_matches_matrix_var<true>()::<lambda()> >(const expect_varmat_matches_matrix_var<true>()::<lambda()>&, const expect_varmat_matches_matrix_var<true>()::<lambda()>&, const expect_varmat_matches_matrix_var<true>()::<lambda()>&)::<lambda(const auto:1108&)> [with auto:1108 = stan::math::var_value<Eigen::Matrix<double, -1, 1> >]':
+test/unit/math/mix/prob/normal_test.cpp:60:0:   required from 'std::vector<double, std::allocator<double> > normal_lpdf_test::value_and_adjoints(const MakeY&, const MakeMu&, const MakeSigma&) [with bool propto = true; MakeY = expect_varmat_matches_matrix_var<true>()::<lambda()>; MakeMu = expect_varmat_matches_matrix_var<true>()::<lambda()>; MakeSigma = expect_varmat_matches_matrix_var<true>()::<lambda()>]'
+RESULT stage=branch suite=test/unit/math/rev/prob/normal_log_test status=PASS build_s=17 cases=1 failed=0
+SUMMARY stage=branch suites=3 failed_suites=1
+
+######## stage develop (swapped: stan/math/prim/prob/normal_lpdf.hpp) ########
+RESULT stage=develop suite=test/unit/math/prim/prob/normal_test status=PASS build_s=71 cases=8 failed=0
+RESULT stage=develop suite=test/unit/math/mix/prob/normal_test status=BUILD_FAILED build_s=28 cases=0 failed=0
+test/unit/math/mix/prob/normal_test.cpp:55: error: request for member 'adj' in '(& x)->Eigen::Matrix<double, -1, 1>::Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >.Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::coeff(i)', which is of non-class type 'const Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::Scalar' {aka 'const double'}
+   55 |         out.push_back(x.coeff(i).adj());
+test/unit/math/mix/prob/normal_test.cpp: In instantiation of 'normal_lpdf_test::value_and_adjoints<true, expect_varmat_matches_matrix_var<true>()::<lambda()>, expect_varmat_matches_matrix_var<true>()::<lambda()>, expect_varmat_matches_matrix_var<true>()::<lambda()> >(const expect_varmat_matches_matrix_var<true>()::<lambda()>&, const expect_varmat_matches_matrix_var<true>()::<lambda()>&, const expect_varmat_matches_matrix_var<true>()::<lambda()>&)::<lambda(const auto:1108&)> [with auto:1108 = Eigen::Matrix<double, -1, 1>]':
+test/unit/math/mix/prob/normal_test.cpp:59:0:   required from 'std::vector<double, std::allocator<double> > normal_lpdf_test::value_and_adjoints(const MakeY&, const MakeMu&, const MakeSigma&) [with bool propto = true; MakeY = expect_varmat_matches_matrix_var<true>()::<lambda()>; MakeMu = expect_varmat_matches_matrix_var<true>()::<lambda()>; MakeSigma = expect_varmat_matches_matrix_var<true>()::<lambda()>]'
+--
+test/unit/math/mix/prob/normal_test.cpp:55: error: request for member 'adj' in '(& x)->Eigen::Matrix<double, -1, 1>::Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >.Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::coeff(i)', which is of non-class type 'const Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::Scalar' {aka 'const double'}
+   55 |         out.push_back(x.coeff(i).adj());
+test/unit/math/mix/prob/normal_test.cpp: In instantiation of 'normal_lpdf_test::value_and_adjoints<true, expect_varmat_matches_matrix_var<true>()::<lambda()>, expect_varmat_matches_matrix_var<true>()::<lambda()>, expect_varmat_matches_matrix_var<true>()::<lambda()> >(const expect_varmat_matches_matrix_var<true>()::<lambda()>&, const expect_varmat_matches_matrix_var<true>()::<lambda()>&, const expect_varmat_matches_matrix_var<true>()::<lambda()>&)::<lambda(const auto:1108&)> [with auto:1108 = stan::math::var_value<Eigen::Matrix<double, -1, 1> >]':
+test/unit/math/mix/prob/normal_test.cpp:60:0:   required from 'std::vector<double, std::allocator<double> > normal_lpdf_test::value_and_adjoints(const MakeY&, const MakeMu&, const MakeSigma&) [with bool propto = true; MakeY = expect_varmat_matches_matrix_var<true>()::<lambda()>; MakeMu = expect_varmat_matches_matrix_var<true>()::<lambda()>; MakeSigma = expect_varmat_matches_matrix_var<true>()::<lambda()>]'
+--
+test/unit/math/mix/prob/normal_test.cpp:47: error: no matching function for call to 'std::vector<double, std::allocator<double> >::push_back(stan::math::arena_matrix<Eigen::Matrix<double, -1, 1> >&)'
+   47 |       out.push_back(x.adj());
+In file included from /appl/scibuilder-mamba/aalto-rhel9/prod/software/scicomp-r-env/2025.1/1c89c1c/lib/gcc/x86_64-conda-linux-gnu/14.3.0/include/c++/vector:66,
+                 from /appl/scibuilder-mamba/aalto-rhel9/prod/software/scicomp-r-env/2025.1/1c89c1c/lib/gcc/x86_64-conda-linux-gnu/14.3.0/include/c++/functional:64,
+--
+test/unit/math/mix/prob/normal_test.cpp:55: error: request for member 'adj' in '(& x)->Eigen::Matrix<double, -1, 1>::Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >.Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::coeff(i)', which is of non-class type 'const Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::Scalar' {aka 'const double'}
+   55 |         out.push_back(x.coeff(i).adj());
+test/unit/math/mix/prob/normal_test.cpp: In instantiation of 'normal_lpdf_test::value_and_adjoints<true, expect_varmat_matches_matrix_var<true>()::<lambda()>, expect_varmat_matches_matrix_var<true>()::<lambda()>, expect_varmat_matches_matrix_var<true>()::<lambda()> >(const expect_varmat_matches_matrix_var<true>()::<lambda()>&, const expect_varmat_matches_matrix_var<true>()::<lambda()>&, const expect_varmat_matches_matrix_var<true>()::<lambda()>&)::<lambda(const auto:1108&)> [with auto:1108 = Eigen::Matrix<double, -1, 1>]':
+test/unit/math/mix/prob/normal_test.cpp:59:0:   required from 'std::vector<double, std::allocator<double> > normal_lpdf_test::value_and_adjoints(const MakeY&, const MakeMu&, const MakeSigma&) [with bool propto = true; MakeY = expect_varmat_matches_matrix_var<true>()::<lambda()>; MakeMu = expect_varmat_matches_matrix_var<true>()::<lambda()>; MakeSigma = expect_varmat_matches_matrix_var<true>()::<lambda()>]'
+--
+test/unit/math/mix/prob/normal_test.cpp:55: error: request for member 'adj' in '(& x)->Eigen::Matrix<double, -1, 1>::Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >.Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::coeff(i)', which is of non-class type 'const Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::Scalar' {aka 'const double'}
+   55 |         out.push_back(x.coeff(i).adj());
+test/unit/math/mix/prob/normal_test.cpp: In instantiation of 'normal_lpdf_test::value_and_adjoints<true, expect_varmat_matches_matrix_var<true>()::<lambda()>, expect_varmat_matches_matrix_var<true>()::<lambda()>, expect_varmat_matches_matrix_var<true>()::<lambda()> >(const expect_varmat_matches_matrix_var<true>()::<lambda()>&, const expect_varmat_matches_matrix_var<true>()::<lambda()>&, const expect_varmat_matches_matrix_var<true>()::<lambda()>&)::<lambda(const auto:1108&)> [with auto:1108 = stan::math::var_value<Eigen::Matrix<double, -1, 1> >]':
+test/unit/math/mix/prob/normal_test.cpp:60:0:   required from 'std::vector<double, std::allocator<double> > normal_lpdf_test::value_and_adjoints(const MakeY&, const MakeMu&, const MakeSigma&) [with bool propto = true; MakeY = expect_varmat_matches_matrix_var<true>()::<lambda()>; MakeMu = expect_varmat_matches_matrix_var<true>()::<lambda()>; MakeSigma = expect_varmat_matches_matrix_var<true>()::<lambda()>]'
+RESULT stage=develop suite=test/unit/math/rev/prob/normal_log_test status=PASS build_s=16 cases=1 failed=0
+SUMMARY stage=develop suites=3 failed_suites=1
+RESULT check=swap_restore status=PASS secs=0
+
+######## stage branch_again ########
+RESULT stage=branch_again suite=test/unit/math/prim/prob/normal_test status=PASS build_s=71 cases=8 failed=0
+RESULT stage=branch_again suite=test/unit/math/mix/prob/normal_test status=BUILD_FAILED build_s=29 cases=0 failed=0
+test/unit/math/mix/prob/normal_test.cpp:55: error: request for member 'adj' in '(& x)->Eigen::Matrix<double, -1, 1>::Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >.Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::coeff(i)', which is of non-class type 'const Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::Scalar' {aka 'const double'}
+   55 |         out.push_back(x.coeff(i).adj());
+test/unit/math/mix/prob/normal_test.cpp: In instantiation of 'normal_lpdf_test::value_and_adjoints<true, expect_varmat_matches_matrix_var<true>()::<lambda()>, expect_varmat_matches_matrix_var<true>()::<lambda()>, expect_varmat_matches_matrix_var<true>()::<lambda()> >(const expect_varmat_matches_matrix_var<true>()::<lambda()>&, const expect_varmat_matches_matrix_var<true>()::<lambda()>&, const expect_varmat_matches_matrix_var<true>()::<lambda()>&)::<lambda(const auto:1108&)> [with auto:1108 = Eigen::Matrix<double, -1, 1>]':
+test/unit/math/mix/prob/normal_test.cpp:59:0:   required from 'std::vector<double, std::allocator<double> > normal_lpdf_test::value_and_adjoints(const MakeY&, const MakeMu&, const MakeSigma&) [with bool propto = true; MakeY = expect_varmat_matches_matrix_var<true>()::<lambda()>; MakeMu = expect_varmat_matches_matrix_var<true>()::<lambda()>; MakeSigma = expect_varmat_matches_matrix_var<true>()::<lambda()>]'
+--
+test/unit/math/mix/prob/normal_test.cpp:55: error: request for member 'adj' in '(& x)->Eigen::Matrix<double, -1, 1>::Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >.Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::coeff(i)', which is of non-class type 'const Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::Scalar' {aka 'const double'}
+   55 |         out.push_back(x.coeff(i).adj());
+test/unit/math/mix/prob/normal_test.cpp: In instantiation of 'normal_lpdf_test::value_and_adjoints<true, expect_varmat_matches_matrix_var<true>()::<lambda()>, expect_varmat_matches_matrix_var<true>()::<lambda()>, expect_varmat_matches_matrix_var<true>()::<lambda()> >(const expect_varmat_matches_matrix_var<true>()::<lambda()>&, const expect_varmat_matches_matrix_var<true>()::<lambda()>&, const expect_varmat_matches_matrix_var<true>()::<lambda()>&)::<lambda(const auto:1108&)> [with auto:1108 = stan::math::var_value<Eigen::Matrix<double, -1, 1> >]':
+test/unit/math/mix/prob/normal_test.cpp:60:0:   required from 'std::vector<double, std::allocator<double> > normal_lpdf_test::value_and_adjoints(const MakeY&, const MakeMu&, const MakeSigma&) [with bool propto = true; MakeY = expect_varmat_matches_matrix_var<true>()::<lambda()>; MakeMu = expect_varmat_matches_matrix_var<true>()::<lambda()>; MakeSigma = expect_varmat_matches_matrix_var<true>()::<lambda()>]'
+--
+test/unit/math/mix/prob/normal_test.cpp:47: error: no matching function for call to 'std::vector<double, std::allocator<double> >::push_back(stan::math::arena_matrix<Eigen::Matrix<double, -1, 1> >&)'
+   47 |       out.push_back(x.adj());
+In file included from /appl/scibuilder-mamba/aalto-rhel9/prod/software/scicomp-r-env/2025.1/1c89c1c/lib/gcc/x86_64-conda-linux-gnu/14.3.0/include/c++/vector:66,
+                 from /appl/scibuilder-mamba/aalto-rhel9/prod/software/scicomp-r-env/2025.1/1c89c1c/lib/gcc/x86_64-conda-linux-gnu/14.3.0/include/c++/functional:64,
+--
+test/unit/math/mix/prob/normal_test.cpp:55: error: request for member 'adj' in '(& x)->Eigen::Matrix<double, -1, 1>::Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >.Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::coeff(i)', which is of non-class type 'const Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::Scalar' {aka 'const double'}
+   55 |         out.push_back(x.coeff(i).adj());
+test/unit/math/mix/prob/normal_test.cpp: In instantiation of 'normal_lpdf_test::value_and_adjoints<true, expect_varmat_matches_matrix_var<true>()::<lambda()>, expect_varmat_matches_matrix_var<true>()::<lambda()>, expect_varmat_matches_matrix_var<true>()::<lambda()> >(const expect_varmat_matches_matrix_var<true>()::<lambda()>&, const expect_varmat_matches_matrix_var<true>()::<lambda()>&, const expect_varmat_matches_matrix_var<true>()::<lambda()>&)::<lambda(const auto:1108&)> [with auto:1108 = Eigen::Matrix<double, -1, 1>]':
+test/unit/math/mix/prob/normal_test.cpp:59:0:   required from 'std::vector<double, std::allocator<double> > normal_lpdf_test::value_and_adjoints(const MakeY&, const MakeMu&, const MakeSigma&) [with bool propto = true; MakeY = expect_varmat_matches_matrix_var<true>()::<lambda()>; MakeMu = expect_varmat_matches_matrix_var<true>()::<lambda()>; MakeSigma = expect_varmat_matches_matrix_var<true>()::<lambda()>]'
+--
+test/unit/math/mix/prob/normal_test.cpp:55: error: request for member 'adj' in '(& x)->Eigen::Matrix<double, -1, 1>::Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >.Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::coeff(i)', which is of non-class type 'const Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::Scalar' {aka 'const double'}
+   55 |         out.push_back(x.coeff(i).adj());
+test/unit/math/mix/prob/normal_test.cpp: In instantiation of 'normal_lpdf_test::value_and_adjoints<true, expect_varmat_matches_matrix_var<true>()::<lambda()>, expect_varmat_matches_matrix_var<true>()::<lambda()>, expect_varmat_matches_matrix_var<true>()::<lambda()> >(const expect_varmat_matches_matrix_var<true>()::<lambda()>&, const expect_varmat_matches_matrix_var<true>()::<lambda()>&, const expect_varmat_matches_matrix_var<true>()::<lambda()>&)::<lambda(const auto:1108&)> [with auto:1108 = stan::math::var_value<Eigen::Matrix<double, -1, 1> >]':
+test/unit/math/mix/prob/normal_test.cpp:60:0:   required from 'std::vector<double, std::allocator<double> > normal_lpdf_test::value_and_adjoints(const MakeY&, const MakeMu&, const MakeSigma&) [with bool propto = true; MakeY = expect_varmat_matches_matrix_var<true>()::<lambda()>; MakeMu = expect_varmat_matches_matrix_var<true>()::<lambda()>; MakeSigma = expect_varmat_matches_matrix_var<true>()::<lambda()>]'
+RESULT stage=branch_again suite=test/unit/math/rev/prob/normal_log_test status=PASS build_s=16 cases=1 failed=0
+SUMMARY stage=branch_again suites=3 failed_suites=1
+
+######## test/prob/normal (generated), -j6, filter: normal_0 ########
+RESULT check=prob_normal filter=normal_0 status=PASS secs=171 ok_cases=5346 failed_cases=0 compiler_kills=0
+
+== final tree check:
+== tree still matches the manifest
+== done 2026-11-01T23:06:46+02:00

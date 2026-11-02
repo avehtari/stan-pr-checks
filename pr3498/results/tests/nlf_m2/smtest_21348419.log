@@ -1,0 +1,75 @@
+== host csl44.int.triton.aalto.fi  date 2026-11-02T00:46:23+02:00  cpus 16  J=16
+== g++ g++ (conda-forge gcc 14.3.0-18) 14.3.0
+== mode targeted  tree <scratch>/smtest_normal_lpdf_mut2
+== deploy repo=math
+== deploy clone=<workstation>/proj/stan_math_normal_lpdf_mut2
+== deploy branch=nl-mut-else
+== deploy head=760f6a1f652274178768cc17ae5612875608dcbf
+== deploy base_ref=760f6a1f65
+== deploy base=760f6a1f652274178768cc17ae5612875608dcbf
+== deploy uncommitted_edits=yes
+== deploy deployed=2026-11-02T00:45:59+02:00
+== repository math
+== tree matches the manifest (1 files)
+
+######## stage branch ########
+RESULT stage=branch suite=test/unit/math/prim/prob/normal_test status=FAIL build_s=73 cases=8 failed=1
+FAILED_CASE stage=branch suite=test/unit/math/prim/prob/normal_test ProbDistributionsNormal.lpdfAllDataChecks
+test/unit/math/prim/prob/normal_test.cpp:126: Failure
+Expected: normal_lpdf<false>(y, mu, 1.0) throws an exception of type std::domain_error.
+  Actual: it throws nothing.
+test/unit/math/prim/prob/normal_test.cpp:134: Failure
+Expected: normal_lpdf<false>(y, mu, 1.0) throws an exception of type std::domain_error.
+  Actual: it throws nothing.
+[  FAILED  ] ProbDistributionsNormal.lpdfAllDataChecks (0 ms)
+[ RUN      ] ProbDistributionsNormal.lpdfFirstInvalidArgumentGivesMessage
+RESULT stage=branch suite=test/unit/math/mix/prob/normal_test status=FAIL build_s=95 cases=5 failed=1
+FAILED_CASE stage=branch suite=test/unit/math/mix/prob/normal_test AgradRev.mathMixScalFun_normal_lpdf_messages
+test/unit/math/mix/prob/normal_test.cpp:242: Failure
+Expected: normal_lpdf(y_nan, mu, to_var(sigma)) throws an exception of type std::domain_error.
+  Actual: it throws nothing.
+test/unit/math/mix/prob/normal_test.cpp:244: Failure
+Expected: normal_lpdf(y, mu_inf, var(1.0)) throws an exception of type std::domain_error.
+  Actual: it throws nothing.
+test/unit/math/mix/prob/normal_test.cpp:257: Failure
+Expected: normal_lpdf(y, mu_inf, sigma_fd) throws an exception of type std::domain_error.
+  Actual: it throws nothing.
+[  FAILED  ] AgradRev.mathMixScalFun_normal_lpdf_messages (0 ms)
+[ RUN      ] AgradRev.mathMixScalFun_normal_lpdf_infinite_y
+SUMMARY stage=branch suites=2 failed_suites=2
+
+######## stage develop (swapped: stan/math/prim/prob/normal_lpdf.hpp) ########
+RESULT stage=develop suite=test/unit/math/prim/prob/normal_test status=PASS build_s=71 cases=8 failed=0
+RESULT stage=develop suite=test/unit/math/mix/prob/normal_test status=PASS build_s=94 cases=5 failed=0
+SUMMARY stage=develop suites=2 failed_suites=0
+RESULT check=swap_restore status=PASS secs=0
+
+######## stage branch_again ########
+RESULT stage=branch_again suite=test/unit/math/prim/prob/normal_test status=FAIL build_s=71 cases=8 failed=1
+FAILED_CASE stage=branch_again suite=test/unit/math/prim/prob/normal_test ProbDistributionsNormal.lpdfAllDataChecks
+test/unit/math/prim/prob/normal_test.cpp:126: Failure
+Expected: normal_lpdf<false>(y, mu, 1.0) throws an exception of type std::domain_error.
+  Actual: it throws nothing.
+test/unit/math/prim/prob/normal_test.cpp:134: Failure
+Expected: normal_lpdf<false>(y, mu, 1.0) throws an exception of type std::domain_error.
+  Actual: it throws nothing.
+[  FAILED  ] ProbDistributionsNormal.lpdfAllDataChecks (0 ms)
+[ RUN      ] ProbDistributionsNormal.lpdfFirstInvalidArgumentGivesMessage
+RESULT stage=branch_again suite=test/unit/math/mix/prob/normal_test status=FAIL build_s=95 cases=5 failed=1
+FAILED_CASE stage=branch_again suite=test/unit/math/mix/prob/normal_test AgradRev.mathMixScalFun_normal_lpdf_messages
+test/unit/math/mix/prob/normal_test.cpp:242: Failure
+Expected: normal_lpdf(y_nan, mu, to_var(sigma)) throws an exception of type std::domain_error.
+  Actual: it throws nothing.
+test/unit/math/mix/prob/normal_test.cpp:244: Failure
+Expected: normal_lpdf(y, mu_inf, var(1.0)) throws an exception of type std::domain_error.
+  Actual: it throws nothing.
+test/unit/math/mix/prob/normal_test.cpp:257: Failure
+Expected: normal_lpdf(y, mu_inf, sigma_fd) throws an exception of type std::domain_error.
+  Actual: it throws nothing.
+[  FAILED  ] AgradRev.mathMixScalFun_normal_lpdf_messages (0 ms)
+[ RUN      ] AgradRev.mathMixScalFun_normal_lpdf_infinite_y
+SUMMARY stage=branch_again suites=2 failed_suites=2
+
+== final tree check:
+== tree still matches the manifest
+== done 2026-11-02T00:54:42+02:00

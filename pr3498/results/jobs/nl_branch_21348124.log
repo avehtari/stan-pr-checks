@@ -1,0 +1,1917 @@
+== host: csl10.int.triton.aalto.fi   date: 2026-11-02T00:21:47+02:00
+== cpu:  Intel(R) Xeon(R) Gold 6248 CPU @ 2.50GHz   cpus: 8
+== governor: performance
+== g++: /appl/scibuilder-mamba/aalto-rhel9/prod/software/scicomp-r-env/2025.1/1c89c1c/bin/g++  g++ (conda-forge gcc 14.3.0-18) 14.3.0
+e100eac2410f879de7243696da800b08  cases.hpp
+033536f509f255c4e6a65f6ba34747fd  dev_normal_lpdf.hpp
+e39ec203800b705bdc88f9d7e72c056c  check_branch.cpp
+296c15981bde07bde4537b21227da612  bench_branch.cpp
+d8e2980c52c4696eec1dfc9e552256e4  syntax_cases.cpp
+833969d15a2937d04671afb7d3df9b23  br_620ab901f5.tar.gz
+== build (at most 6 compiles at a time)
+SYNTAX_CASES OK
+== build done in 44 s
+== check
+HEAP_SELFTEST 1 (expect 1)
+CHECK A regular                rev propto=1 OK rel 1.5e-17 rel_plain 1.4e-15 | value
+CHECK A regular                rev propto=0 OK rel 1.5e-17 rel_plain 1.4e-15 | value
+CHECK A small_sigma            rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK A small_sigma            rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK A sigma_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK A sigma_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK A y_nan                  rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK A y_nan                  rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK A y_inf                  rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK A y_inf                  rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK A y_neg_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK A y_neg_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK A mu_inf                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK A mu_inf                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK A mu_nan                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK A mu_nan                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK A sigma_zero             rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK A sigma_zero             rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK A sigma_neg              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK A sigma_neg              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK A sigma_nan              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK A sigma_nan              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK A y_nan_sigma_neg        rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK A y_nan_sigma_neg        rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK A mu_inf_sigma_neg       rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK A mu_inf_sigma_neg       rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK A y_inf_mu_inf           rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK A y_inf_mu_inf           rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK A y_inf_sigma_inf        rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK A y_inf_sigma_inf        rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK A overflow               rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK A overflow               rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK A size_zero              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK A size_zero              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK A size_zero_bad_scalar   rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK A size_zero_bad_scalar   rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK A size_mismatch          rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Location p
+CHECK A size_mismatch          rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Location p
+HEAP A propto=1 dev 3 branch 0
+HEAP A propto=0 dev 3 branch 0
+CHECK B regular                rev propto=1 OK rel 1.5e-17 rel_plain 1.4e-15 | value
+CHECK B regular                rev propto=0 OK rel 1.5e-17 rel_plain 1.4e-15 | value
+CHECK B regular                fwd propto=1 OK rel 1.5e-17 rel_plain 1.4e-15 | value
+CHECK B regular                fwd propto=0 OK rel 1.5e-17 rel_plain 1.4e-15 | value
+CHECK B small_sigma            rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK B small_sigma            rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK B small_sigma            fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK B small_sigma            fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK B sigma_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK B sigma_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK B sigma_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK B sigma_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK B y_nan                  rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK B y_nan                  rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK B y_nan                  fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK B y_nan                  fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK B y_inf                  rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK B y_inf                  rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK B y_inf                  fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK B y_inf                  fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK B y_neg_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK B y_neg_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK B y_neg_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK B y_neg_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK B mu_inf                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK B mu_inf                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK B mu_inf                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK B mu_inf                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK B mu_nan                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK B mu_nan                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK B mu_nan                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK B mu_nan                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK B sigma_zero             rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK B sigma_zero             rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK B sigma_zero             fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK B sigma_zero             fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK B sigma_neg              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK B sigma_neg              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK B sigma_neg              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK B sigma_neg              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK B sigma_nan              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK B sigma_nan              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK B sigma_nan              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK B sigma_nan              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK B y_nan_sigma_neg        rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK B y_nan_sigma_neg        rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK B y_nan_sigma_neg        fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK B y_nan_sigma_neg        fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK B mu_inf_sigma_neg       rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK B mu_inf_sigma_neg       rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK B mu_inf_sigma_neg       fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK B mu_inf_sigma_neg       fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK B y_inf_mu_inf           rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK B y_inf_mu_inf           rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK B y_inf_mu_inf           fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK B y_inf_mu_inf           fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK B y_inf_sigma_inf        rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK B y_inf_sigma_inf        rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK B y_inf_sigma_inf        fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK B y_inf_sigma_inf        fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK B overflow               rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK B overflow               rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK B overflow               fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK B overflow               fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK B size_zero              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK B size_zero              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK B size_zero              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK B size_zero              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK B size_zero_bad_scalar   rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK B size_zero_bad_scalar   rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK B size_zero_bad_scalar   fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK B size_zero_bad_scalar   fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK B size_mismatch          rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Location p
+CHECK B size_mismatch          rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Location p
+CHECK B size_mismatch          fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Location p
+CHECK B size_mismatch          fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Location p
+HEAP B propto=1 dev 4 branch 0
+HEAP B propto=0 dev 4 branch 0
+CHECK C regular                rev propto=1 OK rel 1.6e-15 rel_plain 0 | value
+CHECK C regular                rev propto=0 OK rel 3.8e-16 rel_plain 0 | value
+CHECK C regular                fwd propto=1 OK rel 1.6e-15 rel_plain 0 | value
+CHECK C regular                fwd propto=0 OK rel 3.8e-16 rel_plain 0 | value
+CHECK C small_sigma            rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK C small_sigma            rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK C small_sigma            fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK C small_sigma            fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK C sigma_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK C sigma_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK C sigma_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK C sigma_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK C y_nan                  rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK C y_nan                  rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK C y_nan                  fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK C y_nan                  fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK C y_inf                  rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK C y_inf                  rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK C y_inf                  fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK C y_inf                  fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK C y_neg_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK C y_neg_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK C y_neg_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK C y_neg_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK C mu_inf                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK C mu_inf                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK C mu_inf                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK C mu_inf                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK C mu_nan                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK C mu_nan                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK C mu_nan                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK C mu_nan                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK C sigma_zero             rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK C sigma_zero             rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK C sigma_zero             fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK C sigma_zero             fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK C sigma_neg              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK C sigma_neg              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK C sigma_neg              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK C sigma_neg              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK C sigma_nan              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK C sigma_nan              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK C sigma_nan              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK C sigma_nan              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK C y_nan_sigma_neg        rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK C y_nan_sigma_neg        rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK C y_nan_sigma_neg        fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK C y_nan_sigma_neg        fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK C mu_inf_sigma_neg       rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK C mu_inf_sigma_neg       rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK C mu_inf_sigma_neg       fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK C mu_inf_sigma_neg       fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK C y_inf_mu_inf           rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK C y_inf_mu_inf           rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK C y_inf_mu_inf           fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK C y_inf_mu_inf           fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK C y_inf_sigma_inf        rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK C y_inf_sigma_inf        rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK C y_inf_sigma_inf        fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK C y_inf_sigma_inf        fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK C overflow               rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK C overflow               rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK C overflow               fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK C overflow               fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK C size_zero              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK C size_zero              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK C size_zero              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK C size_zero              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK C size_mismatch          rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+CHECK C size_mismatch          rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+CHECK C size_mismatch          fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+CHECK C size_mismatch          fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+HEAP C propto=1 dev 6 branch 0
+HEAP C propto=0 dev 6 branch 0
+CHECK D regular                rev propto=1 OK rel 2e-16 rel_plain 2.3e-16 | value
+CHECK D regular                rev propto=0 OK rel 2e-16 rel_plain 2.3e-16 | value
+CHECK D regular                fwd propto=1 OK rel 2e-16 rel_plain 2.3e-16 | value
+CHECK D regular                fwd propto=0 OK rel 2e-16 rel_plain 2.3e-16 | value
+CHECK D small_sigma            rev propto=1 OK rel 4.6e-16 rel_plain 4.6e-16 | value
+CHECK D small_sigma            rev propto=0 OK rel 4.6e-16 rel_plain 4.6e-16 | value
+CHECK D small_sigma            fwd propto=1 OK rel 4.6e-16 rel_plain 4.6e-16 | value
+CHECK D small_sigma            fwd propto=0 OK rel 4.6e-16 rel_plain 4.6e-16 | value
+CHECK D sigma_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK D sigma_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK D sigma_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK D sigma_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK D y_nan                  rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK D y_nan                  rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK D y_nan                  fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK D y_nan                  fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK D y_inf                  rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK D y_inf                  rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK D y_inf                  fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK D y_inf                  fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK D y_neg_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK D y_neg_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK D y_neg_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK D y_neg_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK D mu_inf                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is -inf, but must be finite!
+CHECK D mu_inf                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is -inf, but must be finite!
+CHECK D mu_inf                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is -inf, but must be finite!
+CHECK D mu_inf                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is -inf, but must be finite!
+CHECK D mu_nan                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK D mu_nan                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK D mu_nan                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK D mu_nan                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK D sigma_zero             rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK D sigma_zero             rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK D sigma_zero             fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK D sigma_zero             fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK D sigma_neg              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK D sigma_neg              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK D sigma_neg              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK D sigma_neg              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK D sigma_nan              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK D sigma_nan              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK D sigma_nan              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK D sigma_nan              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK D y_nan_sigma_neg        rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK D y_nan_sigma_neg        rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK D y_nan_sigma_neg        fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK D y_nan_sigma_neg        fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK D mu_inf_sigma_neg       rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK D mu_inf_sigma_neg       rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK D mu_inf_sigma_neg       fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK D mu_inf_sigma_neg       fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK D y_inf_mu_inf           rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK D y_inf_mu_inf           rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK D y_inf_mu_inf           fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK D y_inf_mu_inf           fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK D y_inf_sigma_inf        rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK D y_inf_sigma_inf        rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK D y_inf_sigma_inf        fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK D y_inf_sigma_inf        fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK D overflow               rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK D overflow               rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK D overflow               fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK D overflow               fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK D size_zero              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK D size_zero              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK D size_zero              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK D size_zero              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK D size_zero_bad_scalar   rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK D size_zero_bad_scalar   rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK D size_zero_bad_scalar   fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK D size_zero_bad_scalar   fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+HEAP D propto=1 dev 4 branch 0
+HEAP D propto=0 dev 4 branch 0
+CHECK E regular                rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK E regular                rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK E regular                fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK E regular                fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK E small_sigma            rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK E small_sigma            rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK E small_sigma            fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK E small_sigma            fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK E sigma_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK E sigma_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK E sigma_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK E sigma_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK E y_nan                  rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK E y_nan                  rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK E y_nan                  fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK E y_nan                  fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK E y_inf                  rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK E y_inf                  rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK E y_inf                  fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK E y_inf                  fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK E y_neg_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK E y_neg_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK E y_neg_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK E y_neg_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK E mu_inf                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK E mu_inf                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK E mu_inf                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK E mu_inf                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK E mu_nan                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK E mu_nan                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK E mu_nan                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK E mu_nan                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK E sigma_zero             rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK E sigma_zero             rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK E sigma_zero             fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK E sigma_zero             fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK E sigma_neg              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK E sigma_neg              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK E sigma_neg              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK E sigma_neg              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK E sigma_nan              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK E sigma_nan              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK E sigma_nan              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK E sigma_nan              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK E y_nan_sigma_neg        rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK E y_nan_sigma_neg        rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK E y_nan_sigma_neg        fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK E y_nan_sigma_neg        fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK E mu_inf_sigma_neg       rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK E mu_inf_sigma_neg       rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK E mu_inf_sigma_neg       fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK E mu_inf_sigma_neg       fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK E y_inf_mu_inf           rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK E y_inf_mu_inf           rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK E y_inf_mu_inf           fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK E y_inf_mu_inf           fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK E y_inf_sigma_inf        rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK E y_inf_sigma_inf        rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK E y_inf_sigma_inf        fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK E y_inf_sigma_inf        fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK E overflow               rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK E overflow               rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK E overflow               fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK E overflow               fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK E size_zero              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK E size_zero              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK E size_zero              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK E size_zero              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK E size_zero_bad_scalar   rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK E size_zero_bad_scalar   rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK E size_zero_bad_scalar   fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK E size_zero_bad_scalar   fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK E size_mismatch          rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Location p
+CHECK E size_mismatch          rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Location p
+CHECK E size_mismatch          fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Location p
+CHECK E size_mismatch          fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Location p
+HEAP E propto=1 dev 2 branch 0
+HEAP E propto=0 dev 2 branch 0
+CHECK F regular                rev propto=1 OK rel 1.5e-17 rel_plain 1.4e-15 | value
+CHECK F regular                rev propto=0 OK rel 1.5e-17 rel_plain 1.4e-15 | value
+CHECK F regular                fwd propto=1 OK rel 1.5e-17 rel_plain 1.4e-15 | value
+CHECK F regular                fwd propto=0 OK rel 1.5e-17 rel_plain 1.4e-15 | value
+CHECK F small_sigma            rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK F small_sigma            rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK F small_sigma            fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK F small_sigma            fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK F sigma_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK F sigma_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK F sigma_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK F sigma_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK F y_nan                  rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK F y_nan                  rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK F y_nan                  fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK F y_nan                  fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK F y_inf                  rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK F y_inf                  rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK F y_inf                  fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK F y_inf                  fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK F y_neg_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK F y_neg_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK F y_neg_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK F y_neg_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK F mu_inf                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK F mu_inf                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK F mu_inf                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK F mu_inf                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK F mu_nan                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK F mu_nan                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK F mu_nan                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK F mu_nan                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK F sigma_zero             rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK F sigma_zero             rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK F sigma_zero             fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK F sigma_zero             fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK F sigma_neg              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK F sigma_neg              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK F sigma_neg              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK F sigma_neg              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK F sigma_nan              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK F sigma_nan              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK F sigma_nan              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK F sigma_nan              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK F y_nan_sigma_neg        rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK F y_nan_sigma_neg        rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK F y_nan_sigma_neg        fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK F y_nan_sigma_neg        fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK F mu_inf_sigma_neg       rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK F mu_inf_sigma_neg       rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK F mu_inf_sigma_neg       fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK F mu_inf_sigma_neg       fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK F y_inf_mu_inf           rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK F y_inf_mu_inf           rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK F y_inf_mu_inf           fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK F y_inf_mu_inf           fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK F y_inf_sigma_inf        rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK F y_inf_sigma_inf        rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK F y_inf_sigma_inf        fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK F y_inf_sigma_inf        fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK F overflow               rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK F overflow               rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK F overflow               fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK F overflow               fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK F size_zero              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK F size_zero              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK F size_zero              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK F size_zero              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK F size_zero_bad_scalar   rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK F size_zero_bad_scalar   rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK F size_zero_bad_scalar   fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK F size_zero_bad_scalar   fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK F size_mismatch          rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Location p
+CHECK F size_mismatch          rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Location p
+CHECK F size_mismatch          fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Location p
+CHECK F size_mismatch          fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Location p
+HEAP F propto=1 dev 2 branch 0
+HEAP F propto=0 dev 2 branch 0
+CHECK G regular                rev propto=1 OK rel 1.5e-17 rel_plain 1.4e-15 | value
+CHECK G regular                rev propto=0 OK rel 1.5e-17 rel_plain 1.4e-15 | value
+CHECK G regular                fwd propto=1 OK rel 1.5e-17 rel_plain 1.4e-15 | value
+CHECK G regular                fwd propto=0 OK rel 1.5e-17 rel_plain 1.4e-15 | value
+CHECK G small_sigma            rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK G small_sigma            rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK G small_sigma            fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK G small_sigma            fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK G sigma_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK G sigma_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK G sigma_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK G sigma_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK G y_nan                  rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK G y_nan                  rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK G y_nan                  fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK G y_nan                  fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK G y_inf                  rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK G y_inf                  rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK G y_inf                  fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK G y_inf                  fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK G y_neg_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK G y_neg_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK G y_neg_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK G y_neg_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK G mu_inf                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK G mu_inf                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK G mu_inf                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK G mu_inf                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK G mu_nan                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK G mu_nan                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK G mu_nan                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK G mu_nan                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK G sigma_zero             rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK G sigma_zero             rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK G sigma_zero             fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK G sigma_zero             fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK G sigma_neg              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK G sigma_neg              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK G sigma_neg              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK G sigma_neg              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK G sigma_nan              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK G sigma_nan              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK G sigma_nan              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK G sigma_nan              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK G y_nan_sigma_neg        rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK G y_nan_sigma_neg        rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK G y_nan_sigma_neg        fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK G y_nan_sigma_neg        fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK G mu_inf_sigma_neg       rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK G mu_inf_sigma_neg       rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK G mu_inf_sigma_neg       fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK G mu_inf_sigma_neg       fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK G y_inf_mu_inf           rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK G y_inf_mu_inf           rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK G y_inf_mu_inf           fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK G y_inf_mu_inf           fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK G y_inf_sigma_inf        rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK G y_inf_sigma_inf        rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK G y_inf_sigma_inf        fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK G y_inf_sigma_inf        fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK G overflow               rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK G overflow               rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK G overflow               fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK G overflow               fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK G size_zero              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK G size_zero              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK G size_zero              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK G size_zero              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK G size_zero_bad_scalar   rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK G size_zero_bad_scalar   rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK G size_zero_bad_scalar   fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK G size_zero_bad_scalar   fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK G size_mismatch          rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Location p
+CHECK G size_mismatch          rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Location p
+CHECK G size_mismatch          fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Location p
+CHECK G size_mismatch          fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Location p
+HEAP G propto=1 dev 4 branch 0
+HEAP G propto=0 dev 4 branch 0
+CHECK H regular                rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK H regular                rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK H regular                fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK H regular                fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK H small_sigma            rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK H small_sigma            rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK H small_sigma            fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK H small_sigma            fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK H sigma_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK H sigma_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK H sigma_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK H sigma_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK H y_nan                  rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK H y_nan                  rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK H y_nan                  fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK H y_nan                  fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK H y_inf                  rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK H y_inf                  rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK H y_inf                  fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK H y_inf                  fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK H y_neg_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK H y_neg_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK H y_neg_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK H y_neg_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK H mu_inf                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK H mu_inf                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK H mu_inf                 fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK H mu_inf                 fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK H mu_nan                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK H mu_nan                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK H mu_nan                 fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK H mu_nan                 fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK H sigma_zero             rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK H sigma_zero             rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK H sigma_zero             fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK H sigma_zero             fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK H sigma_neg              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK H sigma_neg              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK H sigma_neg              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK H sigma_neg              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK H sigma_nan              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK H sigma_nan              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK H sigma_nan              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK H sigma_nan              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK H y_nan_sigma_neg        rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK H y_nan_sigma_neg        rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK H y_nan_sigma_neg        fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK H y_nan_sigma_neg        fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK H mu_inf_sigma_neg       rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK H mu_inf_sigma_neg       rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK H mu_inf_sigma_neg       fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK H mu_inf_sigma_neg       fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK H y_inf_mu_inf           rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK H y_inf_mu_inf           rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK H y_inf_mu_inf           fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK H y_inf_mu_inf           fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK H y_inf_sigma_inf        rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK H y_inf_sigma_inf        rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK H y_inf_sigma_inf        fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK H y_inf_sigma_inf        fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK H overflow               rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK H overflow               rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK H overflow               fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK H overflow               fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK H size_zero              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK H size_zero              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK H size_zero              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK H size_zero              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK H size_zero_bad_scalar   rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK H size_zero_bad_scalar   rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK H size_zero_bad_scalar   fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK H size_zero_bad_scalar   fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK H size_mismatch          rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Location p
+CHECK H size_mismatch          rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Location p
+CHECK H size_mismatch          fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK H size_mismatch          fwd propto=0 OK rel 0 rel_plain 0 | value
+HEAP H propto=1 dev 0 branch 0
+HEAP H propto=0 dev 1 branch 0
+CHECK I regular                rev propto=1 OK rel 1.6e-15 rel_plain 0 | value
+CHECK I regular                rev propto=0 OK rel 3.8e-16 rel_plain 0 | value
+CHECK I regular                fwd propto=1 OK rel 1.6e-15 rel_plain 0 | value
+CHECK I regular                fwd propto=0 OK rel 3.8e-16 rel_plain 0 | value
+CHECK I small_sigma            rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK I small_sigma            rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK I small_sigma            fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK I small_sigma            fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK I sigma_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK I sigma_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK I sigma_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK I sigma_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK I y_nan                  rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK I y_nan                  rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK I y_nan                  fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK I y_nan                  fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK I y_inf                  rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK I y_inf                  rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK I y_inf                  fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK I y_inf                  fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK I y_neg_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK I y_neg_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK I y_neg_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK I y_neg_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK I mu_inf                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK I mu_inf                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK I mu_inf                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK I mu_inf                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK I mu_nan                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK I mu_nan                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK I mu_nan                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK I mu_nan                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK I sigma_zero             rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK I sigma_zero             rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK I sigma_zero             fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK I sigma_zero             fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK I sigma_neg              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK I sigma_neg              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK I sigma_neg              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK I sigma_neg              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK I sigma_nan              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK I sigma_nan              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK I sigma_nan              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK I sigma_nan              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK I y_nan_sigma_neg        rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK I y_nan_sigma_neg        rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK I y_nan_sigma_neg        fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK I y_nan_sigma_neg        fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK I mu_inf_sigma_neg       rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK I mu_inf_sigma_neg       rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK I mu_inf_sigma_neg       fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK I mu_inf_sigma_neg       fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK I y_inf_mu_inf           rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK I y_inf_mu_inf           rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK I y_inf_mu_inf           fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK I y_inf_mu_inf           fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK I y_inf_sigma_inf        rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK I y_inf_sigma_inf        rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK I y_inf_sigma_inf        fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK I y_inf_sigma_inf        fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK I overflow               rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK I overflow               rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK I overflow               fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK I overflow               fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK I size_zero              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK I size_zero              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK I size_zero              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK I size_zero              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK I size_mismatch          rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+CHECK I size_mismatch          rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+CHECK I size_mismatch          fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+CHECK I size_mismatch          fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+HEAP I propto=1 dev 7 branch 0
+HEAP I propto=0 dev 7 branch 0
+CHECK J regular                rev propto=1 OK rel 1.6e-15 rel_plain 0 | value
+CHECK J regular                rev propto=0 OK rel 3.8e-16 rel_plain 0 | value
+CHECK J regular                fwd propto=1 OK rel 1.6e-15 rel_plain 0 | value
+CHECK J regular                fwd propto=0 OK rel 3.8e-16 rel_plain 0 | value
+CHECK J small_sigma            rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK J small_sigma            rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK J small_sigma            fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK J small_sigma            fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK J sigma_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK J sigma_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK J sigma_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK J sigma_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK J y_nan                  rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK J y_nan                  rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK J y_nan                  fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK J y_nan                  fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK J y_inf                  rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK J y_inf                  rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK J y_inf                  fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK J y_inf                  fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK J y_neg_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK J y_neg_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK J y_neg_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK J y_neg_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK J mu_inf                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK J mu_inf                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK J mu_inf                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK J mu_inf                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK J mu_nan                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK J mu_nan                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK J mu_nan                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK J mu_nan                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK J sigma_zero             rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK J sigma_zero             rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK J sigma_zero             fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK J sigma_zero             fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK J sigma_neg              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK J sigma_neg              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK J sigma_neg              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK J sigma_neg              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK J sigma_nan              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK J sigma_nan              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK J sigma_nan              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK J sigma_nan              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK J y_nan_sigma_neg        rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK J y_nan_sigma_neg        rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK J y_nan_sigma_neg        fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK J y_nan_sigma_neg        fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK J mu_inf_sigma_neg       rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK J mu_inf_sigma_neg       rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK J mu_inf_sigma_neg       fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK J mu_inf_sigma_neg       fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK J y_inf_mu_inf           rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK J y_inf_mu_inf           rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK J y_inf_mu_inf           fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK J y_inf_mu_inf           fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK J y_inf_sigma_inf        rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK J y_inf_sigma_inf        rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK J y_inf_sigma_inf        fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK J y_inf_sigma_inf        fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK J overflow               rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK J overflow               rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK J overflow               fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK J overflow               fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK J size_zero              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK J size_zero              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK J size_zero              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK J size_zero              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK J size_mismatch          rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+CHECK J size_mismatch          rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+CHECK J size_mismatch          fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+CHECK J size_mismatch          fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+HEAP J propto=1 dev 4 branch 0
+HEAP J propto=0 dev 4 branch 0
+CHECK K regular                rev propto=1 OK rel 2.4e-15 rel_plain 0 | value
+CHECK K regular                rev propto=0 OK rel 6.2e-16 rel_plain 0 | value
+CHECK K regular                fwd propto=1 OK rel 2.4e-15 rel_plain 0 | value
+CHECK K regular                fwd propto=0 OK rel 6.2e-16 rel_plain 0 | value
+CHECK K small_sigma            rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK K small_sigma            rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK K small_sigma            fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK K small_sigma            fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK K sigma_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK K sigma_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK K sigma_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK K sigma_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK K y_nan                  rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK K y_nan                  rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK K y_nan                  fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK K y_nan                  fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK K y_inf                  rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK K y_inf                  rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK K y_inf                  fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK K y_inf                  fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK K y_neg_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK K y_neg_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK K y_neg_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK K y_neg_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK K mu_inf                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is -inf, but must be finite!
+CHECK K mu_inf                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is -inf, but must be finite!
+CHECK K mu_inf                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is -inf, but must be finite!
+CHECK K mu_inf                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is -inf, but must be finite!
+CHECK K mu_nan                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK K mu_nan                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK K mu_nan                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK K mu_nan                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK K sigma_zero             rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK K sigma_zero             rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK K sigma_zero             fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK K sigma_zero             fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK K sigma_neg              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK K sigma_neg              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK K sigma_neg              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK K sigma_neg              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK K sigma_nan              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK K sigma_nan              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK K sigma_nan              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK K sigma_nan              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK K y_nan_sigma_neg        rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK K y_nan_sigma_neg        rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK K y_nan_sigma_neg        fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK K y_nan_sigma_neg        fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK K mu_inf_sigma_neg       rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK K mu_inf_sigma_neg       rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK K mu_inf_sigma_neg       fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK K mu_inf_sigma_neg       fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK K y_inf_mu_inf           rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK K y_inf_mu_inf           rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK K y_inf_mu_inf           fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK K y_inf_mu_inf           fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK K y_inf_sigma_inf        rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK K y_inf_sigma_inf        rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK K y_inf_sigma_inf        fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK K y_inf_sigma_inf        fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK K overflow               rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK K overflow               rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK K overflow               fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK K overflow               fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK K size_zero              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK K size_zero              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK K size_zero              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK K size_zero              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK K size_zero_bad_scalar   rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK K size_zero_bad_scalar   rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK K size_zero_bad_scalar   fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK K size_zero_bad_scalar   fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+HEAP K propto=1 dev 5 branch 0
+HEAP K propto=0 dev 5 branch 0
+CHECK L regular                rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK L regular                rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK L small_sigma            rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK L small_sigma            rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK L sigma_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK L sigma_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK L y_nan                  rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK L y_nan                  rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK L y_inf                  rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK L y_inf                  rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK L y_neg_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK L y_neg_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK L mu_inf                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK L mu_inf                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK L mu_nan                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK L mu_nan                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK L sigma_zero             rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK L sigma_zero             rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK L sigma_neg              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK L sigma_neg              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK L sigma_nan              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK L sigma_nan              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK L y_nan_sigma_neg        rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK L y_nan_sigma_neg        rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK L mu_inf_sigma_neg       rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK L mu_inf_sigma_neg       rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK L y_inf_mu_inf           rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK L y_inf_mu_inf           rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK L y_inf_sigma_inf        rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK L y_inf_sigma_inf        rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK L overflow               rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK L overflow               rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK L size_zero              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK L size_zero              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK L size_mismatch          rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+CHECK L size_mismatch          rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+HEAP L propto=1 dev 4 branch 0
+HEAP L propto=0 dev 4 branch 0
+CHECK M regular                rev propto=1 OK rel 2e-16 rel_plain 2.3e-16 | value
+CHECK M regular                rev propto=0 OK rel 2e-16 rel_plain 2.3e-16 | value
+CHECK M regular                fwd propto=1 OK rel 2e-16 rel_plain 2.3e-16 | value
+CHECK M regular                fwd propto=0 OK rel 2e-16 rel_plain 2.3e-16 | value
+CHECK M small_sigma            rev propto=1 OK rel 4.6e-16 rel_plain 4.6e-16 | value
+CHECK M small_sigma            rev propto=0 OK rel 4.6e-16 rel_plain 4.6e-16 | value
+CHECK M small_sigma            fwd propto=1 OK rel 4.6e-16 rel_plain 4.6e-16 | value
+CHECK M small_sigma            fwd propto=0 OK rel 4.6e-16 rel_plain 4.6e-16 | value
+CHECK M sigma_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK M sigma_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK M sigma_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK M sigma_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK M y_nan                  rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK M y_nan                  rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK M y_nan                  fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK M y_nan                  fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK M y_inf                  rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK M y_inf                  rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK M y_inf                  fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK M y_inf                  fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK M y_neg_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK M y_neg_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK M y_neg_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK M y_neg_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK M mu_inf                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is -inf, but must be finite!
+CHECK M mu_inf                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is -inf, but must be finite!
+CHECK M mu_inf                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is -inf, but must be finite!
+CHECK M mu_inf                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is -inf, but must be finite!
+CHECK M mu_nan                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK M mu_nan                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK M mu_nan                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK M mu_nan                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK M sigma_zero             rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK M sigma_zero             rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK M sigma_zero             fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK M sigma_zero             fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK M sigma_neg              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK M sigma_neg              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK M sigma_neg              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK M sigma_neg              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK M sigma_nan              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK M sigma_nan              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK M sigma_nan              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK M sigma_nan              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK M y_nan_sigma_neg        rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK M y_nan_sigma_neg        rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK M y_nan_sigma_neg        fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK M y_nan_sigma_neg        fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK M mu_inf_sigma_neg       rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK M mu_inf_sigma_neg       rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK M mu_inf_sigma_neg       fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK M mu_inf_sigma_neg       fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK M y_inf_mu_inf           rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK M y_inf_mu_inf           rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK M y_inf_mu_inf           fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK M y_inf_mu_inf           fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK M y_inf_sigma_inf        rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK M y_inf_sigma_inf        rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK M y_inf_sigma_inf        fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK M y_inf_sigma_inf        fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK M overflow               rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK M overflow               rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK M overflow               fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK M overflow               fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK M size_zero              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK M size_zero              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK M size_zero              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK M size_zero              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK M size_zero_bad_scalar   rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK M size_zero_bad_scalar   rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK M size_zero_bad_scalar   fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK M size_zero_bad_scalar   fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+HEAP M propto=1 dev 3 branch 0
+HEAP M propto=0 dev 3 branch 0
+CHECK N regular                rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK N regular                rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK N regular                fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK N regular                fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK N small_sigma            rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK N small_sigma            rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK N small_sigma            fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK N small_sigma            fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK N sigma_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK N sigma_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK N sigma_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK N sigma_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK N y_nan                  rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK N y_nan                  rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK N y_nan                  fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK N y_nan                  fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK N y_inf                  rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK N y_inf                  rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK N y_inf                  fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK N y_inf                  fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK N y_neg_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK N y_neg_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK N y_neg_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK N y_neg_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK N mu_inf                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK N mu_inf                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK N mu_inf                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK N mu_inf                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK N mu_nan                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK N mu_nan                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK N mu_nan                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK N mu_nan                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK N sigma_zero             rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK N sigma_zero             rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK N sigma_zero             fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK N sigma_zero             fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK N sigma_neg              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK N sigma_neg              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK N sigma_neg              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK N sigma_neg              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK N sigma_nan              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK N sigma_nan              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK N sigma_nan              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK N sigma_nan              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK N y_nan_sigma_neg        rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK N y_nan_sigma_neg        rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK N y_nan_sigma_neg        fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK N y_nan_sigma_neg        fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK N mu_inf_sigma_neg       rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK N mu_inf_sigma_neg       rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK N mu_inf_sigma_neg       fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK N mu_inf_sigma_neg       fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK N y_inf_mu_inf           rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK N y_inf_mu_inf           rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK N y_inf_mu_inf           fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK N y_inf_mu_inf           fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK N y_inf_sigma_inf        rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK N y_inf_sigma_inf        rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK N y_inf_sigma_inf        fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK N y_inf_sigma_inf        fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK N overflow               rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK N overflow               rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK N overflow               fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK N overflow               fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK N size_zero              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK N size_zero              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK N size_zero              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK N size_zero              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK N size_mismatch          rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+CHECK N size_mismatch          rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+CHECK N size_mismatch          fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+CHECK N size_mismatch          fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+HEAP N propto=1 dev 3 branch 0
+HEAP N propto=0 dev 3 branch 0
+CHECK O regular                rev propto=1 OK rel 1.2e-16 rel_plain 2.1e-16 | value
+CHECK O regular                rev propto=0 OK rel 1.2e-16 rel_plain 2.1e-16 | value
+CHECK O regular                fwd propto=1 OK rel 1.2e-16 rel_plain 2.1e-16 | value
+CHECK O regular                fwd propto=0 OK rel 1.2e-16 rel_plain 2.1e-16 | value
+CHECK O small_sigma            rev propto=1 OK rel 1.6e-16 rel_plain 1.6e-16 | value
+CHECK O small_sigma            rev propto=0 OK rel 1.6e-16 rel_plain 1.6e-16 | value
+CHECK O small_sigma            fwd propto=1 OK rel 1.6e-16 rel_plain 1.6e-16 | value
+CHECK O small_sigma            fwd propto=0 OK rel 1.6e-16 rel_plain 1.6e-16 | value
+CHECK O sigma_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK O sigma_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK O sigma_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK O sigma_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK O y_nan                  rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK O y_nan                  rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK O y_nan                  fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK O y_nan                  fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK O y_inf                  rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK O y_inf                  rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK O y_inf                  fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK O y_inf                  fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK O y_neg_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK O y_neg_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK O y_neg_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK O y_neg_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK O mu_inf                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is -inf, but must be finite!
+CHECK O mu_inf                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is -inf, but must be finite!
+CHECK O mu_inf                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is -inf, but must be finite!
+CHECK O mu_inf                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is -inf, but must be finite!
+CHECK O mu_nan                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK O mu_nan                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK O mu_nan                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK O mu_nan                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK O sigma_zero             rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK O sigma_zero             rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK O sigma_zero             fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK O sigma_zero             fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK O sigma_neg              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK O sigma_neg              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK O sigma_neg              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK O sigma_neg              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK O sigma_nan              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK O sigma_nan              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK O sigma_nan              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK O sigma_nan              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK O y_nan_sigma_neg        rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK O y_nan_sigma_neg        rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK O y_nan_sigma_neg        fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK O y_nan_sigma_neg        fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK O mu_inf_sigma_neg       rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK O mu_inf_sigma_neg       rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK O mu_inf_sigma_neg       fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK O mu_inf_sigma_neg       fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK O y_inf_mu_inf           rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK O y_inf_mu_inf           rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK O y_inf_mu_inf           fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK O y_inf_mu_inf           fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK O y_inf_sigma_inf        rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK O y_inf_sigma_inf        rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK O y_inf_sigma_inf        fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK O y_inf_sigma_inf        fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK O overflow               rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK O overflow               rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK O overflow               fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK O overflow               fwd propto=0 OK rel 0 rel_plain 0 | value
+HEAP O propto=1 dev 0 branch 0
+HEAP O propto=0 dev 0 branch 0
+CHECK P regular                rev propto=1 OK rel 1.5e-17 rel_plain 1.4e-15 | value
+CHECK P regular                rev propto=0 OK rel 1.5e-17 rel_plain 1.4e-15 | value
+CHECK P regular                fwd propto=1 OK rel 1.5e-17 rel_plain 1.4e-15 | value
+CHECK P regular                fwd propto=0 OK rel 1.5e-17 rel_plain 1.4e-15 | value
+CHECK P small_sigma            rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK P small_sigma            rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK P small_sigma            fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK P small_sigma            fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK P sigma_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK P sigma_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK P sigma_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK P sigma_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK P y_nan                  rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK P y_nan                  rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK P y_nan                  fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK P y_nan                  fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK P y_inf                  rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK P y_inf                  rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK P y_inf                  fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK P y_inf                  fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK P y_neg_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK P y_neg_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK P y_neg_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK P y_neg_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK P mu_inf                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK P mu_inf                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK P mu_inf                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK P mu_inf                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK P mu_nan                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK P mu_nan                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK P mu_nan                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK P mu_nan                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK P sigma_zero             rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK P sigma_zero             rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK P sigma_zero             fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK P sigma_zero             fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK P sigma_neg              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK P sigma_neg              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK P sigma_neg              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK P sigma_neg              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK P sigma_nan              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK P sigma_nan              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK P sigma_nan              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK P sigma_nan              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK P y_nan_sigma_neg        rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK P y_nan_sigma_neg        rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK P y_nan_sigma_neg        fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK P y_nan_sigma_neg        fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK P mu_inf_sigma_neg       rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK P mu_inf_sigma_neg       rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK P mu_inf_sigma_neg       fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK P mu_inf_sigma_neg       fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK P y_inf_mu_inf           rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK P y_inf_mu_inf           rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK P y_inf_mu_inf           fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK P y_inf_mu_inf           fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK P y_inf_sigma_inf        rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK P y_inf_sigma_inf        rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK P y_inf_sigma_inf        fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK P y_inf_sigma_inf        fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK P overflow               rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK P overflow               rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK P overflow               fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK P overflow               fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK P size_zero              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK P size_zero              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK P size_zero              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK P size_zero              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK P size_zero_bad_scalar   rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK P size_zero_bad_scalar   rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK P size_zero_bad_scalar   fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK P size_zero_bad_scalar   fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK P size_mismatch          rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Location p
+CHECK P size_mismatch          rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Location p
+CHECK P size_mismatch          fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Location p
+CHECK P size_mismatch          fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Location p
+HEAP P propto=1 dev 5 branch 0
+HEAP P propto=0 dev 5 branch 0
+CHECK Q regular                rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK Q regular                rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK Q small_sigma            rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK Q small_sigma            rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK Q sigma_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK Q sigma_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK Q y_nan                  rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK Q y_nan                  rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK Q y_inf                  rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK Q y_inf                  rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK Q y_neg_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK Q y_neg_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK Q mu_inf                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK Q mu_inf                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK Q mu_nan                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK Q mu_nan                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK Q sigma_zero             rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK Q sigma_zero             rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK Q sigma_neg              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK Q sigma_neg              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK Q sigma_nan              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK Q sigma_nan              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK Q y_nan_sigma_neg        rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK Q y_nan_sigma_neg        rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK Q mu_inf_sigma_neg       rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK Q mu_inf_sigma_neg       rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK Q y_inf_mu_inf           rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK Q y_inf_mu_inf           rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK Q y_inf_sigma_inf        rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK Q y_inf_sigma_inf        rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK Q overflow               rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK Q overflow               rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK Q size_zero              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK Q size_zero              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK Q size_mismatch          rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+CHECK Q size_mismatch          rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+HEAP Q propto=1 dev 4 branch 0
+HEAP Q propto=0 dev 4 branch 0
+CHECK R regular                rev propto=1 OK rel 1.5e-17 rel_plain 1.4e-15 | value
+CHECK R regular                rev propto=0 OK rel 1.5e-17 rel_plain 1.4e-15 | value
+CHECK R regular                fwd propto=1 OK rel 1.5e-17 rel_plain 1.4e-15 | value
+CHECK R regular                fwd propto=0 OK rel 1.5e-17 rel_plain 1.4e-15 | value
+CHECK R small_sigma            rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK R small_sigma            rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK R small_sigma            fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK R small_sigma            fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK R sigma_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK R sigma_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK R sigma_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK R sigma_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK R y_nan                  rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK R y_nan                  rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK R y_nan                  fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK R y_nan                  fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK R y_inf                  rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK R y_inf                  rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK R y_inf                  fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK R y_inf                  fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK R y_neg_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK R y_neg_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK R y_neg_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK R y_neg_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK R mu_inf                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK R mu_inf                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK R mu_inf                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK R mu_inf                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK R mu_nan                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK R mu_nan                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK R mu_nan                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK R mu_nan                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK R sigma_zero             rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK R sigma_zero             rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK R sigma_zero             fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK R sigma_zero             fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK R sigma_neg              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK R sigma_neg              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK R sigma_neg              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK R sigma_neg              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK R sigma_nan              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK R sigma_nan              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK R sigma_nan              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK R sigma_nan              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK R y_nan_sigma_neg        rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK R y_nan_sigma_neg        rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK R y_nan_sigma_neg        fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK R y_nan_sigma_neg        fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK R mu_inf_sigma_neg       rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK R mu_inf_sigma_neg       rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK R mu_inf_sigma_neg       fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK R mu_inf_sigma_neg       fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK R y_inf_mu_inf           rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK R y_inf_mu_inf           rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK R y_inf_mu_inf           fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK R y_inf_mu_inf           fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK R y_inf_sigma_inf        rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK R y_inf_sigma_inf        rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK R y_inf_sigma_inf        fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK R y_inf_sigma_inf        fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK R overflow               rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK R overflow               rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK R overflow               fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK R overflow               fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK R size_zero              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK R size_zero              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK R size_zero              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK R size_zero              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK R size_zero_bad_scalar   rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK R size_zero_bad_scalar   rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK R size_zero_bad_scalar   fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK R size_zero_bad_scalar   fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK R size_mismatch          rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Location p
+CHECK R size_mismatch          rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Location p
+CHECK R size_mismatch          fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Location p
+CHECK R size_mismatch          fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Location p
+HEAP R propto=1 dev 5 branch 0
+HEAP R propto=0 dev 5 branch 0
+CHECK S regular                rev propto=1 OK rel 1.5e-17 rel_plain 1.4e-15 | value
+CHECK S regular                rev propto=0 OK rel 1.5e-17 rel_plain 1.4e-15 | value
+CHECK S small_sigma            rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK S small_sigma            rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK S sigma_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK S sigma_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK S y_nan                  rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK S y_nan                  rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK S y_inf                  rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK S y_inf                  rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK S y_neg_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK S y_neg_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK S mu_inf                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK S mu_inf                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK S mu_nan                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK S mu_nan                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK S sigma_zero             rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK S sigma_zero             rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK S sigma_neg              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK S sigma_neg              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK S sigma_nan              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK S sigma_nan              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK S y_nan_sigma_neg        rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK S y_nan_sigma_neg        rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK S mu_inf_sigma_neg       rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK S mu_inf_sigma_neg       rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK S y_inf_mu_inf           rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK S y_inf_mu_inf           rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK S y_inf_sigma_inf        rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK S y_inf_sigma_inf        rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK S overflow               rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK S overflow               rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK S size_zero              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK S size_zero              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK S size_zero_bad_scalar   rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK S size_zero_bad_scalar   rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK S size_mismatch          rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Location p
+CHECK S size_mismatch          rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Location p
+HEAP S propto=1 dev 3 branch 0
+HEAP S propto=0 dev 3 branch 0
+CHECK T regular                rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK T regular                rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK T regular                fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK T regular                fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK T small_sigma            rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK T small_sigma            rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK T small_sigma            fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK T small_sigma            fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK T sigma_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK T sigma_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK T sigma_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK T sigma_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK T y_nan                  rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK T y_nan                  rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK T y_nan                  fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK T y_nan                  fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK T y_inf                  rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK T y_inf                  rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK T y_inf                  fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK T y_inf                  fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK T y_neg_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK T y_neg_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK T y_neg_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK T y_neg_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK T mu_inf                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK T mu_inf                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK T mu_inf                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK T mu_inf                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK T mu_nan                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK T mu_nan                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK T mu_nan                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK T mu_nan                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK T sigma_zero             rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK T sigma_zero             rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK T sigma_zero             fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK T sigma_zero             fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK T sigma_neg              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK T sigma_neg              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK T sigma_neg              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK T sigma_neg              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK T sigma_nan              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK T sigma_nan              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK T sigma_nan              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK T sigma_nan              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK T y_nan_sigma_neg        rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK T y_nan_sigma_neg        rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK T y_nan_sigma_neg        fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK T y_nan_sigma_neg        fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK T mu_inf_sigma_neg       rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK T mu_inf_sigma_neg       rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK T mu_inf_sigma_neg       fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK T mu_inf_sigma_neg       fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK T y_inf_mu_inf           rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK T y_inf_mu_inf           rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK T y_inf_mu_inf           fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK T y_inf_mu_inf           fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK T y_inf_sigma_inf        rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK T y_inf_sigma_inf        rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK T y_inf_sigma_inf        fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK T y_inf_sigma_inf        fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK T overflow               rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK T overflow               rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK T overflow               fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK T overflow               fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK T size_zero              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK T size_zero              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK T size_zero              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK T size_zero              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK T size_zero_bad_scalar   rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK T size_zero_bad_scalar   rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK T size_zero_bad_scalar   fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK T size_zero_bad_scalar   fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK T size_mismatch          rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter has size = 1000, but Scale p
+CHECK T size_mismatch          rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter has size = 1000, but Scale p
+CHECK T size_mismatch          fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter has size = 1000, but Scale p
+CHECK T size_mismatch          fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter has size = 1000, but Scale p
+HEAP T propto=1 dev 3 branch 0
+HEAP T propto=0 dev 3 branch 0
+CHECK U regular                rev propto=1 OK rel 1.6e-15 rel_plain 0 | value
+CHECK U regular                rev propto=0 OK rel 3.8e-16 rel_plain 0 | value
+CHECK U regular                fwd propto=1 OK rel 1.6e-15 rel_plain 0 | value
+CHECK U regular                fwd propto=0 OK rel 3.8e-16 rel_plain 0 | value
+CHECK U small_sigma            rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK U small_sigma            rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK U small_sigma            fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK U small_sigma            fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK U sigma_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK U sigma_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK U sigma_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK U sigma_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK U y_nan                  rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK U y_nan                  rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK U y_nan                  fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK U y_nan                  fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK U y_inf                  rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK U y_inf                  rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK U y_inf                  fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK U y_inf                  fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK U y_neg_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK U y_neg_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK U y_neg_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK U y_neg_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK U mu_inf                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK U mu_inf                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK U mu_inf                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK U mu_inf                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK U mu_nan                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK U mu_nan                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK U mu_nan                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK U mu_nan                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK U sigma_zero             rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK U sigma_zero             rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK U sigma_zero             fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK U sigma_zero             fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK U sigma_neg              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK U sigma_neg              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK U sigma_neg              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK U sigma_neg              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK U sigma_nan              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK U sigma_nan              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK U sigma_nan              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK U sigma_nan              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK U y_nan_sigma_neg        rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK U y_nan_sigma_neg        rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK U y_nan_sigma_neg        fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK U y_nan_sigma_neg        fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK U mu_inf_sigma_neg       rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK U mu_inf_sigma_neg       rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK U mu_inf_sigma_neg       fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK U mu_inf_sigma_neg       fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK U y_inf_mu_inf           rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK U y_inf_mu_inf           rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK U y_inf_mu_inf           fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK U y_inf_mu_inf           fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK U y_inf_sigma_inf        rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK U y_inf_sigma_inf        rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK U y_inf_sigma_inf        fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK U y_inf_sigma_inf        fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK U overflow               rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK U overflow               rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK U overflow               fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK U overflow               fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK U size_zero              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK U size_zero              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK U size_zero              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK U size_zero              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK U size_mismatch          rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+CHECK U size_mismatch          rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+CHECK U size_mismatch          fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+CHECK U size_mismatch          fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+HEAP U propto=1 dev 6 branch 0
+HEAP U propto=0 dev 6 branch 0
+CHECK V regular                rev propto=1 OK rel 1.3e-16 rel_plain 0 | value
+CHECK V regular                rev propto=0 OK rel 1.2e-16 rel_plain 0 | value
+CHECK V regular                fwd propto=1 OK rel 1.3e-16 rel_plain 0 | value
+CHECK V regular                fwd propto=0 OK rel 1.2e-16 rel_plain 0 | value
+CHECK V small_sigma            rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK V small_sigma            rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK V small_sigma            fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK V small_sigma            fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK V sigma_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK V sigma_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK V sigma_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK V sigma_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK V y_nan                  rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK V y_nan                  rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK V y_nan                  fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK V y_nan                  fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK V y_inf                  rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK V y_inf                  rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK V y_inf                  fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK V y_inf                  fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK V y_neg_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK V y_neg_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK V y_neg_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK V y_neg_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK V mu_inf                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is -inf, but must be finite!
+CHECK V mu_inf                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is -inf, but must be finite!
+CHECK V mu_inf                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is -inf, but must be finite!
+CHECK V mu_inf                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is -inf, but must be finite!
+CHECK V mu_nan                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK V mu_nan                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK V mu_nan                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK V mu_nan                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK V sigma_zero             rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK V sigma_zero             rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK V sigma_zero             fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK V sigma_zero             fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK V sigma_neg              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK V sigma_neg              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK V sigma_neg              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK V sigma_neg              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK V sigma_nan              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK V sigma_nan              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK V sigma_nan              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK V sigma_nan              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK V y_nan_sigma_neg        rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK V y_nan_sigma_neg        rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK V y_nan_sigma_neg        fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK V y_nan_sigma_neg        fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK V mu_inf_sigma_neg       rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK V mu_inf_sigma_neg       rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK V mu_inf_sigma_neg       fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK V mu_inf_sigma_neg       fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK V y_inf_mu_inf           rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK V y_inf_mu_inf           rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK V y_inf_mu_inf           fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK V y_inf_mu_inf           fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK V y_inf_sigma_inf        rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK V y_inf_sigma_inf        rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK V y_inf_sigma_inf        fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK V y_inf_sigma_inf        fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK V overflow               rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK V overflow               rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK V overflow               fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK V overflow               fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK V size_zero              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK V size_zero              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK V size_zero              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK V size_zero              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK V size_zero_bad_scalar   rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK V size_zero_bad_scalar   rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK V size_zero_bad_scalar   fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK V size_zero_bad_scalar   fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK V size_mismatch          rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+CHECK V size_mismatch          rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+CHECK V size_mismatch          fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+CHECK V size_mismatch          fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+HEAP V propto=1 dev 5 branch 0
+HEAP V propto=0 dev 5 branch 0
+CHECK W regular                rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK W regular                rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK W regular                fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK W regular                fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK W small_sigma            rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK W small_sigma            rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK W small_sigma            fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK W small_sigma            fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK W sigma_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK W sigma_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK W sigma_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK W sigma_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK W y_nan                  rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK W y_nan                  rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK W y_nan                  fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK W y_nan                  fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK W y_inf                  rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK W y_inf                  rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK W y_inf                  fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK W y_inf                  fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK W y_neg_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK W y_neg_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK W y_neg_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK W y_neg_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK W mu_inf                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is -inf, but must be finite!
+CHECK W mu_inf                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is -inf, but must be finite!
+CHECK W mu_inf                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is -inf, but must be finite!
+CHECK W mu_inf                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is -inf, but must be finite!
+CHECK W mu_nan                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK W mu_nan                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK W mu_nan                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK W mu_nan                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK W sigma_zero             rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK W sigma_zero             rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK W sigma_zero             fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK W sigma_zero             fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK W sigma_neg              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK W sigma_neg              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK W sigma_neg              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK W sigma_neg              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK W sigma_nan              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK W sigma_nan              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK W sigma_nan              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK W sigma_nan              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK W y_nan_sigma_neg        rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK W y_nan_sigma_neg        rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK W y_nan_sigma_neg        fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK W y_nan_sigma_neg        fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK W mu_inf_sigma_neg       rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK W mu_inf_sigma_neg       rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK W mu_inf_sigma_neg       fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK W mu_inf_sigma_neg       fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK W y_inf_mu_inf           rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK W y_inf_mu_inf           rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK W y_inf_mu_inf           fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK W y_inf_mu_inf           fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is inf, but must be finite!
+CHECK W y_inf_sigma_inf        rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK W y_inf_sigma_inf        rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK W y_inf_sigma_inf        fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK W y_inf_sigma_inf        fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK W overflow               rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK W overflow               rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK W overflow               fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK W overflow               fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK W size_zero              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK W size_zero              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK W size_zero              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK W size_zero              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK W size_zero_bad_scalar   rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK W size_zero_bad_scalar   rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK W size_zero_bad_scalar   fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK W size_zero_bad_scalar   fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter is nan, but must be finite!
+CHECK W size_mismatch          rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+CHECK W size_mismatch          rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+CHECK W size_mismatch          fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+CHECK W size_mismatch          fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+HEAP W propto=1 dev 4 branch 0
+HEAP W propto=0 dev 4 branch 0
+CHECK X regular                rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK X regular                rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK X regular                fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK X regular                fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK X small_sigma            rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK X small_sigma            rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK X small_sigma            fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK X small_sigma            fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK X sigma_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK X sigma_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK X sigma_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK X sigma_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK X y_nan                  rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK X y_nan                  rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK X y_nan                  fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK X y_nan                  fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK X y_inf                  rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK X y_inf                  rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK X y_inf                  fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK X y_inf                  fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK X y_neg_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK X y_neg_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK X y_neg_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK X y_neg_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK X mu_inf                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK X mu_inf                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK X mu_inf                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK X mu_inf                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK X mu_nan                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK X mu_nan                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK X mu_nan                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK X mu_nan                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK X sigma_zero             rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK X sigma_zero             rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK X sigma_zero             fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK X sigma_zero             fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is 0, but must be positive!
+CHECK X sigma_neg              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK X sigma_neg              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK X sigma_neg              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK X sigma_neg              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK X sigma_nan              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK X sigma_nan              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK X sigma_nan              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK X sigma_nan              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is nan, but must be positive!
+CHECK X y_nan_sigma_neg        rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK X y_nan_sigma_neg        rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK X y_nan_sigma_neg        fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK X y_nan_sigma_neg        fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable is nan, but must be not nan!
+CHECK X mu_inf_sigma_neg       rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK X mu_inf_sigma_neg       rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK X mu_inf_sigma_neg       fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK X mu_inf_sigma_neg       fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK X y_inf_mu_inf           rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK X y_inf_mu_inf           rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK X y_inf_mu_inf           fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK X y_inf_mu_inf           fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK X y_inf_sigma_inf        rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK X y_inf_sigma_inf        rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK X y_inf_sigma_inf        fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK X y_inf_sigma_inf        fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK X overflow               rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK X overflow               rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK X overflow               fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK X overflow               fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK X size_zero              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK X size_zero              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK X size_zero              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK X size_zero              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK X size_zero_bad_scalar   rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK X size_zero_bad_scalar   rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK X size_zero_bad_scalar   fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+CHECK X size_zero_bad_scalar   fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter is -1, but must be positive!
+HEAP X propto=1 dev 1 branch 0
+HEAP X propto=0 dev 1 branch 0
+CHECK Y regular                rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK Y regular                rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK Y regular                fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK Y regular                fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK Y small_sigma            rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK Y small_sigma            rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK Y small_sigma            fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK Y small_sigma            fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK Y sigma_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK Y sigma_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK Y sigma_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK Y sigma_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK Y y_nan                  rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK Y y_nan                  rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK Y y_nan                  fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK Y y_nan                  fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK Y y_inf                  rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK Y y_inf                  rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK Y y_inf                  fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK Y y_inf                  fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK Y y_neg_inf              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK Y y_neg_inf              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK Y y_neg_inf              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK Y y_neg_inf              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK Y mu_inf                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK Y mu_inf                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK Y mu_inf                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK Y mu_inf                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is -inf, but must be fini
+CHECK Y mu_nan                 rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK Y mu_nan                 rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK Y mu_nan                 fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK Y mu_nan                 fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is nan, but must be finit
+CHECK Y sigma_zero             rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK Y sigma_zero             rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK Y sigma_zero             fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK Y sigma_zero             fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is 0, but must be positive!
+CHECK Y sigma_neg              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK Y sigma_neg              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK Y sigma_neg              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK Y sigma_neg              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is -1, but must be positive!
+CHECK Y sigma_nan              rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK Y sigma_nan              rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK Y sigma_nan              fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK Y sigma_nan              fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Scale parameter[5] is nan, but must be positive
+CHECK Y y_nan_sigma_neg        rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK Y y_nan_sigma_neg        rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK Y y_nan_sigma_neg        fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK Y y_nan_sigma_neg        fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable[4] is nan, but must be not nan!
+CHECK Y mu_inf_sigma_neg       rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK Y mu_inf_sigma_neg       rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK Y mu_inf_sigma_neg       fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK Y mu_inf_sigma_neg       fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK Y y_inf_mu_inf           rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK Y y_inf_mu_inf           rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK Y y_inf_mu_inf           fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK Y y_inf_mu_inf           fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Location parameter[6] is inf, but must be finit
+CHECK Y y_inf_sigma_inf        rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK Y y_inf_sigma_inf        rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK Y y_inf_sigma_inf        fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK Y y_inf_sigma_inf        fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK Y overflow               rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK Y overflow               rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK Y overflow               fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK Y overflow               fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK Y size_zero              rev propto=1 OK rel 0 rel_plain 0 | value
+CHECK Y size_zero              rev propto=0 OK rel 0 rel_plain 0 | value
+CHECK Y size_zero              fwd propto=1 OK rel 0 rel_plain 0 | value
+CHECK Y size_zero              fwd propto=0 OK rel 0 rel_plain 0 | value
+CHECK Y size_mismatch          rev propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+CHECK Y size_mismatch          rev propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+CHECK Y size_mismatch          fwd propto=1 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+CHECK Y size_mismatch          fwd propto=0 OK rel 0 rel_plain 0 | normal_lpdf: Random variable has size = 1000, but Scale para
+HEAP Y propto=1 dev 3 branch 0
+HEAP Y propto=0 dev 3 branch 0
+CHECK_SUMMARY ok 1692 fail 0
+CHECK_EXIT=0
+== timing on core 4
+== round 1 2026-11-02T00:22:31+02:00
+RESULT r1 dev T 1 100 746.7 745.5 26043
+RESULT r1 dev T 1 1000 7711.3 7682.7 2585
+RESULT r1 dev T 1 10000 122512.3 122160.6 163
+RESULT r1 dev T 1 100000 2002227.3 1995706.7 9
+SINK -2.39568e+08
+RESULT r1 br T 1 100 737.1 736.4 26242
+RESULT r1 br T 1 1000 7619.8 7611.7 2614
+RESULT r1 br T 1 10000 77593.8 77559.9 257
+RESULT r1 br T 1 100000 1435655.9 1433467.6 13
+SINK -2.87266e+08
+RESULT r1 dev Y 1 100 856.7 856.2 22666
+RESULT r1 dev Y 1 1000 8759.5 8750.0 2268
+RESULT r1 dev Y 1 10000 171110.7 170418.8 118
+RESULT r1 dev Y 1 100000 2704872.7 2700644.0 7
+SINK -2.73917e+07
+RESULT r1 br Y 1 100 701.3 700.7 27617
+RESULT r1 br Y 1 1000 7407.8 7406.3 2683
+RESULT r1 br Y 1 10000 74917.4 74852.0 266
+RESULT r1 br Y 1 100000 1496963.4 1495669.2 13
+SINK -3.95477e+07
+RESULT r1 dev Y 0 100 1488.8 1483.5 13081
+RESULT r1 dev Y 0 1000 15100.7 15084.7 1313
+RESULT r1 dev Y 0 10000 234797.9 233071.6 85
+RESULT r1 dev Y 0 100000 3372274.4 3368455.6 5
+SINK -3.38399e+07
+RESULT r1 br Y 0 100 1375.2 1359.9 14291
+RESULT r1 br Y 0 1000 13903.4 13865.2 1420
+RESULT r1 br Y 0 10000 139475.3 139420.7 143
+RESULT r1 br Y 0 100000 2141210.6 2132120.0 9
+SINK -4.39354e+07
+== round 2 2026-11-02T00:22:35+02:00
+RESULT r2 dev T 1 100 745.3 744.2 25940
+RESULT r2 dev T 1 1000 7741.3 7710.8 2535
+RESULT r2 dev T 1 10000 121403.2 121107.1 165
+RESULT r2 dev T 1 100000 2002708.7 1996398.7 9
+SINK -2.38086e+08
+RESULT r2 br T 1 100 735.9 733.8 26402
+RESULT r2 br T 1 1000 7649.7 7641.7 2618
+RESULT r2 br T 1 10000 76540.4 76454.0 261
+RESULT r2 br T 1 100000 1440151.4 1438123.4 13
+SINK -2.89511e+08
+RESULT r2 dev Y 1 100 856.3 856.0 22745
+RESULT r2 dev Y 1 1000 8891.0 8876.0 2239
+RESULT r2 dev Y 1 10000 172404.1 171234.3 116
+RESULT r2 dev Y 1 100000 2705916.9 2681236.4 7
+SINK -2.71441e+07
+RESULT r2 br Y 1 100 703.8 702.0 27506
+RESULT r2 br Y 1 1000 7428.8 7417.9 2678
+RESULT r2 br Y 1 10000 75351.4 74942.3 261
+RESULT r2 br Y 1 100000 1483487.8 1481027.1 13
+SINK -3.94387e+07
+RESULT r2 dev Y 0 100 1523.0 1515.1 12810
+RESULT r2 dev Y 0 1000 15096.1 15072.9 1323
+RESULT r2 dev Y 0 10000 234519.1 233630.7 85
+RESULT r2 dev Y 0 100000 3370831.8 3361951.8 5
+SINK -3.3705e+07
+RESULT r2 br Y 0 100 1388.6 1380.3 14047
+RESULT r2 br Y 0 1000 13929.8 13919.8 1435
+RESULT r2 br Y 0 10000 138325.7 138251.3 144
+RESULT r2 br Y 0 100000 2162489.7 2151702.7 9
+SINK -4.39298e+07
+== round 3 2026-11-02T00:22:38+02:00
+RESULT r3 dev T 1 100 757.5 755.0 25721
+RESULT r3 dev T 1 1000 7726.8 7722.9 2565
+RESULT r3 dev T 1 10000 122748.0 121364.6 160
+RESULT r3 dev T 1 100000 1961211.0 1954845.7 9
+SINK -2.36837e+08
+RESULT r3 br T 1 100 735.4 732.7 26496
+RESULT r3 br T 1 1000 7642.8 7641.1 2606
+RESULT r3 br T 1 10000 77684.4 77284.4 258
+RESULT r3 br T 1 100000 1436885.3 1433038.3 13
+SINK -2.91497e+08
+RESULT r3 dev Y 1 100 858.4 854.5 22576
+RESULT r3 dev Y 1 1000 8880.3 8872.7 2235
+RESULT r3 dev Y 1 10000 172725.8 172399.6 116
+RESULT r3 dev Y 1 100000 2707994.4 2689324.9 7
+SINK -2.70255e+07
+RESULT r3 br Y 1 100 704.5 703.9 27470
+RESULT r3 br Y 1 1000 7492.6 7487.7 2650
+RESULT r3 br Y 1 10000 74635.7 74619.0 267
+RESULT r3 br Y 1 100000 1490937.9 1488860.6 13
+SINK -3.93872e+07
+RESULT r3 dev Y 0 100 1489.0 1485.1 13069
+RESULT r3 dev Y 0 1000 14952.9 14493.9 1314
+RESULT r3 dev Y 0 10000 233977.3 231955.3 85
+RESULT r3 dev Y 0 100000 3256054.5 3247091.8 6
+SINK -3.4617e+07
+RESULT r3 br Y 0 100 1358.2 1357.8 14318
+RESULT r3 br Y 0 1000 13831.1 13826.1 1438
+RESULT r3 br Y 0 10000 138382.4 138350.9 144
+RESULT r3 br Y 0 100000 2152164.3 2148925.3 9
+SINK -4.41876e+07
+== round 4 2026-11-02T00:22:42+02:00
+RESULT r4 dev T 1 100 749.8 746.7 25982
+RESULT r4 dev T 1 1000 7754.2 7741.1 2556
+RESULT r4 dev T 1 10000 123808.4 122790.6 163
+RESULT r4 dev T 1 100000 2011731.7 2008217.1 9
+SINK -2.37888e+08
+RESULT r4 br T 1 100 735.9 734.8 26429
+RESULT r4 br T 1 1000 7626.3 7617.4 2611
+RESULT r4 br T 1 10000 75890.5 75854.0 263
+RESULT r4 br T 1 100000 1444539.6 1442429.8 13
+SINK -2.90241e+08
+RESULT r4 dev Y 1 100 857.0 856.9 22676
+RESULT r4 dev Y 1 1000 8782.9 8774.9 2258
+RESULT r4 dev Y 1 10000 170179.3 168878.8 117
+RESULT r4 dev Y 1 100000 2626840.1 2608967.9 7
+SINK -2.72605e+07
+RESULT r4 br Y 1 100 700.9 700.1 27612
+RESULT r4 br Y 1 1000 7419.1 7415.8 2678
+RESULT r4 br Y 1 10000 75368.6 75340.8 265
+RESULT r4 br Y 1 100000 1498351.1 1493570.0 13
+SINK -3.94684e+07
+RESULT r4 dev Y 0 100 1480.3 1479.4 13104
+RESULT r4 dev Y 0 1000 15070.0 15061.2 1315
+RESULT r4 dev Y 0 10000 234152.2 233544.9 86
+RESULT r4 dev Y 0 100000 3388960.4 3378069.0 5
+SINK -3.39606e+07
+RESULT r4 br Y 0 100 1359.0 1358.6 14199
+RESULT r4 br Y 0 1000 13830.9 13816.0 1435
+RESULT r4 br Y 0 10000 139313.8 139186.8 143
+RESULT r4 br Y 0 100000 2150752.0 2143643.4 9
+SINK -4.39525e+07
+== round 5 2026-11-02T00:22:46+02:00
+RESULT r5 dev T 1 100 754.0 750.0 25939
+RESULT r5 dev T 1 1000 7690.0 7682.7 2590
+RESULT r5 dev T 1 10000 122009.3 121535.5 162
+RESULT r5 dev T 1 100000 1971788.3 1954427.2 10
+SINK -2.40533e+08
+RESULT r5 br T 1 100 734.7 734.2 26433
+RESULT r5 br T 1 1000 7644.4 7638.3 2596
+RESULT r5 br T 1 10000 76763.6 76722.4 260
+RESULT r5 br T 1 100000 1436954.7 1431663.5 13
+SINK -2.86886e+08
+RESULT r5 dev Y 1 100 857.2 855.6 22726
+RESULT r5 dev Y 1 1000 8806.8 8797.4 2252
+RESULT r5 dev Y 1 10000 171990.5 171308.9 117
+RESULT r5 dev Y 1 100000 2722880.4 2716677.1 7
+SINK -2.72291e+07
+RESULT r5 br Y 1 100 705.0 703.3 27668
+RESULT r5 br Y 1 1000 7622.7 7498.5 2679
+RESULT r5 br Y 1 10000 75613.2 75508.6 264
+RESULT r5 br Y 1 100000 1484507.8 1480449.5 13
+SINK -3.94118e+07
+RESULT r5 dev Y 0 100 1479.0 1478.3 13130
+RESULT r5 dev Y 0 1000 15187.2 15176.5 1314
+RESULT r5 dev Y 0 10000 232266.8 231839.1 85
+RESULT r5 dev Y 0 100000 3212573.2 3207546.8 6
+SINK -3.47036e+07
+RESULT r5 br Y 0 100 1360.8 1359.3 14236
+RESULT r5 br Y 0 1000 13911.6 13902.6 1438
+RESULT r5 br Y 0 10000 139832.5 139790.3 141
+RESULT r5 br Y 0 100000 2150989.1 2147643.9 9
+SINK -4.38541e+07
+== end 2026-11-02T00:22:49+02:00
+EXIT=0
