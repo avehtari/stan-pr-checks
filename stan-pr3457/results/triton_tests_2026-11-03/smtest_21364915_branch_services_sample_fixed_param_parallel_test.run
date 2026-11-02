@@ -1,0 +1,17 @@
+Running main() from lib/stan_math/lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 4 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 4 tests from ServicesSamplesFixedParam
+[ RUN      ] ServicesSamplesFixedParam.call_count
+[       OK ] ServicesSamplesFixedParam.call_count (0 ms)
+[ RUN      ] ServicesSamplesFixedParam.output_sizes
+[       OK ] ServicesSamplesFixedParam.output_sizes (1 ms)
+[ RUN      ] ServicesSamplesFixedParam.parameter_checks
+[       OK ] ServicesSamplesFixedParam.parameter_checks (0 ms)
+[ RUN      ] ServicesSamplesFixedParam.output_regression
+[       OK ] ServicesSamplesFixedParam.output_regression (0 ms)
+[----------] 4 tests from ServicesSamplesFixedParam (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 1 test suite ran. (1 ms total)
+[  PASSED  ] 4 tests.

@@ -192,10 +192,6 @@ int main() {
   run_case(model, "a_c_e", {{"a", {1}, {}}, {"c", {4}, {}}, {"e", {-2}, {}}},
            2, n_seeds, false);
   run_case(model, "z_2", {{"z", {2}, {}}}, 2, n_seeds, false);
-  run_case(model, "t1_sigma", {{"sigma", {1e-20}, {}}, {"t.1", {0.7}, {}}}, 2,
-           n_seeds, false);
-  run_case(model, "w21_sigma", {{"sigma", {1e-20}, {}}, {"w.2.1", {0.4}, {}}},
-           2, n_seeds, false);
   run_case(model, "lb_10", {{"lb", {10}, {}}}, 2, 3, false);
   return 0;
 }

@@ -14,11 +14,11 @@ the expected output.
 Terms: a *supplied* parameter has a user initial value; a *missing*
 parameter has none.
 
-Last run: 2026-11-02 (probe and unit tests at the PR version after
-WardBrian's review); 2026-11-01 (CmdStan runs, sections 1, 2 and 8).
+Last run: 2026-11-03 (probe and unit tests at PR `0f517b597`, after WardBrian's
+second review); 2026-11-02 (PR v3, kept in `*_2026-11-02/`); 2026-11-01 (CmdStan runs, sections 1, 2 and 8).
 The tests, the probe and the CmdStan runs ran on
 Triton batch nodes (Intel Xeon, g++ 14.3.0).  Lint ran on a laptop on
-2026-11-01; on 2026-11-02 cpplint ran on the Triton login node and
+2026-11-01; from 2026-11-02 cpplint ran on the Triton login node and
 clang-format on a laptop.  In the logs, the
 placeholders `<workstation>`, `<scratch>` and `<home>` replace the machine
 paths.
@@ -30,7 +30,8 @@ paths.
 | develop | Stan `a8ec3d18f`, Stan Math `dc66941969` | merge base of the PR (develop of 2026-10-30) |
 | PR v1 | Stan `78b495834` | first PR head (2026-11-01 results) |
 | PR v2 | Stan `7a63912c4` | flat vectors and `unconstrain_array` instead of `get_dims` |
-| PR | Stan `a5786800d` | one decision per tuple slot (2026-11-02 results; the jobs ran on the uncommitted files, same md5) |
+| PR v3 | Stan `a5786800d` | one decision per tuple slot (2026-11-02 results; the jobs ran on the uncommitted files, same md5) |
+| PR | Stan `0f517b597` | rejects initial values with only some slots of a tuple (2026-11-03 results) |
 | CmdStan develop | `3ab132c` | CmdStan with Stan `a8ec3d18f`, stanc3 v2.40.0 (section 1 and `cmdstan/` step 2) |
 
 The unit-test job 21321656 (job name `smtest`) ran on the uncommitted
@@ -57,7 +58,7 @@ md5 `49a48975` of `initialize.hpp`, which is the develop version.
 | `cmdstan/` | `run_3088.R` and the models of the CmdStan runs (develop only) |
 | `grad/grad_check.cpp` | gradients of the offset/multiplier form at small scales (for the #3088 comment and the docs PR) |
 | `triton/` | the Triton job scripts, with placeholders for the paths |
-| `results/` | outputs of 2026-11-01 and the Triton logs (`triton_cmdstan_pr/`: section 8); 2026-11-02 in `probe_2026-11-02/` and `triton_tests_2026-11-02/` |
+| `results/` | outputs of 2026-11-01 and the Triton logs (`triton_cmdstan_pr/`: section 8); 2026-11-02 (PR v3) in `probe_2026-11-02/` and `triton_tests_2026-11-02/`; 2026-11-03 (PR) in `probe_2026-11-03/` and `triton_tests_2026-11-03/` |
 | `random_var_context_tuples/` | probe of the develop defect of section 9 |
 
 Run commands from this directory.  New outputs go to `out/`, which git
@@ -100,11 +101,10 @@ seeds for `lb_10`) and prints per seed:
 For the runs without partial inits (`none_r2`, `none_r0`, `full_r2`) it
 also prints all parameters in hexadecimal for the bitwise comparison.
 
-## Probe results (job 21362578, `results/probe_2026-11-02/compare_output.txt`)
+## Probe results (job 21365693, `results/probe_2026-11-03/compare_output.txt`)
 
-PR version with one decision per tuple slot, built with
-`tools/stan_probe.sh` of the workspace (develop headers vs the working
-tree), stanc v2.39.0-15:
+PR at `0f517b597`, built with `tools/stan_probe.sh` of the workspace
+(develop headers vs the PR headers), stanc v2.39.0-15:
 
 | case | supplied | develop: max_abs_missing | PR: max_abs_missing | max_rel_supplied (PR) |
 |---|---|---|---|---|
@@ -116,14 +116,17 @@ tree), stanc v2.39.0-15:
 | `b_2_d_-3` | `b = 2`, `d = -3` | 9.96 | 0 | 1.48e-16 |
 | `a_c_e` | `a = 1`, `c = 4`, `e = -2` | 11.3 | 0 | 4.44e-16 |
 | `z_2` | `z = 2` (`offset=at[2].1`) | 8.7 | 0 | 4.44e-16 |
-| `t1_sigma` | `sigma = 1e-20`, `t.1 = 0.7` | 1.05e21 | 0 | 7.52e-16 |
-| `w21_sigma` | `sigma = 1e-20`, `w.2.1 = 0.4` | 1.05e21 | 0 | 7.52e-16 |
 | `lb_10` | `lb = 10` | throws, 100 rejections per seed | same | |
 
 ```
 runs without partial inits: 41 of 41 parameter vectors bitwise equal
-next RNG draw after initialize: 222 of 222 equal
+next RNG draw after initialize: 182 of 182 equal
 ```
+
+The PR v3 run of 2026-11-02 (job 21362578, `results/probe_2026-11-02/`)
+had two more cases with a partly supplied tuple (`t1_sigma`,
+`w21_sigma`; PR v3: 0, develop: 1.05e21) and 222 runs.  The PR now rejects
+these inits (section 7).
 
 On develop, every case also includes the missing array of tuples `at`.
 `random_var_context` puts its values into the wrong slots (section 9),
@@ -163,7 +166,7 @@ The two `stuck` lines are the sampling step 1b of the same job.  "Stuck"
 means that `sigma` has standard deviation 0 over the 1000 draws.  The
 probe shows the same defect with the test model of the PR (case
 `sigma_1e-20`: unconstrained values up to 1.05e21 on develop in job
-21362578 and 7.67e20 in job 21342688, at most 46.1 = |log(1e-20)| with
+21365693 and 7.67e20 in job 21342688, at most 46.1 = |log(1e-20)| with
 the PR).
 
 ## 2. Develop already handles the reverse dependency
@@ -185,9 +188,8 @@ most 6.66e-16 (relative 2.84e-15), and `x` comes back within 1.48e-16.
 > constrained scale, up to the rounding of `transform_inits` followed by
 > `write_array`, as on develop.
 
-Probe (job 21362578), PR build: `max_abs_missing` is 0 in every case,
-also with a partly supplied tuple (`t1_sigma`, `w21_sigma`); `mu_5_r0`
-gives 0 (develop: 5).  `max_rel_supplied` is at most 7.52e-16 in both
+Probe (job 21365693), PR build: `max_abs_missing` is 0 in every case;
+`mu_5_r0` gives 0 (develop: 5).  `max_rel_supplied` is at most 7.52e-16 in both
 builds.
 
 ## 4. Runs without partial inits and the RNG stream
@@ -196,9 +198,9 @@ builds.
 > and the number of random draws per attempt is the same as on develop, so
 > the RNG stream does not change.
 
-Probe (job 21362578): the 41 parameter vectors of `none_r2` (20 seeds),
+Probe (job 21365693): the 41 parameter vectors of `none_r2` (20 seeds),
 `none_r0` and `full_r2` (20 seeds) are bitwise equal between the builds.
-The next RNG draw after `initialize` is equal in all 222 runs except the
+The next RNG draw after `initialize` is equal in all 182 runs except the
 3 `lb_10` runs, which throw.
 
 ## 5. The fixed-point iteration needs more than one pass
@@ -227,24 +229,27 @@ both builds throw after 100 rejections per seed.
 
 > | `initialize.hpp` | `initialize_partial_test` | `initialize_test` |
 > |---|---|---|
-> | this PR | 16/16 pass | 16/16 pass |
-> | develop | 1/16 pass | 16/16 pass |
+> | this PR | 14/14 pass | 16/16 pass |
+> | develop | 1/14 pass | 16/16 pass |
 
-Job 21362615 (`results/triton_tests_2026-11-02/smtest_21362615.log` and
+Job 21364915 (`results/triton_tests_2026-11-03/smtest_21364915.log` and
 the `.run` files): the job ran 36 suites with the PR header, and the two
 `initialize` suites also with the develop header and with the PR header
 again.  On develop, all `initialize_partial_test` cases fail except
-`bound_on_provided_value_is_rejected`.  `provided_dependent_parameter`
+`bound_on_provided_value_is_rejected`.  `partial_tuple_is_rejected`
+fails because develop accepts an incomplete tuple.  `provided_dependent_parameter`
 fails because its check of the missing entries uses exact equality and
 develop differs in the last bits (section 2), and because `at` and `z`
 move on develop (section 9).  With the PR header,
 `fail_init_test` and the 33 suites in `src/test/unit/services/sample`
-also pass (one `.run` file each).
+also pass (one `.run` file each).  The job ran on the uncommitted files
+of `0f517b597` (same md5 as in `results/lint_2026-11-03.txt`).
 
 Earlier versions: job 21361639 (tag `pi_t5`) shows that
 `offset_from_array_of_tuples` fails with PR v1, and job 21362559 (tag
 `pi_t10`) shows that the four `partially_provided_*` tests fail with PR
-v2 and the other 12 pass.  The 2026-11-01 run of PR v1 (job 21321656,
+v2 and the other 12 pass.  Job 21362615 (`results/triton_tests_2026-11-02/`)
+is the PR v3 run with 16 tests.  The 2026-11-01 run of PR v1 (job 21321656,
 7 tests) is in `results/triton_tests/`.  `swap/swap_test.sh` runs the
 new tests with the develop header in a local Stan clone.
 
@@ -254,6 +259,8 @@ with the filters of `make/cpplint` report nothing on the two C++ files.
 files): cpplint 2.0.2 on Triton (same filters) reports nothing on
 `initialize.hpp` and `initialize_partial_test.cpp`; clang-format 14 on
 the laptop reports nothing on these and `initialize_test.cpp`.
+2026-11-03 (`results/lint_2026-11-03.txt`): cpplint reports nothing on
+the two files of `0f517b597`.
 
 ## 8. The reprex of #3088 with the PR, end to end
 

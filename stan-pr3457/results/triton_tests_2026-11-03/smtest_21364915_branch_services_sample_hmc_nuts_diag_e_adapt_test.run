@@ -1,0 +1,29 @@
+Running main() from lib/stan_math/lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 10 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 10 tests from ServicesSampleHmcNutsDiagEAdapt
+[ RUN      ] ServicesSampleHmcNutsDiagEAdapt.call_count
+[       OK ] ServicesSampleHmcNutsDiagEAdapt.call_count (2 ms)
+[ RUN      ] ServicesSampleHmcNutsDiagEAdapt.parameter_checks
+[       OK ] ServicesSampleHmcNutsDiagEAdapt.parameter_checks (2 ms)
+[ RUN      ] ServicesSampleHmcNutsDiagEAdapt.output_sizes
+[       OK ] ServicesSampleHmcNutsDiagEAdapt.output_sizes (2 ms)
+[ RUN      ] ServicesSampleHmcNutsDiagEAdapt.output_regression
+[       OK ] ServicesSampleHmcNutsDiagEAdapt.output_regression (2 ms)
+[ RUN      ] ServicesSampleHmcNutsDiagEAdapt.term_buffer_0
+[       OK ] ServicesSampleHmcNutsDiagEAdapt.term_buffer_0 (10 ms)
+[ RUN      ] ServicesSampleHmcNutsDiagEAdapt.term_buffer_1
+[       OK ] ServicesSampleHmcNutsDiagEAdapt.term_buffer_1 (9 ms)
+[ RUN      ] ServicesSampleHmcNutsDiagEAdapt.no_stepsize_adapt
+[       OK ] ServicesSampleHmcNutsDiagEAdapt.no_stepsize_adapt (7 ms)
+[ RUN      ] ServicesSampleHmcNutsDiagEAdapt.schedule_a
+[       OK ] ServicesSampleHmcNutsDiagEAdapt.schedule_a (3 ms)
+[ RUN      ] ServicesSampleHmcNutsDiagEAdapt.schedule_b
+[       OK ] ServicesSampleHmcNutsDiagEAdapt.schedule_b (2 ms)
+[ RUN      ] ServicesSampleHmcNutsDiagEAdapt.schedule_c
+[       OK ] ServicesSampleHmcNutsDiagEAdapt.schedule_c (3 ms)
+[----------] 10 tests from ServicesSampleHmcNutsDiagEAdapt (42 ms total)
+
+[----------] Global test environment tear-down
+[==========] 10 tests from 1 test suite ran. (42 ms total)
+[  PASSED  ] 10 tests.

@@ -1,0 +1,39 @@
+Running main() from lib/stan_math/lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 15 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 15 tests from sample_defaults
+[ RUN      ] sample_defaults.num_samples
+[       OK ] sample_defaults.num_samples (0 ms)
+[ RUN      ] sample_defaults.num_warmup
+[       OK ] sample_defaults.num_warmup (0 ms)
+[ RUN      ] sample_defaults.save_warmup
+[       OK ] sample_defaults.save_warmup (0 ms)
+[ RUN      ] sample_defaults.thin
+[       OK ] sample_defaults.thin (0 ms)
+[ RUN      ] sample_defaults.adaptation_engaged
+[       OK ] sample_defaults.adaptation_engaged (0 ms)
+[ RUN      ] sample_defaults.gamma
+[       OK ] sample_defaults.gamma (0 ms)
+[ RUN      ] sample_defaults.kappa
+[       OK ] sample_defaults.kappa (0 ms)
+[ RUN      ] sample_defaults.t0
+[       OK ] sample_defaults.t0 (0 ms)
+[ RUN      ] sample_defaults.init_buffer
+[       OK ] sample_defaults.init_buffer (0 ms)
+[ RUN      ] sample_defaults.term_buffer
+[       OK ] sample_defaults.term_buffer (0 ms)
+[ RUN      ] sample_defaults.window
+[       OK ] sample_defaults.window (0 ms)
+[ RUN      ] sample_defaults.int_time
+[       OK ] sample_defaults.int_time (0 ms)
+[ RUN      ] sample_defaults.max_depth
+[       OK ] sample_defaults.max_depth (0 ms)
+[ RUN      ] sample_defaults.stepsize
+[       OK ] sample_defaults.stepsize (0 ms)
+[ RUN      ] sample_defaults.stepsize_jitter
+[       OK ] sample_defaults.stepsize_jitter (0 ms)
+[----------] 15 tests from sample_defaults (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 15 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 15 tests.

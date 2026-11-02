@@ -1,0 +1,7 @@
+# 2026-11-03, working tree on a5786800d (uncommitted edits in the two files below)
+## cpplint 2.0.2 (Triton login node, Python 3.9.25, tree <scratch>/stantest_3088, filters of make/cpplint)
+102d6cd2fc29f57bfc91d68a34874759  src/stan/services/util/initialize.hpp
+3aed44bc963cf1e7385806ae30ab9e43  src/test/unit/services/util/initialize_partial_test.cpp
+Done processing src/stan/services/util/initialize.hpp
+Done processing src/test/unit/services/util/initialize_partial_test.cpp
+exit 0

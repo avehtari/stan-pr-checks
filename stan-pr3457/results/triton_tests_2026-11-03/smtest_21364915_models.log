@@ -1,0 +1,11 @@
+make: 'test/test-models/good/mcmc/hmc/common/gauss3D.hpp' is up to date.
+make: 'test/test-models/good/optimization/rosenbrock.hpp' is up to date.
+make: 'test/test-models/good/services/bernoulli.hpp' is up to date.
+make: 'test/test-models/good/services/bug_2390_gq.hpp' is up to date.
+make: 'test/test-models/good/services/gq_test_multidim.hpp' is up to date.
+make: 'test/test-models/good/services/gq_test_zero_sized.hpp' is up to date.
+make: 'test/test-models/good/services/test_fail.hpp' is up to date.
+make: 'test/test-models/good/services/test_gq2.hpp' is up to date.
+make: 'test/test-models/good/services/test_lp.hpp' is up to date.
+make: 'test/test-models/good/services/zero_params.hpp' is up to date.
+bin/stanc  src/test/test-models/good/services/partial_init_dependent.stan --o=test/test-models/good/services/partial_init_dependent.hpp
