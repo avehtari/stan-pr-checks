@@ -77,9 +77,9 @@ default list, cases A-H; `CHECK_ONLY=1` builds and runs only the check.
 > ns from N = 1e4. The branch takes 1.9 to 4.0 ns. The largest ratio of a
 > single round in the table is 0.89 (case C, N = 1e3).
 
-> The largest ratio that I measured is for a data vector `sigma` with a
-> scalar data `y` and an autodiff `mu` vector. It is 0.96 to 0.99 at N <=
-> 1e3, and 0.62 to 0.72 from N = 1e4.
+> The smallest speedup I measured is for a data vector `sigma` with
+> scalar data `y` and an autodiff `mu` vector: 0.96 to 0.99 at N <=
+> 1e3 and 0.62 to 0.72 from N = 1e4.
 
 One evaluation creates the autodiff arguments, calls `normal_lpdf`, runs
 `grad()` and `recover_memory()`.  Each binary times N = 1e2, 1e3, 1e4,
@@ -134,11 +134,11 @@ Median ns per element over the 5 rounds:
 
 ## 3. Behavior against develop
 
-> 1512 of the 1692 comparisons give the same exception text, or values
-> and gradients with an error below 1e-12 times max(1, |reference|). The
-> other 180 comparisons have an invalid `sigma` together with an invalid
-> `y` or `mu`; there the branch gives the `sigma` exception text. The
-> largest error is 2.4e-15 for the values and 1.4e-15 for the gradients.
+> In 1512 of the 1692 comparisons, the branch gives the same exception
+> text as `develop`, or values and gradients within 1e-12 times max(1,
+> |reference|). The largest error is 2.4e-15 for the values and
+> 1.4e-15 for the gradients. The other 180 comparisons have an invalid
+> `sigma` and an invalid `y` or `mu`, and the branch reports `sigma`.
 > A `malloc` counter finds no allocation of 8 N bytes or more on the
 > branch in any of the 25 type cases; `develop` makes up to 7 such
 > allocations per evaluation.
@@ -168,11 +168,12 @@ awk '$1=="CHECK" && $NF=="value" {if ($8+0>r) r=$8+0; if ($10+0>p) p=$10+0}
 
 ## 4. Unit tests and the mutants
 
-> The new tests also pass with the `develop` header, because each call
-> in them has at most one invalid argument. To show that the tests cover
-> the new code, I removed each of the two checks after the sum of
-> squares (one per code path) in turn. At `760f6a1f65`, without the
-> first, 8 assertions fail; without the second, 5 assertions fail.
+> The new tests also pass with the `develop` header, since no call has
+> more than one invalid argument. To check that they cover the new
+> code, I removed, in turn, the check after the sum of squares in each
+> of the two branches of the arithmetic (one for an autodiff `mu` or
+> `y` vector, one for the other cases). At `760f6a1f65`, 8 and 5
+> assertions failed.
 
 The jobs of this section ran at `760f6a1f65`, CPU builds on batch
 nodes.  At the PR head, `results/tests/nlu_t2/` (job 21362182) and
@@ -210,9 +211,9 @@ grep -c "Failure" results/tests/nlf_m2/smtest_21348419_branch_{prim,mix}_prob_no
 > test-headers` and clang-format 10 pass. `make doxygen` with doxygen
 > 1.9.7 gives no warnings.
 
-> I ran the unit tests, the generated tests, the OpenCL test and the
-> checklist items at `421386dec5`, with the change on `develop` at
-> `dc66941969`, with g++ 14.3.0.
+> The unit tests, the generated tests, the OpenCL test and the
+> checklist items ran at `421386dec5` (the change applied to `develop`
+> at `dc66941969`) with g++ 14.3.0.
 
 At the PR head.  Jobs 21362182 and 21362474 ran on the working tree on
 top of `dde60be194`; its three changed files had the md5 of
@@ -256,10 +257,9 @@ Expected: `scalar_sigma value -6.3968830540223898`, `vector_sigma value
 
 ## 7. Commit `dde60be194`: `normal_lpdf` checks `sigma` first
 
-> Values and gradients agree with `develop` up to rounding. Exception
-> types are the same as on `develop`. Exception texts are also the same,
-> except when `sigma` is invalid together with `y` or `mu`: then the
-> text is about `sigma`.
+> Values and gradients agree with `develop` up to rounding. Exceptions
+> have the same types and texts as on `develop`, unless `sigma` and
+> `y` or `mu` are both invalid; then the text is about `sigma`.
 
 `check_positive(sigma)` now runs before the arithmetic, also when `y` or
 `mu` is invalid.  The checks of `y` and `mu` stay where they were: after
