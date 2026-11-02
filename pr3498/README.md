@@ -19,10 +19,14 @@ machine paths.
 | PR | `760f6a1f65` | PR head (6 commits) |
 | 3a66 | `3a66fcf6aa` | first commit: the change of `normal_lpdf.hpp` |
 | 620a | `620ab901f5` | fourth commit |
+| dde6 | `dde60be194` | seventh commit, after the review: `sigma` is checked first |
+| 4213 | `421386dec5` | eighth commit: tests of an invalid varmat and `std::vector<var>` `sigma`; a comment |
 
-After `3a66fcf6aa`, the commits change `stan/` only in comment lines, so
-the timings and the check (made with `3a66fcf6aa` and `620ab901f5`)
-apply to the PR head.
+From `3a66fcf6aa` to `760f6a1f65`, the commits change `stan/` only in
+comment lines, so the timings and the check (made with `3a66fcf6aa` and
+`620ab901f5`) apply to `760f6a1f65`.  `dde60be194` removes the code that
+kept the develop error order when `sigma` is invalid; section 7 gives
+its checks and those of `421386dec5`.
 
 ## Layout
 
@@ -37,6 +41,7 @@ apply to the PR head.
 | `run_branch_bench.sh` | SLURM job: builds and runs the check, then 5 interleaved timing rounds |
 | `summarize.py` | the ratio table from a job log |
 | `mpmath_reference.py` | the constants of the mpmath test in `mix/prob/normal_test.cpp` |
+| `to_ref_probe.cpp` | does develop's `to_ref` of a value view copy the values? (section 8) |
 | `prototype/` | the cost measurement before the change (variants `f1` to `f4`) |
 | `results/jobs/` | logs of the check and timing jobs |
 | `results/tests/<tag>/` | logs of the unit-test, checklist and OpenCL jobs |
@@ -223,3 +228,54 @@ python3 mpmath_reference.py
 
 Expected: `scalar_sigma value -6.3968830540223898`, `vector_sigma value
 -5.3337600932202835`, and the `d_mu`, `d_sigma` lists of the test file.
+
+## 7. Commit `dde60be194`: `normal_lpdf` checks `sigma` first
+
+`check_positive(sigma)` now runs before the arithmetic, also when `y` or
+`mu` is invalid.  The checks of `y` and `mu` stay where they were: after
+the sum of squares, and before the size-zero and all-data `propto`
+returns.  Only an input with an invalid `sigma` and another invalid
+argument gives an exception text different from develop.
+
+- `results/jobs/nl_branch_21361765.log` (job 21361765, `CHECK_ONLY=1`,
+  the uncommitted working tree that became `dde60be194`): 1692
+  comparisons, 1512 the same as develop.  The other 180 are the input
+  cases `y_nan_sigma_neg` and `mu_inf_sigma_neg` (90 each): develop
+  gives the `y` or `mu` message, the branch the `sigma` message.
+  `HEAP ... branch 0` in all 50 lines.
+- Job 21361795 (log `~/smtest_jobs/nlu_t1/` on Triton, not copied):
+  `prim/prob/normal_test` (8 tests) and `mix/prob/normal_test` (5) pass
+  with the branch header and with the develop header.  Job 21361959
+  (`nlu_c1`): cpplint passes.
+- At the working tree that became `421386dec5` (logs `~/smtest_jobs/nlu_t2/`
+  and `nlu_c2/` on Triton, not copied): job 21362182, the two suites
+  pass with the branch and the develop header, and the generated
+  `test/prob/normal` lpdf tests (`-f normal_0`) pass, 5346 checks; job
+  21362474, cpplint, `make test-math-dependencies`, the header check and
+  `make test-headers` pass.
+- The mutant counts of section 4 (8 and 5) are from `760f6a1f65`; they
+  were not run again at `dde60be194`.
+
+```sh
+grep "^CHECK .* FAIL" results/jobs/nl_branch_21361765.log | awk '{print $3}' | sort | uniq -c
+```
+
+## 8. `to_ref` of a value view (review question)
+
+The body of `to_ref(T&& a)` is `return std::forward<T>(a);`, but its
+return type is `ref_type_t<T&&>`.  `ref_type_t` is `plain_type_t<T>` when `Eigen::Ref`
+cannot match the expression (`stan/math/prim/meta/ref_type.hpp`).  The
+value view of a `Matrix<var>` reads the values through the `vari`
+pointers, so `Eigen::Ref` cannot match it.  The return statement then
+evaluates the view into a new array.  Develop's `normal_lpdf` calls
+`to_ref(as_value_column_array_or_scalar(...))` for each argument (for
+`y`: `y_ref`).
+
+`to_ref_probe.cpp` (build line in the file; ran with g++ 11.4.0 on the
+workstation; `to_ref.hpp`, `ref_type.hpp` and
+`as_value_column_array_or_scalar.hpp` as at `dc66941969`), N = 1000:
+
+```
+Matrix<var>  to_ref returns a plain type: 1   allocations >= 8000 bytes: 1
+VectorXd     to_ref returns a plain type: 0   allocations >= 8000 bytes: 0
+```
