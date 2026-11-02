@@ -131,7 +131,9 @@ these inits (section 7).
 On develop, every case also includes the missing array of tuples `at`.
 `random_var_context` puts its values into the wrong slots (section 9),
 so on develop `at`, and `z` through `offset=at[2].1`, move away from
-their draws.  This gives the 8.7 of `x_3`.
+their draws in every case with `init_radius = 2`.  (With
+`init_radius = 0` all draws are 0, and nothing moves.)  This gives the
+8.7 of `x_3`.
 
 The 2026-11-01 run at PR v1 (job 21342688, `results/compare.txt`) used
 the smaller model without `e`, `at`, `z`, `tv` and `w`.  Section 2 uses
@@ -259,8 +261,8 @@ with the filters of `make/cpplint` report nothing on the two C++ files.
 files): cpplint 2.0.2 on Triton (same filters) reports nothing on
 `initialize.hpp` and `initialize_partial_test.cpp`; clang-format 14 on
 the laptop reports nothing on these and `initialize_test.cpp`.
-2026-11-03 (`results/lint_2026-11-03.txt`): cpplint reports nothing on
-the two files of `0f517b597`.
+2026-11-03 (`results/lint_2026-11-03.txt`): cpplint (Triton) and
+clang-format 14 (laptop) report nothing on the two files of `0f517b597`.
 
 ## 8. The reprex of #3088 with the PR, end to end
 

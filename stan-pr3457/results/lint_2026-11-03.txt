@@ -5,3 +5,7 @@
 Done processing src/stan/services/util/initialize.hpp
 Done processing src/test/unit/services/util/initialize_partial_test.cpp
 exit 0
+## Ubuntu clang-format version 14.0.0-1ubuntu1.1 (laptop), --dry-run, files of 0f517b597
+102d6cd2fc29f57bfc91d68a34874759  src/stan/services/util/initialize.hpp
+3aed44bc963cf1e7385806ae30ab9e43  src/test/unit/services/util/initialize_partial_test.cpp
+exit 0
