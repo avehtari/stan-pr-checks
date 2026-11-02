@@ -278,8 +278,9 @@ prints only these summaries).
 
 ## 9. random_var_context and arrays of tuples (develop defect)
 
-`random_var_context_tuples/` holds the probe of the issue draft about
-`random_var_context` (WardBrian's review of #3457).  The model
+`random_var_context_tuples/` holds the probe of stan-dev/stan#3459
+about `random_var_context` (found in WardBrian's review of #3457).  The
+model
 `rvc_tuples.stan` has a missing `array[2] tuple(real<lower=10>,
 real<upper=0>) at`.  `probe_rvc_tuples.cpp` prints the `write_array`
 order and `vals_r`, and runs `initialize` without inits and with the
