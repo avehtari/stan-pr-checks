@@ -1,0 +1,19 @@
+Running main() from lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 5 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 5 tests from ProbDistributionsBeta
+[ RUN      ] ProbDistributionsBeta.errorCheck
+[       OK ] ProbDistributionsBeta.errorCheck (22 ms)
+[ RUN      ] ProbDistributionsBeta.distributionTest
+[       OK ] ProbDistributionsBeta.distributionTest (1113 ms)
+[ RUN      ] ProbDistributionsBeta.error_check
+[       OK ] ProbDistributionsBeta.error_check (0 ms)
+[ RUN      ] ProbDistributionsBeta.chiSquareGoodnessFitTest
+[       OK ] ProbDistributionsBeta.chiSquareGoodnessFitTest (3 ms)
+[ RUN      ] ProbDistributionsBeta.chiSquareGoodnessFitTestSmallParameters
+[       OK ] ProbDistributionsBeta.chiSquareGoodnessFitTestSmallParameters (4 ms)
+[----------] 5 tests from ProbDistributionsBeta (1142 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 1 test suite ran. (1142 ms total)
+[  PASSED  ] 5 tests.

@@ -1,0 +1,131 @@
+Running main() from lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 61 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 61 tests from KernelGenerator
+[ RUN      ] KernelGenerator.rsqrt_test
+[       OK ] KernelGenerator.rsqrt_test (200 ms)
+[ RUN      ] KernelGenerator.sqrt_test
+[       OK ] KernelGenerator.sqrt_test (48 ms)
+[ RUN      ] KernelGenerator.cbrt_test
+[       OK ] KernelGenerator.cbrt_test (48 ms)
+[ RUN      ] KernelGenerator.exp_test
+[       OK ] KernelGenerator.exp_test (47 ms)
+[ RUN      ] KernelGenerator.exp2_test
+[       OK ] KernelGenerator.exp2_test (47 ms)
+[ RUN      ] KernelGenerator.expm1_test
+[       OK ] KernelGenerator.expm1_test (47 ms)
+[ RUN      ] KernelGenerator.log_test
+[       OK ] KernelGenerator.log_test (49 ms)
+[ RUN      ] KernelGenerator.log2_test
+[       OK ] KernelGenerator.log2_test (50 ms)
+[ RUN      ] KernelGenerator.log10_test
+[       OK ] KernelGenerator.log10_test (51 ms)
+[ RUN      ] KernelGenerator.log1p_test
+[       OK ] KernelGenerator.log1p_test (57 ms)
+[ RUN      ] KernelGenerator.log1m_test
+[       OK ] KernelGenerator.log1m_test (58 ms)
+[ RUN      ] KernelGenerator.log_inv_logit_test
+[       OK ] KernelGenerator.log_inv_logit_test (75 ms)
+[ RUN      ] KernelGenerator.sin_test
+[       OK ] KernelGenerator.sin_test (71 ms)
+[ RUN      ] KernelGenerator.sinh_test
+[       OK ] KernelGenerator.sinh_test (69 ms)
+[ RUN      ] KernelGenerator.cos_test
+[       OK ] KernelGenerator.cos_test (69 ms)
+[ RUN      ] KernelGenerator.cosh_test
+[       OK ] KernelGenerator.cosh_test (48 ms)
+[ RUN      ] KernelGenerator.tan_test
+[       OK ] KernelGenerator.tan_test (78 ms)
+[ RUN      ] KernelGenerator.tanh_test
+[       OK ] KernelGenerator.tanh_test (49 ms)
+[ RUN      ] KernelGenerator.asin_test
+[       OK ] KernelGenerator.asin_test (49 ms)
+[ RUN      ] KernelGenerator.asinh_test
+[       OK ] KernelGenerator.asinh_test (64 ms)
+[ RUN      ] KernelGenerator.acos_test
+[       OK ] KernelGenerator.acos_test (52 ms)
+[ RUN      ] KernelGenerator.acosh_test
+[       OK ] KernelGenerator.acosh_test (73 ms)
+[ RUN      ] KernelGenerator.atan_test
+[       OK ] KernelGenerator.atan_test (48 ms)
+[ RUN      ] KernelGenerator.atanh_test
+[       OK ] KernelGenerator.atanh_test (58 ms)
+[ RUN      ] KernelGenerator.tgamma_test
+[       OK ] KernelGenerator.tgamma_test (132 ms)
+[ RUN      ] KernelGenerator.lgamma_test
+[       OK ] KernelGenerator.lgamma_test (79 ms)
+[ RUN      ] KernelGenerator.erf_test
+[       OK ] KernelGenerator.erf_test (48 ms)
+[ RUN      ] KernelGenerator.erfc_test
+[       OK ] KernelGenerator.erfc_test (68 ms)
+[ RUN      ] KernelGenerator.erfcx_test
+[       OK ] KernelGenerator.erfcx_test (74 ms)
+[ RUN      ] KernelGenerator.floor_test
+[       OK ] KernelGenerator.floor_test (45 ms)
+[ RUN      ] KernelGenerator.round_test
+[       OK ] KernelGenerator.round_test (45 ms)
+[ RUN      ] KernelGenerator.ceil_test
+[       OK ] KernelGenerator.ceil_test (44 ms)
+[ RUN      ] KernelGenerator.fabs_test
+[       OK ] KernelGenerator.fabs_test (44 ms)
+[ RUN      ] KernelGenerator.trunc_test
+[       OK ] KernelGenerator.trunc_test (46 ms)
+[ RUN      ] KernelGenerator.digamma_test
+[       OK ] KernelGenerator.digamma_test (101 ms)
+[ RUN      ] KernelGenerator.log1m_exp_test
+[       OK ] KernelGenerator.log1m_exp_test (75 ms)
+[ RUN      ] KernelGenerator.log1p_exp_test
+[       OK ] KernelGenerator.log1p_exp_test (64 ms)
+[ RUN      ] KernelGenerator.inv_square_test
+[       OK ] KernelGenerator.inv_square_test (48 ms)
+[ RUN      ] KernelGenerator.inv_logit_test
+[       OK ] KernelGenerator.inv_logit_test (61 ms)
+[ RUN      ] KernelGenerator.logit_test
+[       OK ] KernelGenerator.logit_test (66 ms)
+[ RUN      ] KernelGenerator.log1m_inv_logit_test
+[       OK ] KernelGenerator.log1m_inv_logit_test (75 ms)
+[ RUN      ] KernelGenerator.square_test
+[       OK ] KernelGenerator.square_test (45 ms)
+[ RUN      ] KernelGenerator.Phi_test
+[       OK ] KernelGenerator.Phi_test (74 ms)
+[ RUN      ] KernelGenerator.Phi_approx_test
+[       OK ] KernelGenerator.Phi_approx_test (92 ms)
+[ RUN      ] KernelGenerator.inv_Phi_test
+[       OK ] KernelGenerator.inv_Phi_test (114 ms)
+[ RUN      ] KernelGenerator.trigamma_test
+[       OK ] KernelGenerator.trigamma_test (66 ms)
+[ RUN      ] KernelGenerator.isfinite_test
+[       OK ] KernelGenerator.isfinite_test (46 ms)
+[ RUN      ] KernelGenerator.isinf_test
+[       OK ] KernelGenerator.isinf_test (44 ms)
+[ RUN      ] KernelGenerator.isnan_test
+[       OK ] KernelGenerator.isnan_test (45 ms)
+[ RUN      ] KernelGenerator.multiple_operations_test
+[       OK ] KernelGenerator.multiple_operations_test (77 ms)
+[ RUN      ] KernelGenerator.multiple_operations_accepts_lvalue_test
+[       OK ] KernelGenerator.multiple_operations_accepts_lvalue_test (3 ms)
+[ RUN      ] KernelGenerator.multiple_operations_with_includes_test
+[       OK ] KernelGenerator.multiple_operations_with_includes_test (144 ms)
+[ RUN      ] KernelGenerator.beta_test
+[       OK ] KernelGenerator.beta_test (568 ms)
+[ RUN      ] KernelGenerator.binomial_coefficient_log_test
+[       OK ] KernelGenerator.binomial_coefficient_log_test (1397 ms)
+[ RUN      ] KernelGenerator.fdim_test
+[       OK ] KernelGenerator.fdim_test (230 ms)
+[ RUN      ] KernelGenerator.fmax_test
+[       OK ] KernelGenerator.fmax_test (226 ms)
+[ RUN      ] KernelGenerator.fmin_test
+[       OK ] KernelGenerator.fmin_test (226 ms)
+[ RUN      ] KernelGenerator.fmod_test
+[       OK ] KernelGenerator.fmod_test (390 ms)
+[ RUN      ] KernelGenerator.lbeta_test
+[       OK ] KernelGenerator.lbeta_test (1101 ms)
+[ RUN      ] KernelGenerator.lmultiply_test
+[       OK ] KernelGenerator.lmultiply_test (264 ms)
+[ RUN      ] KernelGenerator.pow_test
+[       OK ] KernelGenerator.pow_test (409 ms)
+[----------] 61 tests from KernelGenerator (8181 ms total)
+
+[----------] Global test environment tear-down
+[==========] 61 tests from 1 test suite ran. (8182 ms total)
+[  PASSED  ] 61 tests.

@@ -1,0 +1,20 @@
+Running main() from lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 4 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 3 tests from ProbDistributionsBinomial
+[ RUN      ] ProbDistributionsBinomial.errorCheck
+[       OK ] ProbDistributionsBinomial.errorCheck (6 ms)
+[ RUN      ] ProbDistributionsBinomial.distributionCheck
+[       OK ] ProbDistributionsBinomial.distributionCheck (28 ms)
+[ RUN      ] ProbDistributionsBinomial.chiSquareGoodnessFitTest
+[       OK ] ProbDistributionsBinomial.chiSquareGoodnessFitTest (1 ms)
+[----------] 3 tests from ProbDistributionsBinomial (35 ms total)
+
+[----------] 1 test from ProbDistributionBinomiali
+[ RUN      ] ProbDistributionBinomiali.error_check
+[       OK ] ProbDistributionBinomiali.error_check (0 ms)
+[----------] 1 test from ProbDistributionBinomiali (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 2 test suites ran. (35 ms total)
+[  PASSED  ] 4 tests.

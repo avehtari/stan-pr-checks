@@ -1,0 +1,201 @@
+Running main() from lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 7 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 7 tests from MathFunctions
+[ RUN      ] MathFunctions.beta
+[       OK ] MathFunctions.beta (0 ms)
+[ RUN      ] MathFunctions.beta_nan
+[       OK ] MathFunctions.beta_nan (0 ms)
+[ RUN      ] MathFunctions.beta_large_arguments
+test/unit/math/prim/fun/beta_test.cpp:30: Failure
+The difference between r[2] and beta(r[0], r[1]) is 1.696026782557758e-12, which exceeds 1e-13 * r[2], where
+r[2] evaluates to 0.0017724540724622611,
+beta(r[0], r[1]) evaluates to 0.0017724540707662344, and
+1e-13 * r[2] evaluates to 1.7724540724622612e-16.
+Google Test trace:
+test/unit/math/prim/fun/beta_test.cpp:29: a = 0.5, b = 1000000
+test/unit/math/prim/fun/beta_test.cpp:30: Failure
+The difference between r[2] and beta(r[0], r[1]) is 1.696026782557758e-12, which exceeds 1e-13 * r[2], where
+r[2] evaluates to 0.0017724540724622611,
+beta(r[0], r[1]) evaluates to 0.0017724540707662344, and
+1e-13 * r[2] evaluates to 1.7724540724622612e-16.
+Google Test trace:
+test/unit/math/prim/fun/beta_test.cpp:29: a = 1000000, b = 0.5
+test/unit/math/prim/fun/beta_test.cpp:30: Failure
+The difference between r[2] and beta(r[0], r[1]) is 2.9046673344303078e-11, which exceeds 1e-13 * r[2], where
+r[2] evaluates to 5.6049912170985526e-05,
+beta(r[0], r[1]) evaluates to 5.6049883124312182e-05, and
+1e-13 * r[2] evaluates to 5.6049912170985529e-18.
+Google Test trace:
+test/unit/math/prim/fun/beta_test.cpp:29: a = 0.5, b = 1000000000
+test/unit/math/prim/fun/beta_test.cpp:30: Failure
+The difference between r[2] and beta(r[0], r[1]) is 2.9046673344303078e-11, which exceeds 1e-13 * r[2], where
+r[2] evaluates to 5.6049912170985526e-05,
+beta(r[0], r[1]) evaluates to 5.6049883124312182e-05, and
+1e-13 * r[2] evaluates to 5.6049912170985529e-18.
+Google Test trace:
+test/unit/math/prim/fun/beta_test.cpp:29: a = 1000000000, b = 0.5
+test/unit/math/prim/fun/beta_test.cpp:30: Failure
+The difference between r[2] and beta(r[0], r[1]) is 3.3682492050753163e-11, which exceeds 1e-13 * r[2], where
+r[2] evaluates to 3.8248112102919087e-05,
+beta(r[0], r[1]) evaluates to 3.8248078420427037e-05, and
+1e-13 * r[2] evaluates to 3.8248112102919092e-18.
+Google Test trace:
+test/unit/math/prim/fun/beta_test.cpp:29: a = 0.5, b = 2147483648
+test/unit/math/prim/fun/beta_test.cpp:30: Failure
+The difference between r[2] and beta(r[0], r[1]) is 3.3682492050753163e-11, which exceeds 1e-13 * r[2], where
+r[2] evaluates to 3.8248112102919087e-05,
+beta(r[0], r[1]) evaluates to 3.8248078420427037e-05, and
+1e-13 * r[2] evaluates to 3.8248112102919092e-18.
+Google Test trace:
+test/unit/math/prim/fun/beta_test.cpp:29: a = 2147483648, b = 0.5
+test/unit/math/prim/fun/beta_test.cpp:30: Failure
+The difference between r[2] and beta(r[0], r[1]) is 2.412851111693803e-22, which exceeds 1e-13 * r[2], where
+r[2] evaluates to 9.9999900000100006e-13,
+beta(r[0], r[1]) evaluates to 9.9999899975971495e-13, and
+1e-13 * r[2] evaluates to 9.9999900000100003e-26.
+Google Test trace:
+test/unit/math/prim/fun/beta_test.cpp:29: a = 2, b = 1000000
+test/unit/math/prim/fun/beta_test.cpp:30: Failure
+The difference between r[2] and beta(r[0], r[1]) is 2.412851111693803e-22, which exceeds 1e-13 * r[2], where
+r[2] evaluates to 9.9999900000100006e-13,
+beta(r[0], r[1]) evaluates to 9.9999899975971495e-13, and
+1e-13 * r[2] evaluates to 9.9999900000100003e-26.
+Google Test trace:
+test/unit/math/prim/fun/beta_test.cpp:29: a = 1000000, b = 2
+test/unit/math/prim/fun/beta_test.cpp:30: Failure
+The difference between r[2] and beta(r[0], r[1]) is 1.528231008394062e-24, which exceeds 1e-13 * r[2], where
+r[2] evaluates to 9.9999999900000004e-19,
+beta(r[0], r[1]) evaluates to 9.9999847076899165e-19, and
+1e-13 * r[2] evaluates to 9.99999999e-32.
+Google Test trace:
+test/unit/math/prim/fun/beta_test.cpp:29: a = 2, b = 1000000000
+test/unit/math/prim/fun/beta_test.cpp:30: Failure
+The difference between r[2] and beta(r[0], r[1]) is 1.528231008394062e-24, which exceeds 1e-13 * r[2], where
+r[2] evaluates to 9.9999999900000004e-19,
+beta(r[0], r[1]) evaluates to 9.9999847076899165e-19, and
+1e-13 * r[2] evaluates to 9.99999999e-32.
+Google Test trace:
+test/unit/math/prim/fun/beta_test.cpp:29: a = 1000000000, b = 2
+test/unit/math/prim/fun/beta_test.cpp:30: Failure
+The difference between r[2] and beta(r[0], r[1]) is 6.4588989906508158e-25, which exceeds 1e-13 * r[2], where
+r[2] evaluates to 2.1684043439612669e-19,
+beta(r[0], r[1]) evaluates to 2.1683978850622763e-19, and
+1e-13 * r[2] evaluates to 2.1684043439612669e-32.
+Google Test trace:
+test/unit/math/prim/fun/beta_test.cpp:29: a = 2, b = 2147483648
+test/unit/math/prim/fun/beta_test.cpp:30: Failure
+The difference between r[2] and beta(r[0], r[1]) is 6.4588989906508158e-25, which exceeds 1e-13 * r[2], where
+r[2] evaluates to 2.1684043439612669e-19,
+beta(r[0], r[1]) evaluates to 2.1683978850622763e-19, and
+1e-13 * r[2] evaluates to 2.1684043439612669e-32.
+Google Test trace:
+test/unit/math/prim/fun/beta_test.cpp:29: a = 2147483648, b = 2
+test/unit/math/prim/fun/beta_test.cpp:30: Failure
+The difference between r[2] and beta(r[0], r[1]) is 2.5979526193885643e-64, which exceeds 1e-13 * r[2], where
+r[2] evaluates to 3.6286367081911831e-55,
+beta(r[0], r[1]) evaluates to 3.6286367055932305e-55, and
+1e-13 * r[2] evaluates to 3.6286367081911834e-68.
+Google Test trace:
+test/unit/math/prim/fun/beta_test.cpp:29: a = 10, b = 1000000
+test/unit/math/prim/fun/beta_test.cpp:30: Failure
+The difference between r[2] and beta(r[0], r[1]) is 2.5979526193885643e-64, which exceeds 1e-13 * r[2], where
+r[2] evaluates to 3.6286367081911831e-55,
+beta(r[0], r[1]) evaluates to 3.6286367055932305e-55, and
+1e-13 * r[2] evaluates to 3.6286367081911834e-68.
+Google Test trace:
+test/unit/math/prim/fun/beta_test.cpp:29: a = 1000000, b = 10
+test/unit/math/prim/fun/beta_test.cpp:30: Failure
+The difference between r[2] and beta(r[0], r[1]) is 3.5373416361617898e-91, which exceeds 1e-13 * r[2], where
+r[2] evaluates to 3.6287998367040043e-85,
+beta(r[0], r[1]) evaluates to 3.6287962993623682e-85, and
+1e-13 * r[2] evaluates to 3.6287998367040043e-98.
+Google Test trace:
+test/unit/math/prim/fun/beta_test.cpp:29: a = 10, b = 1000000000
+test/unit/math/prim/fun/beta_test.cpp:30: Failure
+The difference between r[2] and beta(r[0], r[1]) is 3.5373416361617898e-91, which exceeds 1e-13 * r[2], where
+r[2] evaluates to 3.6287998367040043e-85,
+beta(r[0], r[1]) evaluates to 3.6287962993623682e-85, and
+1e-13 * r[2] evaluates to 3.6287998367040043e-98.
+Google Test trace:
+test/unit/math/prim/fun/beta_test.cpp:29: a = 1000000000, b = 10
+test/unit/math/prim/fun/beta_test.cpp:30: Failure
+The difference between r[2] and beta(r[0], r[1]) is 1.0765785731482163e-94, which exceeds 1e-13 * r[2], where
+r[2] evaluates to 1.7396599603107283e-88,
+beta(r[0], r[1]) evaluates to 1.7396588837321551e-88, and
+1e-13 * r[2] evaluates to 1.7396599603107282e-101.
+Google Test trace:
+test/unit/math/prim/fun/beta_test.cpp:29: a = 10, b = 2147483648
+test/unit/math/prim/fun/beta_test.cpp:30: Failure
+The difference between r[2] and beta(r[0], r[1]) is 1.0765785731482163e-94, which exceeds 1e-13 * r[2], where
+r[2] evaluates to 1.7396599603107283e-88,
+beta(r[0], r[1]) evaluates to 1.7396588837321551e-88, and
+1e-13 * r[2] evaluates to 1.7396599603107282e-101.
+Google Test trace:
+test/unit/math/prim/fun/beta_test.cpp:29: a = 2147483648, b = 10
+test/unit/math/prim/fun/beta_test.cpp:30: Failure
+The difference between r[2] and beta(r[0], r[1]) is nan, which exceeds 1e-13 * r[2], where
+r[2] evaluates to 1.3594100479922279e-154,
+beta(r[0], r[1]) evaluates to -nan, and
+1e-13 * r[2] evaluates to 1.359410047992228e-167.
+Google Test trace:
+test/unit/math/prim/fun/beta_test.cpp:29: a = 0.5, b = 1.6999999999999999e+308
+test/unit/math/prim/fun/beta_test.cpp:30: Failure
+The difference between r[2] and beta(r[0], r[1]) is nan, which exceeds 1e-13 * r[2], where
+r[2] evaluates to 1.3594100479922279e-154,
+beta(r[0], r[1]) evaluates to -nan, and
+1e-13 * r[2] evaluates to 1.359410047992228e-167.
+Google Test trace:
+test/unit/math/prim/fun/beta_test.cpp:29: a = 1.6999999999999999e+308, b = 0.5
+[  FAILED  ] MathFunctions.beta_large_arguments (0 ms)
+[ RUN      ] MathFunctions.beta_huge_argument_underflow
+test/unit/math/prim/fun/beta_test.cpp:37: Failure
+Expected equality of these values:
+  0.0
+    Which is: 0
+  beta(2.0, 1.7e308)
+    Which is: -nan
+test/unit/math/prim/fun/beta_test.cpp:38: Failure
+Expected equality of these values:
+  0.0
+    Which is: 0
+  beta(1.7e308, 2.0)
+    Which is: -nan
+[  FAILED  ] MathFunctions.beta_huge_argument_underflow (0 ms)
+[ RUN      ] MathFunctions.beta_int_arguments
+test/unit/math/prim/fun/beta_test.cpp:44: Failure
+The difference between expected and beta(2, 1000000000) is 1.528231008394062e-24, which exceeds 1e-13 * expected, where
+expected evaluates to 9.9999999900000004e-19,
+beta(2, 1000000000) evaluates to 9.9999847076899165e-19, and
+1e-13 * expected evaluates to 9.99999999e-32.
+test/unit/math/prim/fun/beta_test.cpp:45: Failure
+The difference between expected and beta(1000000000, 2) is 1.528231008394062e-24, which exceeds 1e-13 * expected, where
+expected evaluates to 9.9999999900000004e-19,
+beta(1000000000, 2) evaluates to 9.9999847076899165e-19, and
+1e-13 * expected evaluates to 9.99999999e-32.
+test/unit/math/prim/fun/beta_test.cpp:46: Failure
+The difference between expected and beta(2.0, 1000000000) is 1.528231008394062e-24, which exceeds 1e-13 * expected, where
+expected evaluates to 9.9999999900000004e-19,
+beta(2.0, 1000000000) evaluates to 9.9999847076899165e-19, and
+1e-13 * expected evaluates to 9.99999999e-32.
+test/unit/math/prim/fun/beta_test.cpp:47: Failure
+The difference between expected and beta(1000000000, 2.0) is 1.528231008394062e-24, which exceeds 1e-13 * expected, where
+expected evaluates to 9.9999999900000004e-19,
+beta(1000000000, 2.0) evaluates to 9.9999847076899165e-19, and
+1e-13 * expected evaluates to 9.99999999e-32.
+[  FAILED  ] MathFunctions.beta_int_arguments (0 ms)
+[ RUN      ] MathFunctions.beta_small_arguments_match_lgamma_formula
+[       OK ] MathFunctions.beta_small_arguments_match_lgamma_formula (0 ms)
+[ RUN      ] MathFunctions.beta_vec
+[       OK ] MathFunctions.beta_vec (1 ms)
+[----------] 7 tests from MathFunctions (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 1 test suite ran. (2 ms total)
+[  PASSED  ] 4 tests.
+[  FAILED  ] 3 tests, listed below:
+[  FAILED  ] MathFunctions.beta_large_arguments
+[  FAILED  ] MathFunctions.beta_huge_argument_underflow
+[  FAILED  ] MathFunctions.beta_int_arguments
+
+ 3 FAILED TESTS

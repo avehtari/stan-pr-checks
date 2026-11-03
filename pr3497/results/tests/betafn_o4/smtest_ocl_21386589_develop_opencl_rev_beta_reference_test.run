@@ -1,0 +1,353 @@
+Running main() from lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 3 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 3 tests from OpenCL_beta
+[ RUN      ] OpenCL_beta.prim_matches_reference
+test/unit/math/opencl/rev/beta_reference_test.cpp:33: Failure
+The difference between rows[i][2] and res[i] is 1.696026782557758e-12, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 0.0017724540724622611,
+res[i] evaluates to 0.0017724540707662344, and
+1e-12 * rows[i][2] evaluates to 1.7724540724622612e-15.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:31: a = 0.5, b = 1000000
+test/unit/math/opencl/rev/beta_reference_test.cpp:33: Failure
+The difference between rows[i][2] and res[i] is 1.696026782557758e-12, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 0.0017724540724622611,
+res[i] evaluates to 0.0017724540707662344, and
+1e-12 * rows[i][2] evaluates to 1.7724540724622612e-15.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:31: a = 1000000, b = 0.5
+test/unit/math/opencl/rev/beta_reference_test.cpp:33: Failure
+The difference between rows[i][2] and res[i] is 2.9046673344303078e-11, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 5.6049912170985526e-05,
+res[i] evaluates to 5.6049883124312182e-05, and
+1e-12 * rows[i][2] evaluates to 5.6049912170985527e-17.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:31: a = 0.5, b = 1000000000
+test/unit/math/opencl/rev/beta_reference_test.cpp:33: Failure
+The difference between rows[i][2] and res[i] is 2.9046673344303078e-11, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 5.6049912170985526e-05,
+res[i] evaluates to 5.6049883124312182e-05, and
+1e-12 * rows[i][2] evaluates to 5.6049912170985527e-17.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:31: a = 1000000000, b = 0.5
+test/unit/math/opencl/rev/beta_reference_test.cpp:33: Failure
+The difference between rows[i][2] and res[i] is 3.3682492050753163e-11, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 3.8248112102919087e-05,
+res[i] evaluates to 3.8248078420427037e-05, and
+1e-12 * rows[i][2] evaluates to 3.8248112102919086e-17.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:31: a = 0.5, b = 2147483648
+test/unit/math/opencl/rev/beta_reference_test.cpp:33: Failure
+The difference between rows[i][2] and res[i] is 3.3682492050753163e-11, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 3.8248112102919087e-05,
+res[i] evaluates to 3.8248078420427037e-05, and
+1e-12 * rows[i][2] evaluates to 3.8248112102919086e-17.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:31: a = 2147483648, b = 0.5
+test/unit/math/opencl/rev/beta_reference_test.cpp:33: Failure
+The difference between rows[i][2] and res[i] is 2.412851111693803e-22, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 9.9999900000100006e-13,
+res[i] evaluates to 9.9999899975971495e-13, and
+1e-12 * rows[i][2] evaluates to 9.9999900000099996e-25.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:31: a = 2, b = 1000000
+test/unit/math/opencl/rev/beta_reference_test.cpp:33: Failure
+The difference between rows[i][2] and res[i] is 2.412851111693803e-22, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 9.9999900000100006e-13,
+res[i] evaluates to 9.9999899975971495e-13, and
+1e-12 * rows[i][2] evaluates to 9.9999900000099996e-25.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:31: a = 1000000, b = 2
+test/unit/math/opencl/rev/beta_reference_test.cpp:33: Failure
+The difference between rows[i][2] and res[i] is 1.528231008394062e-24, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 9.9999999900000004e-19,
+res[i] evaluates to 9.9999847076899165e-19, and
+1e-12 * rows[i][2] evaluates to 9.9999999900000004e-31.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:31: a = 2, b = 1000000000
+test/unit/math/opencl/rev/beta_reference_test.cpp:33: Failure
+The difference between rows[i][2] and res[i] is 1.528231008394062e-24, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 9.9999999900000004e-19,
+res[i] evaluates to 9.9999847076899165e-19, and
+1e-12 * rows[i][2] evaluates to 9.9999999900000004e-31.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:31: a = 1000000000, b = 2
+test/unit/math/opencl/rev/beta_reference_test.cpp:33: Failure
+The difference between rows[i][2] and res[i] is 6.4588989906508158e-25, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 2.1684043439612669e-19,
+res[i] evaluates to 2.1683978850622763e-19, and
+1e-12 * rows[i][2] evaluates to 2.1684043439612669e-31.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:31: a = 2, b = 2147483648
+test/unit/math/opencl/rev/beta_reference_test.cpp:33: Failure
+The difference between rows[i][2] and res[i] is 6.4588989906508158e-25, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 2.1684043439612669e-19,
+res[i] evaluates to 2.1683978850622763e-19, and
+1e-12 * rows[i][2] evaluates to 2.1684043439612669e-31.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:31: a = 2147483648, b = 2
+test/unit/math/opencl/rev/beta_reference_test.cpp:33: Failure
+The difference between rows[i][2] and res[i] is 2.5979526193885643e-64, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 3.6286367081911831e-55,
+res[i] evaluates to 3.6286367055932305e-55, and
+1e-12 * rows[i][2] evaluates to 3.6286367081911831e-67.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:31: a = 10, b = 1000000
+test/unit/math/opencl/rev/beta_reference_test.cpp:33: Failure
+The difference between rows[i][2] and res[i] is 2.5979526193885643e-64, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 3.6286367081911831e-55,
+res[i] evaluates to 3.6286367055932305e-55, and
+1e-12 * rows[i][2] evaluates to 3.6286367081911831e-67.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:31: a = 1000000, b = 10
+test/unit/math/opencl/rev/beta_reference_test.cpp:33: Failure
+The difference between rows[i][2] and res[i] is 3.5373416361617898e-91, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 3.6287998367040043e-85,
+res[i] evaluates to 3.6287962993623682e-85, and
+1e-12 * rows[i][2] evaluates to 3.6287998367040042e-97.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:31: a = 10, b = 1000000000
+test/unit/math/opencl/rev/beta_reference_test.cpp:33: Failure
+The difference between rows[i][2] and res[i] is 3.5373416361617898e-91, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 3.6287998367040043e-85,
+res[i] evaluates to 3.6287962993623682e-85, and
+1e-12 * rows[i][2] evaluates to 3.6287998367040042e-97.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:31: a = 1000000000, b = 10
+test/unit/math/opencl/rev/beta_reference_test.cpp:33: Failure
+The difference between rows[i][2] and res[i] is 1.0765785731482163e-94, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 1.7396599603107283e-88,
+res[i] evaluates to 1.7396588837321551e-88, and
+1e-12 * rows[i][2] evaluates to 1.7396599603107283e-100.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:31: a = 10, b = 2147483648
+test/unit/math/opencl/rev/beta_reference_test.cpp:33: Failure
+The difference between rows[i][2] and res[i] is 1.0765785731482163e-94, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 1.7396599603107283e-88,
+res[i] evaluates to 1.7396588837321551e-88, and
+1e-12 * rows[i][2] evaluates to 1.7396599603107283e-100.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:31: a = 2147483648, b = 10
+test/unit/math/opencl/rev/beta_reference_test.cpp:33: Failure
+The difference between rows[i][2] and res[i] is nan, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 1.3594100479922279e-154,
+res[i] evaluates to -nan, and
+1e-12 * rows[i][2] evaluates to 1.3594100479922279e-166.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:31: a = 0.5, b = 1.6999999999999999e+308
+test/unit/math/opencl/rev/beta_reference_test.cpp:33: Failure
+The difference between rows[i][2] and res[i] is nan, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 1.3594100479922279e-154,
+res[i] evaluates to -nan, and
+1e-12 * rows[i][2] evaluates to 1.3594100479922279e-166.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:31: a = 1.6999999999999999e+308, b = 0.5
+[  FAILED  ] OpenCL_beta.prim_matches_reference (273 ms)
+[ RUN      ] OpenCL_beta.rev_value_matches_reference
+test/unit/math/opencl/rev/beta_reference_test.cpp:50: Failure
+The difference between rows[i][2] and val[i] is 1.696026782557758e-12, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 0.0017724540724622611,
+val[i] evaluates to 0.0017724540707662344, and
+1e-12 * rows[i][2] evaluates to 1.7724540724622612e-15.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:48: a = 0.5, b = 1000000
+test/unit/math/opencl/rev/beta_reference_test.cpp:50: Failure
+The difference between rows[i][2] and val[i] is 1.696026782557758e-12, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 0.0017724540724622611,
+val[i] evaluates to 0.0017724540707662344, and
+1e-12 * rows[i][2] evaluates to 1.7724540724622612e-15.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:48: a = 1000000, b = 0.5
+test/unit/math/opencl/rev/beta_reference_test.cpp:50: Failure
+The difference between rows[i][2] and val[i] is 2.9046673344303078e-11, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 5.6049912170985526e-05,
+val[i] evaluates to 5.6049883124312182e-05, and
+1e-12 * rows[i][2] evaluates to 5.6049912170985527e-17.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:48: a = 0.5, b = 1000000000
+test/unit/math/opencl/rev/beta_reference_test.cpp:50: Failure
+The difference between rows[i][2] and val[i] is 2.9046673344303078e-11, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 5.6049912170985526e-05,
+val[i] evaluates to 5.6049883124312182e-05, and
+1e-12 * rows[i][2] evaluates to 5.6049912170985527e-17.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:48: a = 1000000000, b = 0.5
+test/unit/math/opencl/rev/beta_reference_test.cpp:50: Failure
+The difference between rows[i][2] and val[i] is 3.3682492050753163e-11, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 3.8248112102919087e-05,
+val[i] evaluates to 3.8248078420427037e-05, and
+1e-12 * rows[i][2] evaluates to 3.8248112102919086e-17.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:48: a = 0.5, b = 2147483648
+test/unit/math/opencl/rev/beta_reference_test.cpp:50: Failure
+The difference between rows[i][2] and val[i] is 3.3682492050753163e-11, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 3.8248112102919087e-05,
+val[i] evaluates to 3.8248078420427037e-05, and
+1e-12 * rows[i][2] evaluates to 3.8248112102919086e-17.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:48: a = 2147483648, b = 0.5
+test/unit/math/opencl/rev/beta_reference_test.cpp:50: Failure
+The difference between rows[i][2] and val[i] is 2.412851111693803e-22, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 9.9999900000100006e-13,
+val[i] evaluates to 9.9999899975971495e-13, and
+1e-12 * rows[i][2] evaluates to 9.9999900000099996e-25.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:48: a = 2, b = 1000000
+test/unit/math/opencl/rev/beta_reference_test.cpp:50: Failure
+The difference between rows[i][2] and val[i] is 2.412851111693803e-22, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 9.9999900000100006e-13,
+val[i] evaluates to 9.9999899975971495e-13, and
+1e-12 * rows[i][2] evaluates to 9.9999900000099996e-25.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:48: a = 1000000, b = 2
+test/unit/math/opencl/rev/beta_reference_test.cpp:50: Failure
+The difference between rows[i][2] and val[i] is 1.528231008394062e-24, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 9.9999999900000004e-19,
+val[i] evaluates to 9.9999847076899165e-19, and
+1e-12 * rows[i][2] evaluates to 9.9999999900000004e-31.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:48: a = 2, b = 1000000000
+test/unit/math/opencl/rev/beta_reference_test.cpp:50: Failure
+The difference between rows[i][2] and val[i] is 1.528231008394062e-24, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 9.9999999900000004e-19,
+val[i] evaluates to 9.9999847076899165e-19, and
+1e-12 * rows[i][2] evaluates to 9.9999999900000004e-31.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:48: a = 1000000000, b = 2
+test/unit/math/opencl/rev/beta_reference_test.cpp:50: Failure
+The difference between rows[i][2] and val[i] is 6.4588989906508158e-25, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 2.1684043439612669e-19,
+val[i] evaluates to 2.1683978850622763e-19, and
+1e-12 * rows[i][2] evaluates to 2.1684043439612669e-31.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:48: a = 2, b = 2147483648
+test/unit/math/opencl/rev/beta_reference_test.cpp:50: Failure
+The difference between rows[i][2] and val[i] is 6.4588989906508158e-25, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 2.1684043439612669e-19,
+val[i] evaluates to 2.1683978850622763e-19, and
+1e-12 * rows[i][2] evaluates to 2.1684043439612669e-31.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:48: a = 2147483648, b = 2
+test/unit/math/opencl/rev/beta_reference_test.cpp:50: Failure
+The difference between rows[i][2] and val[i] is 2.5979526193885643e-64, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 3.6286367081911831e-55,
+val[i] evaluates to 3.6286367055932305e-55, and
+1e-12 * rows[i][2] evaluates to 3.6286367081911831e-67.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:48: a = 10, b = 1000000
+test/unit/math/opencl/rev/beta_reference_test.cpp:50: Failure
+The difference between rows[i][2] and val[i] is 2.5979526193885643e-64, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 3.6286367081911831e-55,
+val[i] evaluates to 3.6286367055932305e-55, and
+1e-12 * rows[i][2] evaluates to 3.6286367081911831e-67.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:48: a = 1000000, b = 10
+test/unit/math/opencl/rev/beta_reference_test.cpp:50: Failure
+The difference between rows[i][2] and val[i] is 3.5373416361617898e-91, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 3.6287998367040043e-85,
+val[i] evaluates to 3.6287962993623682e-85, and
+1e-12 * rows[i][2] evaluates to 3.6287998367040042e-97.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:48: a = 10, b = 1000000000
+test/unit/math/opencl/rev/beta_reference_test.cpp:50: Failure
+The difference between rows[i][2] and val[i] is 3.5373416361617898e-91, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 3.6287998367040043e-85,
+val[i] evaluates to 3.6287962993623682e-85, and
+1e-12 * rows[i][2] evaluates to 3.6287998367040042e-97.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:48: a = 1000000000, b = 10
+test/unit/math/opencl/rev/beta_reference_test.cpp:50: Failure
+The difference between rows[i][2] and val[i] is 1.0765785731482163e-94, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 1.7396599603107283e-88,
+val[i] evaluates to 1.7396588837321551e-88, and
+1e-12 * rows[i][2] evaluates to 1.7396599603107283e-100.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:48: a = 10, b = 2147483648
+test/unit/math/opencl/rev/beta_reference_test.cpp:50: Failure
+The difference between rows[i][2] and val[i] is 1.0765785731482163e-94, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 1.7396599603107283e-88,
+val[i] evaluates to 1.7396588837321551e-88, and
+1e-12 * rows[i][2] evaluates to 1.7396599603107283e-100.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:48: a = 2147483648, b = 10
+test/unit/math/opencl/rev/beta_reference_test.cpp:50: Failure
+The difference between rows[i][2] and val[i] is nan, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 1.3594100479922279e-154,
+val[i] evaluates to -nan, and
+1e-12 * rows[i][2] evaluates to 1.3594100479922279e-166.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:48: a = 0.5, b = 1.6999999999999999e+308
+test/unit/math/opencl/rev/beta_reference_test.cpp:50: Failure
+The difference between rows[i][2] and val[i] is nan, which exceeds 1e-12 * rows[i][2], where
+rows[i][2] evaluates to 1.3594100479922279e-154,
+val[i] evaluates to -nan, and
+1e-12 * rows[i][2] evaluates to 1.3594100479922279e-166.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:48: a = 1.6999999999999999e+308, b = 0.5
+[  FAILED  ] OpenCL_beta.rev_value_matches_reference (4 ms)
+[ RUN      ] OpenCL_beta.edge_values_match_cpu
+test/unit/math/opencl/rev/beta_reference_test.cpp:81: Failure
+The difference between cpu and res[k] is nan, which exceeds 1e-11 * std::fabs(cpu), where
+cpu evaluates to 9.9999999999997626e+299,
+res[k] evaluates to -nan, and
+1e-11 * std::fabs(cpu) evaluates to 9.9999999999997626e+288.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:74: a = 1e-300, b = 1.6999999999999999e+308
+test/unit/math/opencl/rev/beta_reference_test.cpp:81: Failure
+The difference between cpu and res[k] is nan, which exceeds 1e-11 * std::fabs(cpu), where
+cpu evaluates to 1.359410047992259e-154,
+res[k] evaluates to -nan, and
+1e-11 * std::fabs(cpu) evaluates to 1.3594100479922589e-165.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:74: a = 0.5, b = 1.6999999999999999e+308
+test/unit/math/opencl/rev/beta_reference_test.cpp:79: Failure
+Expected equality of these values:
+  cpu
+    Which is: 0
+  res[k]
+    Which is: -nan
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:74: a = 2, b = 1.6999999999999999e+308
+test/unit/math/opencl/rev/beta_reference_test.cpp:81: Failure
+The difference between cpu and res[k] is nan, which exceeds 1e-11 * std::fabs(cpu), where
+cpu evaluates to 9.9999999999997626e+299,
+res[k] evaluates to -nan, and
+1e-11 * std::fabs(cpu) evaluates to 9.9999999999997626e+288.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:74: a = 1.6999999999999999e+308, b = 1e-300
+test/unit/math/opencl/rev/beta_reference_test.cpp:81: Failure
+The difference between cpu and res[k] is nan, which exceeds 1e-11 * std::fabs(cpu), where
+cpu evaluates to 1.359410047992259e-154,
+res[k] evaluates to -nan, and
+1e-11 * std::fabs(cpu) evaluates to 1.3594100479922589e-165.
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:74: a = 1.6999999999999999e+308, b = 0.5
+test/unit/math/opencl/rev/beta_reference_test.cpp:79: Failure
+Expected equality of these values:
+  cpu
+    Which is: 0
+  res[k]
+    Which is: -nan
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:74: a = 1.6999999999999999e+308, b = 2
+test/unit/math/opencl/rev/beta_reference_test.cpp:79: Failure
+Expected equality of these values:
+  cpu
+    Which is: 0
+  res[k]
+    Which is: -nan
+Google Test trace:
+test/unit/math/opencl/rev/beta_reference_test.cpp:74: a = 1.6999999999999999e+308, b = 1.6999999999999999e+308
+[  FAILED  ] OpenCL_beta.edge_values_match_cpu (2 ms)
+[----------] 3 tests from OpenCL_beta (279 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (279 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 3 tests, listed below:
+[  FAILED  ] OpenCL_beta.prim_matches_reference
+[  FAILED  ] OpenCL_beta.rev_value_matches_reference
+[  FAILED  ] OpenCL_beta.edge_values_match_cpu
+
+ 3 FAILED TESTS

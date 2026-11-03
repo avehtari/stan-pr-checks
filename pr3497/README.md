@@ -11,7 +11,8 @@ and give the commands, the expected output and the commits.
 | name | commit | what |
 |---|---|---|
 | develop | `dc66941969` | stan-dev/math develop of 2026-10-29, the base of the branch |
-| branch | `b40012df74` | head of `stable-beta-function` (3 commits) |
+| branch | `b40012df74` | head of `stable-beta-function` at the first review (3 commits) |
+| head | `47159a62ca` | head after the review of 2026-11-03 (6 commits); `std::isfinite` and OpenCL `isfinite` replace `< INFTY` and `< INFINITY` (same results for all arguments), `rev/prob/beta_lcdf_test` tolerance 1e-7 |
 | a64 | `a64c3679fa` | second commit of the branch; its `stan/` differs from `b40012df74` only in a comment |
 | pr3433 | `709a1a4d76` | head of stan-dev/math#3433 (stacked on #3490, #3489 and #3409); section 6 only |
 
@@ -258,6 +259,18 @@ runs them again.  Logs in `results/tests/<tag>/`:
 | `betafn_t2` | 21346673 | `a64c3679fa` | 34 suites (33 existing and `rev/prob/beta_lcdf_test`) |
 | `betafn_p2` | 21346950 | `a64c3679fa` | generated `test/prob` with `-f cdf`, 6 families |
 | `betafn_c2` | 21348143 | `a64c3679fa` | cpplint, deps, 3 headers, test-headers, doxygen 1.9.7 |
+| `betafn_t4` | 21386527 | `372cebb637` | the 34 suites of `betafn_t2`; swap of `prim/fun/beta.hpp` on the 3 suites of `betafn_t3` |
+| `betafn_o4` | 21386540, GPU 21386589 | `372cebb637` | the 4 OpenCL suites of `betafn_o3`, same swap |
+| `betafn_c4` | 21386827 | `372cebb637` | cpplint, deps, 2 headers, test-headers, doxygen 1.9.7 |
+
+`47159a62ca` differs from `372cebb637` only in a test comment.
+`results/ci/windows_x64_rev_tests_b40012df74.txt` holds the failure lines
+of the GitHub Actions job `rev tests (windows-latest)` at `b40012df74`
+(run 41405748336): with tolerance 1e-12, `rev/prob/beta_lcdf_test` failed
+with relative errors of 1.7e-8 (value at `b = 2^30`), 2.2e-8 and 3.7e-9
+(derivative at `b = 2^30` and `2^31`).  On develop, `betafn_t4` gives
+relative derivative errors of 2.0e-6 and 3.0e-6 (1e-7 tolerance, 2
+`Failure` lines in `*_develop_rev_prob_beta_lcdf_test.run`).
 
 - The 28 failed expectations are the `Failure` lines of the develop stage
   in `betafn_t3`: `beta_large_arguments` 20, `beta_huge_argument_underflow`

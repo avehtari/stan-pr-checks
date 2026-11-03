@@ -1,0 +1,17 @@
+Running main() from lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 4 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 4 tests from ProbDistributionsStudentT
+[ RUN      ] ProbDistributionsStudentT.errorCheck
+[       OK ] ProbDistributionsStudentT.errorCheck (23 ms)
+[ RUN      ] ProbDistributionsStudentT.distributionTest
+[       OK ] ProbDistributionsStudentT.distributionTest (3219 ms)
+[ RUN      ] ProbDistributionsStudentT.error_check
+[       OK ] ProbDistributionsStudentT.error_check (0 ms)
+[ RUN      ] ProbDistributionsStudentT.chiSquareGoodnessFitTest
+[       OK ] ProbDistributionsStudentT.chiSquareGoodnessFitTest (2 ms)
+[----------] 4 tests from ProbDistributionsStudentT (3244 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 1 test suite ran. (3244 ms total)
+[  PASSED  ] 4 tests.

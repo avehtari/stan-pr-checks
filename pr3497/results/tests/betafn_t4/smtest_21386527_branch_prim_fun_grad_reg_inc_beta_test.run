@@ -1,0 +1,13 @@
+Running main() from lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 2 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 2 tests from grad_reg_inc_beta
+[ RUN      ] grad_reg_inc_beta.1
+[       OK ] grad_reg_inc_beta.1 (0 ms)
+[ RUN      ] grad_reg_inc_beta.2
+[       OK ] grad_reg_inc_beta.2 (0 ms)
+[----------] 2 tests from grad_reg_inc_beta (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 2 tests.

@@ -1,0 +1,17 @@
+Running main() from lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 4 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 4 tests from OpenCL_beta
+[ RUN      ] OpenCL_beta.beta_small
+[       OK ] OpenCL_beta.beta_small (1148 ms)
+[ RUN      ] OpenCL_beta.zero
+[       OK ] OpenCL_beta.zero (0 ms)
+[ RUN      ] OpenCL_beta.prim_rev_values_large
+[       OK ] OpenCL_beta.prim_rev_values_large (24 ms)
+[ RUN      ] OpenCL_beta.prim_rev_scalar_values_large
+[       OK ] OpenCL_beta.prim_rev_scalar_values_large (1788 ms)
+[----------] 4 tests from OpenCL_beta (2960 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 1 test suite ran. (2961 ms total)
+[  PASSED  ] 4 tests.

@@ -1,0 +1,15 @@
+Running main() from lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 3 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 3 tests from OpenCL_beta
+[ RUN      ] OpenCL_beta.prim_matches_reference
+[       OK ] OpenCL_beta.prim_matches_reference (141 ms)
+[ RUN      ] OpenCL_beta.rev_value_matches_reference
+[       OK ] OpenCL_beta.rev_value_matches_reference (5 ms)
+[ RUN      ] OpenCL_beta.edge_values_match_cpu
+[       OK ] OpenCL_beta.edge_values_match_cpu (1 ms)
+[----------] 3 tests from OpenCL_beta (147 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (147 ms total)
+[  PASSED  ] 3 tests.

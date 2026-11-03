@@ -1,0 +1,19 @@
+Running main() from lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 5 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 5 tests from ProbInternalMath
+[ RUN      ] ProbInternalMath.grad_reg_inc_beta_fv
+[       OK ] ProbInternalMath.grad_reg_inc_beta_fv (0 ms)
+[ RUN      ] ProbInternalMath.grad_reg_inc_beta_fv_1stDeriv1
+[       OK ] ProbInternalMath.grad_reg_inc_beta_fv_1stDeriv1 (0 ms)
+[ RUN      ] ProbInternalMath.grad_reg_inc_beta_fv_1stDeriv2
+[       OK ] ProbInternalMath.grad_reg_inc_beta_fv_1stDeriv2 (1 ms)
+[ RUN      ] ProbInternalMath.grad_reg_inc_beta_fv_2ndDeriv1
+[       OK ] ProbInternalMath.grad_reg_inc_beta_fv_2ndDeriv1 (1 ms)
+[ RUN      ] ProbInternalMath.grad_reg_inc_beta_fv_2ndDeriv2
+[       OK ] ProbInternalMath.grad_reg_inc_beta_fv_2ndDeriv2 (0 ms)
+[----------] 5 tests from ProbInternalMath (2 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 1 test suite ran. (2 ms total)
+[  PASSED  ] 5 tests.

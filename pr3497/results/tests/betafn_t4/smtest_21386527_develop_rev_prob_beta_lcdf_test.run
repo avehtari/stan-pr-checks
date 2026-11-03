@@ -1,0 +1,29 @@
+Running main() from lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from AgradRev
+[ RUN      ] AgradRev.ProbDistributionsBeta_lcdf_large_beta_d_y
+test/unit/math/rev/prob/beta_lcdf_test.cpp:30: Failure
+The difference between r[4] and y.adj() is 988.69030672311783, which exceeds tol * r[4], where
+r[4] evaluates to 489281430.6449945,
+y.adj() evaluates to 489282419.33530122, and
+tol * r[4] evaluates to 48.928143064499444.
+Google Test trace:
+test/unit/math/rev/prob/beta_lcdf_test.cpp:25: beta = 1073741824
+test/unit/math/rev/prob/beta_lcdf_test.cpp:30: Failure
+The difference between r[4] and y.adj() is 21505.339361190796, which exceeds tol * r[4], where
+r[4] evaluates to 7219826854.6410484,
+y.adj() evaluates to 7219848359.9804096, and
+tol * r[4] evaluates to 721.98268546410486.
+Google Test trace:
+test/unit/math/rev/prob/beta_lcdf_test.cpp:25: beta = 2147483648
+[  FAILED  ] AgradRev.ProbDistributionsBeta_lcdf_large_beta_d_y (0 ms)
+[----------] 1 test from AgradRev (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] AgradRev.ProbDistributionsBeta_lcdf_large_beta_d_y
+
+ 1 FAILED TEST

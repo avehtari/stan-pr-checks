@@ -1,0 +1,39 @@
+# GitHub Actions run 41405748336, job 125147241818, 'rev tests (windows-latest)'
+# merge commit 38109f0ea978855c5aded4ad5584ada377918858 (PR head b40012df74 + develop dc66941969)
+# toolchain: RTools45 g++ -m64 -D_UCRT -O3; lines 11690-11725 of 'gh run view --log-failed'
+Running main() from lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from AgradRev
+[ RUN      ] AgradRev.ProbDistributionsBeta_lcdf_large_beta_d_y
+test/unit/math/rev/prob/beta_lcdf_test.cpp:24: Failure
+The difference between r[3] and lp.val() is 8.8988253432731312e-09, which exceeds 1e-12 * std::fabs(r[3]), where
+r[3] evaluates to -0.52088580639119242,
+lp.val() evaluates to -0.52088579749236708, and
+1e-12 * std::fabs(r[3]) evaluates to 5.2088580639119244e-13.
+Google Test trace:
+test/unit/math/rev/prob/beta_lcdf_test.cpp:20: beta = 1073741824
+test/unit/math/rev/prob/beta_lcdf_test.cpp:25: Failure
+The difference between r[4] and y.adj() is 10.724058151245117, which exceeds 1e-12 * r[4], where
+r[4] evaluates to 489281430.6449945,
+y.adj() evaluates to 489281419.92093635, and
+1e-12 * r[4] evaluates to 0.00048928143064499454.
+Google Test trace:
+test/unit/math/rev/prob/beta_lcdf_test.cpp:20: beta = 1073741824
+test/unit/math/rev/prob/beta_lcdf_test.cpp:25: Failure
+The difference between r[4] and y.adj() is 26.440727233886719, which exceeds 1e-12 * r[4], where
+r[4] evaluates to 7219826854.6410484,
+y.adj() evaluates to 7219826828.2003212, and
+1e-12 * r[4] evaluates to 0.0072198268546410484.
+Google Test trace:
+test/unit/math/rev/prob/beta_lcdf_test.cpp:20: beta = 2147483648
+[  FAILED  ] AgradRev.ProbDistributionsBeta_lcdf_large_beta_d_y (0 ms)
+[----------] 1 test from AgradRev (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] AgradRev.ProbDistributionsBeta_lcdf_large_beta_d_y
+
+ 1 FAILED TEST
