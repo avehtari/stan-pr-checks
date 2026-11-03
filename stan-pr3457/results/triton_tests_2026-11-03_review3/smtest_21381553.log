@@ -1,0 +1,24 @@
+== host skl9.int.triton.aalto.fi  date 2026-11-03T18:40:57+02:00  cpus 16  J=16
+== g++ g++ (conda-forge gcc 14.3.0-18) 14.3.0
+== mode checklist  tree <scratch>/stantest_3088
+== deploy repo=stan
+== deploy clone=<workstation>/proj/stan_3088
+== deploy branch=fix-partial-init-dependent-transforms
+== deploy head=0f517b597a77b1f9cf4c8cf82015a97e642ec47e
+== deploy base_ref=origin/develop
+== deploy base=a8ec3d18f955e6bddc5b589f55cf2bb414d6f558
+== deploy uncommitted_edits=yes
+== deploy math_commit=dc669419692e2cb71d55000a871066b5739c3e48
+== deploy deployed=2026-11-03T18:36:10+02:00
+== repository stan
+== tree matches the manifest (4 files)
+
+######## check cpplint ########
+RESULT check=cpplint status=PASS secs=11
+
+######## check headers ########
+RESULT check=header_src_stan_services_util_initialize.hpp status=PASS secs=12
+
+== final tree check:
+== tree still matches the manifest
+== done 2026-11-03T18:41:20+02:00

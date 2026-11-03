@@ -1,0 +1,37 @@
+Running main() from lib/stan_math/lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 14 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 14 tests from ServicesUtilInitializePartial
+[ RUN      ] ServicesUtilInitializePartial.small_multiplier
+[       OK ] ServicesUtilInitializePartial.small_multiplier (0 ms)
+[ RUN      ] ServicesUtilInitializePartial.provided_offset
+[       OK ] ServicesUtilInitializePartial.provided_offset (1 ms)
+[ RUN      ] ServicesUtilInitializePartial.radius_zero
+[       OK ] ServicesUtilInitializePartial.radius_zero (0 ms)
+[ RUN      ] ServicesUtilInitializePartial.provided_dependent_parameter
+[       OK ] ServicesUtilInitializePartial.provided_dependent_parameter (0 ms)
+[ RUN      ] ServicesUtilInitializePartial.chain_provided_a_c
+[       OK ] ServicesUtilInitializePartial.chain_provided_a_c (1 ms)
+[ RUN      ] ServicesUtilInitializePartial.chain_provided_b_d
+[       OK ] ServicesUtilInitializePartial.chain_provided_b_d (1 ms)
+[ RUN      ] ServicesUtilInitializePartial.chain_provided_a_c_e
+[       OK ] ServicesUtilInitializePartial.chain_provided_a_c_e (0 ms)
+[ RUN      ] ServicesUtilInitializePartial.provided_vector
+[       OK ] ServicesUtilInitializePartial.provided_vector (1 ms)
+[ RUN      ] ServicesUtilInitializePartial.provided_simplex
+[       OK ] ServicesUtilInitializePartial.provided_simplex (0 ms)
+[ RUN      ] ServicesUtilInitializePartial.provided_array_of_tuples
+[       OK ] ServicesUtilInitializePartial.provided_array_of_tuples (1 ms)
+[ RUN      ] ServicesUtilInitializePartial.provided_nested_tuple
+[       OK ] ServicesUtilInitializePartial.provided_nested_tuple (0 ms)
+[ RUN      ] ServicesUtilInitializePartial.partial_tuple_is_rejected
+[       OK ] ServicesUtilInitializePartial.partial_tuple_is_rejected (1 ms)
+[ RUN      ] ServicesUtilInitializePartial.offset_from_array_of_tuples
+[       OK ] ServicesUtilInitializePartial.offset_from_array_of_tuples (0 ms)
+[ RUN      ] ServicesUtilInitializePartial.bound_on_provided_value_is_rejected
+[       OK ] ServicesUtilInitializePartial.bound_on_provided_value_is_rejected (0 ms)
+[----------] 14 tests from ServicesUtilInitializePartial (6 ms total)
+
+[----------] Global test environment tear-down
+[==========] 14 tests from 1 test suite ran. (6 ms total)
+[  PASSED  ] 14 tests.

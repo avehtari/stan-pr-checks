@@ -14,7 +14,8 @@ the expected output.
 Terms: a *supplied* parameter has a user initial value; a *missing*
 parameter has none.
 
-Last run: 2026-11-03 (probe and unit tests at PR `0f517b597`, after WardBrian's
+Last run: 2026-11-03 (the two `initialize` suites at PR `eb235255b`;
+probe and the other unit tests at `0f517b597`, after WardBrian's
 second review); 2026-11-02 (PR v3, kept in `*_2026-11-02/`); 2026-11-01 (CmdStan runs, sections 1, 2 and 8).
 The tests, the probe and the CmdStan runs ran on
 Triton batch nodes (Intel Xeon, g++ 14.3.0).  Lint ran on a laptop on
@@ -31,7 +32,8 @@ paths.
 | PR v1 | Stan `78b495834` | first PR head (2026-11-01 results) |
 | PR v2 | Stan `7a63912c4` | flat vectors and `unconstrain_array` instead of `get_dims` |
 | PR v3 | Stan `a5786800d` | one decision per tuple slot (2026-11-02 results; the jobs ran on the uncommitted files, same md5) |
-| PR | Stan `0f517b597` | rejects initial values with only some slots of a tuple (2026-11-03 results) |
+| PR v4 | Stan `0f517b597` | rejects initial values with only some slots of a tuple (2026-11-03 results) |
+| PR | Stan `eb235255b` | clearer names and doc comment, local RNG, no size fallback (third review; `triton_tests_2026-11-03_review3/`) |
 | CmdStan develop | `3ab132c` | CmdStan with Stan `a8ec3d18f`, stanc3 v2.40.0 (section 1 and `cmdstan/` step 2) |
 
 The unit-test job 21321656 (job name `smtest`) ran on the uncommitted
@@ -58,7 +60,7 @@ md5 `49a48975` of `initialize.hpp`, which is the develop version.
 | `cmdstan/` | `run_3088.R` and the models of the CmdStan runs (develop only) |
 | `grad/grad_check.cpp` | gradients of the offset/multiplier form at small scales (for the #3088 comment and the docs PR) |
 | `triton/` | the Triton job scripts, with placeholders for the paths |
-| `results/` | outputs of 2026-11-01 and the Triton logs (`triton_cmdstan_pr/`: section 8); 2026-11-02 (PR v3) in `probe_2026-11-02/` and `triton_tests_2026-11-02/`; 2026-11-03 (PR) in `probe_2026-11-03/` and `triton_tests_2026-11-03/` |
+| `results/` | outputs of 2026-11-01 and the Triton logs (`triton_cmdstan_pr/`: section 8); 2026-11-02 (PR v3) in `probe_2026-11-02/` and `triton_tests_2026-11-02/`; 2026-11-03 (PR v4) in `probe_2026-11-03/` and `triton_tests_2026-11-03/`; PR in `triton_tests_2026-11-03_review3/` |
 | `random_var_context_tuples/` | probe of the develop defect of section 9 |
 
 Run commands from this directory.  New outputs go to `out/`, which git
@@ -263,6 +265,15 @@ files): cpplint 2.0.2 on Triton (same filters) reports nothing on
 the laptop reports nothing on these and `initialize_test.cpp`.
 2026-11-03 (`results/lint_2026-11-03.txt`): cpplint (Triton) and
 clang-format 14 (laptop) report nothing on the two files of `0f517b597`.
+
+Third review (`eb235255b`, a refactor of `partial_init_unconstrained`
+without a change of behavior): jobs 21381534 and 21381553
+(`results/triton_tests_2026-11-03_review3/`) ran `initialize_partial_test`
+and `initialize_test` with the PR and the develop header (14/14 and
+16/16 with the PR; 1/14 with develop), cpplint and the header test of
+`initialize.hpp`; `results/lint_2026-11-03_review3.txt` has the md5
+and clang-format.  `fail_init_test`, the 33 `services/sample` suites and
+the probe last ran at `0f517b597`.
 
 ## 8. The reprex of #3088 with the PR, end to end
 
