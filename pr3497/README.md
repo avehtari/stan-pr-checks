@@ -261,7 +261,7 @@ runs them again.  Logs in `results/tests/<tag>/`:
 | `betafn_c2` | 21348143 | `a64c3679fa` | cpplint, deps, 3 headers, test-headers, doxygen 1.9.7 |
 | `betafn_t4` | 21386527 | `372cebb637` | the 34 suites of `betafn_t2`; swap of `prim/fun/beta.hpp` on the 3 suites of `betafn_t3` |
 | `betafn_o4` | 21386540, GPU 21386589 | `372cebb637` | the 4 OpenCL suites of `betafn_o3`, same swap |
-| `betafn_c4` | 21386827 | `372cebb637` | cpplint, deps, 2 headers, test-headers, doxygen 1.9.7 |
+| `betafn_c4` | 21386827 | `372cebb637` | cpplint, deps, 2 headers, test-headers, doxygen |
 
 `47159a62ca` differs from `372cebb637` only in a test comment.
 `results/ci/windows_x64_rev_tests_b40012df74.txt` holds the failure lines
