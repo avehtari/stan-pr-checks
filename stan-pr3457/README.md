@@ -15,7 +15,7 @@ Terms: a *supplied* parameter has a user initial value; a *missing*
 parameter has none.
 
 Last run: 2026-11-03 (the two `initialize` suites at PR `eb235255b`,
-lint and header test at `93f83b502`;
+lint and header test at `5d935d206`;
 probe and the other unit tests at `0f517b597`, after WardBrian's
 second review); 2026-11-02 (PR v3, kept in `*_2026-11-02/`); 2026-11-01 (CmdStan runs, sections 1, 2 and 8).
 The tests, the probe and the CmdStan runs ran on
@@ -36,7 +36,8 @@ paths.
 | PR v4 | Stan `0f517b597` | rejects initial values with only some slots of a tuple (2026-11-03 results) |
 | PR v5 | Stan `eb235255b` | clearer names and doc comment, local RNG, no size fallback (third review; `triton_tests_2026-11-03_review3/`) |
 | PR v6 | Stan `d25d70673` | comment edits only; cpplint and header test job 21381657 |
-| PR | Stan `93f83b502` | comment edits only; cpplint and header test job 21381932 |
+| PR v7 | Stan `93f83b502` | comment edits only; cpplint and header test job 21381932 |
+| PR | Stan `5d935d206` | shorter doc comments, no vector list; cpplint and header test job 21382489 |
 | CmdStan develop | `3ab132c` | CmdStan with Stan `a8ec3d18f`, stanc3 v2.40.0 (section 1 and `cmdstan/` step 2) |
 
 The unit-test job 21321656 (job name `smtest`) ran on the uncommitted
