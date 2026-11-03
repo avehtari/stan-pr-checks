@@ -11,3 +11,17 @@ RESULT check=header_src_stan_services_util_initialize.hpp status=PASS secs=12
 ## Ubuntu clang-format version 14.0.0-1ubuntu1.1 (laptop), --dry-run, file of eb235255b
 c5d053e1227197f6eea02b14c6bb76a9  src/stan/services/util/initialize.hpp
 exit 0
+
+# 2026-11-03, working tree on eb235255b (uncommitted comment-only edits in initialize.hpp), base origin/develop a8ec3d18f
+## md5 of initialize.hpp (workstation clone and Triton tree <scratch>/stantest_3088)
+3112ae58f25779089de04cea259b9695  src/stan/services/util/initialize.hpp (workstation)
+3112ae58f25779089de04cea259b9695  src/stan/services/util/initialize.hpp (Triton)
+## cpplint (make cpplint), Triton job 21381657 (tag p3457_t5c), node pht55, CPU build on a batch node
+RESULT check=cpplint status=PASS secs=18
+198 lines 'Done processing', no other output lines
+## header test of src/stan/services/util/initialize.hpp, Triton job 21381657 (tag p3457_t5c)
+RESULT check=header_src_stan_services_util_initialize.hpp status=PASS secs=19
+## logs: triton_tests_2026-11-03_review3/smtest_21381657*.log
+## Ubuntu clang-format version 14.0.0-1ubuntu1.1 (laptop), --dry-run, file of d25d70673
+3112ae58f25779089de04cea259b9695  src/stan/services/util/initialize.hpp
+exit 0
