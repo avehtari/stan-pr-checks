@@ -1,0 +1,65 @@
+== host csl39.int.triton.aalto.fi  date 2026-11-03T20:24:33+02:00  cpus 16  J=16
+== g++ g++ (conda-forge gcc 14.3.0-18) 14.3.0
+== mode targeted  tree <scratch>/stantest_3088
+== deploy repo=stan
+== deploy clone=<workstation>/proj/stan_3088
+== deploy branch=fix-partial-init-dependent-transforms
+== deploy head=2324dfd29f3316e915bbf289dfc3490d33ebf9f6
+== deploy base_ref=origin/develop
+== deploy base=a8ec3d18f955e6bddc5b589f55cf2bb414d6f558
+== deploy uncommitted_edits=no
+== deploy math_commit=dc669419692e2cb71d55000a871066b5739c3e48
+== deploy deployed=2026-11-03T20:23:57+02:00
+== repository stan
+== tree matches the manifest (4 files)
+RESULT check=test_models status=PASS secs=1 models=2
+
+######## stage branch ########
+RESULT stage=branch suite=src/test/unit/services/util/initialize_partial_test status=PASS build_s=43 cases=14 failed=0
+RESULT stage=branch suite=src/test/unit/services/util/initialize_test status=PASS build_s=40 cases=16 failed=0
+SUMMARY stage=branch suites=2 failed_suites=0
+
+######## stage develop (swapped: src/stan/services/util/initialize.hpp) ########
+RESULT stage=develop suite=src/test/unit/services/util/initialize_partial_test status=FAIL build_s=37 cases=14 failed=13
+FAILED_CASE stage=develop suite=src/test/unit/services/util/initialize_partial_test ServicesUtilInitializePartial.small_multiplier
+FAILED_CASE stage=develop suite=src/test/unit/services/util/initialize_partial_test ServicesUtilInitializePartial.provided_offset
+FAILED_CASE stage=develop suite=src/test/unit/services/util/initialize_partial_test ServicesUtilInitializePartial.radius_zero
+FAILED_CASE stage=develop suite=src/test/unit/services/util/initialize_partial_test ServicesUtilInitializePartial.provided_dependent_parameter
+FAILED_CASE stage=develop suite=src/test/unit/services/util/initialize_partial_test ServicesUtilInitializePartial.chain_provided_a_c
+FAILED_CASE stage=develop suite=src/test/unit/services/util/initialize_partial_test ServicesUtilInitializePartial.chain_provided_b_d
+FAILED_CASE stage=develop suite=src/test/unit/services/util/initialize_partial_test ServicesUtilInitializePartial.chain_provided_a_c_e
+FAILED_CASE stage=develop suite=src/test/unit/services/util/initialize_partial_test ServicesUtilInitializePartial.provided_vector
+FAILED_CASE stage=develop suite=src/test/unit/services/util/initialize_partial_test ServicesUtilInitializePartial.provided_simplex
+FAILED_CASE stage=develop suite=src/test/unit/services/util/initialize_partial_test ServicesUtilInitializePartial.provided_array_of_tuples
+FAILED_CASE stage=develop suite=src/test/unit/services/util/initialize_partial_test ServicesUtilInitializePartial.provided_nested_tuple
+FAILED_CASE stage=develop suite=src/test/unit/services/util/initialize_partial_test ServicesUtilInitializePartial.partial_tuple_is_rejected
+FAILED_CASE stage=develop suite=src/test/unit/services/util/initialize_partial_test ServicesUtilInitializePartial.offset_from_array_of_tuples
+src/test/unit/services/util/initialize_partial_test.cpp:95: Failure
+Expected equality of these values:
+  u_random[n]
+    Which is: 0.0604822
+  params[n]
+--
+src/test/unit/services/util/initialize_partial_test.cpp:95: Failure
+Expected equality of these values:
+  u_random[n]
+    Which is: 0.718314
+  params[n]
+--
+src/test/unit/services/util/initialize_partial_test.cpp:95: Failure
+Expected equality of these values:
+  u_random[n]
+    Which is: 0.523135
+  params[n]
+RESULT stage=develop suite=src/test/unit/services/util/initialize_test status=PASS build_s=35 cases=16 failed=0
+SUMMARY stage=develop suites=2 failed_suites=1
+RESULT check=swap_restore status=PASS secs=0
+
+######## stage branch_again ########
+RESULT stage=branch_again suite=src/test/unit/services/util/initialize_partial_test status=PASS build_s=36 cases=14 failed=0
+RESULT stage=branch_again suite=src/test/unit/services/util/initialize_test status=PASS build_s=36 cases=16 failed=0
+SUMMARY stage=branch_again suites=2 failed_suites=0
+
+== final tree check:
+== tree still matches the manifest
+== done 2026-11-03T20:28:21+02:00

@@ -1,0 +1,2 @@
+make: 'test/test-models/good/services/test_lp.hpp' is up to date.
+bin/stanc  src/test/test-models/good/services/partial_init_dependent.stan --o=test/test-models/good/services/partial_init_dependent.hpp
