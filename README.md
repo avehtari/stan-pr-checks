@@ -51,6 +51,9 @@ skeleton, and a README skeleton with the checks before posting.
   agreement.
 - A file header of two or three lines names the purpose and the claim.
 - Outputs go to `out/`, which is not tracked.
+- Do not store lint records (cpplint, clang-format, header tests) as
+  files.  State the lint result in the PR text; the CI of the pull
+  request runs the same checks (user, 2026-11-03).
 - After a merge or a new commit of the pull request, run the accuracy
   scripts again and update the expected outputs.
 
