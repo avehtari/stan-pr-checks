@@ -1,0 +1,33 @@
+== host milan3.int.triton.aalto.fi  date 2026-11-09T13:52:42+02:00  cpus 16  J=16
+== g++ g++ (conda-forge gcc 14.3.0-18) 14.3.0
+== mode targeted  tree <scratch>/smtest_normal_lpdf
+== deploy repo=math
+== deploy clone=<workstation>/proj/stan_math_normal_lpdf
+== deploy branch=faster-normal-lpdf
+== deploy head=3cce356cc8e0067cdbb58e74aca24a24029167bb
+== deploy base_ref=dc66941969
+== deploy base=dc669419692e2cb71d55000a871066b5739c3e48
+== deploy uncommitted_edits=no
+== deploy deployed=2026-11-09T13:51:31+02:00
+== repository math
+== tree matches the manifest (11 files)
+
+######## stage branch ########
+RESULT stage=branch suite=test/unit/math/prim/prob/normal_test status=PASS build_s=154 cases=8 failed=0
+RESULT stage=branch suite=test/unit/math/mix/prob/normal_test status=PASS build_s=193 cases=5 failed=0
+RESULT stage=branch suite=test/unit/math/rev/prob/normal_log_test status=PASS build_s=34 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/rev/prob/normal_id_glm_lpdf_test status=PASS build_s=72 cases=26 failed=0
+RESULT stage=branch suite=test/unit/math/prim/functor/partials_propagator_test status=PASS build_s=13 cases=1 failed=0
+RESULT stage=branch suite=test/unit/math/rev/functor/partials_propagator_test status=PASS build_s=41 cases=10 failed=0
+RESULT stage=branch suite=test/unit/math/fwd/functor/partials_propagator_test status=PASS build_s=27 cases=5 failed=0
+RESULT stage=branch suite=test/unit/math/mix/functor/partials_propagator_test status=PASS build_s=37 cases=8 failed=0
+RESULT stage=branch suite=test/unit/math/prim/fun/as_value_column_array_or_scalar_ref_test status=PASS build_s=12 cases=4 failed=0
+RESULT stage=branch suite=test/unit/math/rev/fun/as_value_column_array_or_scalar_ref_test status=PASS build_s=31 cases=3 failed=0
+SUMMARY stage=branch suites=10 failed_suites=0
+
+######## test/prob/normal (generated), -j6, filter: normal_0 ########
+RESULT check=prob_normal filter=normal_0 status=PASS secs=233 ok_cases=5346 failed_cases=0 compiler_kills=0
+
+== final tree check:
+== tree still matches the manifest
+== done 2026-11-09T14:06:50+02:00

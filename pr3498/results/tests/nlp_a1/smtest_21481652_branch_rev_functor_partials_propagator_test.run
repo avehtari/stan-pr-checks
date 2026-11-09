@@ -1,0 +1,29 @@
+Running main() from lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 10 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 10 tests from AgradRev
+[ RUN      ] AgradRev.PartialsVari_PartialsPropagatorScal
+[       OK ] AgradRev.PartialsVari_PartialsPropagatorScal (1 ms)
+[ RUN      ] AgradRev.PartialsVari_PartialsPropagatorVec
+[       OK ] AgradRev.PartialsVari_PartialsPropagatorVec (0 ms)
+[ RUN      ] AgradRev.PartialsVari_PartialsPropagatorStdVec
+[       OK ] AgradRev.PartialsVari_PartialsPropagatorStdVec (0 ms)
+[ RUN      ] AgradRev.PartialsVari_PartialsPropagatorMat
+[       OK ] AgradRev.PartialsVari_PartialsPropagatorMat (0 ms)
+[ RUN      ] AgradRev.PartialsVari_PartialsPropagatorMatMultivar
+[       OK ] AgradRev.PartialsVari_PartialsPropagatorMatMultivar (0 ms)
+[ RUN      ] AgradRev.PartialsVari_PartialsPropagatorMultivar
+[       OK ] AgradRev.PartialsVari_PartialsPropagatorMultivar (0 ms)
+[ RUN      ] AgradRev.PartialsVari_PartialsPropagatorMultivarMixed
+[       OK ] AgradRev.PartialsVari_PartialsPropagatorMultivarMixed (0 ms)
+[ RUN      ] AgradRev.PartialsVari_PartialsPropagatorVarValueMat
+[       OK ] AgradRev.PartialsVari_PartialsPropagatorVarValueMat (0 ms)
+[ RUN      ] AgradRev.PartialsVari_PartialsPropagatorStdVectorVarValueMat
+[       OK ] AgradRev.PartialsVari_PartialsPropagatorStdVectorVarValueMat (0 ms)
+[ RUN      ] AgradRev.PartialsPropagatorAssignPartials
+[       OK ] AgradRev.PartialsPropagatorAssignPartials (0 ms)
+[----------] 10 tests from AgradRev (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 10 tests from 1 test suite ran. (1 ms total)
+[  PASSED  ] 10 tests.

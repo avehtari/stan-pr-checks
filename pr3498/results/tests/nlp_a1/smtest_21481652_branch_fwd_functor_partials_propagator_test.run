@@ -1,0 +1,19 @@
+Running main() from lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 5 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 5 tests from MathMetaFwd
+[ RUN      ] MathMetaFwd.PartialsPropagatorFvar
+[       OK ] MathMetaFwd.PartialsPropagatorFvar (0 ms)
+[ RUN      ] MathMetaFwd.PartialsPropagatorFvarScal
+[       OK ] MathMetaFwd.PartialsPropagatorFvarScal (0 ms)
+[ RUN      ] MathMetaFwd.PartialsPropagatorFvarVec
+[       OK ] MathMetaFwd.PartialsPropagatorFvarVec (0 ms)
+[ RUN      ] MathMetaFwd.PartialsPropagatorFvarMat
+[       OK ] MathMetaFwd.PartialsPropagatorFvarMat (0 ms)
+[ RUN      ] MathMetaFwd.PartialsPropagatorAssignPartials
+[       OK ] MathMetaFwd.PartialsPropagatorAssignPartials (0 ms)
+[----------] 5 tests from MathMetaFwd (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 5 tests.

@@ -1,0 +1,25 @@
+Running main() from lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 8 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 8 tests from MathMetaMix
+[ RUN      ] MathMetaMix.PartialsPropagatorUniMixMat
+[       OK ] MathMetaMix.PartialsPropagatorUniMixMat (0 ms)
+[ RUN      ] MathMetaMix.PartialsPropagatorUniMixMat_dbl
+[       OK ] MathMetaMix.PartialsPropagatorUniMixMat_dbl (0 ms)
+[ RUN      ] MathMetaMix.PartialsPropagatorMultiMix
+[       OK ] MathMetaMix.PartialsPropagatorMultiMix (0 ms)
+[ RUN      ] MathMetaMix.PartialsPropagatorMultiMix_dbl
+[       OK ] MathMetaMix.PartialsPropagatorMultiMix_dbl (0 ms)
+[ RUN      ] MathMetaMix.PartialsPropagatorMultiStdMix
+[       OK ] MathMetaMix.PartialsPropagatorMultiStdMix (0 ms)
+[ RUN      ] MathMetaMix.PartialsPropagatorMultiStdMix_dbl
+[       OK ] MathMetaMix.PartialsPropagatorMultiStdMix_dbl (0 ms)
+[ RUN      ] MathMetaMix.PartialsPropagatorMultiMixInt
+[       OK ] MathMetaMix.PartialsPropagatorMultiMixInt (0 ms)
+[ RUN      ] MathMetaMix.PartialsPropagatorMultiMixInt_dbl
+[       OK ] MathMetaMix.PartialsPropagatorMultiMixInt_dbl (0 ms)
+[----------] 8 tests from MathMetaMix (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 8 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 8 tests.

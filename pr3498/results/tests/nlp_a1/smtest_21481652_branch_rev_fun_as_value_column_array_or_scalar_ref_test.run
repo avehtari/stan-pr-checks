@@ -1,0 +1,15 @@
+Running main() from lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 3 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 3 tests from AgradRev
+[ RUN      ] AgradRev.as_value_column_array_or_scalar_ref_scalar
+[       OK ] AgradRev.as_value_column_array_or_scalar_ref_scalar (0 ms)
+[ RUN      ] AgradRev.as_value_column_array_or_scalar_ref_reads_vari
+[       OK ] AgradRev.as_value_column_array_or_scalar_ref_reads_vari (0 ms)
+[ RUN      ] AgradRev.as_value_column_array_or_scalar_ref_varmat
+[       OK ] AgradRev.as_value_column_array_or_scalar_ref_varmat (0 ms)
+[----------] 3 tests from AgradRev (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 3 tests.

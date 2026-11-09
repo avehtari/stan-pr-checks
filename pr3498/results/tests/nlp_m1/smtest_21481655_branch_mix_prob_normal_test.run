@@ -1,0 +1,47 @@
+Running main() from lib/benchmark_1.5.1/googletest/googletest/src/gtest_main.cc
+[==========] Running 5 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 5 tests from AgradRev
+[ RUN      ] AgradRev.mathMixScalFun_normal_lpdf
+[       OK ] AgradRev.mathMixScalFun_normal_lpdf (0 ms)
+[ RUN      ] AgradRev.mathMixScalFun_normal_lpdf_vectors
+[       OK ] AgradRev.mathMixScalFun_normal_lpdf_vectors (8 ms)
+[ RUN      ] AgradRev.mathMixScalFun_normal_lpdf_reference
+[       OK ] AgradRev.mathMixScalFun_normal_lpdf_reference (0 ms)
+[ RUN      ] AgradRev.mathMixScalFun_normal_lpdf_messages
+test/unit/math/mix/prob/normal_test.cpp:223: Failure
+Expected: normal_lpdf(y_nan, to_var(mu), var(1.0)) throws an exception of type std::domain_error.
+  Actual: it throws nothing.
+test/unit/math/mix/prob/normal_test.cpp:225: Failure
+Expected: normal_lpdf(y_nan, vm(mu), var(1.0)) throws an exception of type std::domain_error.
+  Actual: it throws nothing.
+test/unit/math/mix/prob/normal_test.cpp:227: Failure
+Expected: normal_lpdf(y, vm(mu_inf), var(1.0)) throws an exception of type std::domain_error.
+  Actual: it throws nothing.
+test/unit/math/mix/prob/normal_test.cpp:230: Failure
+Expected: normal_lpdf(to_var(y), mu_inf, var(1.0)) throws an exception of type std::domain_error.
+  Actual: it throws nothing.
+test/unit/math/mix/prob/normal_test.cpp:232: Failure
+Expected: normal_lpdf(to_vs(y_nan), mu, 2.0) throws an exception of type std::domain_error.
+  Actual: it throws nothing.
+test/unit/math/mix/prob/normal_test.cpp:235: Failure
+Expected: normal_lpdf(y_nan, to_vs(mu), to_vs(sigma)) throws an exception of type std::domain_error.
+  Actual: it throws nothing.
+test/unit/math/mix/prob/normal_test.cpp:237: Failure
+Expected: normal_lpdf(to_var(y), to_var(mu_inf), to_var(sigma)) throws an exception of type std::domain_error.
+  Actual: it throws nothing.
+test/unit/math/mix/prob/normal_test.cpp:254: Failure
+Expected: normal_lpdf(y_nan, mu_fd, fd(1.0)) throws an exception of type std::domain_error.
+  Actual: it throws nothing.
+[  FAILED  ] AgradRev.mathMixScalFun_normal_lpdf_messages (0 ms)
+[ RUN      ] AgradRev.mathMixScalFun_normal_lpdf_infinite_y
+[       OK ] AgradRev.mathMixScalFun_normal_lpdf_infinite_y (0 ms)
+[----------] 5 tests from AgradRev (8 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 1 test suite ran. (9 ms total)
+[  PASSED  ] 4 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] AgradRev.mathMixScalFun_normal_lpdf_messages
+
+ 1 FAILED TEST

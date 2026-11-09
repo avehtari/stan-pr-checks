@@ -4,9 +4,10 @@ This directory holds the scripts behind the numbers in the PR "Make
 vectorized normal_lpdf faster without heap arrays" (stan-dev/math#3498,
 branch `faster-normal-lpdf`).  Sections 1 to 7 quote the claims of the
 PR text and give the commands and the expected output.  Section 8
-answers a review question about `to_ref`.
+answers a review question about `to_ref`.  Section 9 covers the shared
+helpers that the second review asked for.
 
-Last run: 2026-11-01 and 2026-11-02.  All jobs ran on Triton (Aalto),
+Last run: 2026-11-01 to 2026-11-09.  All jobs ran on Triton (Aalto),
 with g++ 14.3.0 (conda-forge) and `-O3`; the timings on Xeon Gold 6248
 nodes with the `performance` governor, the OpenCL test on a Tesla V100.
 In the logs, `<scratch>`, `<home>` and `<workstation>` replace the
@@ -17,11 +18,13 @@ machine paths.
 | name in this file | commit | what |
 |---|---|---|
 | develop | `dc66941969` | merge base of the PR (develop of 2026-10-29) |
-| PR | `421386dec5` | PR head (8 commits) |
+| PR | `3cce356cc8` | PR head (10 commits) |
 | 3a66 | `3a66fcf6aa` | first commit: the change of `normal_lpdf.hpp` |
 | 620a | `620ab901f5` | fourth commit |
 | 760f | `760f6a1f65` | sixth commit: PR head before the review |
 | dde6 | `dde60be194` | seventh commit, after the review: `sigma` is checked first |
+| 4213 | `421386dec5` | eighth commit: tests of an invalid vector `sigma`; a comment |
+| 8473 | `8473e62cdd` | ninth commit: the helpers and their tests |
 
 From `3a66fcf6aa` to `760f6a1f65`, the commits change `stan/` only in
 comment lines, so the timings and the check (made with `3a66fcf6aa` and
@@ -29,6 +32,8 @@ comment lines, so the timings and the check (made with `3a66fcf6aa` and
 kept the develop error order when `sigma` is invalid; `421386dec5`
 changes a comment and adds tests.  The timings were not made again
 after `dde60be194`.  Section 7 gives the check of `dde60be194`.
+`8473e62cdd` adds two helpers, and `3cce356cc8` uses them in
+`normal_lpdf`; section 9 gives their checks.
 
 ## Layout
 
@@ -168,17 +173,20 @@ awk '$1=="CHECK" && $NF=="value" {if ($8+0>r) r=$8+0; if ($10+0>p) p=$10+0}
 
 ## 4. Unit tests and the mutants
 
-> The new tests also pass with the `develop` header, since no call has
-> more than one invalid argument. To check that they cover the new
-> code, I removed, in turn, the check after the sum of squares in each
-> of the two branches of the arithmetic (one for an autodiff `mu` or
-> `y` vector, one for the other cases). At `760f6a1f65`, 8 and 5
-> assertions failed.
+> The new `normal` tests also pass with the `develop` header, since no
+> call has more than one invalid argument. To check that they cover
+> the new code, I removed, in turn, the check after the sum of squares
+> in each of the two branches of the arithmetic (one for an autodiff
+> `mu` or `y` vector, one for the other cases). Without the check in
+> the first branch, 8 assertions of the new tests fail; without the
+> check in the second branch, 7 fail. The generated `test/prob/normal`
+> tests fail only without the check in the second branch (6 checks
+> fail), because their invalid-value checks use scalar arguments,
+> which do not reach the first branch.
 
-The jobs of this section ran at `760f6a1f65`, CPU builds on batch
-nodes.  At the PR head, `results/tests/nlu_t2/` (job 21362182) and
-`results/tests/nlf_t3/` (job 21362690) give the same suites; see
-section 5.  The mutants were not run again.
+The jobs below ran at `760f6a1f65`, CPU builds on batch nodes.  The
+mutant counts of the quote (8 and 7) and the generated-test result are
+from the PR head `3cce356cc8`; see section 9.
 
 - `results/tests/nlf_a/` (job 21348417): `prim/prob/normal_test` (8
   tests), `mix/prob/normal_test` (5), `rev/prob/normal_log_test` (1),
@@ -202,8 +210,10 @@ grep -c "Failure" results/tests/nlf_m2/smtest_21348419_branch_{prim,mix}_prob_no
 ## 5. Other suites and the checklist
 
 > These tests pass: `prim/prob/normal_test`, `mix/prob/normal_test`,
-> `rev/prob/normal_log_test`, `rev/prob/normal_id_glm_lpdf_test` and the
-> generated `test/prob/normal` lpdf tests.
+> `rev/prob/normal_log_test`, `rev/prob/normal_id_glm_lpdf_test` (it
+> compares against `normal_lpdf`), the `partials_propagator` tests
+> (prim, rev, fwd, mix), the new helper tests and the generated
+> `test/prob/normal` lpdf tests.
 
 > `opencl/rev/normal_lpdf_test` passes on a V100.
 
@@ -212,10 +222,22 @@ grep -c "Failure" results/tests/nlf_m2/smtest_21348419_branch_{prim,mix}_prob_no
 > 1.9.7 gives no warnings.
 
 > The unit tests, the generated tests, the OpenCL test and the
-> checklist items ran at `421386dec5` (the change applied to `develop`
+> checklist items ran at `3cce356cc8` (the change applied to `develop`
 > at `dc66941969`) with g++ 14.3.0.
 
-At the PR head.  Jobs 21362182 and 21362474 ran on the working tree on
+At the PR head `3cce356cc8`:
+
+| check | job | log |
+|---|---|---|
+| 10 suites (normal prim, mix, rev; `partials_propagator` prim, rev, fwd, mix; helper prim, rev); `test/prob/normal` `-f normal_0`, 7 programs, 5346 checks | 21481652 | `results/tests/nlp_a1/` |
+| fwd helper test (2 tests) | 21482184 | `results/tests/nlp_f1/` |
+| `opencl/rev/normal_lpdf_test`, 6 tests, V100 | 21481653, 21481667 | `results/tests/nlp_o2/` |
+| cpplint, deps, header check (3 headers), test-headers, doxygen 0 warnings | 21481940 | `results/tests/nlp_c3/` |
+
+`-f normal_0` selects all 7 generated `normal` lpdf programs and no
+cdf program.
+
+At `421386dec5`.  Jobs 21362182 and 21362474 ran on the working tree on
 top of `dde60be194`; its three changed files had the md5 of
 `421386dec5`.
 
@@ -240,7 +262,8 @@ The `test/prob` run of job 21346941 used the PR code (`stan/` as at the
 head except comments).  In that job the mix suite did not compile: the
 test file of `f83aee2c10` had an error, fixed in the next commit.
 clang-format 10 has no log; `stan_clang_format.sh check` matched the
-changed files before each commit.
+changed files before each commit, and `stan_clang_format.sh branch
+dc66941969` reports all 11 changed files clean at `3cce356cc8`.
 
 ## 6. The mpmath references of the mix test
 
@@ -301,4 +324,53 @@ workstation; `to_ref.hpp`, `ref_type.hpp` and
 ```
 Matrix<var>  to_ref returns a plain type: 1   allocations >= 8000 bytes: 1
 VectorXd     to_ref returns a plain type: 0   allocations >= 8000 bytes: 0
+```
+
+## 9. The shared helpers (second review)
+
+WardBrian asked for a helper for `to_ref(as_value_column_array_or_scalar(...))`,
+which most distributions use, and said that `partials_column_array` is
+not worth a helper.
+
+- `8473e62cdd` adds `as_value_column_array_or_scalar_ref(x)`
+  (`stan/math/prim/fun/`): `to_ref_if<!is_autodiff_v<T>>(as_value_column_array_or_scalar(x))`.
+- `8473e62cdd` adds `assign_partials<I>(ops_partials, x)` to
+  `stan/math/prim/functor/partials_propagator.hpp`.  For a vector
+  operand it writes `x` into the existing partials through a column
+  array view and checks the size; for a scalar operand it writes the sum;
+  for data it writes nothing.  Other operands fail a `static_assert`.
+- `3cce356cc8` uses both in `normal_lpdf` and replaces
+  `partials_column_array` with the existing
+  `as_array_or_scalar(as_column_vector_or_scalar(partials<I>(ops_partials)))`.
+
+The behavior check at `3cce356cc8` (`results/jobs/nl_branch_21481606.log`,
+job 21481606, tarball from `git archive 3cce356cc8 stan`) is the same as
+at `dde60be194`: `CHECK_SUMMARY ok 1512 fail 180`, all 180 in
+`y_nan_sigma_neg` and `mu_inf_sigma_neg`, largest `rel` 2.4e-15 and
+`rel_plain` 1.4e-15, `HEAP ... branch 0` in all 50 lines.  The timings
+were not made again.
+
+Mutants at `3cce356cc8` (a detached worktree with one uncommitted edit
+each, deployed with `--base-ref 3cce356cc8`, so stage `branch` is the
+mutant):
+
+| mutant | removed | job | generated `test/prob/normal` | prim | mix |
+|---|---|---|---|---|---|
+| M1 | the check after the sum where the partials hold `(y - mu) / sigma` | 21481655 | 5346 ok, 0 failed | 0 | 8 |
+| M2 | the check after the sum in the other branch | 21481654 | 6 failed | 4 | 3 |
+
+- The prim and mix columns count `Failure` lines.
+- M2: the 6 failing checks are `InvalidValues` of
+  `normal_00000_generated_ffv_test`; `runTests.py` stopped after that
+  program, so 1 of the 7 programs ran.
+- The generated tests check invalid values only when all arguments are
+  scalars: `test_invalid_values` in `test/prob/test_fixture_distr.hpp`
+  returns at once otherwise.  Scalar arguments never reach the M1
+  branch, which needs an autodiff vector `y` or `mu`.  So the message tests of the vector code paths are
+  still needed in the next distribution PRs.
+
+```sh
+grep -c "Failure" results/tests/nlp_m1/*_branch_{prim,mix}_prob_normal_test.run
+grep -c "Failure" results/tests/nlp_m2/*_branch_{prim,mix}_prob_normal_test.run
+grep -h "FAILED  \]" results/tests/nlp_m2/*prob_normal*.log | sort -u
 ```

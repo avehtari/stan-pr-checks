@@ -1,0 +1,8 @@
+== host gpu4.int.triton.aalto.fi  date 2026-11-09T13:54:33+02:00
+== gpu GPU 0: Tesla V100-PCIE-32GB (UUID: GPU-035d5389-f147-8820-3e45-5fd24bc58fbc)
+
+######## stage branch (GPU) ########
+RESULT stage=branch suite=test/unit/math/opencl/rev/normal_lpdf_test status=PASS build_s=0 cases=6 failed=0
+SUMMARY stage=branch suites=1 failed_suites=0
+
+== done 2026-11-09T13:54:34+02:00

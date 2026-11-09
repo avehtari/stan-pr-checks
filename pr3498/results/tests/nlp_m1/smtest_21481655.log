@@ -1,0 +1,37 @@
+== host milan12.int.triton.aalto.fi  date 2026-11-09T13:52:41+02:00  cpus 16  J=16
+== g++ g++ (conda-forge gcc 14.3.0-18) 14.3.0
+== mode targeted  tree <scratch>/smtest_normal_lpdf_mut1
+== deploy repo=math
+== deploy clone=<workstation>/proj/stan_math_normal_lpdf_mut1
+== deploy branch=
+== deploy head=3cce356cc8e0067cdbb58e74aca24a24029167bb
+== deploy base_ref=3cce356cc8
+== deploy base=3cce356cc8e0067cdbb58e74aca24a24029167bb
+== deploy uncommitted_edits=yes
+== deploy deployed=2026-11-09T13:51:48+02:00
+== repository math
+== tree matches the manifest (1 files)
+
+######## stage branch ########
+RESULT stage=branch suite=test/unit/math/prim/prob/normal_test status=PASS build_s=75 cases=8 failed=0
+RESULT stage=branch suite=test/unit/math/mix/prob/normal_test status=FAIL build_s=98 cases=5 failed=1
+FAILED_CASE stage=branch suite=test/unit/math/mix/prob/normal_test AgradRev.mathMixScalFun_normal_lpdf_messages
+test/unit/math/mix/prob/normal_test.cpp:223: Failure
+Expected: normal_lpdf(y_nan, to_var(mu), var(1.0)) throws an exception of type std::domain_error.
+  Actual: it throws nothing.
+test/unit/math/mix/prob/normal_test.cpp:225: Failure
+Expected: normal_lpdf(y_nan, vm(mu), var(1.0)) throws an exception of type std::domain_error.
+  Actual: it throws nothing.
+test/unit/math/mix/prob/normal_test.cpp:227: Failure
+Expected: normal_lpdf(y, vm(mu_inf), var(1.0)) throws an exception of type std::domain_error.
+  Actual: it throws nothing.
+test/unit/math/mix/prob/normal_test.cpp:230: Failure
+Expected: normal_lpdf(to_var(y), mu_inf, var(1.0)) throws an exception of type std::domain_error.
+SUMMARY stage=branch suites=2 failed_suites=1
+
+######## test/prob/normal (generated), -j6, filter: normal_0 ########
+RESULT check=prob_normal filter=normal_0 status=PASS secs=174 ok_cases=5346 failed_cases=0 compiler_kills=0
+
+== final tree check:
+== tree still matches the manifest
+== done 2026-11-09T13:58:29+02:00
